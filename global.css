@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-montserrat: Montserrat;
+  --font-venite-adoremus: "Venite Adoremus";
+
+  /* font sizes */
+  --font-size-11xl: 30px;
+  --font-size-14xl: 33px;
+  --font-size-9xl: 28px;
+  --font-size-48xl: 67px;
+  --font-size-17xl: 36px;
+
+  /* Colors */
+  --color-white: #fff;
+}

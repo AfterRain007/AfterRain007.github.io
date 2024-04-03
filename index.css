@@ -1,0 +1,465 @@
+.design-child {
+  top: 0;
+  background-color: #010103;
+  height: 3489px;
+}
+.design,
+.design-child,
+.stars-icon {
+  position: absolute;
+  left: 0;
+  width: 1920px;
+}
+.stars-icon {
+  top: 302px;
+  height: 3200px;
+  object-fit: cover;
+}
+.design {
+  top: 0;
+  height: 3502px;
+}
+.certification,
+.home,
+.passions,
+.resume {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+.certification,
+.passions,
+.resume {
+  left: 163px;
+}
+.certification,
+.passions {
+  left: 382px;
+}
+.passions {
+  left: 756px;
+}
+.hero1 {
+  position: absolute;
+  top: 45px;
+  left: 476px;
+  width: 969px;
+  height: 43px;
+}
+.hero,
+.space-1-icon {
+  position: absolute;
+  left: 0;
+  width: 1920px;
+}
+.hero {
+  top: 0;
+  height: 133px;
+  overflow: hidden;
+  font-family: var(--font-venite-adoremus);
+}
+.space-1-icon {
+  top: 14px;
+  height: 933px;
+  object-fit: cover;
+}
+.welcome-to-my {
+  position: absolute;
+  top: 289px;
+  left: 405px;
+  letter-spacing: 0.05em;
+}
+.welcome {
+  position: absolute;
+  top: 133px;
+  left: 0;
+  width: 1920px;
+  height: 947px;
+  font-size: 64px;
+  font-family: var(--font-venite-adoremus);
+}
+.greetings-my-name {
+  margin: 0;
+}
+.greetings-my-name-container {
+  position: absolute;
+  top: 0;
+  left: 339px;
+  display: inline-block;
+  width: 1221px;
+  height: 237px;
+}
+.gambar-1-icon,
+.gambar-2-icon {
+  position: absolute;
+  top: 103.1px;
+  left: 24px;
+  width: 314px;
+  height: 494px;
+  object-fit: cover;
+  display: none;
+}
+.gambar-2-icon {
+  left: 1px;
+  width: 193px;
+  height: 303.6px;
+}
+.gambar-3-icon {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 231px;
+  height: 231px;
+  object-fit: contain;
+}
+.introduction,
+.introduction1 {
+  position: absolute;
+  top: 122px;
+  left: 180px;
+  width: 1560px;
+  height: 237px;
+}
+.introduction {
+  top: 1080px;
+  left: 0;
+  width: 1920px;
+  height: 470px;
+  overflow: hidden;
+  text-align: justify;
+  font-size: var(--font-size-9xl);
+}
+.fun-projects1,
+.vector-icon {
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 458px;
+  height: 258px;
+}
+.fun-projects1 {
+  top: 286px;
+  font-weight: 900;
+  display: inline-block;
+  height: 67px;
+}
+.image-12-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 459px;
+  height: 258px;
+  object-fit: cover;
+}
+.fun-projects,
+.vector-icon1 {
+  position: absolute;
+  top: 511px;
+  left: 1110px;
+  width: 459px;
+  height: 353px;
+}
+.vector-icon1 {
+  top: 0;
+  left: 0;
+  width: 458px;
+  height: 258px;
+  object-fit: cover;
+}
+.course-capstone {
+  position: absolute;
+  top: 511px;
+  left: 551px;
+  width: 458px;
+  height: 353px;
+}
+.icon,
+.icon1,
+.image-11-icon,
+.vector-icon2 {
+  position: absolute;
+  top: 0;
+  left: 1111px;
+  width: 458px;
+  height: 258px;
+}
+.icon,
+.icon1,
+.image-11-icon {
+  left: 1305px;
+  width: 264px;
+  object-fit: cover;
+}
+.icon,
+.icon1 {
+  top: 21px;
+  left: 1240px;
+  width: 81px;
+  height: 213px;
+}
+.icon1 {
+  left: 1130px;
+  width: 107px;
+}
+.bitcoin-sentiment-analysis-container,
+.pot-holes-detection {
+  position: absolute;
+  top: 286px;
+  left: 1111px;
+  font-weight: 900;
+  display: inline-block;
+  width: 458px;
+  height: 67px;
+}
+.bitcoin-sentiment-analysis-container {
+  left: 0;
+}
+.bitcoin-price-prediction-using,
+.ipoth {
+  position: absolute;
+  top: 127px;
+  left: 0;
+  width: 1569px;
+  height: 353px;
+}
+.bitcoin-price-prediction-using {
+  top: 511px;
+  width: 458px;
+}
+.bitcoin-sentiment-child {
+  position: absolute;
+  top: 45px;
+  left: 367px;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.bitcoin-sentiment1,
+.power-bi,
+.vector-icon4 {
+  position: absolute;
+  top: 127px;
+  left: 0;
+  width: 467px;
+  height: 258px;
+}
+.power-bi,
+.vector-icon4 {
+  top: 0;
+  width: 458px;
+}
+.power-bi {
+  top: 127px;
+  left: 551px;
+  height: 353px;
+}
+.projects1 {
+  position: absolute;
+  top: 0;
+  left: 579px;
+  font-size: var(--font-size-48xl);
+  font-family: var(--font-venite-adoremus);
+}
+.project,
+.projects {
+  position: absolute;
+  top: 0;
+  left: 180px;
+  width: 1569px;
+  height: 864px;
+}
+.projects {
+  top: 1550px;
+  left: 0;
+  width: 1920px;
+  height: 911px;
+  overflow: hidden;
+  font-size: var(--font-size-9xl);
+}
+.github-mark-white-1-icon,
+.youtube-icon-full-color-logow {
+  position: absolute;
+  top: 1px;
+  left: 156px;
+  width: 46px;
+  height: 45px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.youtube-icon-full-color-logow {
+  top: 0;
+  left: 69px;
+  width: 64px;
+  height: 46px;
+  object-fit: cover;
+}
+.in-white-722x-1-icon,
+.vector-icon5 {
+  position: absolute;
+  width: 45px;
+  cursor: pointer;
+}
+.in-white-722x-1-icon {
+  top: 1px;
+  left: 226px;
+  height: 45px;
+  object-fit: cover;
+}
+.vector-icon5 {
+  top: calc(50% - 23px);
+  left: calc(50% - 135.5px);
+  height: 45.6px;
+}
+.github-mark-white-1-parent {
+  position: absolute;
+  top: 88px;
+  left: 0;
+  width: 271px;
+  height: 46px;
+}
+.lets-connect,
+.social-media {
+  position: absolute;
+  top: 0;
+  left: 8px;
+}
+.social-media {
+  top: 92px;
+  left: 700px;
+  width: 271px;
+  height: 134px;
+}
+.footer,
+.footer-child,
+.footer1 {
+  position: absolute;
+  top: 0;
+  width: 1671px;
+}
+.footer-child {
+  left: 0;
+  max-height: 100%;
+}
+.footer,
+.footer1 {
+  left: 125px;
+  height: 226px;
+}
+.footer {
+  top: 3176px;
+  left: 0;
+  width: 1920px;
+  height: 326px;
+  overflow: hidden;
+}
+.experience2 {
+  position: absolute;
+  top: 0;
+  left: 517px;
+  font-size: var(--font-size-48xl);
+  font-family: var(--font-venite-adoremus);
+  text-align: center;
+}
+.experience-child {
+  position: absolute;
+  top: 152px;
+  left: 25px;
+  max-width: 100%;
+  overflow: hidden;
+  height: 311px;
+}
+.experience-inner,
+.experience-item {
+  position: absolute;
+  top: 127px;
+  left: 0;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  width: 50px;
+  height: 50px;
+}
+.experience-inner {
+  top: 438px;
+}
+.as-a-production {
+  position: absolute;
+  top: 185px;
+  left: 367px;
+  font-size: var(--font-size-9xl);
+  text-align: justify;
+  display: inline-block;
+  width: 1201px;
+}
+.download-resume1,
+.production-division-intern {
+  position: absolute;
+  top: 130px;
+  left: 367px;
+  font-weight: 900;
+  display: inline-block;
+  width: 978px;
+}
+.download-resume1 {
+  top: 17px;
+  left: 10px;
+  line-height: 90%;
+  width: 339.2px;
+}
+.download-resume {
+  text-decoration: none;
+  position: absolute;
+  top: 431px;
+  left: 367px;
+  border-radius: 20px;
+  background-color: var(--color-white);
+  width: 360px;
+  height: 63px;
+  cursor: pointer;
+  text-align: center;
+  color: #000;
+}
+.july-dec,
+.presents {
+  position: absolute;
+  top: 133px;
+  left: 73px;
+  font-size: var(--font-size-11xl);
+  font-weight: 200;
+  display: inline-block;
+  width: 247px;
+  height: 37px;
+}
+.presents {
+  top: 444px;
+}
+.experience,
+.experience1 {
+  position: absolute;
+  top: 71px;
+  left: 181px;
+  width: 1568px;
+  height: 494px;
+}
+.experience {
+  top: 2461px;
+  left: 0;
+  width: 1920px;
+  height: 715px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-14xl);
+}
+.home-new {
+  text-decoration: none;
+  width: 100%;
+  position: relative;
+  background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff),
+    linear-gradient(#fff, #fff), linear-gradient(#fff, #fff),
+    linear-gradient(#fff, #fff), #fff;
+  height: 3502px;
+  text-align: center;
+  font-size: var(--font-size-17xl);
+  color: var(--color-white);
+  font-family: var(--font-montserrat);
+}
