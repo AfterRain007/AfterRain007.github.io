@@ -8,196 +8,398 @@
     <link rel="stylesheet" href="./index.css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Venite Adoremus:wght@400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap"
     />
   </head>
   <body>
-    <a class="home-new">
+    <div class="fitnesslandingpage">
       <div class="navbar">
         <div class="nav">
+          <button class="logo" id="logo">WORKOUT</button>
           <div class="menuright">
-            <div class="menulinks-large">
-              <button class="exercises">Home</button>
-              <button class="exercises">Resume</button>
-              <button class="exercises">Certification</button>
-              <button class="exercises">PASSIONS</button>
+            <div class="menulinks">
+              <button class="exercises" id="exercises">EXERCISES</button>
+              <button class="exercises" id="trainers1">TRAINERS</button>
+              <button class="exercises" id="pricing">PRICING</button>
+              <button class="login" id="login">LOGIN</button>
             </div>
-            <div class="menulinks-medium">
-              <button class="exercises1">Home</button>
-              <button class="exercises1">Resume</button>
-              <button class="exercises1">Certification</button>
-              <button class="exercises1">PASSIONS</button>
-            </div>
-            <div class="menulinks-medium">
-              <button class="exercises2">Home</button>
-              <button class="exercises2">Resume</button>
-              <button class="exercises2">Certification</button>
-              <button class="exercises2">PASSIONS</button>
-            </div>
+            <button class="hamburger-icon">
+              <img class="group-2-icon" alt="" src="./public/group2.svg" />
+            </button>
           </div>
         </div>
       </div>
-      <div class="hero">
-        <div class="welcome-to-my">Welcome to My Portfolio!</div>
-      </div>
-      <div class="introduction">
-        <div class="pp-1-parent">
-          <img class="pp-1-icon" alt="" src="./public/pp-1@2x.png" />
-
-          <div class="greetings-my-name-container">
-            <p class="greetings-my-name">
-              Greetings! My name is Gilang Islamay from Indonesia and I'm a
-              Microsoft Certified: Power BI Data Analyst Associate. I hold a
-              Bachelor Degree on Mathematics with a specialization in Data
-              Science, with a GPA of 3.66 from Syarif Hidayatullah State Islamic
-              University Jakarta. I'm deeply passionate about the world of data!
-            </p>
-            <p class="greetings-my-name">&nbsp;</p>
-            <p class="greetings-my-name">
-              This portfolio covers all my projects & certificate in a
-              professional setting and some fun stuff! Hope to have the
-              opportunity of working with you soon!
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="projects">
-        <div class="title-parent">
+      <div
+        class="popularexercisessection"
+        data-scroll-to="popularExercisesSection"
+      >
+        <div class="popularexercises">
           <div class="title">
-            <div class="projects1">Projects</div>
+            <div class="popular-exercises">Popular Exercises</div>
+            <div class="see-more-exercises">SEE MORE EXERCISES</div>
           </div>
-          <div class="cards">
-            <div class="bitcoin-price-prediction-parent">
-              <div class="bitcoin-price-prediction">
+          <div class="exercisecards">
+            <div class="column-1">
+              <div class="exercisecard">
                 <img
-                  class="bitcoin-forecast-icon"
+                  class="cardimage-icon"
                   alt=""
-                  src="./public/bitcoin-forecast@2x.png"
+                  src="./public/cardimage@2x.png"
                 />
 
-                <div class="bitcoin-sentiment-analysis-container">
-                  Bitcoin Price Prediction using Temporal Fusion Transformer
+                <div class="text">
+                  <div class="titles">
+                    <div class="popular-exercises">Treadmill</div>
+                    <div class="subtitle">250 est calories</div>
+                  </div>
+                  <div class="duration">
+                    <img
+                      class="duration-child"
+                      alt=""
+                      src="./public/rectangle-10.svg"
+                    />
+
+                    <div class="div">58:24</div>
+                  </div>
                 </div>
               </div>
-              <div class="bitcoin-price-prediction">
-                <img
-                  class="huggingface-light-icon"
-                  alt=""
-                  src="./public/huggingface-light@2x.png"
-                />
+              <div class="exercisecard">
+                <img class="image-icon" alt="" src="./public/image@2x.png" />
 
-                <div class="bitcoin-sentiment-analysis-container">
-                  <p class="greetings-my-name">Bitcoin Sentiment</p>
-                  <p class="greetings-my-name">Analysis with roBERTa</p>
-                </div>
-              </div>
-            </div>
-            <div class="power-bi-parent">
-              <div class="bitcoin-price-prediction">
-                <img
-                  class="power-bi-1"
-                  alt=""
-                  src="./public/power-bi-1@2x.png"
-                />
+                <div class="text">
+                  <div class="titles">
+                    <div class="popular-exercises">Running</div>
+                    <div class="subtitle">250 est calories</div>
+                  </div>
+                  <div class="duration">
+                    <img
+                      class="duration-child"
+                      alt=""
+                      src="./public/rectangle-10.svg"
+                    />
 
-                <div class="bitcoin-sentiment-analysis-container">
-                  Power BI Reports
-                </div>
-              </div>
-              <div class="bitcoin-price-prediction">
-                <img
-                  class="bitcoin-forecast-icon"
-                  alt=""
-                  src="./public/spacex@2x.png"
-                />
-
-                <div class="bitcoin-sentiment-analysis-container">
-                  Course Capstone
+                    <div class="div">58:24</div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="power-bi-parent">
-              <div class="bitcoin-price-prediction">
+            <div class="column-1">
+              <div class="exercisecard2">
                 <img
-                  class="ipoth-1-icon"
+                  class="image-icon"
                   alt=""
-                  src="./public/ipoth-1@2x.png"
+                  src="./public/cardimage@2x.png"
                 />
 
-                <div class="bitcoin-sentiment-analysis-container">
-                  Pot Holes Detection with Computer Vision
+                <div class="text">
+                  <div class="titles">
+                    <div class="popular-exercises">Stretching</div>
+                    <div class="subtitle">250 est calories</div>
+                  </div>
+                  <div class="duration">
+                    <img
+                      class="duration-child"
+                      alt=""
+                      src="./public/rectangle-10.svg"
+                    />
+
+                    <div class="div">58:24</div>
+                  </div>
                 </div>
               </div>
-              <div class="bitcoin-price-prediction">
-                <img
-                  class="huggingface-light-icon"
-                  alt=""
-                  src="./public/image-12@2x.png"
-                />
+              <div class="exercisecard">
+                <img class="image-icon" alt="" src="./public/group-6@2x.png" />
 
-                <div class="bitcoin-sentiment-analysis-container">
-                  Fun Projects
+                <div class="text">
+                  <div class="titles">
+                    <div class="popular-exercises">Lifting</div>
+                    <div class="subtitle">250 est calories</div>
+                  </div>
+                  <div class="duration">
+                    <img
+                      class="duration-child"
+                      alt=""
+                      src="./public/rectangle-10.svg"
+                    />
+
+                    <div class="div">58:24</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column-1">
+              <div class="exercisecard2">
+                <img class="image-icon" alt="" src="./public/group-6@2x.png" />
+
+                <div class="text">
+                  <div class="titles">
+                    <div class="popular-exercises">Yoga</div>
+                    <div class="subtitle">250 est calories</div>
+                  </div>
+                  <div class="duration">
+                    <img
+                      class="duration-child"
+                      alt=""
+                      src="./public/rectangle-10.svg"
+                    />
+
+                    <div class="div">58:24</div>
+                  </div>
+                </div>
+              </div>
+              <div class="exercisecard">
+                <img class="image-icon" alt="" src="./public/group-6@2x.png" />
+
+                <div class="text">
+                  <div class="titles">
+                    <div class="popular-exercises">Pushup</div>
+                    <div class="subtitle">250 est calories</div>
+                  </div>
+                  <div class="duration">
+                    <img
+                      class="duration-child"
+                      alt=""
+                      src="./public/rectangle-10.svg"
+                    />
+
+                    <div class="div">58:24</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="experience">
-        <div class="frame-parent">
-          <div class="nav">
-            <div class="july-dec">Experience</div>
-          </div>
-          <div class="frame-group">
-            <div class="vector-wrapper">
-              <img class="vector-icon" alt="" src="./public/vector.svg" />
+      <div class="trainers1" data-scroll-to="trainers">
+        <div class="trainerscta">
+          <div class="ctaframe">
+            <div class="background"></div>
+            <div class="title4">
+              <h2 class="workout-program-made-container">
+                <p class="workout">Workout</p>
+                <p class="workout">Program</p>
+                <p class="workout">Made</p>
+                <p class="workout">For You</p>
+              </h2>
+              <img class="splash-icon" alt="" src="./public/splash.svg" />
             </div>
-            <div class="frame-container">
-              <div class="frame-wrapper">
-                <div class="frame-div">
-                  <div class="july-dec-2020-wrapper">
-                    <div class="july-dec">July - Dec 2020</div>
-                  </div>
-                  <div class="production-division-intern-container">
-                    <p class="production-division-intern">
-                      Production Division Intern • Badan Pusat Statistik
-                    </p>
-                    <p class="greetings-my-name">
-                      As a Production Division Intern at Badan Pusat Statistik
-                      Kota Tangerang, I've conducted data cleaning for Indonesia
-                      Property Data and Active Company Directory using Microsoft
-                      Excel, calculated employee salaries, and performed data
-                      entry for Supply Chain and Food Marketing Questionnaires
-                      in Tangerang. Additionally, I've automated the making of
-                      envelope front cover.
-                    </p>
-                  </div>
-                </div>
+            <div class="description">
+              <div class="lorem-ipsum-dolor">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua
+                consectetur adipiscing.
               </div>
-              <div class="presents-parent">
-                <div class="july-dec">2024 - Presents</div>
-                <div class="button-download-resume">
-                  <div class="download-resume">Download Resume</div>
-                </div>
-              </div>
+              <button class="button" id="button">
+                <div class="get-started">Get Started</div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="trainersimages">
+          <div class="desktop">
+            <div class="trainer-3">
+              <img
+                class="trainer-3-child"
+                alt=""
+                src="./public/group-142@2x.png"
+              />
+
+              <div class="samantha-william">Samantha William</div>
+              <div class="trainer">Trainer</div>
+            </div>
+            <div class="trainer-2">
+              <img
+                class="trainer-3-child"
+                alt=""
+                src="./public/group-147@2x.png"
+              />
+
+              <div class="samantha-william">Karen Summer</div>
+              <div class="trainer">Trainer</div>
+            </div>
+            <div class="trainer-1">
+              <img
+                class="trainer-1-child"
+                alt=""
+                src="./public/group-146@2x.png"
+              />
+
+              <div class="jonathan-wise">Jonathan Wise</div>
+              <div class="trainer2">Trainer</div>
+            </div>
+          </div>
+          <div class="tablet">
+            <div class="trainer-31">
+              <img
+                class="trainer-3-item"
+                alt=""
+                src="./public/group-147@2x.png"
+              />
+
+              <div class="karen-summer1">Karen Summer</div>
+              <div class="trainer3">Trainer</div>
+            </div>
+            <div class="trainer-21">
+              <img
+                class="trainer-2-item"
+                alt=""
+                src="./public/group-146@2x.png"
+              />
+
+              <div class="jonathan-wise1">Jonathan Wise</div>
+              <div class="trainer4">Trainer</div>
+            </div>
+            <div class="trainer-11">
+              <img
+                class="trainer-1-item"
+                alt=""
+                src="./public/group-142@2x.png"
+              />
+
+              <div class="samantha-william1">Samantha William</div>
+              <div class="trainer5">Trainer</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="footer">
-        <img class="footer-child" alt="" src="./public/vector-2.svg" />
+      <div class="categoriessection">
+        <div class="popularexercises">
+          <div class="category">
+            <div class="div6">01</div>
+            <div class="action">
+              <div class="titles3">
+                <div class="title5">Workout at Home</div>
+                <div class="courses">15 videos</div>
+              </div>
+              <img class="arrow-icon" alt="" src="./public/arrow@2x.png" />
+            </div>
+          </div>
+          <img class="separator-icon" alt="" src="./public/separator.svg" />
 
-        <div class="july-dec">Let’s Connect!</div>
-        <img
-          class="social-media-logo"
-          alt=""
-          src="./public/social-media-logo.svg"
-        />
+          <div class="category">
+            <div class="div6">02</div>
+            <div class="action">
+              <div class="titles3">
+                <div class="title5">Stay Strong and Fit</div>
+                <div class="courses">48 videos</div>
+              </div>
+              <img class="arrow-icon" alt="" src="./public/arrow@2x.png" />
+            </div>
+          </div>
+          <img class="separator-icon" alt="" src="./public/separator.svg" />
+
+          <div class="category">
+            <div class="div6">03</div>
+            <div class="action">
+              <div class="titles3">
+                <div class="title5">High Intensity</div>
+                <div class="courses">48 videos</div>
+              </div>
+              <img class="arrow-icon" alt="" src="./public/arrow@2x.png" />
+            </div>
+          </div>
+          <img class="separator-icon" alt="" src="./public/separator.svg" />
+
+          <div class="category">
+            <div class="div6">04</div>
+            <div class="action">
+              <div class="titles3">
+                <div class="title5">Simple Workout</div>
+                <div class="courses">48 videos</div>
+              </div>
+              <img class="arrow-icon" alt="" src="./public/arrow@2x.png" />
+            </div>
+          </div>
+          <img class="separator-icon" alt="" src="./public/separator.svg" />
+
+          <div class="category">
+            <div class="div6">05</div>
+            <div class="action">
+              <div class="titles3">
+                <div class="title5">Burn Calories</div>
+                <div class="courses">48 videos</div>
+              </div>
+              <img class="arrow-icon" alt="" src="./public/arrow@2x.png" />
+            </div>
+          </div>
+          <img class="separator-icon" alt="" src="./public/separator.svg" />
+        </div>
       </div>
-    </a>
+      <div class="subscribe">
+        <div class="subscribeform">
+          <div class="title10">Get the Newsletter</div>
+          <form class="form" id="formID">
+            <input class="input" placeholder="Email" type="text" />
+
+            <button class="button1" type="submit" form="formID" id="button1">
+              <div class="get-started">Subscribe</div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var logo = document.getElementById("logo");
+      if (logo) {
+        logo.addEventListener("click", function (e) {
+          window.location.href = "fitness-landing-page.html";
+        });
+      }
+      
+      var exercises = document.getElementById("exercises");
+      if (exercises) {
+        exercises.addEventListener("click", function () {
+          var anchor = document.querySelector(
+            "[data-scroll-to='popularExercisesSection']"
+          );
+          if (anchor) {
+            anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+          }
+        });
+      }
+      
+      var trainers1 = document.getElementById("trainers1");
+      if (trainers1) {
+        trainers1.addEventListener("click", function () {
+          var anchor = document.querySelector("[data-scroll-to='trainers']");
+          if (anchor) {
+            anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+          }
+        });
+      }
+      
+      var pricing = document.getElementById("pricing");
+      if (pricing) {
+        pricing.addEventListener("click", function (e) {
+          // Please sync "Page 2" to the project
+        });
+      }
+      
+      var login = document.getElementById("login");
+      if (login) {
+        login.addEventListener("click", function (e) {
+          // Please sync "Page 2" to the project
+        });
+      }
+      
+      var button = document.getElementById("button");
+      if (button) {
+        button.addEventListener("click", function (e) {
+          // Please sync "Page 2" to the project
+        });
+      }
+      
+      var button1 = document.getElementById("button1");
+      if (button1) {
+        button1.addEventListener("click", function (e) {
+          // Please sync "Page 2" to the project
+        });
+      }
+      </script>
   </body>
 </html>
