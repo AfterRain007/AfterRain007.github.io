@@ -104,7 +104,11 @@
                 </div>
               </div>
               <div class="bitcoin-price-prediction">
-                <img class="spacex-icon" alt="" src="./public/spacex@2x.png" />
+                <img
+                  class="spacex-1-icon"
+                  alt=""
+                  src="./public/spacex-1@2x.png"
+                />
 
                 <div class="bitcoin-sentiment-analysis-container">
                   Course Capstone
@@ -183,12 +187,68 @@
         <img class="footer-child" alt="" src="./public/vector-2.svg" />
 
         <div class="lets-connect">Let’s Connect!</div>
-        <img
-          class="social-media-logo"
-          alt=""
-          src="./public/social-media-logo.svg"
-        />
+        <div class="social-media-logo">
+          <img
+            class="vector-icon1"
+            alt=""
+            src="./public/vector.svg"
+            id="vectorIcon"
+          />
+
+          <img
+            class="subtract-icon"
+            alt=""
+            src="./public/subtract.svg"
+            id="subtract"
+          />
+
+          <img
+            class="vector-icon2"
+            alt=""
+            src="./public/vector.svg"
+            id="vectorIcon1"
+          />
+
+          <img
+            class="in-white-722x-1-icon"
+            alt=""
+            src="./public/inwhite722x-1@2x.png"
+            id="inWhite722x1Icon"
+          />
+        </div>
       </div>
     </a>
+
+    <script>
+      var vectorIcon = document.getElementById("vectorIcon");
+      if (vectorIcon) {
+        vectorIcon.addEventListener("click", function () {
+          window.open("instagram.com/razel007");
+        });
+      }
+      
+      var subtract = document.getElementById("subtract");
+      if (subtract) {
+        subtract.addEventListener("click", function () {
+          window.open("https://www.youtube.com/channel/UCnXjOLs6aAcXxSYTzHM3uYQ");
+        });
+      }
+      
+      var vectorIcon1 = document.getElementById("vectorIcon1");
+      if (vectorIcon1) {
+        vectorIcon1.addEventListener("click", function () {
+          window.open("Github.com/afterrain007");
+        });
+      }
+      
+      var inWhite722x1Icon = document.getElementById("inWhite722x1Icon");
+      if (inWhite722x1Icon) {
+        inWhite722x1Icon.addEventListener("click", function () {
+          window.open(
+            "https://www.linkedin.com/in/gilang-islamay-putra-djuharis-842196259/"
+          );
+        });
+      }
+      </script>
   </body>
 </html>
