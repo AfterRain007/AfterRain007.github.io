@@ -350,11 +350,11 @@
 }
 .footer,
 .home-new {
+  overflow: hidden;
   flex-direction: column;
 }
 .footer {
   width: 1438px;
-  overflow: hidden;
   padding: var(--padding-31xl) 124px;
   box-sizing: border-box;
   gap: 68px;
