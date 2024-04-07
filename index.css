@@ -29,7 +29,7 @@
   justify-content: center;
 }
 .navbar {
-  width: 1438px;
+  width: 1917px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -43,7 +43,7 @@
   letter-spacing: 0.05em;
 }
 .hero {
-  width: 1436px;
+  width: 1913px;
   height: 700px;
   overflow: hidden;
   flex-shrink: 0;
@@ -83,112 +83,91 @@
 .pp-1-parent {
   align-self: stretch;
   flex-direction: row;
-  padding: var(--padding-31xl) var(--padding-131xl);
+  padding: var(--padding-31xl) 150px;
   gap: var(--gap-9xl);
 }
 .introduction {
-  width: 1440px;
+  width: 1920px;
   overflow: hidden;
   flex-direction: column;
+  padding: 0 var(--padding-181xl);
+  box-sizing: border-box;
   text-align: justify;
   font-size: var(--font-size-xl);
   font-family: var(--font-montserrat);
 }
-.projects1 {
+.projects {
   width: 1138px;
   position: relative;
   display: inline-block;
   flex-shrink: 0;
 }
-.price-overall-1 {
-  width: 349px;
+.spacex-1-icon {
+  width: 300px;
   position: relative;
-  border-radius: var(--br-6xl);
-  height: 196px;
+  height: 169px;
   object-fit: cover;
 }
-.bitcoin-price-prediction {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-xl);
-}
-.huggingface-light-icon {
-  width: 350px;
-  position: relative;
-  border-radius: var(--br-5xl);
-  height: 196.7px;
-  object-fit: cover;
-}
-.bitcoin-sentiment-analysis-container {
-  width: 350px;
+.course-capstone {
+  width: 300px;
   position: relative;
   font-weight: 900;
   display: inline-block;
   height: 47px;
   flex-shrink: 0;
 }
-.bitcoin-price-prediction-parent {
+.courses {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--gap-25xl);
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
 }
-.power-bi-1,
-.spacex-1-icon {
-  width: 349px;
+.image-12-icon,
+.price-overall-1 {
+  width: 300px;
   position: relative;
-  border-radius: var(--br-5xl);
-  height: 196px;
+  height: 168px;
   object-fit: cover;
 }
-.spacex-1-icon {
-  width: 350px;
-  border-radius: var(--br-6xl);
-  height: 198px;
+.price-overall-1 {
+  width: 299px;
+  height: 167px;
 }
-.power-bi-parent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--gap-25xl);
-}
-.ipoth-1-icon {
-  width: 350px;
+.power-bi-reports {
+  width: 299px;
   position: relative;
-  border-radius: var(--br-5xl);
-  height: 197.1px;
-  object-fit: cover;
+  font-weight: 900;
+  display: inline-block;
+  height: 47px;
+  flex-shrink: 0;
 }
-.cards,
-.projects,
-.title-parent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.cards {
+.fashioncards {
   align-self: stretch;
+  display: flex;
   flex-direction: row;
-  gap: var(--gap-25xl);
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 50px 150px;
   font-size: var(--font-size-xl);
   font-family: var(--font-montserrat);
 }
-.projects,
-.title-parent {
+.new-arrivals,
+.newarrivalssection {
+  align-self: stretch;
+  display: flex;
   flex-direction: column;
 }
-.title-parent {
-  align-self: stretch;
-  gap: 25px;
+.new-arrivals {
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 76px;
 }
-.projects {
-  width: 1438px;
-  padding: var(--padding-31xl) var(--padding-131xl);
-  box-sizing: border-box;
+.newarrivalssection {
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-31xl) var(--padding-181xl);
 }
 .vector-icon {
   width: 37px;
@@ -215,7 +194,7 @@
   font-weight: 900;
 }
 .production-division-intern-container {
-  height: 144px;
+  height: 120px;
   flex: 1;
   position: relative;
   text-align: justify;
@@ -300,9 +279,9 @@
   gap: var(--gap-9xl);
 }
 .experience {
-  width: 1438px;
+  width: 1917px;
   overflow: hidden;
-  padding: var(--padding-31xl) var(--padding-131xl);
+  padding: var(--padding-31xl) 350px;
   box-sizing: border-box;
 }
 .footer-child {
@@ -354,7 +333,7 @@
   flex-direction: column;
 }
 .footer {
-  width: 1438px;
+  width: 1917px;
   padding: var(--padding-31xl) 124px;
   box-sizing: border-box;
   gap: 68px;
@@ -386,6 +365,7 @@
   .greetings-my-name-container {
     font-size: 24px;
     flex: 1;
+    min-width: 0;
   }
   .greetings-my-name-is-gilang-i-wrapper {
     flex: unset;
@@ -403,26 +383,10 @@
     padding-right: var(--padding-31xl);
     box-sizing: border-box;
   }
-  .bitcoin-price-prediction-parent,
-  .power-bi-parent {
-    flex-direction: row;
-  }
-  .cards {
-    align-self: stretch;
-    width: auto;
-    flex: 1;
-    flex-direction: column;
-    gap: 50px 44px;
+  .fashioncards {
     align-items: center;
-    justify-content: space-between;
-  }
-  .title-parent {
-    align-items: center;
-    justify-content: center;
-  }
-  .projects,
-  .title-parent {
-    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 960px) {
@@ -434,19 +398,27 @@
     padding-right: var(--padding-21xl);
     box-sizing: border-box;
   }
-  .bitcoin-price-prediction-parent,
-  .cards,
-  .power-bi-parent,
-  .title-parent {
-    flex-direction: column;
+  .fashioncards {
+    align-items: center;
+    justify-content: center;
+  }
+  .newarrivalssection {
+    padding-right: 78px;
+    box-sizing: border-box;
   }
 }
 @media screen and (max-width: 420px) {
   .navbar {
-    padding: 30px 20px;
+    padding: 30px var(--padding-xl);
     box-sizing: border-box;
   }
-  .bitcoin-price-prediction-parent {
-    gap: var(--gap-25xl);
+  .fashioncards {
+    align-items: center;
+    justify-content: center;
+  }
+  .newarrivalssection {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
   }
 }
