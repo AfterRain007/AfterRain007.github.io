@@ -1,58 +1,55 @@
-.exercises {
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  background-color: transparent;
+.home,
+.resume {
   position: relative;
-  font-size: var(--font-size-13xl);
   letter-spacing: 1.5px;
-  line-height: 12px;
-  font-family: var(--font-venite-adoremus);
-  color: var(--color-white);
-  text-align: left;
-  display: inline-block;
 }
-.menulinks-large {
-  gap: 50px;
+.resume {
+  cursor: pointer;
 }
 .menulinks-large,
-.menuright,
-.nav {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.nav {
+.navbar {
   align-self: stretch;
+  display: flex;
   align-items: center;
   justify-content: center;
+}
+.menulinks-large {
+  flex-direction: row;
+  gap: var(--gap-31xl);
 }
 .navbar {
-  width: 1917px;
-  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 53px 120px;
-  box-sizing: border-box;
+  padding: var(--padding-31xl) var(--padding-131xl);
 }
 .welcome-to-my {
-  align-self: stretch;
   position: relative;
-  letter-spacing: 0.05em;
+  letter-spacing: 1.75px;
 }
-.hero {
-  width: 1913px;
-  height: 700px;
-  overflow: hidden;
-  flex-shrink: 0;
+.welcome-to-my-portfolio-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 0 0 222px;
-  box-sizing: border-box;
+  padding: 295px 0 414px;
+}
+.hero,
+.starting-point {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero {
+  overflow: hidden;
+  flex-direction: row;
+  font-size: 55px;
+}
+.starting-point {
+  flex-direction: column;
+  background-image: url(./public/starting-point@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 .pp-1-icon {
   width: 231px;
@@ -67,34 +64,24 @@
   flex: 1;
   position: relative;
 }
-.greetings-my-name-is-gilang-i-wrapper {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
 .introduction,
-.pp-1-parent {
+.new-arrivals {
+  align-self: stretch;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
-.pp-1-parent {
-  align-self: stretch;
+.new-arrivals {
   flex-direction: row;
-  padding: var(--padding-31xl) 150px;
-  gap: var(--gap-9xl);
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 75px;
 }
 .introduction {
-  width: 1920px;
-  overflow: hidden;
   flex-direction: column;
-  padding: 0 var(--padding-181xl);
-  box-sizing: border-box;
+  justify-content: center;
+  padding: var(--padding-31xl) var(--padding-131xl);
   text-align: justify;
   font-size: var(--font-size-xl);
-  font-family: var(--font-montserrat);
 }
 .projects {
   width: 1138px;
@@ -102,83 +89,142 @@
   display: inline-block;
   flex-shrink: 0;
 }
+.title {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 .spacex-1-icon {
-  width: 300px;
+  width: 350px;
+  height: 197.2px;
   position: relative;
-  height: 169px;
   object-fit: cover;
 }
 .course-capstone {
-  width: 300px;
+  align-self: stretch;
+  flex: 1;
   position: relative;
   font-weight: 900;
-  display: inline-block;
-  height: 47px;
-  flex-shrink: 0;
 }
 .courses {
+  height: 292.3px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: var(--gap-xl);
 }
-.image-12-icon,
-.price-overall-1 {
-  width: 300px;
+.ipoth-1-icon {
+  width: 350px;
   position: relative;
-  height: 168px;
+  height: 197.2px;
   object-fit: cover;
 }
-.price-overall-1 {
-  width: 299px;
-  height: 167px;
+.ipoth {
+  height: 292.3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xl);
 }
-.power-bi-reports {
-  width: 299px;
+.image-12-icon {
+  width: 350px;
   position: relative;
-  font-weight: 900;
-  display: inline-block;
-  height: 47px;
-  flex-shrink: 0;
+  height: 196px;
+  object-fit: cover;
 }
-.fashioncards {
+.courses1 {
+  height: 291px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xl);
+}
+.price-overall-1 {
+  width: 350px;
+  position: relative;
+  height: 194.8px;
+  object-fit: cover;
+}
+.bitcoin-price-prediction {
+  height: 289.7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xl);
+}
+.power-bi-1 {
+  width: 350px;
+  position: relative;
+  height: 195.5px;
+  object-fit: cover;
+}
+.power-bi {
+  height: 290.4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xl);
+}
+.fashioncards,
+.newarrivalssection {
   align-self: stretch;
   display: flex;
+  align-items: center;
+}
+.fashioncards {
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: space-around;
-  gap: 50px 150px;
+  gap: var(--gap-31xl);
   font-size: var(--font-size-xl);
   font-family: var(--font-montserrat);
 }
-.new-arrivals,
 .newarrivalssection {
-  align-self: stretch;
-  display: flex;
   flex-direction: column;
-}
-.new-arrivals {
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 76px;
-}
-.newarrivalssection {
-  align-items: center;
   justify-content: center;
-  padding: var(--padding-31xl) var(--padding-181xl);
+  padding: var(--padding-31xl) var(--padding-131xl);
+  font-family: var(--font-venite-adoremus);
 }
-.vector-icon {
-  width: 37px;
+.experience1 {
+  flex: 1;
   position: relative;
-  height: 273px;
 }
-.vector-wrapper {
+.experience-wrapper {
+  align-self: stretch;
+  height: 149.5px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+}
+.frame-child,
+.frame-item {
+  position: relative;
+  background-color: var(--color-white);
+}
+.frame-child {
+  width: 35px;
+  border-radius: 50%;
+  height: 35px;
+}
+.frame-item {
+  width: 2px;
+  flex: 1;
+}
+.ellipse-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .july-dec {
   position: relative;
@@ -194,27 +240,19 @@
   font-weight: 900;
 }
 .production-division-intern-container {
-  height: 120px;
+  height: 168px;
   flex: 1;
   position: relative;
   text-align: justify;
   display: inline-block;
 }
-.frame-div,
-.frame-wrapper {
+.frame-container {
   align-self: stretch;
   display: flex;
-}
-.frame-div {
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
   gap: var(--gap-2xl);
-}
-.frame-wrapper {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 .download-resume {
   position: relative;
@@ -238,59 +276,51 @@
   background-color: #d8d1ff;
   cursor: pointer;
 }
-.frame-container,
+.frame-group,
 .presents-parent {
   display: flex;
   justify-content: flex-start;
 }
 .presents-parent {
-  flex-direction: row;
-  align-items: center;
-  gap: var(--gap-2xl);
-}
-.frame-container {
-  flex: 1;
-  height: 267px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 83px;
-}
-.experience,
-.frame-group,
-.frame-parent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.frame-group {
   align-self: stretch;
   flex-direction: row;
+  align-items: center;
   gap: var(--gap-2xl);
+}
+.frame-group {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 100px;
+}
+.experience,
+.frame-parent {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+.frame-parent {
+  flex-direction: row;
+  justify-content: space-around;
+  gap: var(--gap-2xl);
+  flex-wrap: wrap;
   text-align: left;
   font-size: var(--font-size-xl);
   font-family: var(--font-montserrat);
 }
-.experience,
-.frame-parent {
-  flex-direction: column;
-}
-.frame-parent {
-  align-self: stretch;
-  gap: var(--gap-9xl);
-}
 .experience {
-  width: 1917px;
-  overflow: hidden;
-  padding: var(--padding-31xl) 350px;
-  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 var(--padding-131xl) var(--padding-31xl);
+  font-family: var(--font-venite-adoremus);
 }
-.footer-child {
+.vector-icon {
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
 }
-.footer-child,
-.lets-connect {
+.lets-connect,
+.vector-icon {
   align-self: stretch;
   position: relative;
 }
@@ -316,77 +346,101 @@
   width: 45px;
   object-fit: cover;
 }
-.footer,
-.home-new,
-.social-media-logo {
+.social-media-logo,
+.vector-parent {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .social-media-logo {
   flex-direction: row;
-  gap: 24px;
+  gap: 25px;
 }
-.footer,
-.home-new {
-  overflow: hidden;
+.vector-parent {
+  align-self: stretch;
   flex-direction: column;
+  gap: var(--gap-31xl);
 }
 .footer {
-  width: 1917px;
-  padding: var(--padding-31xl) 124px;
-  box-sizing: border-box;
-  gap: 68px;
+  align-self: stretch;
+  overflow: hidden;
+  padding: var(--padding-31xl) 0;
   font-size: 36px;
+}
+.content,
+.footer,
+.home-new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  align-self: stretch;
+  background-image: url(./public/content@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  font-size: var(--font-size-29xl);
   font-family: var(--font-montserrat);
 }
 .home-new {
   text-decoration: none;
   width: 100%;
   position: relative;
-  background-image: url(./public/home-new@3x.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
+  background-color: #03060d;
+  overflow: hidden;
   text-align: center;
-  font-size: var(--font-size-29xl);
+  font-size: var(--font-size-13xl);
   color: var(--color-white);
   font-family: var(--font-venite-adoremus);
 }
 @media screen and (max-width: 1200px) {
   .menulinks-large {
     display: flex;
+    font-size: 80%;
   }
   .navbar {
     padding-left: var(--padding-41xl);
     padding-right: var(--padding-41xl);
     box-sizing: border-box;
   }
+  .welcome-to-my {
+    font-size: 80%;
+  }
+  .pp-1-icon {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 173.25px;
+    width: 173.25px;
+  }
   .greetings-my-name-container {
-    font-size: 24px;
+    font-size: 75%;
     flex: 1;
     min-width: 0;
   }
-  .greetings-my-name-is-gilang-i-wrapper {
-    flex: unset;
-    align-self: stretch;
+  .projects {
+    font-size: 80%;
   }
-  .introduction,
-  .pp-1-parent {
-    flex-direction: column;
-  }
-  .introduction {
-    align-items: center;
-    justify-content: space-between;
-    gap: 0;
-    padding-left: var(--padding-31xl);
-    padding-right: var(--padding-31xl);
-    box-sizing: border-box;
+  .bitcoin-price-prediction,
+  .courses,
+  .courses1,
+  .ipoth,
+  .power-bi {
+    scale: 75%;
   }
   .fashioncards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap-31xl);
     align-items: center;
     justify-content: space-around;
-    flex-wrap: wrap;
+    scale: 75%;
+  }
+  .newarrivalssection {
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
   }
 }
 @media screen and (max-width: 960px) {
@@ -398,18 +452,29 @@
     padding-right: var(--padding-21xl);
     box-sizing: border-box;
   }
+  .introduction {
+    padding-right: 78px;
+    box-sizing: border-box;
+  }
   .fashioncards {
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    scale: 75%;
   }
   .newarrivalssection {
-    padding-right: 78px;
+    padding-right: 0;
     box-sizing: border-box;
   }
 }
 @media screen and (max-width: 420px) {
   .navbar {
     padding: 30px var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .introduction {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
     box-sizing: border-box;
   }
   .fashioncards {
