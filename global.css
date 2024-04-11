@@ -18,13 +18,14 @@ body {
 
   /* Gaps */
   --gap-31xl: 50px;
+  --gap-6xl: 25px;
   --gap-2xl: 21px;
   --gap-xl: 20px;
 
   /* Paddings */
+  --padding-56xl: 75px;
+  --padding-6xl: 25px;
   --padding-31xl: 50px;
-  --padding-131xl: 150px;
   --padding-xl: 20px;
-  --padding-41xl: 60px;
   --padding-21xl: 40px;
 }

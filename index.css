@@ -6,6 +6,12 @@
 .resume {
   cursor: pointer;
 }
+.vector-icon {
+  height: 30px;
+  width: 50px;
+  position: relative;
+  display: none;
+}
 .menulinks-large,
 .navbar {
   align-self: stretch;
@@ -19,32 +25,31 @@
 }
 .navbar {
   flex-direction: column;
-  padding: var(--padding-31xl) var(--padding-131xl);
+  padding: var(--padding-31xl) 0;
 }
 .welcome-to-my {
   position: relative;
-  letter-spacing: 1.75px;
+  letter-spacing: 1.5px;
 }
-.welcome-to-my-portfolio-wrapper {
-  display: flex;
+.menulinks-large1 {
+  align-self: stretch;
+  width: 1620px;
   flex-direction: row;
+}
+.menulinks-large-wrapper,
+.menulinks-large1,
+.starting-point {
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 295px 0 414px;
 }
-.hero,
+.menulinks-large-wrapper {
+  flex-direction: row;
+  padding: 286px 0 414px;
+  font-size: 54px;
+}
 .starting-point {
   align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hero {
-  overflow: hidden;
-  flex-direction: row;
-  font-size: 55px;
-}
-.starting-point {
   flex-direction: column;
   background-image: url(./public/starting-point@3x.png);
   background-size: cover;
@@ -79,11 +84,11 @@
 .introduction {
   flex-direction: column;
   justify-content: center;
-  padding: var(--padding-31xl) var(--padding-131xl);
+  padding: var(--padding-31xl) 0;
   text-align: justify;
   font-size: var(--font-size-xl);
 }
-.projects {
+.projects1 {
   width: 1138px;
   position: relative;
   display: inline-block;
@@ -96,35 +101,22 @@
   align-items: center;
   justify-content: center;
 }
-.spacex-1-icon {
+.spacex-2-icon {
   width: 350px;
-  height: 197.2px;
+  height: 197px;
   position: relative;
-  object-fit: cover;
+  object-fit: contain;
 }
 .course-capstone {
   align-self: stretch;
-  flex: 1;
   position: relative;
   font-weight: 900;
+  display: inline-block;
+  height: 75.2px;
+  flex-shrink: 0;
 }
-.courses {
-  height: 292.3px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--gap-xl);
-}
-.ipoth-1-icon {
-  width: 350px;
-  position: relative;
-  height: 197.2px;
-  object-fit: cover;
-}
+.courses,
 .ipoth {
-  height: 292.3px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -133,64 +125,75 @@
 }
 .image-12-icon {
   width: 350px;
-  position: relative;
   height: 196px;
-  object-fit: cover;
+  position: relative;
+  object-fit: contain;
 }
-.courses1 {
-  height: 291px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--gap-xl);
+.fun-projects {
+  align-self: stretch;
+  position: relative;
+  font-weight: 900;
+  display: inline-block;
+  height: 75px;
+  flex-shrink: 0;
 }
 .price-overall-1 {
   width: 350px;
-  position: relative;
   height: 194.8px;
-  object-fit: cover;
+  position: relative;
+  object-fit: contain;
+}
+.bitcoin-price-prediction-container {
+  align-self: stretch;
+  position: relative;
+  font-weight: 900;
+  display: inline-block;
+  height: 74.8px;
+  flex-shrink: 0;
 }
 .bitcoin-price-prediction {
-  height: 289.7px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: var(--gap-xl);
 }
+.huggingface-light-icon,
 .power-bi-1 {
   width: 350px;
+  height: 197.2px;
   position: relative;
-  height: 195.5px;
-  object-fit: cover;
+  object-fit: contain;
 }
-.power-bi {
-  height: 290.4px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--gap-xl);
+.power-bi-1 {
+  height: 195.5px;
+}
+.power-bi-reports {
+  align-self: stretch;
+  position: relative;
+  font-weight: 900;
+  display: inline-block;
+  height: 74.9px;
+  flex-shrink: 0;
 }
 .fashioncards,
-.newarrivalssection {
+.projects {
   align-self: stretch;
   display: flex;
   align-items: center;
+  gap: var(--gap-31xl);
 }
 .fashioncards {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: var(--gap-31xl);
   font-size: var(--font-size-xl);
   font-family: var(--font-montserrat);
 }
-.newarrivalssection {
+.projects {
   flex-direction: column;
   justify-content: center;
-  padding: var(--padding-31xl) var(--padding-131xl);
+  padding: var(--padding-31xl) 0;
   font-family: var(--font-venite-adoremus);
 }
 .experience1 {
@@ -199,7 +202,6 @@
 }
 .experience-wrapper {
   align-self: stretch;
-  height: 149.5px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -240,7 +242,7 @@
   font-weight: 900;
 }
 .production-division-intern-container {
-  height: 168px;
+  height: 96px;
   flex: 1;
   position: relative;
   text-align: justify;
@@ -254,6 +256,14 @@
   justify-content: flex-start;
   gap: var(--gap-2xl);
 }
+.frame-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0 0;
+}
 .download-resume {
   position: relative;
   line-height: 90%;
@@ -262,12 +272,12 @@
 .button-download-resume {
   border-radius: 20px;
   background-color: var(--color-white);
-  height: 45px;
+  height: 34px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 19px 12px;
+  padding: 0 12px;
   box-sizing: border-box;
   text-align: center;
   color: #000;
@@ -291,7 +301,7 @@
   flex: 1;
   flex-direction: column;
   align-items: flex-start;
-  gap: 100px;
+  gap: var(--gap-31xl);
 }
 .experience,
 .frame-parent {
@@ -302,7 +312,7 @@
 .frame-parent {
   flex-direction: row;
   justify-content: space-around;
-  gap: var(--gap-2xl);
+  gap: var(--gap-6xl);
   flex-wrap: wrap;
   text-align: left;
   font-size: var(--font-size-xl);
@@ -311,16 +321,17 @@
 .experience {
   flex-direction: column;
   justify-content: center;
-  padding: 0 var(--padding-131xl) var(--padding-31xl);
+  padding: var(--padding-31xl) 0;
+  gap: var(--gap-31xl);
   font-family: var(--font-venite-adoremus);
 }
-.vector-icon {
+.frame-child1 {
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
 }
-.lets-connect,
-.vector-icon {
+.frame-child1,
+.lets-connect {
   align-self: stretch;
   position: relative;
 }
@@ -349,12 +360,10 @@
 .social-media-logo,
 .vector-parent {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-}
-.social-media-logo {
-  flex-direction: row;
-  gap: 25px;
+  gap: var(--gap-6xl);
 }
 .vector-parent {
   align-self: stretch;
@@ -377,6 +386,7 @@
 }
 .content {
   align-self: stretch;
+  padding: 0 125px;
   background-image: url(./public/content@3x.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -395,95 +405,271 @@
   color: var(--color-white);
   font-family: var(--font-venite-adoremus);
 }
+@media screen and (max-width: 1440px) {
+  .navbar {
+    padding-top: var(--padding-31xl);
+    padding-bottom: var(--padding-31xl);
+    box-sizing: border-box;
+  }
+  .navbar,
+  .welcome-to-my {
+    font-size: 75%;
+  }
+  .menulinks-large-wrapper {
+    padding-top: 185px;
+    padding-bottom: 310px;
+    box-sizing: border-box;
+  }
+  .pp-1-icon {
+    width: 175px;
+    height: 175px;
+  }
+  .greetings-my-name-container,
+  .title {
+    font-size: 75%;
+  }
+  .image-12-icon,
+  .price-overall-1,
+  .spacex-2-icon {
+    width: 262px;
+    height: 147px;
+  }
+  .bitcoin-price-prediction {
+    font-size: 75%;
+  }
+  .huggingface-light-icon,
+  .power-bi-1 {
+    width: 262px;
+    height: 147px;
+  }
+  .fashioncards {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 30%;
+  }
+  .projects {
+    padding: var(--padding-6xl) 0;
+    box-sizing: border-box;
+    max-width: 1440px;
+  }
+  .experience-wrapper,
+  .frame-container,
+  .presents-parent {
+    font-size: 75%;
+  }
+  .experience {
+    padding-top: var(--padding-6xl);
+    padding-bottom: var(--padding-6xl);
+    box-sizing: border-box;
+  }
+}
 @media screen and (max-width: 1200px) {
   .menulinks-large {
     display: flex;
-    font-size: 80%;
   }
-  .navbar {
-    padding-left: var(--padding-41xl);
-    padding-right: var(--padding-41xl);
+  .navbar,
+  .welcome-to-my {
+    font-size: 65%;
+  }
+  .menulinks-large1 {
+    display: flex;
+  }
+  .menulinks-large-wrapper {
+    padding-top: 150px;
+    padding-bottom: 250px;
     box-sizing: border-box;
   }
-  .welcome-to-my {
-    font-size: 80%;
-  }
   .pp-1-icon {
-    flex-wrap: wrap;
-    justify-content: space-around;
-    height: 173.25px;
-    width: 173.25px;
+    width: 150px;
+    height: 150px;
   }
   .greetings-my-name-container {
-    font-size: 75%;
+    font-size: 70%;
     flex: 1;
     min-width: 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
-  .projects {
+  .projects1 {
     font-size: 80%;
   }
-  .bitcoin-price-prediction,
-  .courses,
-  .courses1,
-  .ipoth,
-  .power-bi {
-    scale: 75%;
+  .image-12-icon,
+  .spacex-2-icon {
+    width: 245px;
+    height: 138px;
+    object-fit: contain;
+  }
+  .huggingface-light-icon,
+  .power-bi-1,
+  .price-overall-1 {
+    width: 245px;
+    height: 138px;
   }
   .fashioncards {
-    flex-direction: row;
-    flex-wrap: wrap;
     gap: var(--gap-31xl);
-    align-items: center;
-    justify-content: space-around;
-    scale: 75%;
+    font-size: 27%;
+    row-gap: 0;
   }
-  .newarrivalssection {
+  .projects {
     padding-left: 0;
     padding-right: 0;
     box-sizing: border-box;
   }
 }
 @media screen and (max-width: 960px) {
+  .home,
+  .resume {
+    display: none;
+  }
+  .vector-icon {
+    display: flex;
+    height: 30px;
+  }
   .menulinks-large {
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 65%;
   }
   .navbar {
     padding-left: var(--padding-21xl);
     padding-right: var(--padding-21xl);
     box-sizing: border-box;
   }
-  .introduction {
-    padding-right: 78px;
+  .welcome-to-my {
+    font-size: 55%;
+  }
+  .menulinks-large1 {
+    display: flex;
+  }
+  .menulinks-large-wrapper {
+    padding-top: 85px;
+    padding-bottom: 205px;
     box-sizing: border-box;
   }
-  .fashioncards {
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    scale: 75%;
+  .greetings-my-name-container {
+    text-align: center;
+    flex: unset;
+    align-self: stretch;
   }
-  .newarrivalssection {
-    padding-right: 0;
+  .new-arrivals {
+    align-self: stretch;
+    width: auto;
+    flex-direction: column;
+    gap: var(--gap-6xl);
+  }
+  .introduction {
+    padding: var(--padding-6xl) 0;
+    box-sizing: border-box;
+  }
+  .huggingface-light-icon,
+  .image-12-icon,
+  .power-bi-1,
+  .price-overall-1,
+  .spacex-2-icon {
+    width: 210px;
+    height: 119px;
+  }
+  .fashioncards {
+    gap: var(--gap-31xl);
+    font-size: 27%;
+    row-gap: 0;
+  }
+  .projects {
+    padding: var(--padding-6xl) 35px;
+    box-sizing: border-box;
+  }
+  .experience,
+  .footer {
+    padding-top: var(--padding-6xl);
+    padding-bottom: var(--padding-6xl);
+    box-sizing: border-box;
+  }
+  .content {
+    padding-left: var(--padding-56xl);
+    padding-right: var(--padding-56xl);
     box-sizing: border-box;
   }
 }
 @media screen and (max-width: 420px) {
+  .home,
+  .resume {
+    display: none;
+  }
+  .vector-icon {
+    display: flex;
+    width: 30px;
+    height: 15px;
+  }
+  .menulinks-large {
+    align-items: center;
+    justify-content: flex-end;
+  }
   .navbar {
     padding: 30px var(--padding-xl);
     box-sizing: border-box;
   }
+  .welcome-to-my {
+    font-size: 25%;
+  }
+  .menulinks-large-wrapper {
+    padding-top: 0;
+    padding-bottom: 103px;
+    box-sizing: border-box;
+  }
+  .pp-1-icon {
+    width: 100px;
+    height: 100px;
+  }
+  .greetings-my-name-container {
+    text-align: center;
+    font-size: 50%;
+    flex: unset;
+    align-self: stretch;
+  }
+  .new-arrivals {
+    flex-direction: column;
+    gap: var(--gap-6xl);
+  }
   .introduction {
     padding-left: var(--padding-xl);
     padding-right: var(--padding-xl);
+    padding-bottom: var(--padding-31xl);
     box-sizing: border-box;
+  }
+  .spacex-2-icon {
+    width: 179px;
+    height: 99px;
+  }
+  .courses {
+    gap: var(--gap-xl);
+  }
+  .huggingface-light-icon,
+  .image-12-icon,
+  .power-bi-1,
+  .price-overall-1 {
+    width: 175px;
+    height: 99px;
   }
   .fashioncards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap-31xl);
     align-items: center;
     justify-content: center;
+    font-size: 27%;
+    row-gap: 0;
   }
-  .newarrivalssection {
-    padding-left: var(--padding-xl);
-    padding-right: var(--padding-xl);
+  .content,
+  .projects {
     box-sizing: border-box;
+  }
+  .projects {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .content {
+    padding-left: var(--padding-6xl);
+    padding-right: var(--padding-6xl);
   }
 }
