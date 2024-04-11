@@ -1,3 +1,13 @@
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .home,
 .resume {
   position: relative;
@@ -6,11 +16,21 @@
 .resume {
   cursor: pointer;
 }
+.vector,
 .vector-icon {
-  height: 30px;
+  position: absolute;
   width: 50px;
-  position: relative;
+  height: 30px;
   display: none;
+}
+.vector {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  height: 0;
+  width: 0;
+  position: relative;
 }
 .menulinks-large,
 .navbar {
@@ -28,33 +48,31 @@
   padding: var(--padding-31xl) 0;
 }
 .welcome-to-my {
+  height: 58px;
+  flex: 1;
   position: relative;
   letter-spacing: 1.5px;
+  display: inline-block;
 }
-.menulinks-large1 {
+.starting-point,
+.welcome-to-my-portfolio-wrapper {
   align-self: stretch;
-  width: 1620px;
-  flex-direction: row;
-}
-.menulinks-large-wrapper,
-.menulinks-large1,
-.starting-point {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.menulinks-large-wrapper {
+.welcome-to-my-portfolio-wrapper {
   flex-direction: row;
   padding: 286px 0 414px;
-  font-size: 54px;
-}
-.starting-point {
-  align-self: stretch;
-  flex-direction: column;
-  background-image: url(./public/starting-point@3x.png);
+  background-image: url(./public/frame-49@3x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
+  font-size: var(--font-size-29xl);
+}
+.starting-point {
+  background-color: var(--color-gray);
+  flex-direction: column;
 }
 .pp-1-icon {
   width: 231px;
@@ -84,11 +102,11 @@
 .introduction {
   flex-direction: column;
   justify-content: center;
-  padding: var(--padding-31xl) 0;
   text-align: justify;
   font-size: var(--font-size-xl);
 }
 .projects1 {
+  height: 58px;
   width: 1138px;
   position: relative;
   display: inline-block;
@@ -111,9 +129,6 @@
   align-self: stretch;
   position: relative;
   font-weight: 900;
-  display: inline-block;
-  height: 75.2px;
-  flex-shrink: 0;
 }
 .courses,
 .ipoth {
@@ -121,42 +136,24 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--gap-xl);
+  gap: var(--gap-3xs);
 }
-.image-12-icon {
+.image-12-icon,
+.price-overall-1 {
   width: 350px;
   height: 196px;
   position: relative;
   object-fit: contain;
 }
-.fun-projects {
-  align-self: stretch;
-  position: relative;
-  font-weight: 900;
-  display: inline-block;
-  height: 75px;
-  flex-shrink: 0;
-}
 .price-overall-1 {
-  width: 350px;
   height: 194.8px;
-  position: relative;
-  object-fit: contain;
-}
-.bitcoin-price-prediction-container {
-  align-self: stretch;
-  position: relative;
-  font-weight: 900;
-  display: inline-block;
-  height: 74.8px;
-  flex-shrink: 0;
 }
 .bitcoin-price-prediction {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--gap-xl);
+  gap: var(--gap-3xs);
 }
 .huggingface-light-icon,
 .power-bi-1 {
@@ -168,44 +165,31 @@
 .power-bi-1 {
   height: 195.5px;
 }
-.power-bi-reports {
-  align-self: stretch;
-  position: relative;
-  font-weight: 900;
-  display: inline-block;
-  height: 74.9px;
-  flex-shrink: 0;
-}
 .fashioncards,
 .projects {
   align-self: stretch;
   display: flex;
-  align-items: center;
   gap: var(--gap-31xl);
 }
 .fashioncards {
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: space-around;
   font-size: var(--font-size-xl);
   font-family: var(--font-montserrat);
 }
 .projects {
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  padding: var(--padding-31xl) 0;
   font-family: var(--font-venite-adoremus);
 }
 .experience1 {
+  height: 58px;
   flex: 1;
   position: relative;
-}
-.experience-wrapper {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
 }
 .frame-child,
 .frame-item {
@@ -254,7 +238,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: var(--gap-2xl);
+  gap: var(--gap-xl);
 }
 .frame-wrapper {
   align-self: stretch;
@@ -272,15 +256,13 @@
 .button-download-resume {
   border-radius: 20px;
   background-color: var(--color-white);
-  height: 34px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 0 12px;
-  box-sizing: border-box;
+  padding: 10px;
   text-align: center;
-  color: #000;
+  color: var(--color-black);
 }
 .button-download-resume:hover {
   background-color: #d8d1ff;
@@ -295,7 +277,7 @@
   align-self: stretch;
   flex-direction: row;
   align-items: center;
-  gap: var(--gap-2xl);
+  gap: var(--gap-xl);
 }
 .frame-group {
   flex: 1;
@@ -321,51 +303,57 @@
 .experience {
   flex-direction: column;
   justify-content: center;
-  padding: var(--padding-31xl) 0;
   gap: var(--gap-31xl);
   font-family: var(--font-venite-adoremus);
 }
-.frame-child1 {
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-.frame-child1,
-.lets-connect {
+.lets-connect,
+.rectangle-div {
   align-self: stretch;
   position: relative;
 }
-.subtract-icon,
-.vector-icon1 {
-  width: 45px;
-  position: relative;
-  height: 45.6px;
-  cursor: pointer;
+.rectangle-div {
+  background: linear-gradient(
+    90deg,
+    rgba(3, 7, 14, 0),
+    #fff 33.1%,
+    #fff 50%,
+    #fff 67.43%,
+    rgba(3, 7, 14, 0)
+  );
+  height: 1px;
 }
-.subtract-icon {
-  width: 64px;
-  height: 46px;
+.lets-connect {
+  height: 39px;
+  display: inline-block;
+}
+.rectangle-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-31xl);
 }
 .in-white-722x-1-icon,
-.vector-icon2 {
-  width: 45.8px;
-  position: relative;
+.subtract-icon {
   height: 45px;
+  width: 62.6px;
+  position: relative;
+  object-fit: contain;
   cursor: pointer;
 }
 .in-white-722x-1-icon {
   width: 45px;
-  object-fit: cover;
 }
-.social-media-logo,
-.vector-parent {
+.frame-div,
+.social-media-logo {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: var(--gap-6xl);
 }
-.vector-parent {
+.frame-div {
   align-self: stretch;
   flex-direction: column;
   gap: var(--gap-31xl);
@@ -373,8 +361,7 @@
 .footer {
   align-self: stretch;
   overflow: hidden;
-  padding: var(--padding-31xl) 0;
-  font-size: 36px;
+  font-size: var(--font-size-13xl);
 }
 .content,
 .footer,
@@ -387,6 +374,7 @@
 .content {
   align-self: stretch;
   padding: 0 125px;
+  gap: var(--gap-31xl);
   background-image: url(./public/content@3x.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -398,7 +386,7 @@
   text-decoration: none;
   width: 100%;
   position: relative;
-  background-color: #03060d;
+  background-color: var(--color-gray);
   overflow: hidden;
   text-align: center;
   font-size: var(--font-size-13xl);
@@ -406,31 +394,42 @@
   font-family: var(--font-venite-adoremus);
 }
 @media screen and (max-width: 1440px) {
+  .home,
+  .resume {
+    font-size: var(--font-size-5xl);
+  }
   .navbar {
     padding-top: var(--padding-31xl);
     padding-bottom: var(--padding-31xl);
     box-sizing: border-box;
   }
-  .navbar,
   .welcome-to-my {
     font-size: 75%;
   }
-  .menulinks-large-wrapper {
-    padding-top: 185px;
-    padding-bottom: 310px;
+  .welcome-to-my-portfolio-wrapper {
+    padding-top: 215px;
+    padding-bottom: 300px;
     box-sizing: border-box;
   }
   .pp-1-icon {
-    width: 175px;
-    height: 175px;
+    width: 173px;
+    height: 173px;
   }
-  .greetings-my-name-container,
+  .greetings-my-name-container {
+    font-size: var(--font-size-mini);
+  }
   .title {
     font-size: 75%;
   }
-  .image-12-icon,
-  .price-overall-1,
   .spacex-2-icon {
+    width: 262px;
+    height: 147px;
+  }
+  .course-capstone {
+    font-size: var(--font-size-mini);
+  }
+  .image-12-icon,
+  .price-overall-1 {
     width: 262px;
     height: 147px;
   }
@@ -445,15 +444,23 @@
   .fashioncards {
     flex-wrap: wrap;
     justify-content: space-around;
-    font-size: 30%;
+    font-size: var(--font-size-mini);
   }
   .projects {
     padding: var(--padding-6xl) 0;
     box-sizing: border-box;
     max-width: 1440px;
   }
-  .experience-wrapper,
-  .frame-container,
+  .july-dec,
+  .production-division-intern-container {
+    font-size: var(--font-size-mini);
+  }
+  .frame-container {
+    font-size: 75%;
+  }
+  .download-resume {
+    font-size: var(--font-size-mini);
+  }
   .presents-parent {
     font-size: 75%;
   }
@@ -462,44 +469,59 @@
     padding-bottom: var(--padding-6xl);
     box-sizing: border-box;
   }
+  .lets-connect {
+    font-size: var(--font-size-5xl);
+  }
+  .social-media-logo {
+    scale: 75%;
+  }
+  .frame-div {
+    gap: var(--gap-31xl);
+  }
 }
 @media screen and (max-width: 1200px) {
+  .home,
+  .resume {
+    font-size: var(--font-size-xl);
+  }
   .menulinks-large {
     display: flex;
   }
-  .navbar,
   .welcome-to-my {
-    font-size: 65%;
+    font-size: 62.5%;
   }
-  .menulinks-large1 {
-    display: flex;
-  }
-  .menulinks-large-wrapper {
-    padding-top: 150px;
+  .welcome-to-my-portfolio-wrapper {
+    padding-top: 180px;
     padding-bottom: 250px;
     box-sizing: border-box;
   }
   .pp-1-icon {
-    width: 150px;
-    height: 150px;
+    width: 144px;
+    height: 144px;
   }
   .greetings-my-name-container {
-    font-size: 70%;
+    font-size: var(--font-size-xs);
     flex: 1;
     min-width: 0;
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  .projects1 {
-    font-size: 80%;
+  .title {
+    font-size: 62.5%;
   }
-  .image-12-icon,
   .spacex-2-icon {
     width: 245px;
     height: 138px;
     object-fit: contain;
   }
+  .course-capstone {
+    font-size: var(--font-size-xs);
+  }
+  .image-12-icon {
+    object-fit: contain;
+  }
   .huggingface-light-icon,
+  .image-12-icon,
   .power-bi-1,
   .price-overall-1 {
     width: 245px;
@@ -507,48 +529,78 @@
   }
   .fashioncards {
     gap: var(--gap-31xl);
-    font-size: 27%;
-    row-gap: 0;
+    row-gap: 25px;
+    font-size: var(--font-size-smi-5);
   }
   .projects {
     padding-left: 0;
     padding-right: 0;
     box-sizing: border-box;
   }
+  .download-resume,
+  .july-dec,
+  .production-division-intern-container {
+    font-size: var(--font-size-xs);
+  }
+  .frame-group {
+    font-size: var(--font-size-smi-5);
+  }
+  .lets-connect {
+    font-size: var(--font-size-xl);
+  }
+  .social-media-logo {
+    scale: 62.5%;
+  }
 }
 @media screen and (max-width: 960px) {
   .home,
   .resume {
+    font-size: var(--font-size-smi);
     display: none;
   }
   .vector-icon {
     display: flex;
     height: 30px;
   }
+  .vector,
+  .vector-icon:active {
+    display: flex;
+  }
   .menulinks-large {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    padding-right: 0;
+    box-sizing: border-box;
     font-size: 65%;
   }
   .navbar {
-    padding-left: var(--padding-21xl);
-    padding-right: var(--padding-21xl);
+    align-items: flex-end;
+    justify-content: center;
+    padding: 33px var(--padding-56xl) 15px;
     box-sizing: border-box;
   }
   .welcome-to-my {
-    font-size: 55%;
+    font-size: 50%;
   }
-  .menulinks-large1 {
-    display: flex;
-  }
-  .menulinks-large-wrapper {
-    padding-top: 85px;
+  .welcome-to-my-portfolio-wrapper {
+    padding-top: 140px;
     padding-bottom: 205px;
     box-sizing: border-box;
   }
+  .starting-point {
+    align-self: stretch;
+    width: auto;
+  }
+  .pp-1-icon {
+    width: 115px;
+    height: 115px;
+  }
   .greetings-my-name-container {
+    font-size: var(--font-size-3xs);
     text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
     flex: unset;
     align-self: stretch;
   }
@@ -562,68 +614,103 @@
     padding: var(--padding-6xl) 0;
     box-sizing: border-box;
   }
+  .title {
+    font-size: 50%;
+  }
+  .spacex-2-icon {
+    width: 210px;
+    height: 119px;
+  }
+  .course-capstone {
+    font-size: var(--font-size-3xs);
+  }
   .huggingface-light-icon,
   .image-12-icon,
   .power-bi-1,
-  .price-overall-1,
-  .spacex-2-icon {
+  .price-overall-1 {
     width: 210px;
     height: 119px;
   }
   .fashioncards {
     gap: var(--gap-31xl);
-    font-size: 27%;
-    row-gap: 0;
+    font-size: var(--font-size-3xs);
+    row-gap: 20px;
   }
   .projects {
     padding: var(--padding-6xl) 35px;
     box-sizing: border-box;
   }
-  .experience,
-  .footer {
+  .download-resume,
+  .july-dec,
+  .production-division-intern-container {
+    font-size: var(--font-size-3xs);
+  }
+  .experience {
     padding-top: var(--padding-6xl);
     padding-bottom: var(--padding-6xl);
     box-sizing: border-box;
   }
+  .rectangle-parent {
+    gap: var(--gap-6xl);
+  }
+  .social-media-logo {
+    scale: 50%;
+  }
+  .frame-div {
+    gap: var(--gap-xl);
+  }
+  .content,
+  .footer {
+    box-sizing: border-box;
+  }
+  .footer {
+    padding-top: var(--padding-6xl);
+    padding-bottom: var(--padding-6xl);
+  }
   .content {
+    gap: var(--gap-31xl);
     padding-left: var(--padding-56xl);
     padding-right: var(--padding-56xl);
-    box-sizing: border-box;
+    row-gap: 0;
   }
 }
 @media screen and (max-width: 420px) {
-  .home,
-  .resume {
-    display: none;
-  }
   .vector-icon {
     display: flex;
     width: 30px;
     height: 15px;
   }
   .menulinks-large {
+    gap: var(--gap-31xl);
     align-items: center;
     justify-content: flex-end;
+    padding-right: 0;
+    box-sizing: border-box;
   }
   .navbar {
-    padding: 30px var(--padding-xl);
-    box-sizing: border-box;
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 55px;
   }
   .welcome-to-my {
     font-size: 25%;
   }
-  .menulinks-large-wrapper {
-    padding-top: 0;
-    padding-bottom: 103px;
+  .welcome-to-my-portfolio-wrapper {
+    padding-top: 60px;
+    padding-bottom: 90px;
     box-sizing: border-box;
+  }
+  .starting-point {
+    align-items: center;
+    justify-content: center;
   }
   .pp-1-icon {
     width: 100px;
     height: 100px;
   }
   .greetings-my-name-container {
+    font-size: var(--font-size-3xs);
     text-align: center;
-    font-size: 50%;
     flex: unset;
     align-self: stretch;
   }
@@ -636,6 +723,9 @@
     padding-right: var(--padding-xl);
     padding-bottom: var(--padding-31xl);
     box-sizing: border-box;
+  }
+  .title {
+    font-size: 40%;
   }
   .spacex-2-icon {
     width: 179px;
@@ -657,19 +747,216 @@
     gap: var(--gap-31xl);
     align-items: center;
     justify-content: center;
-    font-size: 27%;
-    row-gap: 0;
-  }
-  .content,
-  .projects {
-    box-sizing: border-box;
+    font-size: var(--font-size-3xs);
+    row-gap: 20 px;
   }
   .projects {
     padding-left: 0;
     padding-right: 0;
+    box-sizing: border-box;
+  }
+  .frame-container,
+  .frame-parent,
+  .presents-parent {
+    gap: var(--gap-3xs);
+  }
+  .lets-connect {
+    font-size: 16px;
+  }
+  .social-media-logo {
+    scale: 45%;
   }
   .content {
     padding-left: var(--padding-6xl);
     padding-right: var(--padding-6xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 350px) {
+  .welcome-to-my {
+    font-size: 20%;
+  }
+  .welcome-to-my-portfolio-wrapper {
+    padding-top: var(--padding-31xl);
+    padding-bottom: var(--padding-56xl);
+    box-sizing: border-box;
+  }
+  .title {
+    font-size: 35%;
+  }
+  .fashioncards {
+    gap: var(--gap-31xl);
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: var(--font-size-3xs);
+    row-gap: 20px;
+  }
+  .experience,
+  .projects {
+    row-gap: 25px;
+  }
+  .experience {
+    gap: var(--gap-31xl);
+  }
+  .social-media-logo {
+    scale: 35%;
+  }
+  .frame-div {
+    row-gap: 10px;
+  }
+}
+.group-3-icon {
+  width: 49px;
+  position: relative;
+  height: 49px;
+  object-fit: cover;
+}
+.group-3-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.hello,
+.macy-johnson {
+  position: relative;
+  line-height: 18px;
+}
+.macy-johnson {
+  font-size: var(--font-size-xl);
+  line-height: 30px;
+  color: #191919;
+}
+.hello-parent,
+.profile {
+  justify-content: flex-start;
+}
+.hello-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.profile {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+.menu-child {
+  width: 261px;
+  position: relative;
+  border-top: 1px solid #e6e9f0;
+  box-sizing: border-box;
+  height: 1px;
+  display: none;
+}
+.calender-icon,
+.iconlylightprofile {
+  width: 24px;
+  position: relative;
+  height: 24px;
+}
+.calender-icon {
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.iconlylightprofile-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-9xl);
+}
+.home1 {
+  position: relative;
+  line-height: 24px;
+}
+.home-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-9xl);
+}
+.drawer-menu-items,
+.home-parent,
+.menu {
+  justify-content: flex-start;
+}
+.drawer-menu-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--gap-3xs);
+  font-size: var(--font-size-13xl);
+  color: var(--color-white);
+  font-family: var(--font-venite-adoremus);
+}
+.menu {
+  align-self: stretch;
+  flex-direction: column;
+  gap: var(--gap-xl);
+}
+.app-version-details,
+.drawer-menu,
+.menu {
+  display: flex;
+  align-items: flex-start;
+}
+.app-version-details {
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 14px;
+}
+.drawer-menu {
+  width: 320px;
+  height: 100%;
+  position: relative;
+  background-color: var(--color-black);
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--padding-31xl) 30px var(--padding-6xl);
+  box-sizing: border-box;
+  opacity: 0;
+  max-width: 90%;
+  overflow: auto;
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--color-lightslategray);
+  font-family: var(--font-roboto);
+}
+.drawer-menu.animate {
+  animation: 0.25s ease 0s 1 normal forwards slide-in-right;
+}
+@media screen and (max-width: 960px) {
+  .home-parent {
+    font-size: 50%;
+  }
+  .menu {
+    padding-right: 0;
+    box-sizing: border-box;
+  }
+  .app-version-details,
+  .drawer-menu {
+    padding-bottom: 0;
+    box-sizing: border-box;
+  }
+  .drawer-menu {
+    width: 250px;
+    padding-right: 0;
+    padding-bottom: 16px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .home-parent {
+    font-size: 25%;
+  }
+  .app-version-details {
+    font-size: 50%;
+  }
+  .drawer-menu {
+    width: 150px;
+    padding-left: var(--padding-xl);
+    box-sizing: border-box;
   }
 }
