@@ -645,6 +645,10 @@
   .production-division-intern-container {
     font-size: var(--font-size-3xs);
   }
+  .frame-group {
+    font-size: var(--font-size-smi-5);
+    row-gap: 25px;
+  }
   .experience {
     padding-top: var(--padding-6xl);
     padding-bottom: var(--padding-6xl);
