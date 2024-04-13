@@ -12,7 +12,7 @@
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
     />
 
     <style>
@@ -25,48 +25,119 @@
   </head>
   <body>
     <div class="drawer-menu" data-animate-on-scroll>
-      <div class="menu">
-        <div class="profile">
-          <div class="group-3-wrapper">
-            <img class="group-3-icon" alt="" src="./public/group3@2x.png" />
-          </div>
-          <div class="hello-parent">
-            <div class="hello">Hello</div>
-            <b class="macy-johnson">Macy Johnson</b>
-          </div>
-        </div>
-        <div class="menu-child"></div>
-        <div class="drawer-menu-items">
-          <div class="frame-parent1">
-            <div class="vector-parent">
-              <img class="frame-icon" alt="" src="./public/frame-2217.svg" />
+      <div class="close-parent">
+        <button class="close" id="drawerclose">
+          <div class="close-child"></div>
+          <div class="close-item"></div>
+        </button>
+        <div class="menu1">
+          <div class="drawer-menu-items">
+            <div class="home-parent">
+              <button class="home1" id="drawerhome">
+                <img
+                  class="profile-logo-icon"
+                  alt=""
+                  src="./public/profile-logo@2x.png"
+                />
 
-              <div class="home1">HOME</div>
-            </div>
-            <div class="vector-parent">
-              <img class="vector-icon3" alt="" src="./public/vector.svg" />
+                <div class="home2">HOME</div>
+              </button>
+              <div class="certification1" id="drawercertificationContainer">
+                <img
+                  class="certificate-logo-icon"
+                  alt=""
+                  src="./public/certificate-logo.svg"
+                />
 
-              <div class="home1">CERTIFICATION</div>
-            </div>
-            <div class="vector-parent">
-              <img class="frame-child1" alt="" src="./public/frame-2216.svg" />
+                <div class="certification2">CERTIFICATION</div>
+              </div>
+              <div class="passions1">
+                <img
+                  class="rubiks-cube-icon"
+                  alt=""
+                  src="./public/rubiks-cube.svg"
+                />
 
-              <div class="home1">PASSIONS</div>
-            </div>
-            <div class="vector-parent">
-              <img class="vector-icon4" alt="" src="./public/vector.svg" />
+                <div class="certification2">PASSIONS</div>
+              </div>
+              <a
+                class="resume1"
+                href="https://drive.google.com/file/d/1yIwIyFa2kMHVO4iV8ypUsUcXclFJkJd3/view?usp=sharing"
+                target="_blank"
+              >
+                <img class="cv-logo-icon" alt="" src="./public/cv-logo.svg" />
 
-              <div class="home1">RESUME</div>
+                <div class="certification2">RESUME</div>
+              </a>
             </div>
           </div>
         </div>
       </div>
       <div class="app-version-details">
-        <div class="home1">Website version 0.1.0</div>
+        <div class="background-designed-by-container">
+          <p class="background-designed-by">Background Designed by Freepik</p>
+          <p class="background-designed-by">Made with Figma x Locofy</p>
+          <p class="background-designed-by">Website Version 0.1.0</p>
+        </div>
       </div>
     </div>
 
     <script>
+      var drawerclose = document.getElementById("drawerclose");
+      if (drawerclose) {
+        drawerclose.addEventListener("click", function (e) {
+          var popup = e.currentTarget.parentNode;
+          function isOverlay(node) {
+            return !!(
+              node &&
+              node.classList &&
+              node.classList.contains("popup-overlay")
+            );
+          }
+          while (popup && !isOverlay(popup)) {
+            popup = popup.parentNode;
+          }
+          if (isOverlay(popup)) {
+            popup.style.display = "none";
+          }
+        });
+      }
+      
+      var drawerhome = document.getElementById("drawerhome");
+      if (drawerhome) {
+        drawerhome.addEventListener("click", function () {
+          window.location.href = "https://afterrain007.github.io/";
+        });
+      }
+      
+      var drawerhome = document.getElementById("drawerhome");
+      if (drawerhome) {
+        drawerhome.addEventListener("click", function (e) {
+          var popup = e.currentTarget.parentNode;
+          function isOverlay(node) {
+            return !!(
+              node &&
+              node.classList &&
+              node.classList.contains("popup-overlay")
+            );
+          }
+          while (popup && !isOverlay(popup)) {
+            popup = popup.parentNode;
+          }
+          if (isOverlay(popup)) {
+            popup.style.display = "none";
+          }
+        });
+      }
+      
+      var drawercertificationContainer = document.getElementById(
+        "drawercertificationContainer"
+      );
+      if (drawercertificationContainer) {
+        drawercertificationContainer.addEventListener("click", function (e) {
+          window.location.href = "./certificate-new.html";
+        });
+      }
       var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
       var observer = new IntersectionObserver(
         (entries) => {

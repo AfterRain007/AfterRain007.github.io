@@ -9,70 +9,75 @@
   }
 }
 .home,
-.resume {
+.passions {
   position: relative;
   letter-spacing: 1.5px;
 }
-.resume {
+.home {
   cursor: pointer;
 }
-.vector,
-.vector-icon {
-  position: absolute;
-  width: 50px;
-  height: 30px;
+.passions {
+  width: 200px;
   display: none;
 }
-.vector {
+.hamburger-menu-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 35px;
+}
+.hamburger-menu {
   cursor: pointer;
   border: 0;
   padding: 0;
   background-color: transparent;
-  height: 0;
-  width: 0;
+  height: 35px;
+  width: 50px;
   position: relative;
+  display: none;
 }
-.menulinks-large,
+.menu,
 .navbar {
   align-self: stretch;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.menulinks-large {
+.menu {
   flex-direction: row;
   gap: var(--gap-31xl);
 }
 .navbar {
   flex-direction: column;
-  padding: var(--padding-31xl) 0;
+  padding: var(--padding-31xl) 0 0;
 }
-.welcome-to-my {
+.welcome-weary-traveler {
+  align-self: stretch;
   height: 58px;
-  flex: 1;
   position: relative;
   letter-spacing: 1.5px;
   display: inline-block;
 }
-.starting-point,
-.welcome-to-my-portfolio-wrapper {
+.navbar-parent,
+.welcome-weary-traveler-wrapper {
   align-self: stretch;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
-.welcome-to-my-portfolio-wrapper {
-  flex-direction: row;
-  padding: 286px 0 414px;
+.welcome-weary-traveler-wrapper {
+  justify-content: center;
+  font-size: var(--font-size-29xl);
+}
+.navbar-parent {
+  justify-content: flex-start;
+  padding: 0 0 315px;
+  gap: 270px;
   background-image: url(./public/frame-49@3x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  font-size: var(--font-size-29xl);
-}
-.starting-point {
-  background-color: var(--color-gray);
-  flex-direction: column;
 }
 .pp-1-icon {
   width: 231px;
@@ -104,6 +109,7 @@
   justify-content: center;
   text-align: justify;
   font-size: var(--font-size-xl);
+  font-family: var(--font-montserrat);
 }
 .projects1 {
   height: 58px;
@@ -137,8 +143,9 @@
   align-items: center;
   justify-content: center;
   gap: var(--gap-3xs);
+  object-fit: contain;
 }
-.image-12-icon,
+.github-pic-icon,
 .price-overall-1 {
   width: 350px;
   height: 196px;
@@ -154,6 +161,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--gap-3xs);
+  object-fit: contain;
 }
 .huggingface-light-icon,
 .power-bi-1 {
@@ -183,7 +191,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-venite-adoremus);
 }
 .experience1 {
   height: 58px;
@@ -215,76 +222,59 @@
 .july-dec {
   position: relative;
 }
-.july-dec-2020-wrapper {
+.july-dec-2020-parent {
+  align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: var(--padding-8xs) 0;
 }
 .production-division-intern {
   margin: 0;
   font-weight: 900;
 }
 .production-division-intern-container {
+  align-self: stretch;
   height: 96px;
-  flex: 1;
   position: relative;
-  text-align: justify;
   display: inline-block;
-}
-.frame-container {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-xl);
-}
-.frame-wrapper {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 0 0;
 }
 .download-resume {
   position: relative;
+  font-size: var(--font-size-xl);
   line-height: 90%;
   font-weight: 900;
+  font-family: var(--font-montserrat);
+  color: var(--color-black);
+  text-align: center;
 }
 .button-download-resume {
-  border-radius: 20px;
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-3xs);
   background-color: var(--color-white);
+  border-radius: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  text-align: center;
-  color: var(--color-black);
 }
 .button-download-resume:hover {
   background-color: #d8d1ff;
   cursor: pointer;
 }
-.frame-group,
-.presents-parent {
-  display: flex;
-  justify-content: flex-start;
-}
-.presents-parent {
-  align-self: stretch;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--gap-xl);
-}
-.frame-group {
+.production-division-intern-b-parent {
   flex: 1;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-8xs) 0 0;
   gap: var(--gap-31xl);
+  text-align: justify;
 }
+.content,
 .experience,
 .frame-parent {
   align-self: stretch;
@@ -294,16 +284,27 @@
 .frame-parent {
   flex-direction: row;
   justify-content: space-around;
-  gap: var(--gap-6xl);
+  gap: var(--gap-3xs);
   flex-wrap: wrap;
   text-align: left;
   font-size: var(--font-size-xl);
   font-family: var(--font-montserrat);
 }
+.content,
 .experience {
   flex-direction: column;
   justify-content: center;
   gap: var(--gap-31xl);
+}
+.content {
+  padding: var(--padding-31xl) 125px;
+  background-image: url(./public/content@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  text-align: center;
+  font-size: var(--font-size-29xl);
+  color: var(--color-white);
   font-family: var(--font-venite-adoremus);
 }
 .lets-connect,
@@ -334,52 +335,45 @@
   justify-content: center;
   gap: var(--gap-31xl);
 }
-.in-white-722x-1-icon,
-.subtract-icon {
+.instagram-logo-icon,
+.youtube-logo-icon {
   height: 45px;
-  width: 62.6px;
+  width: 45px;
   position: relative;
   object-fit: contain;
   cursor: pointer;
 }
-.in-white-722x-1-icon {
-  width: 45px;
+.youtube-logo-icon {
+  width: 62.6px;
 }
-.frame-div,
+.footer,
+.frame-group,
+.home-new,
 .social-media-logo {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+.social-media-logo {
+  flex-direction: row;
   gap: var(--gap-6xl);
 }
-.frame-div {
-  align-self: stretch;
+.footer,
+.frame-group,
+.home-new {
   flex-direction: column;
+}
+.frame-group {
+  align-self: stretch;
   gap: var(--gap-31xl);
+}
+.footer,
+.home-new {
+  overflow: hidden;
 }
 .footer {
   align-self: stretch;
-  overflow: hidden;
-  font-size: var(--font-size-13xl);
-}
-.content,
-.footer,
-.home-new {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.content {
-  align-self: stretch;
-  padding: 0 125px;
-  gap: var(--gap-31xl);
-  background-image: url(./public/content@3x.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-  font-size: var(--font-size-29xl);
+  padding: var(--padding-31xl) 0;
   font-family: var(--font-montserrat);
 }
 .home-new {
@@ -387,7 +381,6 @@
   width: 100%;
   position: relative;
   background-color: var(--color-gray);
-  overflow: hidden;
   text-align: center;
   font-size: var(--font-size-13xl);
   color: var(--color-white);
@@ -395,20 +388,21 @@
 }
 @media screen and (max-width: 1440px) {
   .home,
-  .resume {
+  .passions {
     font-size: var(--font-size-5xl);
   }
   .navbar {
     padding-top: var(--padding-31xl);
-    padding-bottom: var(--padding-31xl);
+    padding-bottom: 0;
     box-sizing: border-box;
   }
-  .welcome-to-my {
+  .welcome-weary-traveler {
     font-size: 75%;
   }
-  .welcome-to-my-portfolio-wrapper {
-    padding-top: 215px;
-    padding-bottom: 300px;
+  .navbar-parent {
+    gap: 191px;
+    padding-top: 0;
+    padding-bottom: 235px;
     box-sizing: border-box;
   }
   .pp-1-icon {
@@ -428,7 +422,7 @@
   .course-capstone {
     font-size: var(--font-size-mini);
   }
-  .image-12-icon,
+  .github-pic-icon,
   .price-overall-1 {
     width: 262px;
     height: 147px;
@@ -451,18 +445,10 @@
     box-sizing: border-box;
     max-width: 1440px;
   }
+  .download-resume,
   .july-dec,
   .production-division-intern-container {
     font-size: var(--font-size-mini);
-  }
-  .frame-container {
-    font-size: 75%;
-  }
-  .download-resume {
-    font-size: var(--font-size-mini);
-  }
-  .presents-parent {
-    font-size: 75%;
   }
   .experience {
     padding-top: var(--padding-6xl);
@@ -475,24 +461,25 @@
   .social-media-logo {
     scale: 75%;
   }
-  .frame-div {
+  .frame-group {
     gap: var(--gap-31xl);
   }
 }
 @media screen and (max-width: 1200px) {
   .home,
-  .resume {
+  .passions {
     font-size: var(--font-size-xl);
   }
-  .menulinks-large {
+  .menu {
     display: flex;
   }
-  .welcome-to-my {
+  .welcome-weary-traveler {
     font-size: 62.5%;
   }
-  .welcome-to-my-portfolio-wrapper {
-    padding-top: 180px;
-    padding-bottom: 250px;
+  .navbar-parent {
+    gap: 150px;
+    padding-top: 0;
+    padding-bottom: 194px;
     box-sizing: border-box;
   }
   .pp-1-icon {
@@ -517,11 +504,11 @@
   .course-capstone {
     font-size: var(--font-size-xs);
   }
-  .image-12-icon {
+  .github-pic-icon {
     object-fit: contain;
   }
+  .github-pic-icon,
   .huggingface-light-icon,
-  .image-12-icon,
   .power-bi-1,
   .price-overall-1 {
     width: 245px;
@@ -530,9 +517,10 @@
   .fashioncards {
     gap: var(--gap-31xl);
     row-gap: 25px;
-    font-size: var(--font-size-smi-5);
+    font-size: 12.5px;
   }
   .projects {
+    gap: var(--gap-6xl);
     padding-left: 0;
     padding-right: 0;
     box-sizing: border-box;
@@ -542,8 +530,8 @@
   .production-division-intern-container {
     font-size: var(--font-size-xs);
   }
-  .frame-group {
-    font-size: var(--font-size-smi-5);
+  .experience {
+    gap: var(--gap-6xl);
   }
   .lets-connect {
     font-size: var(--font-size-xl);
@@ -554,51 +542,49 @@
 }
 @media screen and (max-width: 960px) {
   .home,
-  .resume {
+  .passions {
     font-size: var(--font-size-smi);
     display: none;
   }
-  .vector-icon {
-    display: flex;
-    height: 30px;
-  }
-  .vector,
-  .vector-icon:active {
+  .hamburger-menu {
     display: flex;
   }
-  .menulinks-large {
+  .menu,
+  .navbar {
+    box-sizing: border-box;
+  }
+  .menu {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-right: 0;
-    box-sizing: border-box;
     font-size: 65%;
   }
   .navbar {
     align-items: flex-end;
     justify-content: center;
-    padding: 33px var(--padding-56xl) 15px;
-    box-sizing: border-box;
+    padding: var(--padding-11xl) var(--padding-11xl) 0 0;
   }
-  .welcome-to-my {
+  .welcome-weary-traveler {
     font-size: 50%;
   }
-  .welcome-to-my-portfolio-wrapper {
-    padding-top: 140px;
-    padding-bottom: 205px;
+  .welcome-weary-traveler-wrapper {
+    padding-left: 0;
+    padding-right: 0;
     box-sizing: border-box;
   }
-  .starting-point {
-    align-self: stretch;
-    width: auto;
+  .navbar-parent {
+    gap: 112px;
+    padding: 0 0 153px;
+    box-sizing: border-box;
   }
   .pp-1-icon {
     width: 115px;
     height: 115px;
   }
   .greetings-my-name-container {
-    font-size: var(--font-size-3xs);
-    text-align: center;
+    font-size: var(--font-size-xs);
+    text-align: left;
     flex-wrap: wrap;
     justify-content: space-around;
     flex: unset;
@@ -624,8 +610,8 @@
   .course-capstone {
     font-size: var(--font-size-3xs);
   }
+  .github-pic-icon,
   .huggingface-light-icon,
-  .image-12-icon,
   .power-bi-1,
   .price-overall-1 {
     width: 210px;
@@ -639,20 +625,24 @@
   .projects {
     padding: var(--padding-6xl) 35px;
     box-sizing: border-box;
+    row-gap: 25px;
   }
   .download-resume,
   .july-dec,
   .production-division-intern-container {
     font-size: var(--font-size-3xs);
   }
-  .frame-group {
-    font-size: var(--font-size-smi-5);
-    row-gap: 25px;
-  }
   .experience {
     padding-top: var(--padding-6xl);
     padding-bottom: var(--padding-6xl);
     box-sizing: border-box;
+    row-gap: 25px;
+  }
+  .content {
+    gap: var(--gap-31xl);
+    padding: 0 33px;
+    box-sizing: border-box;
+    row-gap: 0;
   }
   .rectangle-parent {
     gap: var(--gap-6xl);
@@ -660,61 +650,63 @@
   .social-media-logo {
     scale: 50%;
   }
-  .frame-div {
+  .frame-group {
     gap: var(--gap-xl);
-  }
-  .content,
-  .footer {
-    box-sizing: border-box;
   }
   .footer {
     padding-top: var(--padding-6xl);
     padding-bottom: var(--padding-6xl);
-  }
-  .content {
-    gap: var(--gap-31xl);
-    padding-left: var(--padding-56xl);
-    padding-right: var(--padding-56xl);
-    row-gap: 0;
+    box-sizing: border-box;
   }
 }
 @media screen and (max-width: 420px) {
-  .vector-icon {
-    display: flex;
-    width: 30px;
-    height: 15px;
+  .hamburger-menu,
+  .hamburger-menu-icon {
+    width: 35px;
+    height: 20px;
+    object-fit: contain;
   }
-  .menulinks-large {
+  .menu,
+  .navbar {
+    box-sizing: border-box;
+  }
+  .menu {
     gap: var(--gap-31xl);
     align-items: center;
     justify-content: flex-end;
     padding-right: 0;
-    box-sizing: border-box;
   }
   .navbar {
+    gap: var(--gap-0);
     align-items: flex-end;
     justify-content: center;
-    padding-right: 55px;
+    padding: var(--padding-6xl) var(--padding-6xl) 0 0;
   }
-  .welcome-to-my {
+  .welcome-weary-traveler {
     font-size: 25%;
   }
-  .welcome-to-my-portfolio-wrapper {
-    padding-top: 60px;
-    padding-bottom: 90px;
-    box-sizing: border-box;
-  }
-  .starting-point {
+  .navbar-parent,
+  .welcome-weary-traveler-wrapper {
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+  }
+  .welcome-weary-traveler-wrapper {
+    gap: var(--gap-0);
+    padding-top: 0;
+    padding-right: 0;
+  }
+  .navbar-parent {
+    gap: 35px;
+    padding: 0 0 70px;
   }
   .pp-1-icon {
     width: 100px;
     height: 100px;
   }
   .greetings-my-name-container {
-    font-size: var(--font-size-3xs);
-    text-align: center;
+    font-size: var(--font-size-5xs);
+    text-align: left;
     flex: unset;
     align-self: stretch;
   }
@@ -725,7 +717,7 @@
   .introduction {
     padding-left: var(--padding-xl);
     padding-right: var(--padding-xl);
-    padding-bottom: var(--padding-31xl);
+    padding-bottom: var(--padding-6xl);
     box-sizing: border-box;
   }
   .title {
@@ -738,8 +730,8 @@
   .courses {
     gap: var(--gap-xl);
   }
+  .github-pic-icon,
   .huggingface-light-icon,
-  .image-12-icon,
   .power-bi-1,
   .price-overall-1 {
     width: 175px;
@@ -752,38 +744,62 @@
     align-items: center;
     justify-content: center;
     font-size: var(--font-size-3xs);
-    row-gap: 20 px;
+    row-gap: 30px;
   }
   .projects {
+    gap: var(--gap-6xl);
     padding-left: 0;
     padding-right: 0;
     box-sizing: border-box;
   }
-  .frame-container,
-  .frame-parent,
-  .presents-parent {
+  .download-resume,
+  .july-dec,
+  .production-division-intern-container {
+    font-size: var(--font-size-5xs);
+  }
+  .frame-parent {
     gap: var(--gap-3xs);
   }
+  .experience {
+    gap: var(--gap-6xl);
+  }
+  .content {
+    padding: 0 var(--padding-6xl);
+    box-sizing: border-box;
+  }
   .lets-connect {
-    font-size: 16px;
+    font-size: var(--font-size-base);
   }
   .social-media-logo {
     scale: 45%;
   }
-  .content {
-    padding-left: var(--padding-6xl);
-    padding-right: var(--padding-6xl);
-    box-sizing: border-box;
+  .footer {
+    gap: var(--gap-0);
   }
 }
 @media screen and (max-width: 350px) {
-  .welcome-to-my {
+  .hamburger-menu,
+  .hamburger-menu-icon {
+    width: 30px;
+    height: 15px;
+  }
+  .navbar {
+    padding-top: var(--padding-6xl);
+    padding-right: var(--padding-6xl);
+    box-sizing: border-box;
+  }
+  .welcome-weary-traveler {
     font-size: 20%;
   }
-  .welcome-to-my-portfolio-wrapper {
-    padding-top: var(--padding-31xl);
-    padding-bottom: var(--padding-56xl);
+  .navbar-parent {
+    gap: 21px;
+    padding-top: 0;
+    padding-bottom: 54px;
     box-sizing: border-box;
+  }
+  .greetings-my-name-container {
+    font-size: var(--font-size-5xs);
+    text-align: left;
   }
   .title {
     font-size: 35%;
@@ -802,178 +818,244 @@
   .experience {
     gap: var(--gap-31xl);
   }
+  .content {
+    padding-top: 0;
+    padding-bottom: 0;
+    box-sizing: border-box;
+  }
   .social-media-logo {
     scale: 35%;
   }
-  .frame-div {
+  .frame-group {
     row-gap: 10px;
   }
 }
-.group-3-icon {
-  width: 49px;
+.close-child,
+.close-item {
+  position: absolute;
+  height: 16.67%;
+  width: 124.67%;
+  top: 88.33%;
+  right: -24.67%;
+  bottom: -5%;
+  left: 0;
+  background-color: var(--color-gainsboro);
+  transform: rotate(-45deg);
+  transform-origin: 0 0;
+}
+.close-item {
+  top: 0;
+  right: -36.33%;
+  bottom: 83.33%;
+  left: 11.67%;
+  transform: rotate(45deg);
+}
+.close {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  width: 30px;
   position: relative;
-  height: 49px;
-  object-fit: cover;
+  height: 30px;
 }
-.group-3-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.hello,
-.macy-johnson {
-  position: relative;
-  line-height: 18px;
-}
-.macy-johnson {
-  font-size: var(--font-size-xl);
-  line-height: 30px;
-  color: #191919;
-}
-.hello-parent,
-.profile {
-  justify-content: flex-start;
-}
-.hello-parent {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.profile {
-  display: none;
-  flex-direction: row;
-  align-items: center;
-  gap: 12px;
-}
-.menu-child {
-  width: 261px;
-  position: relative;
-  border-top: 1px solid #e6e9f0;
-  box-sizing: border-box;
-  height: 1px;
-  display: none;
-}
-.frame-icon {
+.profile-logo-icon {
   width: 35px;
   position: relative;
   height: 23.9px;
+  object-fit: cover;
+}
+.home2 {
+  position: relative;
+  font-size: var(--font-size-13xl);
+  line-height: 24px;
+  font-family: var(--font-venite-adoremus);
+  color: var(--color-white);
+  text-align: left;
 }
 .home1 {
-  position: relative;
-  line-height: 24px;
-}
-.vector-icon3 {
-  width: 35px;
-  position: relative;
-  height: 28px;
-}
-.vector-parent {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: var(--gap-3xs);
 }
-.frame-child1 {
+.certificate-logo-icon {
+  width: 35px;
+  position: relative;
+  height: 28px;
+}
+.certification2 {
+  position: relative;
+  line-height: 24px;
+}
+.certification1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-3xs);
+  cursor: pointer;
+}
+.rubiks-cube-icon {
   width: 35px;
   position: relative;
   height: 23.9px;
   overflow: hidden;
   flex-shrink: 0;
 }
-.vector-icon4 {
+.passions1 {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-3xs);
+}
+.cv-logo-icon {
   width: 35px;
   position: relative;
-  height: 24.5px;
+  height: 23.9px;
 }
-.frame-parent1 {
-  align-self: stretch;
+.home-parent,
+.resume1 {
   display: flex;
+  justify-content: center;
+}
+.resume1 {
+  text-decoration: none;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--gap-3xs);
+  color: inherit;
+}
+.home-parent {
+  align-self: stretch;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
   gap: 23px;
 }
+.close-parent,
 .drawer-menu-items,
-.menu {
+.menu1 {
+  display: flex;
+  align-items: flex-start;
   justify-content: flex-start;
 }
 .drawer-menu-items {
   width: 333px;
-  display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  font-size: var(--font-size-13xl);
-  color: var(--color-white);
-  font-family: var(--font-venite-adoremus);
 }
-.menu {
+.close-parent,
+.menu1 {
   align-self: stretch;
   flex-direction: column;
-  gap: var(--gap-xl);
 }
-.app-version-details,
-.drawer-menu,
-.menu {
-  display: flex;
-  align-items: flex-start;
+.close-parent {
+  align-items: flex-end;
+  gap: var(--gap-6xl);
+}
+.background-designed-by {
+  margin: 0;
+}
+.background-designed-by-container {
+  height: 72px;
+  position: relative;
+  line-height: 24px;
+  display: inline-block;
 }
 .app-version-details {
+  display: flex;
   flex-direction: row;
+  align-items: flex-start;
   justify-content: flex-start;
   font-size: 14px;
+  color: #7e8a97;
+  font-family: var(--font-roboto);
 }
 .drawer-menu {
   width: 320px;
   height: 100%;
   position: relative;
   background-color: var(--color-black);
+  display: flex;
   flex-direction: column;
+  align-items: flex-end;
   justify-content: space-between;
-  padding: var(--padding-31xl) 30px var(--padding-6xl);
+  padding: var(--padding-31xl) var(--padding-6xl);
   box-sizing: border-box;
   opacity: 0;
   max-width: 90%;
   overflow: auto;
   text-align: left;
-  font-size: var(--font-size-xs);
-  color: var(--color-lightslategray);
-  font-family: var(--font-roboto);
+  font-size: var(--font-size-13xl);
+  color: var(--color-white);
+  font-family: var(--font-venite-adoremus);
 }
 .drawer-menu.animate {
   animation: 0.25s ease 0s 1 normal forwards slide-in-right;
 }
 @media screen and (max-width: 960px) {
-  .frame-parent1 {
+  .home2 {
+    font-size: var(--font-size-base);
+  }
+  .home-parent {
     font-size: 50%;
   }
-  .menu {
+  .menu1 {
     padding-right: 0;
     box-sizing: border-box;
   }
-  .app-version-details,
-  .drawer-menu {
+  .background-designed-by-container {
+    font-size: var(--font-size-xs);
+    text-align: right;
+  }
+  .app-version-details {
     padding-bottom: 0;
     box-sizing: border-box;
+    row-gap: 5px;
   }
   .drawer-menu {
     width: 250px;
-    padding-right: 0;
+    padding-top: var(--padding-6xl);
+    padding-right: var(--padding-6xl);
     padding-bottom: 16px;
+    box-sizing: border-box;
   }
 }
 @media screen and (max-width: 420px) {
-  .frame-child1,
-  .frame-icon,
-  .vector-icon3,
-  .vector-icon4 {
+  .close {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+  .profile-logo-icon {
+    width: 25px;
+    object-fit: contain;
+  }
+  .home2 {
+    font-size: var(--font-size-5xs);
+  }
+  .certificate-logo-icon,
+  .rubiks-cube-icon {
     width: 25px;
     font-size: 25%;
     object-fit: contain;
   }
-  .frame-parent1 {
+  .cv-logo-icon {
+    width: 25px;
+    object-fit: contain;
+  }
+  .home-parent {
+    gap: var(--gap-3xs);
     font-size: 25%;
+  }
+  .background-designed-by-container {
+    font-size: var(--font-size-5xs);
+    line-height: 15px;
   }
   .app-version-details {
     font-size: 50%;
@@ -982,5 +1064,17 @@
     width: 150px;
     padding-left: var(--padding-xl);
     box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 350px) {
+  .certificate-logo-icon,
+  .cv-logo-icon,
+  .profile-logo-icon,
+  .rubiks-cube-icon {
+    width: 23px;
+  }
+  .background-designed-by-container {
+    font-size: 6px;
+    line-height: 13px;
   }
 }

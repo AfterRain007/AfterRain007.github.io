@@ -8,171 +8,232 @@
     opacity: 1;
   }
 }
-.group-3-icon {
-  width: 49px;
+.close-child,
+.close-item {
+  position: absolute;
+  height: 16.67%;
+  width: 124.67%;
+  top: 88.33%;
+  right: -24.67%;
+  bottom: -5%;
+  left: 0;
+  background-color: var(--color-gainsboro);
+  transform: rotate(-45deg);
+  transform-origin: 0 0;
+}
+.close-item {
+  top: 0;
+  right: -36.33%;
+  bottom: 83.33%;
+  left: 11.67%;
+  transform: rotate(45deg);
+}
+.close {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  width: 30px;
   position: relative;
-  height: 49px;
-  object-fit: cover;
+  height: 30px;
 }
-.group-3-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.hello,
-.macy-johnson {
-  position: relative;
-  line-height: 18px;
-}
-.macy-johnson {
-  font-size: var(--font-size-xl);
-  line-height: 30px;
-  color: #191919;
-}
-.hello-parent,
-.profile {
-  justify-content: flex-start;
-}
-.hello-parent {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.profile {
-  display: none;
-  flex-direction: row;
-  align-items: center;
-  gap: 12px;
-}
-.menu-child {
-  width: 261px;
-  position: relative;
-  border-top: 1px solid #e6e9f0;
-  box-sizing: border-box;
-  height: 1px;
-  display: none;
-}
-.frame-icon {
+.profile-logo-icon {
   width: 35px;
   position: relative;
   height: 23.9px;
+  object-fit: cover;
+}
+.home2 {
+  position: relative;
+  font-size: var(--font-size-13xl);
+  line-height: 24px;
+  font-family: var(--font-venite-adoremus);
+  color: var(--color-white);
+  text-align: left;
 }
 .home1 {
-  position: relative;
-  line-height: 24px;
-}
-.vector-icon3 {
-  width: 35px;
-  position: relative;
-  height: 28px;
-}
-.vector-parent {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: var(--gap-3xs);
 }
-.frame-child1 {
+.certificate-logo-icon {
+  width: 35px;
+  position: relative;
+  height: 28px;
+}
+.certification2 {
+  position: relative;
+  line-height: 24px;
+}
+.certification1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-3xs);
+  cursor: pointer;
+}
+.rubiks-cube-icon {
   width: 35px;
   position: relative;
   height: 23.9px;
   overflow: hidden;
   flex-shrink: 0;
 }
-.vector-icon4 {
+.passions1 {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-3xs);
+}
+.cv-logo-icon {
   width: 35px;
   position: relative;
-  height: 24.5px;
+  height: 23.9px;
 }
-.frame-parent1 {
-  align-self: stretch;
+.home-parent,
+.resume1 {
   display: flex;
+  justify-content: center;
+}
+.resume1 {
+  text-decoration: none;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--gap-3xs);
+  color: inherit;
+}
+.home-parent {
+  align-self: stretch;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
   gap: 23px;
 }
+.close-parent,
 .drawer-menu-items,
-.menu {
+.menu1 {
+  display: flex;
+  align-items: flex-start;
   justify-content: flex-start;
 }
 .drawer-menu-items {
   width: 333px;
-  display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  font-size: var(--font-size-13xl);
-  color: var(--color-white);
-  font-family: var(--font-venite-adoremus);
 }
-.menu {
+.close-parent,
+.menu1 {
   align-self: stretch;
   flex-direction: column;
-  gap: var(--gap-xl);
 }
-.app-version-details,
-.drawer-menu,
-.menu {
-  display: flex;
-  align-items: flex-start;
+.close-parent {
+  align-items: flex-end;
+  gap: var(--gap-6xl);
+}
+.background-designed-by {
+  margin: 0;
+}
+.background-designed-by-container {
+  height: 72px;
+  position: relative;
+  line-height: 24px;
+  display: inline-block;
 }
 .app-version-details {
+  display: flex;
   flex-direction: row;
+  align-items: flex-start;
   justify-content: flex-start;
   font-size: 14px;
+  color: #7e8a97;
+  font-family: var(--font-roboto);
 }
 .drawer-menu {
   width: 320px;
   height: 100%;
   position: relative;
   background-color: var(--color-black);
+  display: flex;
   flex-direction: column;
+  align-items: flex-end;
   justify-content: space-between;
-  padding: var(--padding-31xl) 30px var(--padding-6xl);
+  padding: var(--padding-31xl) var(--padding-6xl);
   box-sizing: border-box;
   opacity: 0;
   max-width: 90%;
   overflow: auto;
   text-align: left;
-  font-size: var(--font-size-xs);
-  color: var(--color-lightslategray);
-  font-family: var(--font-roboto);
+  font-size: var(--font-size-13xl);
+  color: var(--color-white);
+  font-family: var(--font-venite-adoremus);
 }
 .drawer-menu.animate {
   animation: 0.25s ease 0s 1 normal forwards slide-in-right;
 }
 @media screen and (max-width: 960px) {
-  .frame-parent1 {
+  .home2 {
+    font-size: var(--font-size-base);
+  }
+  .home-parent {
     font-size: 50%;
   }
-  .menu {
+  .menu1 {
     padding-right: 0;
     box-sizing: border-box;
   }
-  .app-version-details,
-  .drawer-menu {
+  .background-designed-by-container {
+    font-size: var(--font-size-xs);
+    text-align: right;
+  }
+  .app-version-details {
     padding-bottom: 0;
     box-sizing: border-box;
+    row-gap: 5px;
   }
   .drawer-menu {
     width: 250px;
-    padding-right: 0;
+    padding-top: var(--padding-6xl);
+    padding-right: var(--padding-6xl);
     padding-bottom: 16px;
+    box-sizing: border-box;
   }
 }
 @media screen and (max-width: 420px) {
-  .frame-child1,
-  .frame-icon,
-  .vector-icon3,
-  .vector-icon4 {
+  .close {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+  .profile-logo-icon {
+    width: 25px;
+    object-fit: contain;
+  }
+  .home2 {
+    font-size: var(--font-size-5xs);
+  }
+  .certificate-logo-icon,
+  .rubiks-cube-icon {
     width: 25px;
     font-size: 25%;
     object-fit: contain;
   }
-  .frame-parent1 {
+  .cv-logo-icon {
+    width: 25px;
+    object-fit: contain;
+  }
+  .home-parent {
+    gap: var(--gap-3xs);
     font-size: 25%;
+  }
+  .background-designed-by-container {
+    font-size: var(--font-size-5xs);
+    line-height: 15px;
   }
   .app-version-details {
     font-size: 50%;
@@ -181,5 +242,17 @@
     width: 150px;
     padding-left: var(--padding-xl);
     box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 350px) {
+  .certificate-logo-icon,
+  .cv-logo-icon,
+  .profile-logo-icon,
+  .rubiks-cube-icon {
+    width: 23px;
+  }
+  .background-designed-by-container {
+    font-size: 6px;
+    line-height: 13px;
   }
 }
