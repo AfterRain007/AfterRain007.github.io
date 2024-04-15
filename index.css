@@ -114,7 +114,6 @@
   justify-content: center;
   text-align: justify;
   font-size: var(--font-size-xl);
-  font-family: var(--font-montserrat);
 }
 .projects1 {
   height: 58px;
@@ -205,6 +204,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: var(--font-venite-adoremus);
 }
 .experience1 {
   height: 58px;
@@ -288,7 +288,6 @@
   gap: var(--gap-31xl);
   text-align: justify;
 }
-.content,
 .experience,
 .frame-parent {
   align-self: stretch;
@@ -304,21 +303,10 @@
   font-size: var(--font-size-xl);
   font-family: var(--font-montserrat);
 }
-.content,
 .experience {
   flex-direction: column;
   justify-content: center;
   gap: var(--gap-31xl);
-}
-.content {
-  padding: var(--padding-31xl) 125px;
-  background-image: url(./public/content@3x.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-  text-align: center;
-  font-size: var(--font-size-29xl);
-  color: var(--color-white);
   font-family: var(--font-venite-adoremus);
 }
 .lets-connect,
@@ -360,34 +348,46 @@
 .youtube-logo-icon {
   width: 62.6px;
 }
-.footer,
-.frame-group,
-.home-new,
 .social-media-logo {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-}
-.social-media-logo {
-  flex-direction: row;
   gap: var(--gap-6xl);
-}
-.footer,
-.frame-group,
-.home-new {
-  flex-direction: column;
 }
 .frame-group {
   align-self: stretch;
   gap: var(--gap-31xl);
 }
+.content,
 .footer,
+.frame-group,
 .home-new {
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .footer {
   align-self: stretch;
-  padding: var(--padding-31xl) 0;
+  overflow: hidden;
+  padding: var(--padding-31xl) 0 0;
+  font-size: var(--font-size-13xl);
+}
+.content,
+.home-new {
+  text-align: center;
+  color: var(--color-white);
+}
+.content {
+  align-self: stretch;
+  padding: var(--padding-31xl) 125px;
+  gap: var(--gap-31xl);
+  background-image: url(./public/content@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  font-size: var(--font-size-29xl);
   font-family: var(--font-montserrat);
 }
 .home-new {
@@ -395,9 +395,8 @@
   width: 100%;
   position: relative;
   background-color: var(--color-gray);
-  text-align: center;
+  overflow: hidden;
   font-size: var(--font-size-13xl);
-  color: var(--color-white);
   font-family: var(--font-venite-adoremus);
 }
 @media screen and (max-width: 1440px) {
@@ -654,12 +653,6 @@
     box-sizing: border-box;
     row-gap: 25px;
   }
-  .content {
-    gap: var(--gap-31xl);
-    padding: 0 33px;
-    box-sizing: border-box;
-    row-gap: 0;
-  }
   .rectangle-parent {
     gap: var(--gap-6xl);
   }
@@ -669,10 +662,18 @@
   .frame-group {
     gap: var(--gap-xl);
   }
+  .content,
+  .footer {
+    box-sizing: border-box;
+  }
   .footer {
     padding-top: var(--padding-6xl);
     padding-bottom: var(--padding-6xl);
-    box-sizing: border-box;
+  }
+  .content {
+    gap: var(--gap-31xl);
+    padding: 0 33px;
+    row-gap: 0;
   }
 }
 @media screen and (max-width: 420px) {
@@ -785,10 +786,6 @@
   .experience {
     gap: var(--gap-6xl);
   }
-  .content {
-    padding: 0 var(--padding-6xl);
-    box-sizing: border-box;
-  }
   .lets-connect {
     font-size: var(--font-size-base);
   }
@@ -797,6 +794,10 @@
   }
   .footer {
     gap: var(--gap-0);
+  }
+  .content {
+    padding: 0 var(--padding-6xl);
+    box-sizing: border-box;
   }
 }
 @media screen and (max-width: 350px) {
@@ -840,16 +841,16 @@
   .experience {
     gap: var(--gap-31xl);
   }
-  .content {
-    padding-top: 0;
-    padding-bottom: 0;
-    box-sizing: border-box;
-  }
   .social-media-logo {
     scale: 35%;
   }
   .frame-group {
     row-gap: 10px;
+  }
+  .content {
+    padding-top: 0;
+    padding-bottom: 0;
+    box-sizing: border-box;
   }
 }
 .close-child,
