@@ -25,17 +25,16 @@
         font-weight: 400;
       }
     </style>
-	
-	<title>AR Home</title>
-	
-	<meta name="description" content="This website is a central hub for all things Gilang Islamay! Discover my latest project, browse my portfolio, and find a wealth of additional content – all in one convenient location!" />
   </head>
   <body>
     <a class="home-new">
       <div class="navbar-parent">
         <div class="navbar">
           <div class="menu">
-            <div class="home" data-scroll-to="homeText" id="homeText">Home</div>
+            <div class="home" id="homeText">
+              Home
+              <div class="anchor-home" data-scroll-to="homeText"></div>
+            </div>
             <div class="home" id="resumeText">Resume</div>
             <div class="home" id="certificationText">Certification</div>
             <div class="passions">Passions</div>
@@ -80,32 +79,6 @@
             <div class="projects1">Projects</div>
           </div>
           <div class="fashioncards">
-            <div class="courses">
-              <img
-                class="spacex-2-icon"
-                alt=""
-                src="./public/spacex-2@2x.png"
-              />
-
-              <div class="course-capstone">Course Capstone</div>
-            </div>
-            <div class="ipoth">
-              <img class="spacex-2-icon" alt="" src="./public/ipoth-1@2x.png" />
-
-              <div class="course-capstone">
-                <p class="greetings-my-name">Pot Holes Detection</p>
-                <p class="greetings-my-name">with Computer Vision</p>
-              </div>
-            </div>
-            <div class="ipoth">
-              <img
-                class="github-pic-icon"
-                alt=""
-                src="./public/github-pic@2x.png"
-              />
-
-              <div class="course-capstone">Fun Projects</div>
-            </div>
             <div class="bitcoin-price-prediction">
               <img
                 class="price-overall-1"
@@ -113,27 +86,53 @@
                 src="./public/price-overall-1@2x.png"
               />
 
-              <div class="course-capstone">
+              <div class="bitcoin-price-prediction-container">
                 <p class="greetings-my-name">Bitcoin Price Prediction using</p>
                 <p class="greetings-my-name">Temporal Fusion Transformer</p>
               </div>
             </div>
-            <div class="ipoth">
+            <div class="bitcoin-sentiment">
               <img
                 class="huggingface-light-icon"
                 alt=""
                 src="./public/huggingface-light@2x.png"
               />
 
-              <div class="course-capstone">
+              <div class="bitcoin-price-prediction-container">
                 <p class="greetings-my-name">Bitcoin Sentiment</p>
                 <p class="greetings-my-name">Analysis with roBERTa</p>
               </div>
             </div>
-            <div class="courses">
+            <div class="bitcoin-sentiment">
+              <img class="ipoth-1-icon" alt="" src="./public/ipoth-1@2x.png" />
+
+              <div class="bitcoin-price-prediction-container">
+                <p class="greetings-my-name">Pot Holes Detection</p>
+                <p class="greetings-my-name">with Computer Vision</p>
+              </div>
+            </div>
+            <div class="power-bi">
               <img class="power-bi-1" alt="" src="./public/power-bi-1@2x.png" />
 
-              <div class="course-capstone">Power BI Reports</div>
+              <div class="bitcoin-price-prediction-container">
+                Power BI Reports
+              </div>
+            </div>
+            <div class="power-bi">
+              <img class="ipoth-1-icon" alt="" src="./public/spacex-2@2x.png" />
+
+              <div class="bitcoin-price-prediction-container">
+                Course Capstone
+              </div>
+            </div>
+            <div class="bitcoin-sentiment">
+              <img
+                class="github-pic-icon"
+                alt=""
+                src="./public/github-pic@2x.png"
+              />
+
+              <div class="bitcoin-price-prediction-container">Fun Projects</div>
             </div>
           </div>
         </div>

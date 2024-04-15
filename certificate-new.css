@@ -9,16 +9,19 @@
   }
 }
 .home3 {
-  cursor: pointer;
-}
-.certification3,
-.home3,
-.passions3 {
   position: relative;
   letter-spacing: 1.5px;
+  cursor: pointer;
+}
+.anchor-certification {
+  position: absolute;
+  left: 0;
+  top: --10px;
 }
 .passions3 {
   width: 200px;
+  position: relative;
+  letter-spacing: 1.5px;
   display: none;
 }
 .hamburger-menu-icon1 {
@@ -129,7 +132,6 @@
   object-fit: cover;
   z-index: 1;
 }
-.entrepreneur,
 .wyiia {
   height: 234px;
   width: 350px;
@@ -237,7 +239,6 @@
   font-family: var(--font-venite-adoremus);
 }
 @media screen and (max-width: 1440px) {
-  .certification3,
   .home3,
   .passions3 {
     font-size: var(--font-size-5xl);
@@ -272,6 +273,10 @@
   .wyiia {
     width: 400px;
   }
+  .power-bi-data-analyst-associat-parent {
+    object-fit: contain;
+    justify-content: space-around;
+  }
   .lets-connect1 {
     font-size: var(--font-size-5xl);
   }
@@ -283,7 +288,6 @@
   }
 }
 @media screen and (max-width: 1200px) {
-  .certification3,
   .home3,
   .passions3 {
     font-size: var(--font-size-xl);
@@ -308,7 +312,6 @@
   }
 }
 @media screen and (max-width: 960px) {
-  .certification3,
   .home3,
   .passions3 {
     font-size: var(--font-size-smi);
@@ -417,7 +420,6 @@
     padding-right: 0;
     box-sizing: border-box;
   }
-  .entrepreneur,
   .power-bi-data-analyst-associat,
   .wyiia {
     width: 250px;
@@ -463,7 +465,6 @@
   .hall-of-certificate {
     font-size: 20%;
   }
-  .entrepreneur,
   .power-bi-data-analyst-associat,
   .wyiia {
     width: 200px;
@@ -709,7 +710,7 @@
     font-size: 25%;
   }
   .background-designed-by-container {
-    font-size: var(--font-size-5xs);
+    font-size: 7px;
     line-height: 15px;
   }
   .app-version-details {

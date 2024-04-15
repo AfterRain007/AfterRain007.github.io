@@ -232,7 +232,7 @@
     font-size: 25%;
   }
   .background-designed-by-container {
-    font-size: var(--font-size-5xs);
+    font-size: 7px;
     line-height: 15px;
   }
   .app-version-details {

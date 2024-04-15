@@ -8,6 +8,11 @@
     opacity: 1;
   }
 }
+.anchor-home {
+  position: absolute;
+  left: 0;
+  top: --10px;
+}
 .home,
 .passions {
   position: relative;
@@ -125,35 +130,16 @@
   align-items: center;
   justify-content: center;
 }
-.spacex-2-icon {
+.price-overall-1 {
   width: 350px;
-  height: 197px;
+  height: 194.8px;
   position: relative;
   object-fit: contain;
 }
-.course-capstone {
+.bitcoin-price-prediction-container {
   align-self: stretch;
   position: relative;
   font-weight: 900;
-}
-.courses,
-.ipoth {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--gap-3xs);
-  object-fit: contain;
-}
-.github-pic-icon,
-.price-overall-1 {
-  width: 350px;
-  height: 196px;
-  position: relative;
-  object-fit: contain;
-}
-.price-overall-1 {
-  height: 194.8px;
 }
 .bitcoin-price-prediction {
   display: flex;
@@ -163,15 +149,43 @@
   gap: var(--gap-3xs);
   object-fit: contain;
 }
-.huggingface-light-icon,
-.power-bi-1 {
+.huggingface-light-icon {
   width: 350px;
   height: 197.2px;
   position: relative;
   object-fit: contain;
 }
+.bitcoin-sentiment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-3xs);
+  object-fit: contain;
+}
+.ipoth-1-icon,
+.power-bi-1 {
+  width: 350px;
+  height: 197px;
+  position: relative;
+  object-fit: contain;
+}
 .power-bi-1 {
   height: 195.5px;
+}
+.power-bi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-3xs);
+  object-fit: contain;
+}
+.github-pic-icon {
+  width: 350px;
+  height: 196px;
+  position: relative;
+  object-fit: contain;
 }
 .fashioncards,
 .projects {
@@ -415,22 +429,19 @@
   .title {
     font-size: 75%;
   }
-  .spacex-2-icon {
-    width: 262px;
-    height: 147px;
-  }
-  .course-capstone {
-    font-size: var(--font-size-mini);
-  }
-  .github-pic-icon,
   .price-overall-1 {
     width: 262px;
     height: 147px;
   }
+  .bitcoin-price-prediction-container {
+    font-size: var(--font-size-mini);
+  }
   .bitcoin-price-prediction {
     font-size: 75%;
   }
+  .github-pic-icon,
   .huggingface-light-icon,
+  .ipoth-1-icon,
   .power-bi-1 {
     width: 262px;
     height: 147px;
@@ -496,23 +507,28 @@
   .title {
     font-size: 62.5%;
   }
-  .spacex-2-icon {
-    width: 245px;
-    height: 138px;
-    object-fit: contain;
-  }
-  .course-capstone {
-    font-size: var(--font-size-xs);
-  }
-  .github-pic-icon {
-    object-fit: contain;
-  }
-  .github-pic-icon,
-  .huggingface-light-icon,
-  .power-bi-1,
   .price-overall-1 {
     width: 245px;
     height: 138px;
+  }
+  .bitcoin-price-prediction-container {
+    font-size: var(--font-size-xs);
+  }
+  .huggingface-light-icon {
+    width: 245px;
+    height: 138px;
+  }
+  .ipoth-1-icon {
+    object-fit: contain;
+  }
+  .github-pic-icon,
+  .ipoth-1-icon,
+  .power-bi-1 {
+    width: 245px;
+    height: 138px;
+  }
+  .github-pic-icon {
+    object-fit: contain;
   }
   .fashioncards {
     gap: var(--gap-31xl);
@@ -584,7 +600,7 @@
   }
   .greetings-my-name-container {
     font-size: var(--font-size-xs);
-    text-align: left;
+    text-align: justify;
     flex-wrap: wrap;
     justify-content: space-around;
     flex: unset;
@@ -603,17 +619,17 @@
   .title {
     font-size: 50%;
   }
-  .spacex-2-icon {
+  .price-overall-1 {
     width: 210px;
     height: 119px;
   }
-  .course-capstone {
+  .bitcoin-price-prediction-container {
     font-size: var(--font-size-3xs);
   }
   .github-pic-icon,
   .huggingface-light-icon,
-  .power-bi-1,
-  .price-overall-1 {
+  .ipoth-1-icon,
+  .power-bi-1 {
     width: 210px;
     height: 119px;
   }
@@ -706,7 +722,7 @@
   }
   .greetings-my-name-container {
     font-size: var(--font-size-5xs);
-    text-align: left;
+    text-align: justify;
     flex: unset;
     align-self: stretch;
   }
@@ -723,17 +739,23 @@
   .title {
     font-size: 40%;
   }
-  .spacex-2-icon {
+  .huggingface-light-icon,
+  .price-overall-1 {
+    width: 175px;
+    height: 99px;
+  }
+  .ipoth-1-icon {
     width: 179px;
     height: 99px;
   }
-  .courses {
+  .power-bi-1 {
+    width: 175px;
+    height: 99px;
+  }
+  .power-bi {
     gap: var(--gap-xl);
   }
-  .github-pic-icon,
-  .huggingface-light-icon,
-  .power-bi-1,
-  .price-overall-1 {
+  .github-pic-icon {
     width: 175px;
     height: 99px;
   }
@@ -799,7 +821,7 @@
   }
   .greetings-my-name-container {
     font-size: var(--font-size-5xs);
-    text-align: left;
+    text-align: justify;
   }
   .title {
     font-size: 35%;
@@ -1054,7 +1076,7 @@
     font-size: 25%;
   }
   .background-designed-by-container {
-    font-size: var(--font-size-5xs);
+    font-size: 7px;
     line-height: 15px;
   }
   .app-version-details {

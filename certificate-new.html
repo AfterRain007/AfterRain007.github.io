@@ -25,8 +25,6 @@
         font-weight: 400;
       }
     </style>
-	
-	<title>AR Certificate Page</title>
   </head>
   <body>
     <a class="certificate-new">
@@ -35,7 +33,13 @@
           <div class="menu2">
             <div class="home3" id="homeText">Home</div>
             <div class="home3" id="resumeText">Resume</div>
-            <div class="certification3">Certification</div>
+            <div class="home3" id="certificationText">
+              Certification
+              <div
+                class="anchor-certification"
+                data-scroll-to="certificationText"
+              ></div>
+            </div>
             <div class="passions3">Passions</div>
             <button class="hamburger-menu1" id="hamburgerMenu">
               <img
@@ -123,7 +127,7 @@
               src="./public/greenbase-sertif@2x.png"
             />
           </div>
-          <div class="entrepreneur">
+          <div class="wyiia">
             <img
               class="power-bi-text"
               alt=""
@@ -168,7 +172,7 @@
               <img
                 class="instagram-logo-icon1"
                 alt=""
-                src="./public/linkedin-logo1@2x.png"
+                src="./public/linkedin-logo@2x.png"
                 id="linkedinLogoIcon"
               />
             </div>
@@ -329,6 +333,16 @@
         });
       }
       
+      var certificationText = document.getElementById("certificationText");
+      if (certificationText) {
+        certificationText.addEventListener("click", function () {
+          var anchor = document.querySelector("[data-scroll-to='certificationText']");
+          if (anchor) {
+            anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+          }
+        });
+      }
+      
       var hamburgerMenu = document.getElementById("hamburgerMenu");
       if (hamburgerMenu) {
         hamburgerMenu.addEventListener("click", function () {
@@ -361,30 +375,28 @@
       var instagramLogoIcon = document.getElementById("instagramLogoIcon");
       if (instagramLogoIcon) {
         instagramLogoIcon.addEventListener("click", function () {
-          window.open("instagram.com/razel007");
+          window.open("https://www.instagram.com/razel007");
         });
       }
       
       var youtubeLogo = document.getElementById("youtubeLogo");
       if (youtubeLogo) {
         youtubeLogo.addEventListener("click", function () {
-          window.open("https://www.youtube.com/channel/UCnXjOLs6aAcXxSYTzHM3uYQ");
+          window.open("https://www.youtube.com/@afterrain37/");
         });
       }
       
       var githubLogoIcon = document.getElementById("githubLogoIcon");
       if (githubLogoIcon) {
         githubLogoIcon.addEventListener("click", function () {
-          window.open("Github.com/afterrain007");
+          window.open("https://github.com/AfterRain007/");
         });
       }
       
       var linkedinLogoIcon = document.getElementById("linkedinLogoIcon");
       if (linkedinLogoIcon) {
         linkedinLogoIcon.addEventListener("click", function () {
-          window.open(
-            "https://www.linkedin.com/in/gilang-islamay-putra-djuharis-842196259/"
-          );
+          window.open("https://www.linkedin.com/in/gilang-islamay-putra-djuharis/");
         });
       }
       </script>
