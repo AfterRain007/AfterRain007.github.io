@@ -218,9 +218,9 @@
   background-color: var(--color-white);
 }
 .frame-child {
-  width: 35px;
+  width: 25px;
   border-radius: 50%;
-  height: 35px;
+  height: 25px;
 }
 .frame-item {
   width: 2px;
@@ -232,6 +232,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 0 var(--padding-8xs);
 }
 .july-dec {
   position: relative;
@@ -242,7 +243,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: var(--padding-8xs) 0;
+  padding: 0 0 var(--padding-8xs);
 }
 .production-division-intern {
   margin: 0;
@@ -266,7 +267,7 @@
 .button-download-resume {
   cursor: pointer;
   border: 0;
-  padding: var(--padding-3xs);
+  padding: 7px var(--padding-3xs);
   background-color: var(--color-white);
   border-radius: 20px;
   display: flex;
@@ -284,7 +285,6 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: var(--padding-8xs) 0 0;
   gap: var(--gap-31xl);
   text-align: justify;
 }
