@@ -64,7 +64,7 @@
   flex-direction: row;
   align-items: flex-start;
   padding: 0 0 500px;
-  background-image: url(./public/hero@3x.png);
+  background-image: url(./public/hero@3x.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -221,7 +221,7 @@
   align-self: stretch;
   padding: var(--padding-31xl) var(--padding-56xl);
   gap: var(--gap-81xl);
-  background-image: url(./public/content1@3x.png);
+  background-image: url(./public/content1@3x.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
