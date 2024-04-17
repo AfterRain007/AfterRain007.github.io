@@ -194,7 +194,7 @@
 .github-logo-icon1,
 .youtube-logo-icon1 {
   height: 33px;
-  width: 45.5px;
+  width: 45px;
 }
 .github-logo-icon1 {
   width: 33px;
@@ -334,8 +334,14 @@
     width: 21px;
     height: 21px;
   }
+  .social-media-logo1 {
+    gap: var(--gap-mini);
+  }
+  .frame-container {
+    gap: var(--gap-3xl);
+  }
   .footer1 {
-    gap: var(--gap-26xl);
+    gap: var(--gap-25xl);
   }
 }
 @media screen and (max-width: 960px) {
@@ -380,7 +386,7 @@
     gap: var(--gap-6xl);
     align-items: center;
     justify-content: space-around;
-    padding: var(--padding-6xl) var(--padding-3xs);
+    padding: 0 var(--padding-3xs);
     box-sizing: border-box;
     flex-wrap: wrap;
   }
@@ -403,21 +409,22 @@
     height: 17px;
   }
   .social-media-logo1 {
+    gap: var(--gap-mini);
+  }
+  .frame-container {
     gap: var(--gap-xl);
   }
   .content1,
   .footer1 {
+    gap: var(--gap-31xl);
     box-sizing: border-box;
   }
   .footer1 {
-    gap: var(--gap-6xl);
-    padding-top: var(--padding-6xl);
-    padding-bottom: var(--padding-6xl);
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .content1 {
-    gap: var(--gap-81xl);
-    padding: 0 var(--padding-56xl);
-    row-gap: 0;
+    padding: var(--padding-14xl) var(--padding-56xl);
   }
 }
 @media screen and (max-width: 420px) {
@@ -456,8 +463,7 @@
     gap: var(--gap-0);
     align-items: center;
     justify-content: center;
-    padding-top: 0;
-    padding-right: 0;
+    padding: 0;
     box-sizing: border-box;
   }
   .power-bi-data-analyst-associat,
@@ -465,9 +471,12 @@
     width: 250px;
   }
   .power-bi-data-analyst-associat-parent {
+    gap: 1px;
+    padding-top: 0;
+    padding-bottom: 0;
+    box-sizing: border-box;
     flex-wrap: wrap;
     justify-content: space-around;
-    row-gap: 0;
   }
   .lets-connect1 {
     font-size: var(--font-size-5xs);
@@ -488,10 +497,11 @@
     gap: var(--gap-3xs);
   }
   .footer1 {
-    gap: var(--gap-6xl);
+    gap: var(--gap-21xl);
   }
   .content1 {
-    padding: 0 var(--padding-6xl);
+    gap: var(--gap-14xl);
+    padding: var(--padding-14xl) var(--padding-6xl);
     box-sizing: border-box;
   }
 }
@@ -510,7 +520,7 @@
     padding-right: var(--padding-6xl);
   }
   .hero {
-    gap: 22px;
+    gap: var(--gap-3xl);
     padding-top: 0;
     padding-bottom: 62px;
   }
@@ -519,16 +529,23 @@
   }
   .power-bi-data-analyst-associat,
   .wyiia {
-    width: 200px;
+    width: 175px;
+    height: 117px;
   }
   .power-bi-data-analyst-associat-parent {
-    gap: var(--gap-6xl);
+    gap: var(--gap-mini);
     object-fit: contain;
-    row-gap: 0;
+  }
+  .frame-container {
+    gap: var(--gap-xl);
+  }
+  .footer1 {
+    gap: var(--gap-21xl);
   }
   .content1 {
-    padding-top: 0;
-    padding-bottom: 0;
+    gap: var(--gap-6xl);
+    padding-top: var(--padding-14xl);
+    padding-bottom: var(--padding-14xl);
     box-sizing: border-box;
   }
 }

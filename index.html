@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
+	<title>AR Home</title>
+	
+	<meta name="description" content="This website is a central hub for all things Gilang Islamay! Discover my latest project, browse my portfolio, and find a wealth of additional content – all in one convenient location!" />
 
     <meta property="og:image" content="public/thumbnail.png" />
 
@@ -25,10 +28,6 @@
         font-weight: 400;
       }
     </style>
-	
-	<title>AR Home</title>
-	
-	<meta name="description" content="This website is a central hub for all things Gilang Islamay! Discover my latest project, browse my portfolio, and find a wealth of additional content – all in one convenient location!" />
   </head>
   <body>
     <a class="home-new">
@@ -193,25 +192,25 @@
             <img
               class="price-overall-11"
               alt=""
-              src="./public/price-overall-11@2x.png"
+              src="./public/price-overall-1@2x.png"
             />
 
             <img
               class="huggingface-light-icon1"
               alt=""
-              src="./public/huggingface-light1@2x.png"
+              src="./public/huggingface-light@2x.png"
             />
 
-            <img class="ipoth-1-icon1" alt="" src="./public/ipoth-11@2x.png" />
+            <img class="ipoth-1-icon1" alt="" src="./public/ipoth-1@2x.png" />
 
-            <img class="power-bi-11" alt="" src="./public/power-bi-11@2x.png" />
+            <img class="power-bi-11" alt="" src="./public/power-bi-1@2x.png" />
 
-            <img class="ipoth-1-icon1" alt="" src="./public/spacex-21@2x.png" />
+            <img class="ipoth-1-icon1" alt="" src="./public/spacex-2@2x.png" />
 
             <img
               class="github-pic-icon1"
               alt=""
-              src="./public/github-pic1@2x.png"
+              src="./public/github-pic@2x.png"
             />
           </div>
         </div>
@@ -346,17 +345,6 @@
             <p class="background-designed-by">Made with Figma x Locofy</p>
             <p class="background-designed-by">Website Version 0.1.1</p>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="soonToBeAdded" class="popup-overlay" style="display: none">
-      <div class="soon-to-be-added">
-        <div class="description-will-be-added-soon-parent">
-          <div class="description-will-be">
-            Description Will be added soon on Version 0.1.2 :D
-          </div>
-          <img class="three-dot-icon6" alt="" src="./public/three-dot.svg" />
         </div>
       </div>
     </div>
@@ -522,26 +510,9 @@
       var powerBIContainer = document.getElementById("powerBIContainer");
       if (powerBIContainer) {
         powerBIContainer.addEventListener("click", function () {
-          var popup = document.getElementById("soonToBeAdded");
-          if (!popup) return;
-          var popupStyle = popup.style;
-          if (popupStyle) {
-            popupStyle.display = "flex";
-            popupStyle.zIndex = 100;
-            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
-            popupStyle.alignItems = "center";
-            popupStyle.justifyContent = "center";
-          }
-          popup.setAttribute("closable", "");
-      
-          var onClick =
-            popup.onClick ||
-            function (e) {
-              if (e.target === popup && popup.hasAttribute("closable")) {
-                popupStyle.display = "none";
-              }
-            };
-          popup.addEventListener("click", onClick);
+          window.open(
+            "https://learn.microsoft.com/api/credentials/share/en-us/GilangIslamay/2D153C0409AD4A2E?sharingId=59E07EA30355A46D"
+          );
         });
       }
       

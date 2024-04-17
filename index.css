@@ -452,7 +452,7 @@
 .github-logo-icon,
 .youtube-logo-icon {
   height: 33px;
-  width: 45.5px;
+  width: 45px;
 }
 .github-logo-icon {
   width: 33px;
@@ -738,8 +738,14 @@
     width: 21px;
     height: 21px;
   }
+  .social-media-logo {
+    gap: var(--gap-mini);
+  }
+  .frame-group {
+    gap: var(--gap-3xl);
+  }
   .footer {
-    gap: var(--gap-26xl);
+    gap: var(--gap-25xl);
   }
   .content {
     gap: var(--gap-31xl);
@@ -802,7 +808,7 @@
     gap: var(--gap-6xl);
   }
   .introduction {
-    padding: var(--padding-6xl) 0;
+    padding: 0;
     box-sizing: border-box;
   }
   .title {
@@ -840,9 +846,9 @@
     row-gap: 20px;
   }
   .projects {
-    padding: var(--padding-6xl) 35px;
+    gap: var(--gap-mini);
+    padding: 0 35px;
     box-sizing: border-box;
-    row-gap: 25px;
   }
   .download-resume,
   .july-dec,
@@ -850,10 +856,10 @@
     font-size: var(--font-size-3xs);
   }
   .experience {
-    padding-top: var(--padding-6xl);
-    padding-bottom: var(--padding-6xl);
+    gap: var(--gap-mini);
+    padding-top: 0;
+    padding-bottom: 0;
     box-sizing: border-box;
-    row-gap: 25px;
   }
   .lets-connect {
     font-size: var(--font-size-3xs);
@@ -874,20 +880,23 @@
     height: 17px;
   }
   .social-media-logo {
+    gap: var(--gap-mini);
+  }
+  .frame-group {
     gap: var(--gap-xl);
   }
   .content,
   .footer {
-    gap: var(--gap-6xl);
     box-sizing: border-box;
   }
   .footer {
-    padding-top: var(--padding-6xl);
-    padding-bottom: var(--padding-6xl);
+    gap: var(--gap-21xl);
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .content {
-    padding: 0 33px;
-    row-gap: 0;
+    gap: var(--gap-31xl);
+    padding: var(--padding-14xl);
   }
 }
 @media screen and (max-width: 420px) {
@@ -948,7 +957,7 @@
   .introduction {
     padding-left: var(--padding-xl);
     padding-right: var(--padding-xl);
-    padding-bottom: var(--padding-6xl);
+    padding-bottom: 0;
     box-sizing: border-box;
   }
   .title {
@@ -1014,7 +1023,7 @@
     row-gap: 30px;
   }
   .projects {
-    gap: var(--gap-6xl);
+    gap: var(--gap-mini);
     padding-left: 0;
     padding-right: 0;
     box-sizing: border-box;
@@ -1038,7 +1047,7 @@
     gap: var(--gap-3xs);
   }
   .experience {
-    gap: var(--gap-6xl);
+    gap: var(--gap-mini);
   }
   .lets-connect {
     font-size: var(--font-size-5xs);
@@ -1059,10 +1068,11 @@
     gap: var(--gap-3xs);
   }
   .footer {
-    gap: var(--gap-6xl);
+    gap: var(--gap-21xl);
   }
   .content {
-    padding: 0 var(--padding-6xl);
+    gap: var(--gap-14xl);
+    padding: var(--padding-14xl) var(--padding-6xl);
     box-sizing: border-box;
   }
 }
@@ -1108,9 +1118,16 @@
   .experience {
     gap: var(--gap-6xl);
   }
+  .frame-group {
+    gap: var(--gap-xl);
+  }
+  .footer {
+    gap: var(--gap-21xl);
+  }
   .content {
-    padding-top: 0;
-    padding-bottom: 0;
+    gap: var(--gap-14xl);
+    padding-top: var(--padding-14xl);
+    padding-bottom: var(--padding-14xl);
     box-sizing: border-box;
   }
 }
@@ -1370,65 +1387,5 @@
   .background-designed-by-container {
     font-size: 6px;
     line-height: 13px;
-  }
-}
-.description-will-be {
-  position: relative;
-  font-weight: 900;
-}
-.three-dot-icon6 {
-  width: 4px;
-  position: relative;
-  height: 20px;
-  display: none;
-}
-.description-will-be-added-soon-parent,
-.soon-to-be-added {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 var(--padding-10xs) 0 var(--padding-12xs);
-}
-.soon-to-be-added {
-  position: relative;
-  border-radius: var(--br-3xs);
-  background-color: var(--color-gray-300);
-  backdrop-filter: blur(7.5px);
-  border: 1px solid var(--color-gray-200);
-  box-sizing: border-box;
-  flex-direction: column;
-  padding: var(--padding-3xs);
-  max-width: 90%;
-  max-height: 90%;
-  overflow: auto;
-  text-align: center;
-  font-size: 40px;
-  color: var(--color-black);
-  font-family: var(--font-montserrat);
-}
-@media screen and (max-width: 1440px) {
-  .description-will-be {
-    font-size: var(--font-size-mini);
-  }
-}
-@media screen and (max-width: 1200px) {
-  .description-will-be {
-    font-size: var(--font-size-xs);
-  }
-  .three-dot-icon6 {
-    width: 3px;
-    height: 15px;
-  }
-}
-@media screen and (max-width: 960px) {
-  .description-will-be {
-    font-size: var(--font-size-3xs);
-  }
-}
-@media screen and (max-width: 420px) {
-  .three-dot-icon6 {
-    width: 2px;
-    height: 10px;
   }
 }
