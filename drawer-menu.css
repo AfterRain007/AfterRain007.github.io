@@ -86,6 +86,10 @@
   overflow: hidden;
   flex-shrink: 0;
 }
+.passions2 {
+  position: relative;
+  line-height: 24px;
+}
 .passions1 {
   display: none;
   flex-direction: row;
@@ -215,21 +219,27 @@
     object-fit: contain;
   }
   .home2 {
-    font-size: var(--font-size-5xs);
+    font-size: var(--font-size-3xs);
   }
-  .certificate-logo-icon,
-  .rubiks-cube-icon {
+  .certificate-logo-icon {
     width: 25px;
     font-size: 25%;
     object-fit: contain;
   }
-  .cv-logo-icon {
+  .certification2 {
+    font-size: var(--font-size-3xs);
+  }
+  .rubiks-cube-icon {
+    font-size: 25%;
+  }
+  .cv-logo-icon,
+  .rubiks-cube-icon {
     width: 25px;
     object-fit: contain;
   }
   .home-parent {
     gap: var(--gap-3xs);
-    font-size: 25%;
+    font-size: 30%;
   }
   .background-designed-by-container {
     font-size: 7px;
@@ -240,7 +250,7 @@
   }
   .drawer-menu {
     width: 150px;
-    padding-left: var(--padding-xl);
+    padding-left: 12px;
     box-sizing: border-box;
   }
 }

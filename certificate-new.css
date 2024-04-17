@@ -117,6 +117,10 @@
   position: relative;
   object-fit: contain;
 }
+.power-bi-data-analyst-associat:hover,
+.wyiia:hover {
+  filter: drop-shadow(0 0 25px rgba(102, 76, 232, 0.5));
+}
 .wyiia-sertif-icon {
   width: 95.34%;
   position: absolute;
@@ -151,12 +155,12 @@
   justify-content: space-around;
   gap: 100px 25px;
 }
-.frame-child1,
+.footer-item,
 .lets-connect1 {
   align-self: stretch;
   position: relative;
 }
-.frame-child1 {
+.footer-item {
   background: linear-gradient(
     90deg,
     rgba(3, 7, 14, 0),
@@ -168,27 +172,32 @@
   height: 1px;
 }
 .lets-connect1 {
-  height: 39px;
+  height: 24px;
   display: inline-block;
 }
-.rectangle-group {
+.lets-connect-container {
   align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--gap-31xl);
 }
+.github-logo-icon1,
 .instagram-logo-icon1,
 .youtube-logo-icon1 {
-  height: 45px;
-  width: 45px;
+  height: 30px;
+  width: 30px;
   position: relative;
   object-fit: contain;
   cursor: pointer;
 }
+.github-logo-icon1,
 .youtube-logo-icon1 {
-  width: 62.6px;
+  height: 33px;
+  width: 45.5px;
+}
+.github-logo-icon1 {
+  width: 33px;
 }
 .frame-container,
 .social-media-logo1 {
@@ -201,12 +210,12 @@
 .frame-container {
   align-self: stretch;
   flex-direction: column;
-  gap: var(--gap-31xl);
 }
 .footer1 {
   align-self: stretch;
   overflow: hidden;
-  font-size: var(--font-size-13xl);
+  gap: var(--gap-31xl);
+  font-size: var(--font-size-xl);
   font-family: var(--font-montserrat);
 }
 .certificate-new,
@@ -231,7 +240,7 @@
   text-decoration: none;
   width: 100%;
   position: relative;
-  background-color: var(--color-gray);
+  background-color: var(--color-gray-100);
   overflow: hidden;
   text-align: center;
   font-size: var(--font-size-13xl);
@@ -278,13 +287,19 @@
     justify-content: space-around;
   }
   .lets-connect1 {
-    font-size: var(--font-size-5xl);
+    font-size: var(--font-size-mini);
   }
-  .social-media-logo1 {
-    scale: 75%;
+  .instagram-logo-icon1 {
+    width: 25px;
+    height: 25px;
   }
-  .frame-container {
-    gap: var(--gap-31xl);
+  .youtube-logo-icon1 {
+    width: 34px;
+    height: 25px;
+  }
+  .github-logo-icon1 {
+    width: 25px;
+    height: 25px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -305,10 +320,22 @@
     font-size: 62.5%;
   }
   .lets-connect1 {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-xs);
   }
-  .social-media-logo1 {
-    scale: 62.5%;
+  .instagram-logo-icon1 {
+    width: 21px;
+    height: 21px;
+  }
+  .youtube-logo-icon1 {
+    width: 28px;
+    height: 21px;
+  }
+  .github-logo-icon1 {
+    width: 21px;
+    height: 21px;
+  }
+  .footer1 {
+    gap: var(--gap-26xl);
   }
 }
 @media screen and (max-width: 960px) {
@@ -357,13 +384,25 @@
     box-sizing: border-box;
     flex-wrap: wrap;
   }
-  .rectangle-group {
+  .lets-connect1 {
+    font-size: var(--font-size-3xs);
+  }
+  .lets-connect-container {
     gap: var(--gap-6xl);
   }
-  .social-media-logo1 {
-    scale: 50%;
+  .instagram-logo-icon1 {
+    width: 17px;
+    height: 17px;
   }
-  .frame-container {
+  .youtube-logo-icon1 {
+    width: 23px;
+    height: 17px;
+  }
+  .github-logo-icon1 {
+    width: 17px;
+    height: 17px;
+  }
+  .social-media-logo1 {
     gap: var(--gap-xl);
   }
   .content1,
@@ -371,6 +410,7 @@
     box-sizing: border-box;
   }
   .footer1 {
+    gap: var(--gap-6xl);
     padding-top: var(--padding-6xl);
     padding-bottom: var(--padding-6xl);
   }
@@ -430,13 +470,25 @@
     row-gap: 0;
   }
   .lets-connect1 {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-5xs);
+  }
+  .instagram-logo-icon1 {
+    width: 13px;
+    height: 13px;
+  }
+  .youtube-logo-icon1 {
+    width: 18px;
+    height: 13px;
+  }
+  .github-logo-icon1 {
+    width: 13px;
+    height: 13px;
   }
   .social-media-logo1 {
-    scale: 45%;
+    gap: var(--gap-3xs);
   }
   .footer1 {
-    gap: var(--gap-0);
+    gap: var(--gap-6xl);
   }
   .content1 {
     padding: 0 var(--padding-6xl);
@@ -473,12 +525,6 @@
     gap: var(--gap-6xl);
     object-fit: contain;
     row-gap: 0;
-  }
-  .social-media-logo1 {
-    scale: 35%;
-  }
-  .frame-container {
-    row-gap: 10px;
   }
   .content1 {
     padding-top: 0;
@@ -563,6 +609,10 @@
   height: 23.9px;
   overflow: hidden;
   flex-shrink: 0;
+}
+.passions2 {
+  position: relative;
+  line-height: 24px;
 }
 .passions1 {
   display: none;
@@ -693,21 +743,27 @@
     object-fit: contain;
   }
   .home2 {
-    font-size: var(--font-size-5xs);
+    font-size: var(--font-size-3xs);
   }
-  .certificate-logo-icon,
-  .rubiks-cube-icon {
+  .certificate-logo-icon {
     width: 25px;
     font-size: 25%;
     object-fit: contain;
   }
-  .cv-logo-icon {
+  .certification2 {
+    font-size: var(--font-size-3xs);
+  }
+  .rubiks-cube-icon {
+    font-size: 25%;
+  }
+  .cv-logo-icon,
+  .rubiks-cube-icon {
     width: 25px;
     object-fit: contain;
   }
   .home-parent {
     gap: var(--gap-3xs);
-    font-size: 25%;
+    font-size: 30%;
   }
   .background-designed-by-container {
     font-size: 7px;
@@ -718,7 +774,7 @@
   }
   .drawer-menu {
     width: 150px;
-    padding-left: var(--padding-xl);
+    padding-left: 12px;
     box-sizing: border-box;
   }
 }
