@@ -295,7 +295,7 @@
       );
       if (drawercertificationContainer) {
         drawercertificationContainer.addEventListener("click", function (e) {
-          window.location.href = "./certificate-new.html";
+          window.location.href = "./certificate";
         });
       }
       var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
