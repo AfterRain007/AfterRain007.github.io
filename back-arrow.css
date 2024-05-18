@@ -1,0 +1,28 @@
+.vector-icon1 {
+  position: absolute;
+  height: 98.15%;
+  width: 102.68%;
+  top: 0;
+  right: -2.68%;
+  bottom: 1.85%;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.back-arrow {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  width: 100%;
+  position: relative;
+  height: 27px;
+  overflow: hidden;
+}
+@media screen and (max-width: 420px) {
+  .back-arrow {
+    width: 42px;
+    height: 20px;
+  }
+}

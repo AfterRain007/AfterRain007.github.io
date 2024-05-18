@@ -204,7 +204,7 @@
     width: 250px;
     padding-top: var(--padding-6xl);
     padding-right: var(--padding-6xl);
-    padding-bottom: 16px;
+    padding-bottom: var(--padding-base);
     box-sizing: border-box;
   }
 }

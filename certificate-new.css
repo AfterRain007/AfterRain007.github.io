@@ -31,7 +31,7 @@
   width: 50px;
   height: 35px;
 }
-.hamburger-menu1 {
+.hamburger-menu2 {
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -64,7 +64,7 @@
   flex-direction: row;
   align-items: flex-start;
   padding: 0 0 500px;
-  background-image: url(./public/hero@3x.webp);
+  background-image: url(./public/hero@3x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -119,7 +119,7 @@
 }
 .power-bi-data-analyst-associat:hover,
 .wyiia:hover {
-  filter: drop-shadow(0 0 25px rgba(102, 76, 232, 0.5));
+  box-shadow: 0 0 25px rgba(102, 76, 232, 0.5);
 }
 .wyiia-sertif-icon {
   width: 95.34%;
@@ -175,7 +175,7 @@
   height: 24px;
   display: inline-block;
 }
-.lets-connect-container {
+.lets-connect-wrapper {
   align-self: stretch;
   display: flex;
   flex-direction: column;
@@ -199,7 +199,7 @@
 .github-logo-icon1 {
   width: 33px;
 }
-.frame-container,
+.frame-group,
 .social-media-logo1 {
   display: flex;
   flex-direction: row;
@@ -207,7 +207,7 @@
   justify-content: center;
   gap: var(--gap-6xl);
 }
-.frame-container {
+.frame-group {
   align-self: stretch;
   flex-direction: column;
 }
@@ -230,7 +230,7 @@
   align-self: stretch;
   padding: var(--padding-31xl) var(--padding-56xl);
   gap: var(--gap-81xl);
-  background-image: url(./public/content1@3x.webp);
+  background-image: url(./public/content1@3x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -337,7 +337,7 @@
   .social-media-logo1 {
     gap: var(--gap-mini);
   }
-  .frame-container {
+  .frame-group {
     gap: var(--gap-3xl);
   }
   .footer1 {
@@ -350,7 +350,7 @@
     font-size: var(--font-size-smi);
     display: none;
   }
-  .hamburger-menu1,
+  .hamburger-menu2,
   .menu2 {
     display: flex;
   }
@@ -393,7 +393,7 @@
   .lets-connect1 {
     font-size: var(--font-size-3xs);
   }
-  .lets-connect-container {
+  .lets-connect-wrapper {
     gap: var(--gap-6xl);
   }
   .instagram-logo-icon1 {
@@ -411,7 +411,7 @@
   .social-media-logo1 {
     gap: var(--gap-mini);
   }
-  .frame-container {
+  .frame-group {
     gap: var(--gap-xl);
   }
   .content1,
@@ -429,7 +429,7 @@
 }
 @media screen and (max-width: 420px) {
   .hamburger-menu-icon1,
-  .hamburger-menu1 {
+  .hamburger-menu2 {
     width: 35px;
     height: 20px;
     object-fit: contain;
@@ -471,7 +471,7 @@
     width: 250px;
   }
   .power-bi-data-analyst-associat-parent {
-    gap: 1px;
+    gap: var(--gap-12xs);
     padding-top: 0;
     padding-bottom: 0;
     box-sizing: border-box;
@@ -507,7 +507,7 @@
 }
 @media screen and (max-width: 350px) {
   .hamburger-menu-icon1,
-  .hamburger-menu1 {
+  .hamburger-menu2 {
     width: 30px;
     height: 15px;
   }
@@ -536,7 +536,7 @@
     gap: var(--gap-mini);
     object-fit: contain;
   }
-  .frame-container {
+  .frame-group {
     gap: var(--gap-xl);
   }
   .footer1 {
@@ -745,7 +745,7 @@
     width: 250px;
     padding-top: var(--padding-6xl);
     padding-right: var(--padding-6xl);
-    padding-bottom: 16px;
+    padding-bottom: var(--padding-base);
     box-sizing: border-box;
   }
 }

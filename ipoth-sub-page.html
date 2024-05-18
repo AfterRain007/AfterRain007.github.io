@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./ipoth-sub-page.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Venite Adoremus:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,900;1,400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="ipoth-sub-page">
+      <a class="ipoth-sub-page1">
+        <div class="header1">
+          <div class="navbar3">
+            <div class="menu4">
+              <button class="back-arrow2" id="backArrow">
+                <img class="vector-icon3" alt="" src="./public/vector.svg" />
+              </button>
+            </div>
+          </div>
+          <div class="intro1">
+            <div class="title-group">
+              <div class="title2">Pot Holes Detection with Computer Vision</div>
+              <i class="sub-title1">Pot Holes, Pot Holes everywhere!</i>
+            </div>
+            <div class="price-overall-1-group">
+              <img
+                class="price-overall-111"
+                alt=""
+                src="./public/price-overall-1@2x.png"
+              />
+
+              <div class="image-11">Indonesia Pot Holes (IPOTH)</div>
+              <img class="overlay-icon1" alt="" src="./public/overlay@2x.png" />
+            </div>
+          </div>
+        </div>
+        <div class="content3">
+          <div class="general-overview2">
+            <div class="general-overview3">General Overview</div>
+            <div class="lorem-ipsum-dolor1">
+              Based on the problem Indonesia have which is pothole, me and four
+              of my friends created a computer vision model using YOLO to
+              automatically detect pothole. After training, we got mAP results
+              on IoU 50 training of 84% and 52% on testing with only 30 epochs
+              and publicly available dataset. Not only that, but we actually
+              made a mock up application too!
+            </div>
+          </div>
+          <div class="detailed1">
+            <div class="comprehensive-breakdown1">Comprehensive Breakdown</div>
+            <div class="quisque-scelerisque-tristique-container1">
+              <p class="me-and-four">
+                Me and four of my friends which are Muhammad Hanan Azhar
+                Jihaannuriy, Izzuddin, Rizky Azriel Fahrezi, and Najib Ridho
+                Sandika joined an international competition called World Youth
+                Invention and Innovation Award in the Technology Category. Based
+                on the traffic accident report in Indonesia which cost 698 lives
+                where infrastructure is the third most accident cause, we
+                decided to do computer vision as our project. With that in mind,
+                we use Annotated Potholes Dataset by Atikur Rahman Chitholian
+                dataset to built a YOLO model with it. 532 annotated image were
+                used for training and 133 for testing, but due to hardware and
+                time limitations we can only do 30 epochs for the training
+                phase. Nonetheless it results in mAP results on IoU 50 training
+                of 84% and 52% on testing!
+              </p>
+              <p class="after-we-built">
+                After we built our model, a mock up mobile application was made
+                to further solidify our idea. And at the end we got a gold medal
+                at World Youth Invention and Innovation Award in the Technology
+                Category!
+              </p>
+            </div>
+          </div>
+          <div class="closing1">
+            <div class="comprehensive-breakdown1">Epilogue</div>
+            <div class="aenean-at-ipsum1">
+              Thank you for everyone involved! Not only four of my friends, but
+              also Mr. Taufik Edy Sutanto, M.Sc.Tech.,Ph.D as our Academic
+              supervisor in this competition!
+            </div>
+          </div>
+        </div>
+        <div class="footer4">
+          <div class="footer-child1"></div>
+          <div class="lets-connect-parent1">
+            <div class="lets-connect4">Let’s Connect!</div>
+            <div class="social-media-logo4">
+              <img
+                class="instagram-logo-icon4"
+                alt=""
+                src="./public/instagram-logo.svg"
+                id="instagramLogoIcon"
+              />
+
+              <img
+                class="youtube-logo-icon4"
+                alt=""
+                src="./public/youtube-logo.svg"
+                id="youtubeLogoIcon"
+              />
+
+              <img
+                class="github-logo-icon4"
+                alt=""
+                src="./public/github-logo.svg"
+                id="githubLogoIcon"
+              />
+
+              <img
+                class="github-logo-icon4"
+                alt=""
+                src="./public/linkedin-logo@2x.png"
+                id="linkedinLogoIcon"
+              />
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <script>
+      var backArrow = document.getElementById("backArrow");
+      if (backArrow) {
+        backArrow.addEventListener("click", function (e) {
+          window.location.href = "./home-new.html";
+        });
+      }
+      
+      var instagramLogoIcon = document.getElementById("instagramLogoIcon");
+      if (instagramLogoIcon) {
+        instagramLogoIcon.addEventListener("click", function () {
+          window.open("https://www.instagram.com/razel007");
+        });
+      }
+      
+      var youtubeLogoIcon = document.getElementById("youtubeLogoIcon");
+      if (youtubeLogoIcon) {
+        youtubeLogoIcon.addEventListener("click", function () {
+          window.open("https://www.youtube.com/@afterrain37/");
+        });
+      }
+      
+      var githubLogoIcon = document.getElementById("githubLogoIcon");
+      if (githubLogoIcon) {
+        githubLogoIcon.addEventListener("click", function () {
+          window.open("https://github.com/AfterRain007/");
+        });
+      }
+      
+      var linkedinLogoIcon = document.getElementById("linkedinLogoIcon");
+      if (linkedinLogoIcon) {
+        linkedinLogoIcon.addEventListener("click", function () {
+          window.open("https://www.linkedin.com/in/gilang-islamay-putra-djuharis/");
+        });
+      }
+      </script>
+  </body>
+</html>

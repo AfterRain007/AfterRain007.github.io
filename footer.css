@@ -1,0 +1,169 @@
+.lets-connect3,
+.rectangle-div {
+  align-self: stretch;
+  position: relative;
+}
+.rectangle-div {
+  background: linear-gradient(
+    90deg,
+    rgba(3, 7, 14, 0),
+    #fff 33.1%,
+    #fff 50%,
+    #fff 67.43%,
+    rgba(3, 7, 14, 0)
+  );
+  height: 1px;
+}
+.lets-connect3 {
+  height: 24px;
+  display: inline-block;
+}
+.github-logo-icon3,
+.instagram-logo-icon3,
+.youtube-logo-icon3 {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  object-fit: contain;
+  cursor: pointer;
+}
+.github-logo-icon3,
+.youtube-logo-icon3 {
+  height: 33px;
+  width: 45px;
+}
+.github-logo-icon3 {
+  width: 33px;
+}
+.footer3,
+.lets-connect-container,
+.social-media-logo3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-media-logo3 {
+  flex-direction: row;
+  gap: var(--gap-6xl);
+}
+.footer3,
+.lets-connect-container {
+  flex-direction: column;
+}
+.lets-connect-container {
+  align-self: stretch;
+  gap: var(--gap-6xl);
+}
+.footer3 {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  gap: var(--gap-31xl);
+  text-align: center;
+  font-size: var(--font-size-xl);
+  color: var(--color-white);
+  font-family: var(--font-montserrat);
+}
+@media screen and (max-width: 1440px) {
+  .lets-connect3 {
+    font-size: var(--font-size-mini);
+  }
+  .instagram-logo-icon3 {
+    width: 25px;
+    height: 25px;
+  }
+  .youtube-logo-icon3 {
+    width: 34px;
+    height: 25px;
+  }
+  .github-logo-icon3 {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .lets-connect3 {
+    font-size: var(--font-size-xs);
+  }
+  .instagram-logo-icon3 {
+    width: 21px;
+    height: 21px;
+  }
+  .youtube-logo-icon3 {
+    width: 28px;
+    height: 21px;
+  }
+  .github-logo-icon3 {
+    width: 21px;
+    height: 21px;
+  }
+  .social-media-logo3 {
+    gap: var(--gap-mini);
+  }
+  .lets-connect-container {
+    gap: var(--gap-3xl);
+  }
+  .footer3 {
+    gap: var(--gap-25xl);
+  }
+}
+@media screen and (max-width: 960px) {
+  .lets-connect3 {
+    font-size: var(--font-size-3xs);
+  }
+  .instagram-logo-icon3 {
+    width: 17px;
+    height: 17px;
+  }
+  .youtube-logo-icon3 {
+    width: 23px;
+    height: 17px;
+  }
+  .github-logo-icon3 {
+    width: 17px;
+    height: 17px;
+  }
+  .social-media-logo3 {
+    gap: var(--gap-mini);
+  }
+  .lets-connect-container {
+    gap: var(--gap-xl);
+  }
+  .footer3 {
+    gap: var(--gap-21xl);
+    padding-top: 0;
+    padding-bottom: 0;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 420px) {
+  .lets-connect3 {
+    font-size: var(--font-size-3xs);
+  }
+  .instagram-logo-icon3 {
+    width: 13px;
+    height: 13px;
+  }
+  .youtube-logo-icon3 {
+    width: 18px;
+    height: 13px;
+  }
+  .github-logo-icon3 {
+    width: 13px;
+    height: 13px;
+  }
+  .social-media-logo3 {
+    gap: var(--gap-3xs);
+  }
+  .footer3 {
+    gap: var(--gap-21xl);
+  }
+}
+@media screen and (max-width: 350px) {
+  .lets-connect-container {
+    gap: var(--gap-3xs);
+  }
+  .footer3 {
+    gap: var(--gap-21xl);
+  }
+}

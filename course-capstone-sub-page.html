@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./course-capstone-sub-page.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Venite Adoremus:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,900;1,400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="course-capstone-sub-page">
+      <a class="course-capstone-sub-page1">
+        <div class="header4">
+          <div class="navbar6">
+            <div class="menu7">
+              <button class="back-arrow5" id="backArrow">
+                <img class="vector-icon6" alt="" src="./public/vector.svg" />
+              </button>
+            </div>
+          </div>
+          <div class="intro4">
+            <div class="title-parent2">
+              <div class="title5">Course Capstone</div>
+              <i class="sub-title4">It’s actually kinda interesting</i>
+            </div>
+            <div class="price-overall-1-parent2">
+              <img
+                class="price-overall-114"
+                alt=""
+                src="./public/price-overall-1@2x.png"
+              />
+
+              <div class="image-14">SpaceX Dashboard using Python</div>
+              <img
+                class="overlay-icon4"
+                alt=""
+                src="./public/overlay@2x.png"
+                id="overlayImage"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="content6">
+          <div class="general-overview8">
+            <div class="general-overview9">General Overview</div>
+            <div class="lorem-ipsum-dolor4">
+              Google Data Analytics, IBM Data Science, and DQLab
+            </div>
+          </div>
+          <div class="detailed4">
+            <div class="comprehensive-breakdown4">Comprehensive Breakdown</div>
+            <div class="quisque-scelerisque-tristique2">
+              After I was done with my thesis I solidify my skill that’s related
+              to Data Analytics and Data Science with courses. And I not only
+              solidify my skill with finishing this courses in just a week, but
+              I also gained something new like running SQL queries in python
+              using sqlite3 and creatuing a dashboard in python that’s running
+              on a local server using dash. You learn something new everyday!
+            </div>
+          </div>
+          <div class="closing4">
+            <div class="comprehensive-breakdown4">Epilogue</div>
+            <div class="aenean-at-ipsum4">
+              You can find the certifications on the certificate page!
+            </div>
+          </div>
+        </div>
+        <div class="footer7">
+          <div class="footer-child4"></div>
+          <div class="lets-connect-parent4">
+            <div class="lets-connect7">Let’s Connect!</div>
+            <div class="social-media-logo7">
+              <img
+                class="instagram-logo-icon7"
+                alt=""
+                src="./public/instagram-logo.svg"
+                id="instagramLogoIcon"
+              />
+
+              <img
+                class="youtube-logo-icon7"
+                alt=""
+                src="./public/youtube-logo.svg"
+                id="youtubeLogoIcon"
+              />
+
+              <img
+                class="github-logo-icon7"
+                alt=""
+                src="./public/github-logo.svg"
+                id="githubLogoIcon"
+              />
+
+              <img
+                class="github-logo-icon7"
+                alt=""
+                src="./public/linkedin-logo@2x.png"
+                id="linkedinLogoIcon"
+              />
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <script>
+      var backArrow = document.getElementById("backArrow");
+      if (backArrow) {
+        backArrow.addEventListener("click", function (e) {
+          window.location.href = "./home-new.html";
+        });
+      }
+      
+      var overlayImage = document.getElementById("overlayImage");
+      if (overlayImage) {
+        overlayImage.addEventListener("click", function () {
+          window.open("https://github.com/AfterRain007/TFDS");
+        });
+      }
+      
+      var instagramLogoIcon = document.getElementById("instagramLogoIcon");
+      if (instagramLogoIcon) {
+        instagramLogoIcon.addEventListener("click", function () {
+          window.open("https://www.instagram.com/razel007");
+        });
+      }
+      
+      var youtubeLogoIcon = document.getElementById("youtubeLogoIcon");
+      if (youtubeLogoIcon) {
+        youtubeLogoIcon.addEventListener("click", function () {
+          window.open("https://www.youtube.com/@afterrain37/");
+        });
+      }
+      
+      var githubLogoIcon = document.getElementById("githubLogoIcon");
+      if (githubLogoIcon) {
+        githubLogoIcon.addEventListener("click", function () {
+          window.open("https://github.com/AfterRain007/");
+        });
+      }
+      
+      var linkedinLogoIcon = document.getElementById("linkedinLogoIcon");
+      if (linkedinLogoIcon) {
+        linkedinLogoIcon.addEventListener("click", function () {
+          window.open("https://www.linkedin.com/in/gilang-islamay-putra-djuharis/");
+        });
+      }
+      </script>
+  </body>
+</html>

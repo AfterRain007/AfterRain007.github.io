@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./fun-projects-sub-page.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Venite Adoremus:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,900;1,400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="fun-projects-sub-page">
+      <a class="fun-projects-sub-page1">
+        <div class="header5">
+          <div class="navbar7">
+            <div class="menu8">
+              <button class="back-arrow6" id="backArrow">
+                <img class="vector-icon7" alt="" src="./public/vector.svg" />
+              </button>
+            </div>
+          </div>
+          <div class="intro5">
+            <div class="title-parent3">
+              <div class="title6">Fun Projects</div>
+              <i class="sub-title5"
+                >Why do it manually for 30 minutes when you can do it
+                automatically by coding for 3 days?</i
+              >
+            </div>
+            <div class="price-overall-1-parent3">
+              <img
+                class="price-overall-115"
+                alt=""
+                src="./public/price-overall-1@2x.png"
+              />
+
+              <div class="image-15">Github Profile</div>
+              <img
+                class="overlay-icon5"
+                alt=""
+                src="./public/overlay@2x.png"
+                id="overlayImage"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="content7">
+          <div class="general-overview10">
+            <div class="general-overview11">General Overview</div>
+            <div class="lorem-ipsum-dolor5">
+              Some of my fun projects that I do in my spare time!
+            </div>
+          </div>
+          <div class="detailed5">
+            <div class="comprehensive-breakdown5">Comprehensive Breakdown</div>
+            <div class="quisque-scelerisque-tristique3">
+              Sorty is a File Sorting Algorithm in which it detect file name
+              using Regular Expression to sort them out. Whilst chatty is a
+              simple Text Algorithm to classify who said the most bad words and
+              took longer to text back, it’s called “Simple” because it uses
+              List Comprehension rather than Machine Learning.
+            </div>
+          </div>
+          <div class="closing5">
+            <div class="comprehensive-breakdown5">Epilogue</div>
+            <div class="aenean-at-ipsum5">
+              Source code could be found at this GitHub Repo
+            </div>
+          </div>
+        </div>
+        <div class="footer8">
+          <div class="footer-child5"></div>
+          <div class="lets-connect-parent5">
+            <div class="lets-connect8">Let’s Connect!</div>
+            <div class="social-media-logo8">
+              <img
+                class="instagram-logo-icon8"
+                alt=""
+                src="./public/instagram-logo.svg"
+                id="instagramLogoIcon"
+              />
+
+              <img
+                class="youtube-logo-icon8"
+                alt=""
+                src="./public/youtube-logo.svg"
+                id="youtubeLogoIcon"
+              />
+
+              <img
+                class="github-logo-icon8"
+                alt=""
+                src="./public/github-logo.svg"
+                id="githubLogoIcon"
+              />
+
+              <img
+                class="github-logo-icon8"
+                alt=""
+                src="./public/linkedin-logo@2x.png"
+                id="linkedinLogoIcon"
+              />
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <script>
+      var backArrow = document.getElementById("backArrow");
+      if (backArrow) {
+        backArrow.addEventListener("click", function (e) {
+          window.location.href = "./home-new.html";
+        });
+      }
+      
+      var overlayImage = document.getElementById("overlayImage");
+      if (overlayImage) {
+        overlayImage.addEventListener("click", function () {
+          window.open("https://github.com/AfterRain007/Fun-Projects");
+        });
+      }
+      
+      var instagramLogoIcon = document.getElementById("instagramLogoIcon");
+      if (instagramLogoIcon) {
+        instagramLogoIcon.addEventListener("click", function () {
+          window.open("https://www.instagram.com/razel007");
+        });
+      }
+      
+      var youtubeLogoIcon = document.getElementById("youtubeLogoIcon");
+      if (youtubeLogoIcon) {
+        youtubeLogoIcon.addEventListener("click", function () {
+          window.open("https://www.youtube.com/@afterrain37/");
+        });
+      }
+      
+      var githubLogoIcon = document.getElementById("githubLogoIcon");
+      if (githubLogoIcon) {
+        githubLogoIcon.addEventListener("click", function () {
+          window.open("https://github.com/AfterRain007/");
+        });
+      }
+      
+      var linkedinLogoIcon = document.getElementById("linkedinLogoIcon");
+      if (linkedinLogoIcon) {
+        linkedinLogoIcon.addEventListener("click", function () {
+          window.open("https://www.linkedin.com/in/gilang-islamay-putra-djuharis/");
+        });
+      }
+      </script>
+  </body>
+</html>

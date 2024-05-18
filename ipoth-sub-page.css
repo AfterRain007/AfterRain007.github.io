@@ -1,0 +1,594 @@
+.vector-icon3 {
+  position: absolute;
+  height: 98.15%;
+  width: 102.68%;
+  top: 0;
+  right: -2.68%;
+  bottom: 1.85%;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.back-arrow2 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  width: 56px;
+  position: relative;
+  height: 27px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.menu4,
+.navbar3 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.navbar3 {
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 var(--padding-31xl);
+}
+.sub-title1,
+.title2 {
+  align-self: stretch;
+  position: relative;
+}
+.sub-title1 {
+  font-size: var(--font-size-xl);
+  font-family: var(--font-montserrat);
+}
+.title-group {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.price-overall-111 {
+  width: 888px;
+  height: 492.2px;
+  position: relative;
+  object-fit: cover;
+  z-index: 0;
+}
+.image-11 {
+  align-self: stretch;
+  height: 20px;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.overlay-icon1 {
+  width: 888px;
+  height: 492.2px;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  opacity: 0%;
+  z-index: 2;
+}
+.overlay-icon1:hover {
+  opacity: 100%;
+}
+.header1,
+.intro1,
+.price-overall-1-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.price-overall-1-group {
+  position: relative;
+  gap: var(--gap-8xs);
+  text-align: left;
+  font-size: var(--font-size-base);
+  font-family: var(--font-montserrat);
+}
+.header1,
+.intro1 {
+  align-self: stretch;
+}
+.intro1 {
+  border-radius: var(--br-3xs);
+  gap: var(--gap-16xl);
+  row-gap: 30px;
+}
+.header1 {
+  font-family: var(--font-venite-adoremus);
+}
+.general-overview3,
+.lorem-ipsum-dolor1 {
+  align-self: stretch;
+  position: relative;
+  display: inline-block;
+}
+.general-overview3 {
+  height: 39px;
+  font-weight: 600;
+}
+.lorem-ipsum-dolor1 {
+  height: 72px;
+  font-size: var(--font-size-xl);
+  text-indent: 33px;
+}
+.general-overview2 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--gap-8xs);
+}
+.comprehensive-breakdown1 {
+  align-self: stretch;
+  height: 39px;
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+}
+.me-and-four {
+  text-indent: 33px;
+  margin-block-start: 0;
+  margin-block-end: 10px;
+}
+.after-we-built {
+  text-indent: 33px;
+  margin: 0;
+}
+.quisque-scelerisque-tristique-container1 {
+  align-self: stretch;
+  height: 178px;
+  position: relative;
+  font-size: var(--font-size-xl);
+  display: inline-block;
+}
+.detailed1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-8xs);
+}
+.aenean-at-ipsum1 {
+  align-self: stretch;
+  height: 24px;
+  position: relative;
+  font-size: var(--font-size-xl);
+  text-indent: 33px;
+  display: inline-block;
+}
+.closing1,
+.content3 {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.closing1 {
+  width: 1720px;
+  display: none;
+  gap: var(--gap-8xs);
+}
+.content3 {
+  align-self: stretch;
+  display: flex;
+  gap: var(--gap-31xl);
+  text-align: justify;
+  font-size: var(--font-size-13xl);
+}
+.footer-child1,
+.lets-connect4 {
+  align-self: stretch;
+  position: relative;
+}
+.footer-child1 {
+  background: linear-gradient(
+    90deg,
+    rgba(3, 7, 14, 0),
+    #fff 33.1%,
+    #fff 50%,
+    #fff 67.43%,
+    rgba(3, 7, 14, 0)
+  );
+  height: 1px;
+}
+.lets-connect4 {
+  height: 24px;
+  display: inline-block;
+}
+.github-logo-icon4,
+.instagram-logo-icon4,
+.youtube-logo-icon4 {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  object-fit: contain;
+  cursor: pointer;
+}
+.github-logo-icon4,
+.youtube-logo-icon4 {
+  height: 33px;
+  width: 45px;
+}
+.github-logo-icon4 {
+  width: 33px;
+}
+.social-media-logo4 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-6xl);
+}
+.footer4,
+.lets-connect-parent1 {
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+}
+.lets-connect-parent1 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-6xl);
+}
+.footer4 {
+  gap: var(--gap-31xl);
+  font-size: var(--font-size-xl);
+}
+.footer4,
+.ipoth-sub-page,
+.ipoth-sub-page1 {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.ipoth-sub-page1 {
+  text-decoration: none;
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-31xl) var(--padding-81xl);
+  gap: var(--gap-31xl);
+  background-image: url(./public/ipoth--subpage@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  color: inherit;
+}
+.ipoth-sub-page {
+  width: 100%;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: center;
+  font-size: var(--font-size-29xl);
+  color: var(--color-white);
+  font-family: var(--font-montserrat);
+}
+@media screen and (max-width: 1440px) {
+  .navbar3 {
+    gap: var(--gap-0);
+    padding-top: 0;
+    padding-bottom: var(--padding-18xl);
+    box-sizing: border-box;
+  }
+  .title2 {
+    font-size: var(--font-size-17xl);
+  }
+  .sub-title1 {
+    font-size: var(--font-size-mini);
+  }
+  .price-overall-111 {
+    width: 666px;
+    height: 369px;
+  }
+  .image-11 {
+    font-size: var(--font-size-xs);
+  }
+  .overlay-icon1 {
+    width: 666px;
+    height: 369px;
+  }
+  .general-overview3 {
+    font-size: var(--font-size-5xl);
+  }
+  .lorem-ipsum-dolor1 {
+    font-size: var(--font-size-mini);
+  }
+  .comprehensive-breakdown1 {
+    font-size: var(--font-size-5xl);
+  }
+  .aenean-at-ipsum1,
+  .quisque-scelerisque-tristique-container1 {
+    font-size: var(--font-size-mini);
+  }
+  .content3 {
+    gap: var(--gap-26xl);
+  }
+  .lets-connect4 {
+    font-size: var(--font-size-mini);
+  }
+  .instagram-logo-icon4 {
+    width: 25px;
+    height: 25px;
+  }
+  .youtube-logo-icon4 {
+    width: 34px;
+    height: 25px;
+  }
+  .github-logo-icon4 {
+    width: 25px;
+    height: 25px;
+  }
+  .ipoth-sub-page1 {
+    gap: var(--gap-31xl);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .menu4 {
+    display: flex;
+  }
+  .navbar3 {
+    gap: var(--gap-0);
+    padding-top: 0;
+    padding-bottom: var(--padding-11xl);
+    box-sizing: border-box;
+  }
+  .title2 {
+    font-size: var(--font-size-11xl);
+  }
+  .sub-title1 {
+    font-size: var(--font-size-xs);
+  }
+  .price-overall-111 {
+    width: 555px;
+    height: 307px;
+  }
+  .image-11 {
+    font-size: var(--font-size-3xs);
+  }
+  .overlay-icon1 {
+    width: 555px;
+    height: 307px;
+  }
+  .general-overview3 {
+    font-size: var(--font-size-xl);
+  }
+  .lorem-ipsum-dolor1 {
+    font-size: var(--font-size-xs);
+  }
+  .comprehensive-breakdown1 {
+    font-size: var(--font-size-xl);
+  }
+  .aenean-at-ipsum1,
+  .quisque-scelerisque-tristique-container1 {
+    font-size: var(--font-size-xs);
+  }
+  .content3 {
+    gap: var(--gap-16xl);
+  }
+  .lets-connect4 {
+    font-size: var(--font-size-xs);
+  }
+  .instagram-logo-icon4 {
+    width: 21px;
+    height: 21px;
+  }
+  .youtube-logo-icon4 {
+    width: 28px;
+    height: 21px;
+  }
+  .github-logo-icon4 {
+    width: 21px;
+    height: 21px;
+  }
+  .social-media-logo4 {
+    gap: var(--gap-mini);
+  }
+  .lets-connect-parent1 {
+    gap: var(--gap-3xl);
+  }
+  .footer4 {
+    gap: var(--gap-25xl);
+  }
+  .ipoth-sub-page1 {
+    gap: var(--gap-31xl);
+    padding-left: var(--padding-56xl);
+    padding-right: var(--padding-56xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 960px) {
+  .menu4,
+  .navbar3 {
+    box-sizing: border-box;
+  }
+  .menu4 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-right: 0;
+    font-size: 65%;
+  }
+  .navbar3 {
+    gap: var(--gap-0);
+    padding: 0 var(--padding-base) var(--padding-base) 0;
+  }
+  .title-group {
+    padding-bottom: var(--padding-mini);
+    box-sizing: border-box;
+  }
+  .overlay-icon1,
+  .price-overall-111 {
+    width: 444px;
+    height: 246px;
+  }
+  .intro1 {
+    row-gap: 10px;
+  }
+  .general-overview3 {
+    font-size: var(--font-size-xl);
+  }
+  .aenean-at-ipsum1,
+  .lorem-ipsum-dolor1,
+  .quisque-scelerisque-tristique-container1 {
+    font-size: var(--font-size-xs);
+  }
+  .lets-connect4 {
+    font-size: var(--font-size-3xs);
+  }
+  .instagram-logo-icon4 {
+    width: 17px;
+    height: 17px;
+  }
+  .youtube-logo-icon4 {
+    width: 23px;
+    height: 17px;
+  }
+  .github-logo-icon4 {
+    width: 17px;
+    height: 17px;
+  }
+  .social-media-logo4 {
+    gap: var(--gap-mini);
+  }
+  .lets-connect-parent1 {
+    gap: var(--gap-xl);
+  }
+  .footer4 {
+    gap: var(--gap-21xl);
+    padding-top: 0;
+    padding-bottom: 0;
+    box-sizing: border-box;
+  }
+  .ipoth-sub-page1 {
+    padding-left: var(--padding-31xl);
+    padding-top: var(--padding-21xl);
+    padding-right: var(--padding-31xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 420px) {
+  .back-arrow2 {
+    width: 42px;
+    height: 20px;
+  }
+  .menu4,
+  .navbar3 {
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .menu4 {
+    gap: var(--gap-31xl);
+    justify-content: flex-start;
+    padding-right: 0;
+  }
+  .navbar3 {
+    gap: var(--gap-0);
+    justify-content: center;
+    padding: 0 var(--padding-base) var(--padding-base) 0;
+  }
+  .title-group {
+    gap: var(--gap-12xs);
+  }
+  .price-overall-111 {
+    width: 266px;
+    height: 148px;
+  }
+  .image-11 {
+    font-size: var(--font-size-5xs);
+  }
+  .overlay-icon1 {
+    width: 266px;
+    height: 148px;
+  }
+  .aenean-at-ipsum1 {
+    font-size: var(--font-size-3xs);
+  }
+  .content3 {
+    gap: var(--gap-6xl);
+  }
+  .lets-connect4 {
+    font-size: var(--font-size-3xs);
+  }
+  .instagram-logo-icon4 {
+    width: 13px;
+    height: 13px;
+  }
+  .youtube-logo-icon4 {
+    width: 18px;
+    height: 13px;
+  }
+  .github-logo-icon4 {
+    width: 13px;
+    height: 13px;
+  }
+  .social-media-logo4 {
+    gap: var(--gap-3xs);
+  }
+  .footer4 {
+    gap: var(--gap-21xl);
+  }
+  .ipoth-sub-page1 {
+    gap: var(--gap-14xl);
+    padding: var(--padding-14xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 350px) {
+  .navbar3 {
+    gap: var(--gap-0);
+    padding-top: 0;
+    padding-right: var(--padding-base);
+    padding-bottom: var(--padding-base);
+    box-sizing: border-box;
+  }
+  .title2 {
+    font-size: var(--font-size-5xl);
+  }
+  .sub-title1 {
+    font-size: var(--font-size-3xs);
+  }
+  .price-overall-111 {
+    width: 221px;
+    height: 123px;
+  }
+  .image-11 {
+    font-size: var(--font-size-5xs);
+  }
+  .overlay-icon1 {
+    width: 221px;
+    height: 123px;
+  }
+  .intro1 {
+    row-gap: 10px;
+  }
+  .general-overview3 {
+    font-size: var(--font-size-base);
+  }
+  .lorem-ipsum-dolor1 {
+    font-size: var(--font-size-3xs);
+  }
+  .comprehensive-breakdown1 {
+    font-size: var(--font-size-base);
+  }
+  .aenean-at-ipsum1,
+  .quisque-scelerisque-tristique-container1 {
+    font-size: var(--font-size-3xs);
+  }
+  .lets-connect-parent1 {
+    gap: var(--gap-3xs);
+  }
+  .footer4 {
+    gap: var(--gap-21xl);
+  }
+}
