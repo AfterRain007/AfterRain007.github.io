@@ -1,4 +1,4 @@
-.vector-icon4 {
+.vector-icon5 {
   position: absolute;
   height: 98.15%;
   width: 102.68%;
@@ -50,7 +50,7 @@
   align-items: center;
   justify-content: center;
 }
-.price-overall-112 {
+.power-bi-mock-up1 {
   width: 888px;
   height: 492.2px;
   position: relative;
@@ -81,13 +81,13 @@
 }
 .header2,
 .intro2,
-.price-overall-1-container {
+.power-bi-mock-up-parent {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.price-overall-1-container {
+.power-bi-mock-up-parent {
   position: relative;
   gap: var(--gap-8xs);
   text-align: left;
@@ -147,7 +147,7 @@
 }
 .quisque-scelerisque-tristique-container2 {
   align-self: stretch;
-  height: 130px;
+  height: 106px;
   position: relative;
   font-size: var(--font-size-xl);
   display: inline-block;
@@ -186,12 +186,12 @@
   text-align: justify;
   font-size: var(--font-size-13xl);
 }
-.footer-child2,
+.footer-child3,
 .lets-connect5 {
   align-self: stretch;
   position: relative;
 }
-.footer-child2 {
+.footer-child3 {
   background: linear-gradient(
     90deg,
     rgba(3, 7, 14, 0),
@@ -288,7 +288,7 @@
   .sub-title2 {
     font-size: var(--font-size-mini);
   }
-  .price-overall-112 {
+  .power-bi-mock-up1 {
     width: 666px;
     height: 369px;
   }
@@ -350,7 +350,7 @@
   .sub-title2 {
     font-size: var(--font-size-xs);
   }
-  .price-overall-112 {
+  .power-bi-mock-up1 {
     width: 555px;
     height: 307px;
   }
@@ -429,7 +429,7 @@
     box-sizing: border-box;
   }
   .overlay-icon2,
-  .price-overall-112 {
+  .power-bi-mock-up1 {
     width: 444px;
     height: 246px;
   }
@@ -501,7 +501,7 @@
   .title-container {
     gap: var(--gap-12xs);
   }
-  .price-overall-112 {
+  .power-bi-mock-up1 {
     width: 266px;
     height: 148px;
   }
@@ -559,7 +559,7 @@
   .sub-title2 {
     font-size: var(--font-size-3xs);
   }
-  .price-overall-112 {
+  .power-bi-mock-up1 {
     width: 221px;
     height: 123px;
   }

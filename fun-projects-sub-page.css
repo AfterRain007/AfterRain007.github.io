@@ -1,4 +1,4 @@
-.vector-icon7 {
+.vector-icon8 {
   position: absolute;
   height: 98.15%;
   width: 102.68%;
@@ -50,7 +50,7 @@
   align-items: center;
   justify-content: center;
 }
-.price-overall-115 {
+.github-profile-icon1 {
   width: 888px;
   height: 492.2px;
   position: relative;
@@ -79,15 +79,15 @@
 .overlay-icon5:hover {
   opacity: 100%;
 }
+.github-profile-parent,
 .header5,
-.intro5,
-.price-overall-1-parent3 {
+.intro5 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.price-overall-1-parent3 {
+.github-profile-parent {
   position: relative;
   gap: var(--gap-8xs);
   text-align: left;
@@ -178,12 +178,12 @@
   text-align: justify;
   font-size: var(--font-size-13xl);
 }
-.footer-child5,
+.footer-child6,
 .lets-connect8 {
   align-self: stretch;
   position: relative;
 }
-.footer-child5 {
+.footer-child6 {
   background: linear-gradient(
     90deg,
     rgba(3, 7, 14, 0),
@@ -280,7 +280,7 @@
   .sub-title5 {
     font-size: var(--font-size-mini);
   }
-  .price-overall-115 {
+  .github-profile-icon1 {
     width: 666px;
     height: 369px;
   }
@@ -342,7 +342,7 @@
   .sub-title5 {
     font-size: var(--font-size-xs);
   }
-  .price-overall-115 {
+  .github-profile-icon1 {
     width: 555px;
     height: 307px;
   }
@@ -420,8 +420,8 @@
     padding-bottom: var(--padding-mini);
     box-sizing: border-box;
   }
-  .overlay-icon5,
-  .price-overall-115 {
+  .github-profile-icon1,
+  .overlay-icon5 {
     width: 444px;
     height: 246px;
   }
@@ -493,7 +493,7 @@
   .title-parent3 {
     gap: var(--gap-12xs);
   }
-  .price-overall-115 {
+  .github-profile-icon1 {
     width: 266px;
     height: 148px;
   }
@@ -551,7 +551,7 @@
   .sub-title5 {
     font-size: var(--font-size-3xs);
   }
-  .price-overall-115 {
+  .github-profile-icon1 {
     width: 221px;
     height: 123px;
   }

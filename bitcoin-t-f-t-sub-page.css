@@ -1,4 +1,4 @@
-.vector-icon10 {
+.vector-icon11 {
   position: absolute;
   height: 98.15%;
   width: 102.68%;
@@ -53,7 +53,7 @@
   align-items: center;
   justify-content: center;
 }
-.price-overall-118 {
+.tft-arch-icon {
   width: 888px;
   height: 492.2px;
   position: relative;
@@ -67,7 +67,7 @@
   display: inline-block;
   z-index: 1;
 }
-.overlay-icon8 {
+.overlay-icon7 {
   width: 888px;
   height: 492.2px;
   position: absolute;
@@ -79,18 +79,18 @@
   cursor: pointer;
   z-index: 2;
 }
-.overlay-icon8:hover {
+.overlay-icon7:hover {
   opacity: 100%;
 }
 .header8,
 .intro8,
-.price-overall-1-parent6 {
+.tft-arch-parent {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.price-overall-1-parent6 {
+.tft-arch-parent {
   position: relative;
   gap: var(--gap-8xs);
   text-align: left;
@@ -192,12 +192,12 @@
   text-align: justify;
   font-size: var(--font-size-13xl);
 }
-.footer-child8,
+.footer-child9,
 .lets-connect11 {
   align-self: stretch;
   position: relative;
 }
-.footer-child8 {
+.footer-child9 {
   background: linear-gradient(
     90deg,
     rgba(3, 7, 14, 0),
@@ -294,14 +294,14 @@
   .sub-title8 {
     font-size: var(--font-size-mini);
   }
-  .price-overall-118 {
+  .tft-arch-icon {
     width: 666px;
     height: 369px;
   }
   .image-18 {
     font-size: var(--font-size-xs);
   }
-  .overlay-icon8 {
+  .overlay-icon7 {
     width: 666px;
     height: 369px;
   }
@@ -356,14 +356,14 @@
   .sub-title8 {
     font-size: var(--font-size-xs);
   }
-  .price-overall-118 {
+  .tft-arch-icon {
     width: 555px;
     height: 307px;
   }
   .image-18 {
     font-size: var(--font-size-3xs);
   }
-  .overlay-icon8 {
+  .overlay-icon7 {
     width: 555px;
     height: 307px;
   }
@@ -434,8 +434,8 @@
     padding-bottom: var(--padding-mini);
     box-sizing: border-box;
   }
-  .overlay-icon8,
-  .price-overall-118 {
+  .overlay-icon7,
+  .tft-arch-icon {
     width: 444px;
     height: 246px;
   }
@@ -507,14 +507,14 @@
   .title-parent6 {
     gap: var(--gap-12xs);
   }
-  .price-overall-118 {
+  .tft-arch-icon {
     width: 266px;
     height: 148px;
   }
   .image-18 {
     font-size: var(--font-size-5xs);
   }
-  .overlay-icon8 {
+  .overlay-icon7 {
     width: 266px;
     height: 148px;
   }
@@ -565,14 +565,14 @@
   .sub-title8 {
     font-size: var(--font-size-3xs);
   }
-  .price-overall-118 {
+  .tft-arch-icon {
     width: 221px;
     height: 123px;
   }
   .image-18 {
     font-size: var(--font-size-5xs);
   }
-  .overlay-icon8 {
+  .overlay-icon7 {
     width: 221px;
     height: 123px;
   }

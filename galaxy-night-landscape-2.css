@@ -1,0 +1,9 @@
+.galaxy-night-landscape-2 {
+  width: 100%;
+  position: relative;
+  height: 0;
+  background-image: url(./public/galaxynightlandscape-2@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}

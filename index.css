@@ -128,13 +128,6 @@
   align-items: center;
   justify-content: center;
 }
-.price-overall-1 {
-  width: 350px;
-  height: 194px;
-  position: relative;
-  border-radius: var(--br-3xs);
-  object-fit: contain;
-}
 .lorem-ipsum {
   flex: 1;
   position: relative;
@@ -154,24 +147,33 @@
   justify-content: center;
   padding: 0 var(--padding-10xs) 0 var(--padding-12xs);
 }
+.huggingface-icon,
+.project-template {
+  border-radius: var(--br-3xs);
+  object-fit: contain;
+}
 .project-template {
   backdrop-filter: blur(7.5px);
-  border-radius: var(--br-3xs);
   background-color: var(--color-gray-300);
   border: 1px solid var(--color-gray-200);
+  display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: flex-start;
   padding: var(--padding-3xs);
   gap: var(--gap-3xs);
-  object-fit: contain;
 }
 .project-template1:hover,
 .project-template:hover {
   box-shadow: 0 0 25px rgba(102, 76, 232, 0.5);
   cursor: pointer;
 }
+.huggingface-icon {
+  width: 350px;
+  height: 194px;
+  position: relative;
+}
 .fashioncards,
-.project-template,
 .project-template1 {
   display: flex;
   align-items: flex-start;
@@ -197,13 +199,13 @@
   font-size: var(--font-size-base);
   font-family: var(--font-montserrat);
 }
-.price-overall-18 {
+.price-overall-11 {
   height: 194.8px;
   width: 350px;
   position: relative;
   object-fit: contain;
 }
-.price-overall-18:hover {
+.price-overall-11:hover {
   box-shadow: 0 0 5px #584fee;
 }
 .github-pic-icon,
@@ -400,7 +402,7 @@
 }
 .content,
 .footer,
-.home-new,
+.index,
 .lets-connect-parent {
   display: flex;
   flex-direction: column;
@@ -413,7 +415,7 @@
   gap: var(--gap-31xl);
 }
 .content,
-.home-new {
+.index {
   text-align: center;
   color: var(--color-white);
 }
@@ -428,7 +430,7 @@
   font-size: var(--font-size-xl);
   font-family: var(--font-montserrat);
 }
-.home-new {
+.index {
   text-decoration: none;
   width: 100%;
   position: relative;
@@ -471,14 +473,16 @@
   .title {
     font-size: 75%;
   }
-  .price-overall-1 {
-    width: 262px;
-    height: 147px;
-  }
   .lorem-ipsum {
     font-size: var(--font-size-mini);
   }
-  .project-template,
+  .project-template {
+    font-size: 75%;
+  }
+  .huggingface-icon {
+    width: 262px;
+    height: 147px;
+  }
   .project-template1 {
     font-size: 75%;
   }
@@ -491,7 +495,7 @@
   .huggingface-light-icon,
   .ipoth-1-icon,
   .power-bi-1,
-  .price-overall-18 {
+  .price-overall-11 {
     width: 262px;
     height: 147px;
   }
@@ -575,10 +579,6 @@
   .title {
     font-size: 62.5%;
   }
-  .price-overall-1 {
-    width: 245px;
-    height: 138px;
-  }
   .lorem-ipsum {
     font-size: var(--font-size-xs);
   }
@@ -586,13 +586,17 @@
     width: 3px;
     height: 15px;
   }
+  .huggingface-icon {
+    width: 245px;
+    height: 138px;
+  }
   .fashioncards {
     gap: var(--gap-31xl);
     row-gap: 25px;
     font-size: var(--font-size-smi-5);
   }
   .huggingface-light-icon,
-  .price-overall-18 {
+  .price-overall-11 {
     width: 245px;
     height: 138px;
   }
@@ -733,12 +737,12 @@
   .title {
     font-size: 50%;
   }
-  .price-overall-1 {
-    width: 140px;
-    height: 79px;
-  }
   .lorem-ipsum {
     font-size: var(--font-size-5xs);
+  }
+  .huggingface-icon {
+    width: 140px;
+    height: 79px;
   }
   .fashioncards {
     gap: var(--gap-31xl);
@@ -749,7 +753,7 @@
   .huggingface-light-icon,
   .ipoth-1-icon,
   .power-bi-1,
-  .price-overall-18 {
+  .price-overall-11 {
     width: 210px;
     height: 119px;
   }
@@ -873,10 +877,6 @@
   .title {
     font-size: 50%;
   }
-  .price-overall-1 {
-    width: 122px;
-    height: 69px;
-  }
   .three-dot-icon {
     width: 2px;
     height: 10px;
@@ -885,6 +885,10 @@
     padding-left: 0;
     padding-right: 0;
     box-sizing: border-box;
+  }
+  .huggingface-icon {
+    width: 122px;
+    height: 69px;
   }
   .fashioncards {
     flex-direction: row;
@@ -896,7 +900,7 @@
     row-gap: 30px;
   }
   .huggingface-light-icon,
-  .price-overall-18 {
+  .price-overall-11 {
     width: 175px;
     height: 99px;
   }
@@ -970,14 +974,14 @@
     gap: var(--gap-21xl);
   }
   .content,
-  .home-new {
+  .index {
     box-sizing: border-box;
   }
   .content {
     gap: var(--gap-14xl);
     padding: var(--padding-14xl) var(--padding-mini);
   }
-  .home-new {
+  .index {
     padding-left: 0;
     padding-right: 0;
   }

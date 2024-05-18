@@ -1,4 +1,4 @@
-.vector-icon8 {
+.vector-icon9 {
   position: absolute;
   height: 98.15%;
   width: 102.68%;
@@ -50,7 +50,7 @@
   align-items: center;
   justify-content: center;
 }
-.price-overall-116 {
+.website-thumbnail-icon1 {
   width: 888px;
   height: 492.2px;
   position: relative;
@@ -81,13 +81,13 @@
 }
 .header6,
 .intro6,
-.price-overall-1-parent4 {
+.website-thumbnail-parent {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.price-overall-1-parent4 {
+.website-thumbnail-parent {
   position: relative;
   gap: var(--gap-8xs);
   text-align: left;
@@ -178,12 +178,12 @@
   text-align: justify;
   font-size: var(--font-size-13xl);
 }
-.footer-child6,
+.footer-child7,
 .lets-connect9 {
   align-self: stretch;
   position: relative;
 }
-.footer-child6 {
+.footer-child7 {
   background: linear-gradient(
     90deg,
     rgba(3, 7, 14, 0),
@@ -280,7 +280,7 @@
   .sub-title6 {
     font-size: var(--font-size-mini);
   }
-  .price-overall-116 {
+  .website-thumbnail-icon1 {
     width: 666px;
     height: 369px;
   }
@@ -342,7 +342,7 @@
   .sub-title6 {
     font-size: var(--font-size-xs);
   }
-  .price-overall-116 {
+  .website-thumbnail-icon1 {
     width: 555px;
     height: 307px;
   }
@@ -421,7 +421,7 @@
     box-sizing: border-box;
   }
   .overlay-icon6,
-  .price-overall-116 {
+  .website-thumbnail-icon1 {
     width: 444px;
     height: 246px;
   }
@@ -493,7 +493,7 @@
   .title-parent4 {
     gap: var(--gap-12xs);
   }
-  .price-overall-116 {
+  .website-thumbnail-icon1 {
     width: 266px;
     height: 148px;
   }
@@ -551,7 +551,7 @@
   .sub-title6 {
     font-size: var(--font-size-3xs);
   }
-  .price-overall-116 {
+  .website-thumbnail-icon1 {
     width: 221px;
     height: 123px;
   }

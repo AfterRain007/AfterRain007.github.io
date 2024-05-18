@@ -76,4 +76,5 @@ body {
 
   /* Border radiuses */
   --br-3xs: 10px;
+  --br-5xs: 8px;
 }

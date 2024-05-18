@@ -1,0 +1,22 @@
+.profile-icon {
+  position: absolute;
+  height: 41.7%;
+  width: 28.52%;
+  top: 0;
+  right: 35.67%;
+  bottom: 58.3%;
+  left: 35.81%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.intersect-icon,
+.profile-logo {
+  position: relative;
+  width: 289px;
+  height: 152.5px;
+}
+.profile-logo {
+  width: 100%;
+  height: 305px;
+}
