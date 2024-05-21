@@ -1,3 +1,26 @@
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
 @keyframes slide-in-right {
   0% {
     transform: translateX(200px);
@@ -84,7 +107,7 @@
   background-repeat: no-repeat;
   background-position: top;
 }
-.pp-1-icon {
+.photo-profile-icon {
   width: 231px;
   position: relative;
   height: 231px;
@@ -128,84 +151,121 @@
   align-items: center;
   justify-content: center;
 }
+.tft-thumbnail-icon {
+  width: 350px;
+  height: 194px;
+  position: relative;
+  border-radius: var(--br-3xs);
+  object-fit: contain;
+  cursor: pointer;
+}
+.tft-thumbnail-icon:hover {
+  box-shadow: 0 0 75px rgba(102, 76, 232, 0.5);
+}
 .lorem-ipsum {
   flex: 1;
   position: relative;
   font-weight: 900;
 }
-.three-dot-icon {
-  width: 4px;
+.hugging-face-logo {
+  display: none;
+}
+.hugging-face-logo:hover {
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+}
+.github-logo-icon,
+.hugging-face-logo {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  object-fit: contain;
+  cursor: pointer;
+}
+.github-logo-icon:hover {
+  animation: 1s ease 0s 1 normal none pulsate;
+  opacity: 1;
+}
+.frame-child,
+.github-logo-icon1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+}
+.frame-child {
+  background-color: var(--color-gainsboro);
+  display: none;
+}
+.github-logo-icon1 {
+  object-fit: contain;
+  cursor: pointer;
+}
+.github-logo-icon1:hover,
+.github-logo-icon7:hover {
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+}
+.rectangle-parent {
+  width: 20px;
   position: relative;
   height: 20px;
   display: none;
 }
+.frame-item {
+  width: 40px;
+  height: 20px;
+  display: none;
+}
+.lorem-ipsum-parent,
+.project-template {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+}
 .lorem-ipsum-parent {
   align-self: stretch;
-  display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 0 var(--padding-10xs) 0 var(--padding-12xs);
+  padding: 0 0 0 var(--padding-12xs);
 }
-.huggingface-icon,
 .project-template {
+  backdrop-filter: blur(7.5px);
   border-radius: var(--br-3xs);
+  background-color: var(--color-gray-300);
+  border: 1px solid var(--color-gray-200);
+  flex-direction: column;
+  padding: var(--padding-3xs);
   object-fit: contain;
 }
-.project-template {
-  backdrop-filter: blur(7.5px);
-  background-color: var(--color-gray-300);
-  border: 1px solid var(--color-gray-200);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-3xs);
-  gap: var(--gap-3xs);
-}
-.project-template1:hover,
-.project-template:hover {
-  box-shadow: 0 0 25px rgba(102, 76, 232, 0.5);
-  cursor: pointer;
-}
-.huggingface-icon {
-  width: 350px;
-  height: 194px;
-  position: relative;
-}
-.fashioncards,
-.project-template1 {
-  display: flex;
-  align-items: flex-start;
-}
-.project-template1 {
-  backdrop-filter: blur(7.5px);
-  border-radius: var(--br-3xs);
-  background-color: var(--color-gray-300);
-  border: 1px solid var(--color-gray-200);
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: var(--padding-3xs);
-  gap: var(--gap-3xs);
+.github-logo-icon7 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  display: none;
   object-fit: contain;
   cursor: pointer;
 }
 .fashioncards {
   align-self: stretch;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: space-around;
   gap: var(--gap-31xl);
+  text-align: left;
   font-size: var(--font-size-base);
   font-family: var(--font-montserrat);
 }
-.price-overall-11 {
+.price-overall-1 {
   height: 194.8px;
   width: 350px;
   position: relative;
   object-fit: contain;
 }
-.price-overall-11:hover {
+.price-overall-1:hover {
   box-shadow: 0 0 5px #584fee;
 }
 .github-pic-icon,
@@ -254,17 +314,17 @@
   position: relative;
   display: inline-block;
 }
-.frame-child,
-.frame-item {
+.ellipse-div,
+.frame-child12 {
   position: relative;
   background-color: var(--color-white);
 }
-.frame-child {
+.ellipse-div {
   width: 25px;
   border-radius: 50%;
   height: 25px;
 }
-.frame-item {
+.frame-child12 {
   width: 2px;
   flex: 1;
 }
@@ -293,7 +353,7 @@
 }
 .production-division-intern-container {
   align-self: stretch;
-  height: 96px;
+  height: auto;
   position: relative;
   display: inline-block;
 }
@@ -352,12 +412,12 @@
   font-size: var(--font-size-29xl);
   font-family: var(--font-venite-adoremus);
 }
-.footer-child,
+.frame-child14,
 .lets-connect {
   align-self: stretch;
   position: relative;
 }
-.footer-child {
+.frame-child14 {
   background: linear-gradient(
     90deg,
     rgba(3, 7, 14, 0),
@@ -372,7 +432,7 @@
   height: 24px;
   display: inline-block;
 }
-.github-logo-icon,
+.github-logo-icon16,
 .instagram-logo-icon,
 .youtube-logo-icon {
   height: 30px;
@@ -381,14 +441,15 @@
   object-fit: contain;
   cursor: pointer;
 }
-.github-logo-icon,
+.github-logo-icon16,
 .youtube-logo-icon {
   height: 33px;
   width: 45px;
 }
-.github-logo-icon {
+.github-logo-icon16 {
   width: 33px;
 }
+.lets-connect-parent,
 .social-media-logo {
   display: flex;
   flex-direction: row;
@@ -398,12 +459,16 @@
 }
 .lets-connect-parent {
   align-self: stretch;
-  gap: var(--gap-6xl);
+  flex-direction: column;
+}
+.rectangle-parent6 {
+  align-self: stretch;
+  gap: var(--gap-31xl);
 }
 .content,
 .footer,
 .index,
-.lets-connect-parent {
+.rectangle-parent6 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -412,7 +477,6 @@
 .footer {
   align-self: stretch;
   overflow: hidden;
-  gap: var(--gap-31xl);
 }
 .content,
 .index {
@@ -458,7 +522,7 @@
     padding-bottom: 235px;
     box-sizing: border-box;
   }
-  .pp-1-icon {
+  .photo-profile-icon {
     width: 173px;
     height: 173px;
   }
@@ -473,18 +537,25 @@
   .title {
     font-size: 75%;
   }
+  .tft-thumbnail-icon {
+    width: 262px;
+    height: 147px;
+  }
   .lorem-ipsum {
-    font-size: var(--font-size-mini);
+    font-size: var(--font-size-xs);
+  }
+  .github-logo-icon,
+  .github-logo-icon1,
+  .hugging-face-logo {
+    width: 15px;
+    height: 15px;
   }
   .project-template {
     font-size: 75%;
   }
-  .huggingface-icon {
-    width: 262px;
-    height: 147px;
-  }
-  .project-template1 {
-    font-size: 75%;
+  .github-logo-icon7 {
+    width: 15px;
+    height: 15px;
   }
   .fashioncards {
     flex-wrap: wrap;
@@ -495,7 +566,7 @@
   .huggingface-light-icon,
   .ipoth-1-icon,
   .power-bi-1,
-  .price-overall-11 {
+  .price-overall-1 {
     width: 262px;
     height: 147px;
   }
@@ -537,7 +608,7 @@
     width: 34px;
     height: 25px;
   }
-  .github-logo-icon {
+  .github-logo-icon16 {
     width: 25px;
     height: 25px;
   }
@@ -565,7 +636,7 @@
     padding-bottom: 194px;
     box-sizing: border-box;
   }
-  .pp-1-icon {
+  .photo-profile-icon {
     width: 144px;
     height: 144px;
   }
@@ -579,16 +650,19 @@
   .title {
     font-size: 62.5%;
   }
-  .lorem-ipsum {
-    font-size: var(--font-size-xs);
-  }
-  .three-dot-icon {
-    width: 3px;
-    height: 15px;
-  }
-  .huggingface-icon {
+  .tft-thumbnail-icon {
     width: 245px;
     height: 138px;
+  }
+  .lorem-ipsum {
+    font-size: var(--font-size-3xs);
+  }
+  .github-logo-icon,
+  .github-logo-icon1,
+  .github-logo-icon7,
+  .hugging-face-logo {
+    width: 13px;
+    height: 13px;
   }
   .fashioncards {
     gap: var(--gap-31xl);
@@ -596,7 +670,7 @@
     font-size: var(--font-size-smi-5);
   }
   .huggingface-light-icon,
-  .price-overall-11 {
+  .price-overall-1 {
     width: 245px;
     height: 138px;
   }
@@ -623,7 +697,7 @@
     padding-right: 0;
     box-sizing: border-box;
   }
-  .frame-child {
+  .ellipse-div {
     width: 20px;
     height: 20px;
   }
@@ -657,7 +731,7 @@
     width: 28px;
     height: 21px;
   }
-  .github-logo-icon {
+  .github-logo-icon16 {
     width: 21px;
     height: 21px;
   }
@@ -712,7 +786,7 @@
     padding: 0 0 153px;
     box-sizing: border-box;
   }
-  .pp-1-icon {
+  .photo-profile-icon {
     width: 115px;
     height: 115px;
   }
@@ -737,12 +811,19 @@
   .title {
     font-size: 50%;
   }
-  .lorem-ipsum {
-    font-size: var(--font-size-5xs);
-  }
-  .huggingface-icon {
+  .tft-thumbnail-icon {
     width: 140px;
     height: 79px;
+  }
+  .lorem-ipsum {
+    font-size: var(--font-size-7xs);
+  }
+  .github-logo-icon,
+  .github-logo-icon1,
+  .github-logo-icon7,
+  .hugging-face-logo {
+    width: 10px;
+    height: 10px;
   }
   .fashioncards {
     gap: var(--gap-31xl);
@@ -753,7 +834,7 @@
   .huggingface-light-icon,
   .ipoth-1-icon,
   .power-bi-1,
-  .price-overall-11 {
+  .price-overall-1 {
     width: 210px;
     height: 119px;
   }
@@ -789,7 +870,7 @@
     width: 23px;
     height: 17px;
   }
-  .github-logo-icon {
+  .github-logo-icon16 {
     width: 17px;
     height: 17px;
   }
@@ -854,7 +935,7 @@
     gap: var(--gap-16xl);
     padding: 0 0 70px;
   }
-  .pp-1-icon {
+  .photo-profile-icon {
     width: 100px;
     height: 100px;
   }
@@ -877,18 +958,36 @@
   .title {
     font-size: 50%;
   }
-  .three-dot-icon {
-    width: 2px;
-    height: 10px;
+  .tft-thumbnail-icon {
+    width: 122px;
+    height: 69px;
+  }
+  .lorem-ipsum {
+    font-size: var(--font-size-7xs);
+    text-align: center;
+  }
+  .github-logo-icon,
+  .hugging-face-logo {
+    width: 13px;
+    height: 13px;
+  }
+  .github-logo-icon {
+    display: none;
+  }
+  .github-logo-icon1 {
+    display: none;
+    width: 7px;
+    height: 7px;
   }
   .lorem-ipsum-parent {
     padding-left: 0;
     padding-right: 0;
     box-sizing: border-box;
   }
-  .huggingface-icon {
-    width: 122px;
-    height: 69px;
+  .github-logo-icon7 {
+    display: none;
+    width: 7px;
+    height: 7px;
   }
   .fashioncards {
     flex-direction: row;
@@ -900,7 +999,7 @@
     row-gap: 30px;
   }
   .huggingface-light-icon,
-  .price-overall-11 {
+  .price-overall-1 {
     width: 175px;
     height: 99px;
   }
@@ -963,7 +1062,7 @@
     width: 18px;
     height: 13px;
   }
-  .github-logo-icon {
+  .github-logo-icon16 {
     width: 13px;
     height: 13px;
   }
@@ -1006,8 +1105,21 @@
     padding-bottom: 54px;
     box-sizing: border-box;
   }
+  .projects1 {
+    height: auto;
+  }
   .title {
     font-size: 35%;
+  }
+  .lorem-ipsum {
+    font-size: var(--font-size-7xs);
+    text-align: center;
+  }
+  .github-logo-icon1,
+  .github-logo-icon7 {
+    display: none;
+    width: 7px;
+    height: 7px;
   }
   .fashioncards,
   .fashioncards1 {
@@ -1017,12 +1129,14 @@
     font-size: var(--font-size-3xs);
     row-gap: 20px;
   }
-  .experience,
   .projects {
-    row-gap: 25px;
+    gap: var(--gap-8xs);
+  }
+  .experience1 {
+    height: auto;
   }
   .experience {
-    gap: var(--gap-6xl);
+    gap: var(--gap-8xs);
   }
   .lets-connect-parent {
     gap: var(--gap-3xs);
@@ -1072,7 +1186,7 @@
   height: 23.9px;
   object-fit: cover;
 }
-.home2 {
+.home3 {
   position: relative;
   font-size: var(--font-size-13xl);
   line-height: 24px;
@@ -1080,7 +1194,7 @@
   color: var(--color-white);
   text-align: left;
 }
-.home1 {
+.home2 {
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -1096,11 +1210,11 @@
   position: relative;
   height: 28px;
 }
-.certification2 {
+.certification3 {
   position: relative;
   line-height: 24px;
 }
-.certification1 {
+.certification2 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1115,11 +1229,11 @@
   overflow: hidden;
   flex-shrink: 0;
 }
-.passions2 {
+.passions3 {
   position: relative;
   line-height: 24px;
 }
-.passions1 {
+.passions2 {
   display: none;
   flex-direction: row;
   align-items: center;
@@ -1132,11 +1246,11 @@
   height: 23.9px;
 }
 .home-parent,
-.resume1 {
+.resume2 {
   display: flex;
   justify-content: center;
 }
-.resume1 {
+.resume2 {
   text-decoration: none;
   flex-direction: row;
   align-items: center;
@@ -1151,7 +1265,7 @@
 }
 .close-parent,
 .drawer-menu-items,
-.menu1 {
+.menu10 {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -1161,7 +1275,7 @@
   flex-direction: row;
 }
 .close-parent,
-.menu1 {
+.menu10 {
   align-self: stretch;
   flex-direction: column;
 }
@@ -1210,13 +1324,13 @@
   animation: 0.25s ease 0s 1 normal forwards slide-in-right;
 }
 @media screen and (max-width: 960px) {
-  .home2 {
+  .home3 {
     font-size: var(--font-size-base);
   }
   .home-parent {
     font-size: 50%;
   }
-  .menu1 {
+  .menu10 {
     padding-right: 0;
     box-sizing: border-box;
   }
@@ -1247,7 +1361,7 @@
     width: 25px;
     object-fit: contain;
   }
-  .home2 {
+  .home3 {
     font-size: var(--font-size-3xs);
   }
   .certificate-logo-icon {
@@ -1255,7 +1369,7 @@
     font-size: 25%;
     object-fit: contain;
   }
-  .certification2 {
+  .certification3 {
     font-size: var(--font-size-3xs);
   }
   .rubiks-cube-icon {
@@ -1291,7 +1405,7 @@
     width: 23px;
   }
   .background-designed-by-container {
-    font-size: 6px;
+    font-size: var(--font-size-7xs);
     line-height: 13px;
   }
 }

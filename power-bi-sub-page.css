@@ -1,4 +1,4 @@
-.vector-icon2 {
+.vector-icon1 {
   position: absolute;
   height: 98.15%;
   width: 102.68%;
@@ -10,7 +10,7 @@
   overflow: hidden;
   max-height: 100%;
 }
-.back-arrow2 {
+.back-arrow1 {
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -21,52 +21,52 @@
   overflow: hidden;
   flex-shrink: 0;
 }
-.menu4,
-.navbar4 {
+.menu3,
+.navbar3 {
   align-self: stretch;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
 }
-.navbar4 {
+.navbar3 {
   flex-direction: column;
   justify-content: center;
   padding: 0 0 var(--padding-31xl);
 }
-.sub-title2,
-.title3 {
+.sub-title1,
+.title2 {
   align-self: stretch;
   height: auto;
   position: relative;
   display: inline-block;
 }
-.sub-title2 {
+.sub-title1 {
   font-size: var(--font-size-xl);
   font-family: var(--font-montserrat);
 }
-.title-container {
+.title-group {
   align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.huggingface-thumbnail-white1 {
+.power-bi-thumbnail1 {
   width: 888px;
   height: 492.2px;
   position: relative;
   object-fit: cover;
   z-index: 0;
 }
-.image-12 {
+.image-11 {
   align-self: stretch;
   height: 20px;
   position: relative;
   display: inline-block;
   z-index: 1;
 }
-.overlay-icon2 {
+.overlay-icon1 {
   width: 888px;
   height: 492.2px;
   position: absolute;
@@ -74,13 +74,14 @@
   top: 0;
   left: 0;
   object-fit: cover;
+  display: none;
   opacity: 0%;
   z-index: 2;
 }
-.overlay-icon2:hover {
+.overlay-icon1:hover {
   opacity: 100%;
 }
-.huggingface-thumbnail-white-parent {
+.power-bi-thumbnail-parent {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,30 +92,37 @@
   font-size: var(--font-size-base);
   font-family: var(--font-montserrat);
 }
-.intro2 {
+.intro1 {
   border-radius: var(--br-3xs);
   gap: var(--gap-16xl);
   row-gap: 30px;
 }
-.header2,
-.intro2 {
+.header1,
+.intro1 {
   align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.general-overview5 {
+.general-overview3,
+.lorem-ipsum-dolor1 {
   margin: 0;
   align-self: stretch;
   height: auto;
   position: relative;
+  display: inline-block;
+}
+.general-overview3 {
   font-size: inherit;
   font-weight: 600;
   font-family: inherit;
-  display: inline-block;
 }
-.general-overview4 {
+.lorem-ipsum-dolor1 {
+  font-size: var(--font-size-xl);
+  text-indent: 33px;
+}
+.general-overview2 {
   align-self: stretch;
   display: flex;
   flex-direction: column;
@@ -126,24 +134,29 @@
   color: var(--color-white);
   font-family: var(--font-montserrat);
 }
-.comprehensive-breakdown2,
-.quisque-scelerisque-tristique {
+.comprehensive-breakdown1 {
   margin: 0;
   align-self: stretch;
   height: auto;
   position: relative;
-  display: inline-block;
-}
-.comprehensive-breakdown2 {
   font-size: inherit;
   font-weight: 600;
   font-family: inherit;
+  display: inline-block;
 }
-.quisque-scelerisque-tristique {
-  font-size: var(--font-size-xl);
+.on-february-of {
   text-indent: 33px;
+  display: block;
 }
-.content4 {
+.quisque-scelerisque-tristique-container1 {
+  margin: 0;
+  align-self: stretch;
+  height: auto;
+  position: relative;
+  font-size: var(--font-size-xl);
+  display: inline-block;
+}
+.content3 {
   align-self: stretch;
   display: flex;
   flex-direction: column;
@@ -151,12 +164,12 @@
   justify-content: center;
   gap: var(--gap-31xl);
 }
-.frame-child18,
-.lets-connect4 {
+.frame-child17,
+.lets-connect3 {
   align-self: stretch;
   position: relative;
 }
-.frame-child18 {
+.frame-child17 {
   background: linear-gradient(
     90deg,
     rgba(3, 7, 14, 0),
@@ -167,30 +180,29 @@
   );
   height: 1px;
 }
-.lets-connect4 {
+.lets-connect3 {
   height: 24px;
   display: inline-block;
 }
-.github-logo-icon20,
-.instagram-logo-icon4,
-.youtube-logo-icon4 {
+.github-logo-icon19,
+.instagram-logo-icon3,
+.youtube-logo-icon3 {
   height: 30px;
   width: 30px;
   position: relative;
   object-fit: contain;
   cursor: pointer;
 }
-.github-logo-icon20,
-.youtube-logo-icon4 {
+.github-logo-icon19,
+.youtube-logo-icon3 {
   height: 33px;
   width: 45px;
 }
-.github-logo-icon20 {
+.github-logo-icon19 {
   width: 33px;
 }
-.lets-connect-parent2,
-.rectangle-parent10,
-.social-media-logo4 {
+.lets-connect-parent1,
+.social-media-logo3 {
   align-self: stretch;
   display: flex;
   flex-direction: row;
@@ -198,47 +210,51 @@
   justify-content: center;
   gap: var(--gap-6xl);
 }
-.lets-connect-parent2,
-.rectangle-parent10 {
+.lets-connect-parent1 {
   flex-direction: column;
 }
-.rectangle-parent10 {
+.rectangle-parent9 {
   gap: var(--gap-31xl);
 }
-.footer4 {
-  overflow: hidden;
-}
-.bitcoin-sentiment-sub-page1,
-.footer-frame,
-.footer4 {
+.footer-container,
+.footer3,
+.rectangle-parent9 {
   align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.footer-frame {
+.footer3 {
+  overflow: hidden;
+}
+.footer-container {
   font-size: var(--font-size-xl);
   font-family: var(--font-montserrat);
 }
-.bitcoin-sentiment-sub-page1 {
-  text-decoration: none;
+.power-bi-sub-page,
+.power-bi-sub-page1 {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.power-bi-sub-page1 {
+  text-decoration: none;
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
   padding: var(--padding-31xl) var(--padding-81xl);
   gap: var(--gap-31xl);
-  background-image: url(./public/bitcoin-sentiment-subpage@3x.png);
+  background-image: url(./public/power-bi--subpage@3x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
   color: inherit;
 }
-.bitcoin-sentiment-sub-page {
+.power-bi-sub-page {
   width: 100%;
   position: relative;
   background-color: var(--color-gray-100);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   text-align: center;
@@ -247,122 +263,132 @@
   font-family: var(--font-venite-adoremus);
 }
 @media screen and (max-width: 1440px) {
-  .navbar4 {
+  .navbar3 {
     gap: var(--gap-0);
     padding-top: 0;
     padding-bottom: var(--padding-18xl);
     box-sizing: border-box;
   }
-  .title3 {
+  .title2 {
     font-size: 75%;
     height: auto;
   }
-  .sub-title2 {
+  .sub-title1 {
     font-size: var(--font-size-mini);
   }
-  .huggingface-thumbnail-white1 {
+  .power-bi-thumbnail1 {
     width: 666px;
     height: 369px;
   }
-  .image-12 {
+  .image-11 {
     font-size: var(--font-size-xs);
   }
-  .overlay-icon2 {
+  .overlay-icon1 {
     width: 666px;
     height: 369px;
   }
-  .comprehensive-breakdown2,
-  .general-overview5 {
+  .general-overview3 {
     font-size: var(--font-size-5xl);
   }
-  .quisque-scelerisque-tristique {
+  .lorem-ipsum-dolor1 {
     font-size: var(--font-size-mini);
   }
-  .content4 {
+  .comprehensive-breakdown1 {
+    font-size: var(--font-size-5xl);
+  }
+  .quisque-scelerisque-tristique-container1 {
+    font-size: var(--font-size-mini);
+  }
+  .content3 {
     gap: var(--gap-26xl);
   }
-  .lets-connect4 {
+  .lets-connect3 {
     font-size: var(--font-size-mini);
   }
-  .instagram-logo-icon4 {
+  .instagram-logo-icon3 {
     width: 25px;
     height: 25px;
   }
-  .youtube-logo-icon4 {
+  .youtube-logo-icon3 {
     width: 34px;
     height: 25px;
   }
-  .github-logo-icon20 {
+  .github-logo-icon19 {
     width: 25px;
     height: 25px;
   }
-  .bitcoin-sentiment-sub-page1 {
+  .power-bi-sub-page1 {
     gap: var(--gap-31xl);
   }
 }
 @media screen and (max-width: 1200px) {
-  .menu4 {
+  .menu3 {
     display: flex;
   }
-  .navbar4 {
+  .navbar3 {
     gap: var(--gap-0);
     padding-top: 0;
     padding-bottom: var(--padding-11xl);
     box-sizing: border-box;
   }
-  .title3 {
+  .title2 {
     font-size: 62.5%;
     height: auto;
   }
-  .sub-title2 {
+  .sub-title1 {
     font-size: var(--font-size-xs);
   }
-  .huggingface-thumbnail-white1 {
+  .power-bi-thumbnail1 {
     width: 555px;
     height: 307px;
   }
-  .image-12 {
+  .image-11 {
     font-size: var(--font-size-3xs);
   }
-  .overlay-icon2 {
+  .overlay-icon1 {
     width: 555px;
     height: 307px;
   }
-  .comprehensive-breakdown2,
-  .general-overview5 {
+  .general-overview3 {
     font-size: var(--font-size-xl);
   }
-  .quisque-scelerisque-tristique {
+  .lorem-ipsum-dolor1 {
     font-size: var(--font-size-xs);
   }
-  .content4 {
+  .comprehensive-breakdown1 {
+    font-size: var(--font-size-xl);
+  }
+  .quisque-scelerisque-tristique-container1 {
+    font-size: var(--font-size-xs);
+  }
+  .content3 {
     gap: var(--gap-16xl);
   }
-  .lets-connect4 {
+  .lets-connect3 {
     font-size: var(--font-size-xs);
   }
-  .instagram-logo-icon4 {
+  .instagram-logo-icon3 {
     width: 21px;
     height: 21px;
   }
-  .youtube-logo-icon4 {
+  .youtube-logo-icon3 {
     width: 28px;
     height: 21px;
   }
-  .github-logo-icon20 {
+  .github-logo-icon19 {
     width: 21px;
     height: 21px;
   }
-  .social-media-logo4 {
+  .social-media-logo3 {
     gap: var(--gap-mini);
   }
-  .lets-connect-parent2 {
+  .lets-connect-parent1 {
     gap: var(--gap-3xl);
   }
-  .footer4 {
+  .footer3 {
     gap: var(--gap-25xl);
   }
-  .bitcoin-sentiment-sub-page1 {
+  .power-bi-sub-page1 {
     gap: var(--gap-31xl);
     padding-left: var(--padding-56xl);
     padding-right: var(--padding-56xl);
@@ -370,71 +396,72 @@
   }
 }
 @media screen and (max-width: 960px) {
-  .menu4,
-  .navbar4 {
+  .menu3,
+  .navbar3 {
     box-sizing: border-box;
   }
-  .menu4 {
+  .menu3 {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding-right: 0;
     font-size: 65%;
   }
-  .navbar4 {
+  .navbar3 {
     gap: var(--gap-0);
     padding: 0 var(--padding-base) var(--padding-base) 0;
   }
-  .title3 {
+  .title2 {
     height: auto;
     font-size: 50%;
   }
-  .title-container {
+  .title-group {
     padding-bottom: var(--padding-mini);
     box-sizing: border-box;
   }
-  .huggingface-thumbnail-white1,
-  .overlay-icon2 {
+  .overlay-icon1,
+  .power-bi-thumbnail1 {
     width: 444px;
     height: 246px;
   }
-  .intro2 {
+  .intro1 {
     row-gap: 10px;
   }
-  .general-overview5 {
+  .general-overview3 {
     font-size: var(--font-size-xl);
   }
-  .quisque-scelerisque-tristique {
+  .lorem-ipsum-dolor1,
+  .quisque-scelerisque-tristique-container1 {
     font-size: var(--font-size-xs);
   }
-  .lets-connect4 {
+  .lets-connect3 {
     font-size: var(--font-size-3xs);
   }
-  .instagram-logo-icon4 {
+  .instagram-logo-icon3 {
     width: 17px;
     height: 17px;
   }
-  .youtube-logo-icon4 {
+  .youtube-logo-icon3 {
     width: 23px;
     height: 17px;
   }
-  .github-logo-icon20 {
+  .github-logo-icon19 {
     width: 17px;
     height: 17px;
   }
-  .social-media-logo4 {
+  .social-media-logo3 {
     gap: var(--gap-mini);
   }
-  .lets-connect-parent2 {
+  .lets-connect-parent1 {
     gap: var(--gap-xl);
   }
-  .footer4 {
+  .footer3 {
     gap: var(--gap-21xl);
     padding-top: 0;
     padding-bottom: 0;
     box-sizing: border-box;
   }
-  .bitcoin-sentiment-sub-page1 {
+  .power-bi-sub-page1 {
     padding-left: var(--padding-31xl);
     padding-top: var(--padding-21xl);
     padding-right: var(--padding-31xl);
@@ -442,121 +469,127 @@
   }
 }
 @media screen and (max-width: 420px) {
-  .back-arrow2 {
+  .back-arrow1 {
     width: 42px;
     height: 20px;
   }
-  .menu4,
-  .navbar4 {
+  .menu3,
+  .navbar3 {
     align-items: center;
     box-sizing: border-box;
   }
-  .menu4 {
+  .menu3 {
     gap: var(--gap-31xl);
     justify-content: flex-start;
     padding-right: 0;
   }
-  .navbar4 {
+  .navbar3 {
     gap: var(--gap-0);
     justify-content: center;
     padding: 0 var(--padding-base) var(--padding-base) 0;
   }
-  .title3 {
+  .title2 {
     height: auto;
     font-size: 40%;
   }
-  .sub-title2 {
+  .sub-title1 {
     font-size: var(--font-size-3xs);
   }
-  .title-container {
+  .title-group {
     gap: var(--gap-12xs);
   }
-  .huggingface-thumbnail-white1 {
+  .power-bi-thumbnail1 {
     width: 266px;
     height: 148px;
   }
-  .image-12 {
+  .image-11 {
     font-size: var(--font-size-5xs);
   }
-  .overlay-icon2 {
+  .overlay-icon1 {
     width: 266px;
     height: 148px;
   }
-  .comprehensive-breakdown2,
-  .general-overview5,
-  .quisque-scelerisque-tristique {
+  .comprehensive-breakdown1,
+  .general-overview3,
+  .lorem-ipsum-dolor1,
+  .quisque-scelerisque-tristique-container1 {
     font-size: var(--font-size-3xs);
   }
-  .content4 {
+  .content3 {
     gap: var(--gap-6xl);
   }
-  .lets-connect4 {
+  .lets-connect3 {
     font-size: var(--font-size-3xs);
   }
-  .instagram-logo-icon4 {
+  .instagram-logo-icon3 {
     width: 13px;
     height: 13px;
   }
-  .youtube-logo-icon4 {
+  .youtube-logo-icon3 {
     width: 18px;
     height: 13px;
   }
-  .github-logo-icon20 {
+  .github-logo-icon19 {
     width: 13px;
     height: 13px;
   }
-  .social-media-logo4 {
+  .social-media-logo3 {
     gap: var(--gap-3xs);
   }
-  .footer4 {
+  .footer3 {
     gap: var(--gap-21xl);
   }
-  .bitcoin-sentiment-sub-page1 {
+  .power-bi-sub-page1 {
     gap: var(--gap-14xl);
     padding: var(--padding-14xl);
     box-sizing: border-box;
   }
 }
 @media screen and (max-width: 350px) {
-  .navbar4 {
+  .navbar3 {
     gap: var(--gap-0);
     padding-top: 0;
     padding-right: var(--padding-base);
     padding-bottom: var(--padding-base);
     box-sizing: border-box;
   }
-  .title3 {
+  .title2 {
     font-size: 40%;
     height: auto;
   }
-  .sub-title2 {
+  .sub-title1 {
     font-size: var(--font-size-3xs);
   }
-  .huggingface-thumbnail-white1 {
+  .power-bi-thumbnail1 {
     width: 221px;
     height: 123px;
   }
-  .image-12 {
+  .image-11 {
     font-size: var(--font-size-5xs);
   }
-  .overlay-icon2 {
+  .overlay-icon1 {
     width: 221px;
     height: 123px;
   }
-  .intro2 {
+  .intro1 {
     row-gap: 10px;
   }
-  .comprehensive-breakdown2,
-  .general-overview5 {
+  .general-overview3 {
     font-size: var(--font-size-base);
   }
-  .quisque-scelerisque-tristique {
+  .lorem-ipsum-dolor1 {
     font-size: var(--font-size-3xs);
   }
-  .lets-connect-parent2 {
+  .comprehensive-breakdown1 {
+    font-size: var(--font-size-base);
+  }
+  .quisque-scelerisque-tristique-container1 {
+    font-size: var(--font-size-3xs);
+  }
+  .lets-connect-parent1 {
     gap: var(--gap-3xs);
   }
-  .footer4 {
+  .footer3 {
     gap: var(--gap-21xl);
   }
 }

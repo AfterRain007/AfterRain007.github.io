@@ -8,16 +8,20 @@
     <link rel="stylesheet" href="./drawer-menu.css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Venite Adoremus:wght@400&display=swap"
-    />
-    <link
-      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,900;1,400&display=swap"
     />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
     />
+
+    <style>
+      @font-face {
+        font-family: "Venite Adoremus";
+        src: url("./public/Venite Adoremus.otf");
+        font-weight: 400;
+      }
+    </style>
   </head>
   <body>
     <div class="drawer-menu" data-animate-on-scroll>
@@ -26,44 +30,44 @@
           <div class="close-child"></div>
           <div class="close-item"></div>
         </button>
-        <div class="menu1">
+        <div class="menu10">
           <div class="drawer-menu-items">
             <div class="home-parent">
-              <button class="home1" id="drawerhome">
+              <button class="home2" id="drawerhome">
                 <img
                   class="profile-logo-icon"
                   alt=""
                   src="./public/profile-logo@2x.png"
                 />
 
-                <div class="home2">HOME</div>
+                <div class="home3">HOME</div>
               </button>
-              <div class="certification1" id="drawercertificationContainer">
+              <div class="certification2" id="drawercertificationContainer">
                 <img
                   class="certificate-logo-icon"
                   alt=""
                   src="./public/certificate-logo.svg"
                 />
 
-                <div class="certification2">CERTIFICATION</div>
+                <div class="certification3">CERTIFICATION</div>
               </div>
-              <div class="passions1">
+              <div class="passions2">
                 <img
                   class="rubiks-cube-icon"
                   alt=""
                   src="./public/rubiks-cube.svg"
                 />
 
-                <div class="passions2">PASSIONS</div>
+                <div class="passions3">PASSIONS</div>
               </div>
               <a
-                class="resume1"
+                class="resume2"
                 href="https://drive.google.com/file/d/1yIwIyFa2kMHVO4iV8ypUsUcXclFJkJd3/view?usp=sharing"
                 target="_blank"
               >
                 <img class="cv-logo-icon" alt="" src="./public/cv-logo.svg" />
 
-                <div class="certification2">RESUME</div>
+                <div class="certification3">RESUME</div>
               </a>
             </div>
           </div>
@@ -131,7 +135,7 @@
       );
       if (drawercertificationContainer) {
         drawercertificationContainer.addEventListener("click", function (e) {
-          window.location.href = "./certificate-new.html";
+          window.location.href = "./hall-of-certificate.html";
         });
       }
       var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");

@@ -8,46 +8,50 @@
     <link rel="stylesheet" href="./fun-projects-sub-page.css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Venite Adoremus:wght@400&display=swap"
-    />
-    <link
-      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,900;1,400&display=swap"
     />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
     />
+
+    <style>
+      @font-face {
+        font-family: "Venite Adoremus";
+        src: url("./public/Venite Adoremus.otf");
+        font-weight: 400;
+      }
+    </style>
   </head>
   <body>
     <div class="fun-projects-sub-page">
       <a class="fun-projects-sub-page1">
-        <div class="header5">
-          <div class="navbar7">
-            <div class="menu8">
-              <button class="back-arrow6" id="backArrow">
-                <img class="vector-icon8" alt="" src="./public/vector1.svg" />
+        <div class="header4">
+          <div class="navbar6">
+            <div class="menu6">
+              <button class="back-arrow4" id="backArrow">
+                <img class="vector-icon4" alt="" src="./public/vector.svg" />
               </button>
             </div>
           </div>
-          <div class="intro5">
-            <div class="title-parent3">
-              <div class="title6">Fun Projects</div>
-              <i class="sub-title5"
+          <div class="intro4">
+            <div class="title-parent2">
+              <div class="title5">Fun Projects</div>
+              <i class="sub-title4"
                 >Why do it manually for 30 minutes when you can do it
                 automatically by coding for 3 days?</i
               >
             </div>
-            <div class="github-profile-parent">
+            <div class="github-profile-thumbnail-parent">
               <img
-                class="github-profile-icon1"
+                class="github-profile-thumbnail1"
                 alt=""
-                src="./public/github-profile@2x.png"
+                src="./public/github-profile-thumbnail@2x.png"
               />
 
-              <div class="image-15">Github Profile</div>
+              <div class="image-14">Github Profile</div>
               <img
-                class="overlay-icon5"
+                class="overlay-icon4"
                 alt=""
                 src="./public/overlay@2x.png"
                 id="overlayImage"
@@ -55,62 +59,60 @@
             </div>
           </div>
         </div>
-        <div class="content7">
-          <div class="general-overview10">
-            <div class="general-overview11">General Overview</div>
-            <div class="lorem-ipsum-dolor5">
+        <main class="content6">
+          <section class="general-overview8">
+            <h2 class="general-overview9">General Overview</h2>
+            <p class="lorem-ipsum-dolor4">
               Some of my fun projects that I do in my spare time!
-            </div>
-          </div>
-          <div class="detailed5">
-            <div class="comprehensive-breakdown5">Comprehensive Breakdown</div>
-            <div class="quisque-scelerisque-tristique3">
+            </p>
+          </section>
+          <section class="general-overview8">
+            <h2 class="comprehensive-breakdown4">Comprehensive Breakdown</h2>
+            <p class="lorem-ipsum-dolor4">
               Sorty is a File Sorting Algorithm in which it detect file name
               using Regular Expression to sort them out. Whilst chatty is a
               simple Text Algorithm to classify who said the most bad words and
               took longer to text back, it’s called “Simple” because it uses
               List Comprehension rather than Machine Learning.
-            </div>
-          </div>
-          <div class="closing5">
-            <div class="comprehensive-breakdown5">Epilogue</div>
-            <div class="aenean-at-ipsum5">
-              Source code could be found at this GitHub Repo
-            </div>
-          </div>
-        </div>
-        <div class="footer8">
-          <div class="footer-child6"></div>
-          <div class="lets-connect-parent5">
-            <div class="lets-connect8">Let’s Connect!</div>
-            <div class="social-media-logo8">
-              <img
-                class="instagram-logo-icon8"
-                alt=""
-                src="./public/instagram-logo.svg"
-                id="instagramLogoIcon"
-              />
+            </p>
+          </section>
+        </main>
+        <div class="footer-wrapper2">
+          <div class="footer6">
+            <div class="rectangle-parent12">
+              <div class="frame-child20"></div>
+              <div class="lets-connect-parent4">
+                <div class="lets-connect6">Let’s Connect!</div>
+                <div class="social-media-logo6">
+                  <img
+                    class="instagram-logo-icon6"
+                    alt=""
+                    src="./public/instagram-logo.svg"
+                    id="instagramLogoIcon"
+                  />
 
-              <img
-                class="youtube-logo-icon8"
-                alt=""
-                src="./public/youtube-logo.svg"
-                id="youtubeLogoIcon"
-              />
+                  <img
+                    class="youtube-logo-icon6"
+                    alt=""
+                    src="./public/youtube-logo.svg"
+                    id="youtubeLogoIcon"
+                  />
 
-              <img
-                class="github-logo-icon8"
-                alt=""
-                src="./public/github-logo.svg"
-                id="githubLogoIcon"
-              />
+                  <img
+                    class="github-logo-icon22"
+                    alt=""
+                    src="./public/github-logo1.svg"
+                    id="githubLogoIcon"
+                  />
 
-              <img
-                class="github-logo-icon8"
-                alt=""
-                src="./public/linkedin-logo@2x.png"
-                id="linkedinLogoIcon"
-              />
+                  <img
+                    class="github-logo-icon22"
+                    alt=""
+                    src="./public/linkedin-logo@2x.png"
+                    id="linkedinLogoIcon"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -121,7 +123,7 @@
       var backArrow = document.getElementById("backArrow");
       if (backArrow) {
         backArrow.addEventListener("click", function (e) {
-          window.location.href = "./index1.html";
+          window.location.href = "./index.html";
         });
       }
       

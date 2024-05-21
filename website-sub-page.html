@@ -8,32 +8,36 @@
     <link rel="stylesheet" href="./website-sub-page.css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Venite Adoremus:wght@400&display=swap"
-    />
-    <link
-      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,900;1,400&display=swap"
     />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
     />
+
+    <style>
+      @font-face {
+        font-family: "Venite Adoremus";
+        src: url("./public/Venite Adoremus.otf");
+        font-weight: 400;
+      }
+    </style>
   </head>
   <body>
     <div class="website-sub-page">
       <a class="website-sub-page1">
-        <div class="header6">
-          <div class="navbar8">
-            <div class="menu9">
-              <button class="back-arrow7" id="backArrow">
-                <img class="vector-icon9" alt="" src="./public/vector1.svg" />
+        <div class="header5">
+          <div class="navbar7">
+            <div class="menu7">
+              <button class="back-arrow5" id="backArrow">
+                <img class="vector-icon5" alt="" src="./public/vector.svg" />
               </button>
             </div>
           </div>
-          <div class="intro6">
-            <div class="title-parent4">
-              <div class="title7">personal Website</div>
-              <i class="sub-title6">HTML much?</i>
+          <div class="intro5">
+            <div class="title-parent3">
+              <div class="title6">personal Website</div>
+              <i class="sub-title5">HTML much?</i>
             </div>
             <div class="website-thumbnail-parent">
               <img
@@ -42,9 +46,9 @@
                 src="./public/website-thumbnail@2x.png"
               />
 
-              <div class="image-16">Personal Website Thumbnail</div>
+              <div class="image-15">Personal Website Thumbnail</div>
               <img
-                class="overlay-icon6"
+                class="overlay-icon5"
                 alt=""
                 src="./public/overlay@2x.png"
                 id="overlayImage"
@@ -52,60 +56,60 @@
             </div>
           </div>
         </div>
-        <div class="content8">
-          <div class="general-overview12">
-            <div class="general-overview13">General Overview</div>
-            <div class="lorem-ipsum-dolor6">
+        <main class="content7">
+          <section class="general-overview10">
+            <h2 class="general-overview11">General Overview</h2>
+            <p class="lorem-ipsum-dolor5">
               One-stop shop for my latest project, portfolio, and many more!
-            </div>
-          </div>
-          <div class="detailed6">
-            <div class="comprehensive-breakdown6">Comprehensive Breakdown</div>
-            <div class="quisque-scelerisque-tristique4">
+            </p>
+          </section>
+          <section class="general-overview10">
+            <h2 class="comprehensive-breakdown5">Comprehensive Breakdown</h2>
+            <p class="lorem-ipsum-dolor5">
               I've spent two months learning, crafting the design, building the
               functionality, ensuring it works seamlessly across devices, and
               optimizing for a smooth user experience. With combination of Figma
               and Locofy I’m able to create my personal website with combination
               of HTML and CSS Programming Language.
-            </div>
-          </div>
-          <div class="closing6">
-            <div class="comprehensive-breakdown6">Epilogue</div>
-            <div class="aenean-at-ipsum6">Never have I ever need</div>
-          </div>
-        </div>
-        <div class="footer9">
-          <div class="footer-child7"></div>
-          <div class="lets-connect-parent6">
-            <div class="lets-connect9">Let’s Connect!</div>
-            <div class="social-media-logo9">
-              <img
-                class="instagram-logo-icon9"
-                alt=""
-                src="./public/instagram-logo.svg"
-                id="instagramLogoIcon"
-              />
+            </p>
+          </section>
+        </main>
+        <div class="footer-wrapper3">
+          <div class="footer7">
+            <div class="rectangle-parent13">
+              <div class="frame-child21"></div>
+              <div class="lets-connect-parent5">
+                <div class="lets-connect7">Let’s Connect!</div>
+                <div class="social-media-logo7">
+                  <img
+                    class="instagram-logo-icon7"
+                    alt=""
+                    src="./public/instagram-logo.svg"
+                    id="instagramLogoIcon"
+                  />
 
-              <img
-                class="youtube-logo-icon9"
-                alt=""
-                src="./public/youtube-logo.svg"
-                id="youtubeLogoIcon"
-              />
+                  <img
+                    class="youtube-logo-icon7"
+                    alt=""
+                    src="./public/youtube-logo.svg"
+                    id="youtubeLogoIcon"
+                  />
 
-              <img
-                class="github-logo-icon9"
-                alt=""
-                src="./public/github-logo.svg"
-                id="githubLogoIcon"
-              />
+                  <img
+                    class="github-logo-icon23"
+                    alt=""
+                    src="./public/github-logo1.svg"
+                    id="githubLogoIcon"
+                  />
 
-              <img
-                class="github-logo-icon9"
-                alt=""
-                src="./public/linkedin-logo@2x.png"
-                id="linkedinLogoIcon"
-              />
+                  <img
+                    class="github-logo-icon23"
+                    alt=""
+                    src="./public/linkedin-logo@2x.png"
+                    id="linkedinLogoIcon"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -116,7 +120,7 @@
       var backArrow = document.getElementById("backArrow");
       if (backArrow) {
         backArrow.addEventListener("click", function (e) {
-          window.location.href = "./index1.html";
+          window.location.href = "./index.html";
         });
       }
       

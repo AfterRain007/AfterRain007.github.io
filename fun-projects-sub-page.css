@@ -1,4 +1,4 @@
-.vector-icon8 {
+.vector-icon4 {
   position: absolute;
   height: 98.15%;
   width: 102.68%;
@@ -10,7 +10,7 @@
   overflow: hidden;
   max-height: 100%;
 }
-.back-arrow6 {
+.back-arrow4 {
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -21,50 +21,52 @@
   overflow: hidden;
   flex-shrink: 0;
 }
-.menu8,
-.navbar7 {
+.menu6,
+.navbar6 {
   align-self: stretch;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
 }
-.navbar7 {
+.navbar6 {
   flex-direction: column;
   justify-content: center;
   padding: 0 0 var(--padding-31xl);
 }
-.sub-title5,
-.title6 {
+.sub-title4,
+.title5 {
   align-self: stretch;
+  height: auto;
   position: relative;
+  display: inline-block;
 }
-.sub-title5 {
+.sub-title4 {
   font-size: var(--font-size-xl);
   font-family: var(--font-montserrat);
 }
-.title-parent3 {
+.title-parent2 {
   align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.github-profile-icon1 {
+.github-profile-thumbnail1 {
   width: 888px;
   height: 492.2px;
   position: relative;
   object-fit: cover;
   z-index: 0;
 }
-.image-15 {
+.image-14 {
   align-self: stretch;
   height: 20px;
   position: relative;
   display: inline-block;
   z-index: 1;
 }
-.overlay-icon5 {
+.overlay-icon4 {
   width: 888px;
   height: 492.2px;
   position: absolute;
@@ -76,114 +78,86 @@
   cursor: pointer;
   z-index: 2;
 }
-.overlay-icon5:hover {
+.overlay-icon4:hover {
   opacity: 100%;
 }
-.github-profile-parent,
-.header5,
-.intro5 {
+.github-profile-thumbnail-parent {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.github-profile-parent {
   position: relative;
   gap: var(--gap-8xs);
   text-align: left;
   font-size: var(--font-size-base);
   font-family: var(--font-montserrat);
 }
-.header5,
-.intro5 {
-  align-self: stretch;
-}
-.intro5 {
+.intro4 {
   border-radius: var(--br-3xs);
   gap: var(--gap-16xl);
   row-gap: 30px;
 }
-.header5 {
-  font-family: var(--font-venite-adoremus);
-}
-.general-overview11,
-.lorem-ipsum-dolor5 {
-  align-self: stretch;
-  position: relative;
-  display: inline-block;
-}
-.general-overview11 {
-  height: 39px;
-  font-weight: 600;
-}
-.lorem-ipsum-dolor5 {
-  height: 24px;
-  font-size: var(--font-size-xl);
-  text-indent: 33px;
-}
-.general-overview10 {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: var(--gap-8xs);
-}
-.comprehensive-breakdown5 {
-  align-self: stretch;
-  height: 39px;
-  position: relative;
-  font-weight: 600;
-  display: inline-block;
-}
-.quisque-scelerisque-tristique3 {
-  align-self: stretch;
-  height: 48px;
-  position: relative;
-  font-size: var(--font-size-xl);
-  text-indent: 33px;
-  display: inline-block;
-}
-.detailed5 {
+.header4,
+.intro4 {
   align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--gap-8xs);
 }
-.aenean-at-ipsum5 {
+.general-overview9,
+.lorem-ipsum-dolor4 {
+  margin: 0;
   align-self: stretch;
-  height: 24px;
+  height: auto;
   position: relative;
-  font-size: var(--font-size-xl);
-  text-indent: 33px;
   display: inline-block;
 }
-.closing5,
-.content7 {
+.general-overview9 {
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+}
+.lorem-ipsum-dolor4 {
+  font-size: var(--font-size-xl);
+  text-indent: 33px;
+}
+.general-overview8 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-8xs);
+  text-align: justify;
+  font-size: var(--font-size-13xl);
+  color: var(--color-white);
+  font-family: var(--font-montserrat);
+}
+.comprehensive-breakdown4 {
+  margin: 0;
+  align-self: stretch;
+  height: auto;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+}
+.content6 {
+  align-self: stretch;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-}
-.closing5 {
-  width: 1720px;
-  display: none;
-  gap: var(--gap-8xs);
-}
-.content7 {
-  align-self: stretch;
-  display: flex;
   gap: var(--gap-31xl);
-  text-align: justify;
-  font-size: var(--font-size-13xl);
 }
-.footer-child6,
-.lets-connect8 {
+.frame-child20,
+.lets-connect6 {
   align-self: stretch;
   position: relative;
 }
-.footer-child6 {
+.frame-child20 {
   background: linear-gradient(
     90deg,
     rgba(3, 7, 14, 0),
@@ -194,50 +168,58 @@
   );
   height: 1px;
 }
-.lets-connect8 {
+.lets-connect6 {
   height: 24px;
   display: inline-block;
 }
-.github-logo-icon8,
-.instagram-logo-icon8,
-.youtube-logo-icon8 {
+.github-logo-icon22,
+.instagram-logo-icon6,
+.youtube-logo-icon6 {
   height: 30px;
   width: 30px;
   position: relative;
   object-fit: contain;
   cursor: pointer;
 }
-.github-logo-icon8,
-.youtube-logo-icon8 {
+.github-logo-icon22,
+.youtube-logo-icon6 {
   height: 33px;
   width: 45px;
 }
-.github-logo-icon8 {
+.github-logo-icon22 {
   width: 33px;
 }
-.social-media-logo8 {
+.lets-connect-parent4,
+.social-media-logo6 {
+  align-self: stretch;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: var(--gap-6xl);
 }
-.footer8,
-.lets-connect-parent5 {
+.lets-connect-parent4 {
+  flex-direction: column;
+}
+.rectangle-parent12 {
+  gap: var(--gap-31xl);
+}
+.footer-wrapper2,
+.footer6,
+.rectangle-parent12 {
   align-self: stretch;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.lets-connect-parent5 {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-6xl);
+.footer6 {
+  overflow: hidden;
 }
-.footer8 {
-  gap: var(--gap-31xl);
+.footer-wrapper2 {
   font-size: var(--font-size-xl);
+  font-family: var(--font-montserrat);
 }
-.footer8,
 .fun-projects-sub-page,
 .fun-projects-sub-page1 {
   overflow: hidden;
@@ -260,65 +242,63 @@
 .fun-projects-sub-page {
   width: 100%;
   position: relative;
+  background-color: var(--color-gray-100);
   align-items: flex-start;
   justify-content: flex-start;
   text-align: center;
   font-size: var(--font-size-29xl);
   color: var(--color-white);
-  font-family: var(--font-montserrat);
+  font-family: var(--font-venite-adoremus);
 }
 @media screen and (max-width: 1440px) {
-  .navbar7 {
+  .navbar6 {
     gap: var(--gap-0);
     padding-top: 0;
     padding-bottom: var(--padding-18xl);
     box-sizing: border-box;
   }
-  .title6 {
-    font-size: var(--font-size-17xl);
+  .title5 {
+    font-size: 75%;
+    height: auto;
   }
-  .sub-title5 {
+  .sub-title4 {
     font-size: var(--font-size-mini);
   }
-  .github-profile-icon1 {
+  .github-profile-thumbnail1 {
     width: 666px;
     height: 369px;
   }
-  .image-15 {
+  .image-14 {
     font-size: var(--font-size-xs);
   }
-  .overlay-icon5 {
+  .overlay-icon4 {
     width: 666px;
     height: 369px;
   }
-  .general-overview11 {
+  .general-overview9 {
     font-size: var(--font-size-5xl);
   }
-  .lorem-ipsum-dolor5 {
+  .lorem-ipsum-dolor4 {
     font-size: var(--font-size-mini);
   }
-  .comprehensive-breakdown5 {
+  .comprehensive-breakdown4 {
     font-size: var(--font-size-5xl);
   }
-  .aenean-at-ipsum5,
-  .quisque-scelerisque-tristique3 {
-    font-size: var(--font-size-mini);
-  }
-  .content7 {
+  .content6 {
     gap: var(--gap-26xl);
   }
-  .lets-connect8 {
+  .lets-connect6 {
     font-size: var(--font-size-mini);
   }
-  .instagram-logo-icon8 {
+  .instagram-logo-icon6 {
     width: 25px;
     height: 25px;
   }
-  .youtube-logo-icon8 {
+  .youtube-logo-icon6 {
     width: 34px;
     height: 25px;
   }
-  .github-logo-icon8 {
+  .github-logo-icon22 {
     width: 25px;
     height: 25px;
   }
@@ -327,70 +307,67 @@
   }
 }
 @media screen and (max-width: 1200px) {
-  .menu8 {
+  .menu6 {
     display: flex;
   }
-  .navbar7 {
+  .navbar6 {
     gap: var(--gap-0);
     padding-top: 0;
     padding-bottom: var(--padding-11xl);
     box-sizing: border-box;
   }
-  .title6 {
-    font-size: var(--font-size-11xl);
+  .title5 {
+    font-size: 62.5%;
+    height: auto;
   }
-  .sub-title5 {
+  .sub-title4 {
     font-size: var(--font-size-xs);
   }
-  .github-profile-icon1 {
+  .github-profile-thumbnail1 {
     width: 555px;
     height: 307px;
   }
-  .image-15 {
+  .image-14 {
     font-size: var(--font-size-3xs);
   }
-  .overlay-icon5 {
+  .overlay-icon4 {
     width: 555px;
     height: 307px;
   }
-  .general-overview11 {
+  .general-overview9 {
     font-size: var(--font-size-xl);
   }
-  .lorem-ipsum-dolor5 {
+  .lorem-ipsum-dolor4 {
     font-size: var(--font-size-xs);
   }
-  .comprehensive-breakdown5 {
+  .comprehensive-breakdown4 {
     font-size: var(--font-size-xl);
   }
-  .aenean-at-ipsum5,
-  .quisque-scelerisque-tristique3 {
-    font-size: var(--font-size-xs);
-  }
-  .content7 {
+  .content6 {
     gap: var(--gap-16xl);
   }
-  .lets-connect8 {
+  .lets-connect6 {
     font-size: var(--font-size-xs);
   }
-  .instagram-logo-icon8 {
+  .instagram-logo-icon6 {
     width: 21px;
     height: 21px;
   }
-  .youtube-logo-icon8 {
+  .youtube-logo-icon6 {
     width: 28px;
     height: 21px;
   }
-  .github-logo-icon8 {
+  .github-logo-icon22 {
     width: 21px;
     height: 21px;
   }
-  .social-media-logo8 {
+  .social-media-logo6 {
     gap: var(--gap-mini);
   }
-  .lets-connect-parent5 {
+  .lets-connect-parent4 {
     gap: var(--gap-3xl);
   }
-  .footer8 {
+  .footer6 {
     gap: var(--gap-25xl);
   }
   .fun-projects-sub-page1 {
@@ -401,63 +378,65 @@
   }
 }
 @media screen and (max-width: 960px) {
-  .menu8,
-  .navbar7 {
+  .menu6,
+  .navbar6 {
     box-sizing: border-box;
   }
-  .menu8 {
+  .menu6 {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding-right: 0;
     font-size: 65%;
   }
-  .navbar7 {
+  .navbar6 {
     gap: var(--gap-0);
     padding: 0 var(--padding-base) var(--padding-base) 0;
   }
-  .title-parent3 {
+  .title5 {
+    height: auto;
+    font-size: 50%;
+  }
+  .title-parent2 {
     padding-bottom: var(--padding-mini);
     box-sizing: border-box;
   }
-  .github-profile-icon1,
-  .overlay-icon5 {
+  .github-profile-thumbnail1,
+  .overlay-icon4 {
     width: 444px;
     height: 246px;
   }
-  .intro5 {
+  .intro4 {
     row-gap: 10px;
   }
-  .general-overview11 {
+  .general-overview9 {
     font-size: var(--font-size-xl);
   }
-  .aenean-at-ipsum5,
-  .lorem-ipsum-dolor5,
-  .quisque-scelerisque-tristique3 {
+  .lorem-ipsum-dolor4 {
     font-size: var(--font-size-xs);
   }
-  .lets-connect8 {
+  .lets-connect6 {
     font-size: var(--font-size-3xs);
   }
-  .instagram-logo-icon8 {
+  .instagram-logo-icon6 {
     width: 17px;
     height: 17px;
   }
-  .youtube-logo-icon8 {
+  .youtube-logo-icon6 {
     width: 23px;
     height: 17px;
   }
-  .github-logo-icon8 {
+  .github-logo-icon22 {
     width: 17px;
     height: 17px;
   }
-  .social-media-logo8 {
+  .social-media-logo6 {
     gap: var(--gap-mini);
   }
-  .lets-connect-parent5 {
+  .lets-connect-parent4 {
     gap: var(--gap-xl);
   }
-  .footer8 {
+  .footer6 {
     gap: var(--gap-21xl);
     padding-top: 0;
     padding-bottom: 0;
@@ -471,64 +450,73 @@
   }
 }
 @media screen and (max-width: 420px) {
-  .back-arrow6 {
+  .back-arrow4 {
     width: 42px;
     height: 20px;
   }
-  .menu8,
-  .navbar7 {
+  .menu6,
+  .navbar6 {
     align-items: center;
     box-sizing: border-box;
   }
-  .menu8 {
+  .menu6 {
     gap: var(--gap-31xl);
     justify-content: flex-start;
     padding-right: 0;
   }
-  .navbar7 {
+  .navbar6 {
     gap: var(--gap-0);
     justify-content: center;
     padding: 0 var(--padding-base) var(--padding-base) 0;
   }
-  .title-parent3 {
+  .title5 {
+    height: auto;
+    font-size: 40%;
+  }
+  .sub-title4 {
+    font-size: var(--font-size-3xs);
+  }
+  .title-parent2 {
     gap: var(--gap-12xs);
   }
-  .github-profile-icon1 {
+  .github-profile-thumbnail1 {
     width: 266px;
     height: 148px;
   }
-  .image-15 {
+  .image-14 {
     font-size: var(--font-size-5xs);
   }
-  .overlay-icon5 {
+  .overlay-icon4 {
     width: 266px;
     height: 148px;
   }
-  .aenean-at-ipsum5 {
+  .comprehensive-breakdown4,
+  .general-overview9,
+  .lorem-ipsum-dolor4 {
     font-size: var(--font-size-3xs);
   }
-  .content7 {
+  .content6 {
     gap: var(--gap-6xl);
   }
-  .lets-connect8 {
+  .lets-connect6 {
     font-size: var(--font-size-3xs);
   }
-  .instagram-logo-icon8 {
+  .instagram-logo-icon6 {
     width: 13px;
     height: 13px;
   }
-  .youtube-logo-icon8 {
+  .youtube-logo-icon6 {
     width: 18px;
     height: 13px;
   }
-  .github-logo-icon8 {
+  .github-logo-icon22 {
     width: 13px;
     height: 13px;
   }
-  .social-media-logo8 {
+  .social-media-logo6 {
     gap: var(--gap-3xs);
   }
-  .footer8 {
+  .footer6 {
     gap: var(--gap-21xl);
   }
   .fun-projects-sub-page1 {
@@ -538,50 +526,47 @@
   }
 }
 @media screen and (max-width: 350px) {
-  .navbar7 {
+  .navbar6 {
     gap: var(--gap-0);
     padding-top: 0;
     padding-right: var(--padding-base);
     padding-bottom: var(--padding-base);
     box-sizing: border-box;
   }
-  .title6 {
-    font-size: var(--font-size-5xl);
+  .title5 {
+    font-size: 40%;
+    height: auto;
   }
-  .sub-title5 {
+  .sub-title4 {
     font-size: var(--font-size-3xs);
   }
-  .github-profile-icon1 {
+  .github-profile-thumbnail1 {
     width: 221px;
     height: 123px;
   }
-  .image-15 {
+  .image-14 {
     font-size: var(--font-size-5xs);
   }
-  .overlay-icon5 {
+  .overlay-icon4 {
     width: 221px;
     height: 123px;
   }
-  .intro5 {
+  .intro4 {
     row-gap: 10px;
   }
-  .general-overview11 {
+  .general-overview9 {
     font-size: var(--font-size-base);
   }
-  .lorem-ipsum-dolor5 {
+  .lorem-ipsum-dolor4 {
     font-size: var(--font-size-3xs);
   }
-  .comprehensive-breakdown5 {
+  .comprehensive-breakdown4 {
     font-size: var(--font-size-base);
   }
-  .aenean-at-ipsum5,
-  .quisque-scelerisque-tristique3 {
-    font-size: var(--font-size-3xs);
-  }
-  .lets-connect-parent5 {
+  .lets-connect-parent4 {
     gap: var(--gap-3xs);
   }
-  .footer8 {
+  .footer6 {
     gap: var(--gap-21xl);
   }
 }

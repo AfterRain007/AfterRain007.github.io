@@ -5,7 +5,7 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
     <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./django-sub-page.css" />
+    <link rel="stylesheet" href="./power-bi-sub-page.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,900;1,400&display=swap"
@@ -24,87 +24,95 @@
     </style>
   </head>
   <body>
-    <div class="django-sub-page">
-      <a class="django-sub-page1">
-        <div class="header6">
-          <div class="navbar8">
-            <div class="menu8">
-              <button class="back-arrow6" id="backArrow">
-                <img class="vector-icon6" alt="" src="./public/vector.svg" />
+    <div class="power-bi-sub-page">
+      <a class="power-bi-sub-page1">
+        <div class="header1">
+          <div class="navbar3">
+            <div class="menu3">
+              <button class="back-arrow1" id="backArrow">
+                <img class="vector-icon1" alt="" src="./public/vector.svg" />
               </button>
             </div>
           </div>
-          <div class="intro6">
-            <div class="title-parent4">
-              <div class="title7">Django App</div>
-              <i class="sub-title6">Python... Python everywhere!</i>
+          <div class="intro1">
+            <div class="title-group">
+              <div class="title2">Power BI Reports</div>
+              <i class="sub-title1">Data Analytics Much?</i>
             </div>
-            <div class="django-app-thumbnail-parent">
+            <div class="power-bi-thumbnail-parent">
               <img
-                class="django-app-thumbnail1"
+                class="power-bi-thumbnail1"
                 alt=""
-                src="./public/django-app-thumbnail@2x.png"
+                src="./public/power-bi-thumbnail@2x.png"
               />
 
-              <div class="image-16">Sales Performance Tracker APP</div>
-              <img
-                class="ovelay-icon"
-                alt=""
-                src="./public/overlay@2x.png"
-                id="ovelayImage"
-              />
+              <div class="image-11">
+                Power BI Report using Maven Cycles Data
+              </div>
+              <img class="overlay-icon1" alt="" src="./public/overlay@2x.png" />
             </div>
           </div>
         </div>
-        <main class="content8">
-          <section class="general-overview12">
-            <h2 class="general-overview13">General Overview</h2>
-            <p class="lorem-ipsum-dolor6">
-              Django App to Track Sales Performance.
+        <main class="content3">
+          <section class="general-overview2">
+            <h2 class="general-overview3">General Overview</h2>
+            <p class="lorem-ipsum-dolor1">
+              Power BI Dashboard to Track sales of a company where it provides
+              seamless insights and an intuitive design without needing an
+              expert guidance.
             </p>
           </section>
-          <section class="general-overview12">
-            <h2 class="comprehensive-breakdown6">Comprehensive Breakdown</h2>
-            <p class="lorem-ipsum-dolor6">
-              Django App that handles Create, Read, Update and Delete (CRUD) of
-              a Sales Person with Python and MySQL. It creates simplicity by
-              just inputting the name of employee, employment status, and
-              performance. It automatically assign different target according to
-              it’s employment status and concludes the status based on the
-              target and performance.
+          <section class="general-overview2">
+            <h2 class="comprehensive-breakdown1">Comprehensive Breakdown</h2>
+            <p class="quisque-scelerisque-tristique-container1">
+              <span class="on-february-of"
+                >On February of 2024 I got the chance to be in a scholarship
+                program by Talenta AI Indonesia, in which this is a mentoring
+                program about Microsoft Azure Data Fundamental and Advanced
+                Power BI. At the end of the program out of all the candidates
+                across Indonesia, me and other 199 participant is chosen to do
+                Microsoft Certification for free. I passed the Microsoft
+                Certification: Power BI Data Analyst Associate with a score of
+                793 out of 1000.</span
+              >
+              <span class="on-february-of"
+                >With the power that’s vested in me by Talenta AI Indonesia,
+                I’ve created a mock up dashboard in Power BI from Preparing,
+                Modelling, Visualizing, and Analyzing the data.</span
+              >
             </p>
           </section>
         </main>
-        <div class="footer-wrapper4">
-          <div class="footer8">
-            <div class="rectangle-parent14">
-              <div class="frame-child22"></div>
-              <div class="lets-connect-parent6">
-                <div class="lets-connect8">Let’s Connect!</div>
-                <div class="social-media-logo8">
+        <div class="footer-container">
+          <div class="footer3">
+            <div class="rectangle-parent9">
+              <div class="frame-child17"></div>
+              <div class="lets-connect-parent1">
+                <div class="lets-connect3">Let’s Connect!</div>
+                <div class="social-media-logo3">
                   <img
-                    class="instagram-logo-icon8"
+                    class="instagram-logo-icon3"
                     alt=""
                     src="./public/instagram-logo.svg"
                     id="instagramLogoIcon"
                   />
 
                   <img
-                    class="youtube-logo-icon8"
+                    class="youtube-logo-icon3"
                     alt=""
                     src="./public/youtube-logo.svg"
                     id="youtubeLogoIcon"
                   />
 
                   <img
-                    class="github-logo-icon24"
+                    class="github-logo-icon19"
                     alt=""
                     src="./public/github-logo1.svg"
                     id="githubLogoIcon"
                   />
 
                   <img
-                    class="github-logo-icon24"
+                    class="github-logo-icon19"
                     alt=""
                     src="./public/linkedin-logo@2x.png"
                     id="linkedinLogoIcon"
@@ -122,13 +130,6 @@
       if (backArrow) {
         backArrow.addEventListener("click", function (e) {
           window.location.href = "./index.html";
-        });
-      }
-      
-      var ovelayImage = document.getElementById("ovelayImage");
-      if (ovelayImage) {
-        ovelayImage.addEventListener("click", function () {
-          window.open("https://github.com/AfterRain007/Learn-Django");
         });
       }
       

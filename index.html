@@ -8,16 +8,20 @@
     <link rel="stylesheet" href="./index.css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Venite Adoremus:wght@400&display=swap"
-    />
-    <link
-      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,900;1,400&display=swap"
     />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
     />
+
+    <style>
+      @font-face {
+        font-family: "Venite Adoremus";
+        src: url("./public/Venite Adoremus.otf");
+        font-weight: 400;
+      }
+    </style>
   </head>
   <body>
     <a class="index">
@@ -47,7 +51,11 @@
       <section class="content">
         <div class="introduction">
           <div class="new-arrivals">
-            <img class="pp-1-icon" alt="" src="./public/pp-1@2x.png" />
+            <img
+              class="photo-profile-icon"
+              alt=""
+              src="./public/photo-profile@2x.png"
+            />
 
             <div class="greetings-my-name-container">
               <p class="greetings-my-name">
@@ -74,9 +82,10 @@
           <div class="fashioncards">
             <div class="project-template">
               <img
-                class="huggingface-icon"
+                class="tft-thumbnail-icon"
                 alt=""
-                src="./public/price-overall-1@2x.png"
+                src="./public/tftarch@2x.png"
+                id="tftThumbnailImage"
               />
 
               <div class="lorem-ipsum-parent">
@@ -87,17 +96,44 @@
                   <p class="greetings-my-name">Temporal Fusion Transformer</p>
                 </div>
                 <img
-                  class="three-dot-icon"
+                  class="hugging-face-logo"
                   alt=""
-                  src="./public/three-dot.svg"
+                  src="./public/hugging-face-logo@2x.png"
+                  id="huggingFaceLogo"
                 />
+
+                <img
+                  class="hugging-face-logo"
+                  alt=""
+                  src="./public/linkedin-logo@2x.png"
+                  id="linkedinLogoIcon"
+                />
+
+                <img
+                  class="github-logo-icon"
+                  alt=""
+                  src="./public/github-logo.svg"
+                  id="githubLogoIcon"
+                />
+
+                <div class="rectangle-parent">
+                  <div class="frame-child"></div>
+                  <img
+                    class="github-logo-icon1"
+                    alt=""
+                    src="./public/github-logo.svg"
+                    id="githubLogoIcon"
+                  />
+                </div>
+                <div class="frame-item"></div>
               </div>
             </div>
-            <div class="project-template1" id="projectTemplateContainer1">
+            <div class="project-template">
               <img
-                class="huggingface-icon"
+                class="tft-thumbnail-icon"
                 alt=""
-                src="./public/huggingface@2x.png"
+                src="./public/huggingfacethumbnailwhite@2x.png"
+                id="huggingfaceThumbnailWhite"
               />
 
               <div class="lorem-ipsum-parent">
@@ -106,17 +142,44 @@
                   <p class="greetings-my-name">Analysis with roBERTa</p>
                 </div>
                 <img
-                  class="three-dot-icon"
+                  class="github-logo-icon"
                   alt=""
-                  src="./public/three-dot.svg"
+                  src="./public/hugging-face-logo@2x.png"
+                  id="huggingFaceLogo"
                 />
+
+                <img
+                  class="hugging-face-logo"
+                  alt=""
+                  src="./public/linkedin-logo@2x.png"
+                  id="linkedinLogoIcon"
+                />
+
+                <img
+                  class="github-logo-icon"
+                  alt=""
+                  src="./public/github-logo.svg"
+                  id="githubLogoIcon"
+                />
+
+                <div class="rectangle-parent">
+                  <div class="frame-child"></div>
+                  <img
+                    class="github-logo-icon1"
+                    alt=""
+                    src="./public/github-logo.svg"
+                    id="githubLogoIcon"
+                  />
+                </div>
+                <div class="frame-item"></div>
               </div>
             </div>
-            <div class="project-template1" id="projectTemplateContainer2">
+            <div class="project-template">
               <img
-                class="huggingface-icon"
+                class="tft-thumbnail-icon"
                 alt=""
-                src="./public/ipoth-thumbnail@2x.png"
+                src="./public/ipoththumbnail@2x.png"
+                id="ipothThumbnailImage"
               />
 
               <div class="lorem-ipsum-parent">
@@ -125,96 +188,257 @@
                   <p class="greetings-my-name">with Computer Vision</p>
                 </div>
                 <img
-                  class="three-dot-icon"
+                  class="hugging-face-logo"
                   alt=""
-                  src="./public/three-dot.svg"
+                  src="./public/hugging-face-logo@2x.png"
+                  id="huggingFaceLogo"
                 />
+
+                <img
+                  class="github-logo-icon"
+                  alt=""
+                  src="./public/linkedin-logo@2x.png"
+                  id="linkedinLogoIcon"
+                />
+
+                <img
+                  class="github-logo-icon"
+                  alt=""
+                  src="./public/github-logo.svg"
+                  id="githubLogoIcon"
+                />
+
+                <div class="rectangle-parent">
+                  <div class="frame-child"></div>
+                  <img
+                    class="github-logo-icon1"
+                    alt=""
+                    src="./public/github-logo.svg"
+                    id="githubLogoIcon"
+                  />
+                </div>
+                <div class="frame-item"></div>
               </div>
             </div>
-            <div class="project-template1" id="projectTemplateContainer3">
+            <div class="project-template">
               <img
-                class="huggingface-icon"
+                class="tft-thumbnail-icon"
                 alt=""
-                src="./public/power-bi-mockup@2x.png"
+                src="./public/powerbithumbnail@2x.png"
+                id="powerBiThumbnail"
               />
 
               <div class="lorem-ipsum-parent">
                 <div class="lorem-ipsum">Power BI Reports</div>
                 <img
-                  class="three-dot-icon"
+                  class="hugging-face-logo"
                   alt=""
-                  src="./public/three-dot.svg"
+                  src="./public/hugging-face-logo@2x.png"
+                  id="huggingFaceLogo"
                 />
+
+                <img
+                  class="hugging-face-logo"
+                  alt=""
+                  src="./public/linkedin-logo@2x.png"
+                  id="linkedinLogoIcon"
+                />
+
+                <img
+                  class="github-logo-icon"
+                  alt=""
+                  src="./public/github-logo.svg"
+                  id="githubLogoIcon"
+                />
+
+                <div class="rectangle-parent">
+                  <div class="frame-child"></div>
+                  <img
+                    class="github-logo-icon7"
+                    alt=""
+                    src="./public/github-logo.svg"
+                    id="githubLogoIcon"
+                  />
+                </div>
+                <div class="frame-item"></div>
               </div>
             </div>
-            <div class="project-template1" id="projectTemplateContainer4">
+            <div class="project-template">
               <img
-                class="huggingface-icon"
+                class="tft-thumbnail-icon"
                 alt=""
-                src="./public/django-app-thumbnail@2x.png"
+                src="./public/djangoapp-thumbnail@2x.png"
+                id="djangoAppThumbnail"
               />
 
               <div class="lorem-ipsum-parent">
                 <div class="lorem-ipsum">Django App</div>
                 <img
-                  class="three-dot-icon"
+                  class="hugging-face-logo"
                   alt=""
-                  src="./public/three-dot.svg"
+                  src="./public/hugging-face-logo@2x.png"
+                  id="huggingFaceLogo"
                 />
+
+                <img
+                  class="hugging-face-logo"
+                  alt=""
+                  src="./public/linkedin-logo@2x.png"
+                  id="linkedinLogoIcon"
+                />
+
+                <img
+                  class="github-logo-icon"
+                  alt=""
+                  src="./public/github-logo.svg"
+                  id="githubLogoIcon"
+                />
+
+                <div class="rectangle-parent">
+                  <div class="frame-child"></div>
+                  <img
+                    class="github-logo-icon1"
+                    alt=""
+                    src="./public/github-logo.svg"
+                    id="githubLogoIcon"
+                  />
+                </div>
+                <div class="frame-item"></div>
               </div>
             </div>
-            <div class="project-template1" id="projectTemplateContainer5">
+            <div class="project-template">
               <img
-                class="huggingface-icon"
+                class="tft-thumbnail-icon"
                 alt=""
-                src="./public/website-thumbnail@2x.png"
+                src="./public/websitethumbnail@2x.png"
+                id="websiteThumbnailImage"
               />
 
               <div class="lorem-ipsum-parent">
                 <div class="lorem-ipsum">Personal Website</div>
                 <img
-                  class="three-dot-icon"
+                  class="hugging-face-logo"
                   alt=""
-                  src="./public/three-dot.svg"
+                  src="./public/hugging-face-logo@2x.png"
+                  id="huggingFaceLogo"
                 />
+
+                <img
+                  class="github-logo-icon"
+                  alt=""
+                  src="./public/linkedin-logo@2x.png"
+                  id="linkedinLogoIcon"
+                />
+
+                <img
+                  class="github-logo-icon"
+                  alt=""
+                  src="./public/github-logo.svg"
+                  id="githubLogoIcon"
+                />
+
+                <div class="rectangle-parent">
+                  <div class="frame-child"></div>
+                  <img
+                    class="github-logo-icon1"
+                    alt=""
+                    src="./public/github-logo.svg"
+                    id="githubLogoIcon"
+                  />
+                </div>
+                <div class="frame-item"></div>
               </div>
             </div>
-            <div class="project-template1" id="projectTemplateContainer6">
+            <div class="project-template">
               <img
-                class="huggingface-icon"
+                class="tft-thumbnail-icon"
                 alt=""
-                src="./public/github-profile@2x.png"
+                src="./public/githubprofile@2x.png"
+                id="githubProfileThumbnail"
               />
 
               <div class="lorem-ipsum-parent">
                 <div class="lorem-ipsum">Fun Projects</div>
                 <img
-                  class="three-dot-icon"
+                  class="hugging-face-logo"
                   alt=""
-                  src="./public/three-dot.svg"
+                  src="./public/hugging-face-logo@2x.png"
+                  id="huggingFaceLogo"
                 />
+
+                <img
+                  class="hugging-face-logo"
+                  alt=""
+                  src="./public/linkedin-logo@2x.png"
+                  id="linkedinLogoIcon"
+                />
+
+                <img
+                  class="github-logo-icon"
+                  alt=""
+                  src="./public/github-logo.svg"
+                  id="githubLogoIcon"
+                />
+
+                <div class="rectangle-parent">
+                  <div class="frame-child"></div>
+                  <img
+                    class="github-logo-icon1"
+                    alt=""
+                    src="./public/github-logo.svg"
+                    id="githubLogoIcon"
+                  />
+                </div>
+                <div class="frame-item"></div>
               </div>
             </div>
-            <div class="project-template1" id="projectTemplateContainer7">
+            <div class="project-template">
               <img
-                class="huggingface-icon"
+                class="tft-thumbnail-icon"
                 alt=""
-                src="./public/courses-thumbnail@2x.png"
+                src="./public/coursecapstonethumbnail@2x.png"
+                id="courseCapstoneThumbnail"
               />
 
               <div class="lorem-ipsum-parent">
                 <div class="lorem-ipsum">Course Capstone</div>
                 <img
-                  class="three-dot-icon"
+                  class="hugging-face-logo"
                   alt=""
-                  src="./public/three-dot.svg"
+                  src="./public/hugging-face-logo@2x.png"
+                  id="huggingFaceLogo"
                 />
+
+                <img
+                  class="hugging-face-logo"
+                  alt=""
+                  src="./public/linkedin-logo@2x.png"
+                  id="linkedinLogoIcon"
+                />
+
+                <img
+                  class="github-logo-icon"
+                  alt=""
+                  src="./public/github-logo.svg"
+                  id="githubLogoIcon"
+                />
+
+                <div class="rectangle-parent">
+                  <div class="frame-child"></div>
+                  <img
+                    class="github-logo-icon1"
+                    alt=""
+                    src="./public/github-logo.svg"
+                    id="githubLogoIcon"
+                  />
+                </div>
+                <div class="frame-item"></div>
               </div>
             </div>
           </div>
           <div class="fashioncards1">
             <img
-              class="price-overall-11"
+              class="price-overall-1"
               alt=""
               src="./public/price-overall-1@2x.png"
             />
@@ -244,9 +468,9 @@
           </div>
           <div class="frame-parent">
             <div class="ellipse-parent">
-              <div class="frame-child"></div>
-              <div class="frame-item"></div>
-              <div class="frame-child"></div>
+              <div class="ellipse-div"></div>
+              <div class="frame-child12"></div>
+              <div class="ellipse-div"></div>
             </div>
             <div class="july-dec-2020-parent">
               <div class="july-dec">July - Dec 2020</div>
@@ -274,37 +498,39 @@
           </div>
         </div>
         <div class="footer">
-          <div class="footer-child"></div>
-          <div class="lets-connect-parent">
-            <div class="lets-connect">Let’s Connect!</div>
-            <div class="social-media-logo">
-              <img
-                class="instagram-logo-icon"
-                alt=""
-                src="./public/instagram-logo.svg"
-                id="instagramLogoIcon"
-              />
+          <div class="rectangle-parent6">
+            <div class="frame-child14"></div>
+            <div class="lets-connect-parent">
+              <div class="lets-connect">Let’s Connect!</div>
+              <div class="social-media-logo">
+                <img
+                  class="instagram-logo-icon"
+                  alt=""
+                  src="./public/instagram-logo.svg"
+                  id="instagramLogoIcon"
+                />
 
-              <img
-                class="youtube-logo-icon"
-                alt=""
-                src="./public/youtube-logo.svg"
-                id="youtubeLogoIcon"
-              />
+                <img
+                  class="youtube-logo-icon"
+                  alt=""
+                  src="./public/youtube-logo.svg"
+                  id="youtubeLogoIcon"
+                />
 
-              <img
-                class="github-logo-icon"
-                alt=""
-                src="./public/github-logo.svg"
-                id="githubLogoIcon"
-              />
+                <img
+                  class="github-logo-icon16"
+                  alt=""
+                  src="./public/github-logo1.svg"
+                  id="githubLogoIcon"
+                />
 
-              <img
-                class="github-logo-icon"
-                alt=""
-                src="./public/linkedin-logo@2x.png"
-                id="linkedinLogoIcon"
-              />
+                <img
+                  class="github-logo-icon16"
+                  alt=""
+                  src="./public/linkedin-logo@2x.png"
+                  id="linkedinLogoIcon"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -318,44 +544,44 @@
             <div class="close-child"></div>
             <div class="close-item"></div>
           </button>
-          <div class="menu1">
+          <div class="menu10">
             <div class="drawer-menu-items">
               <div class="home-parent">
-                <button class="home1" id="drawerhome">
+                <button class="home2" id="drawerhome">
                   <img
                     class="profile-logo-icon"
                     alt=""
                     src="./public/profile-logo@2x.png"
                   />
 
-                  <div class="home2">HOME</div>
+                  <div class="home3">HOME</div>
                 </button>
-                <div class="certification1" id="drawercertificationContainer">
+                <div class="certification2" id="drawercertificationContainer">
                   <img
                     class="certificate-logo-icon"
                     alt=""
                     src="./public/certificate-logo.svg"
                   />
 
-                  <div class="certification2">CERTIFICATION</div>
+                  <div class="certification3">CERTIFICATION</div>
                 </div>
-                <div class="passions1">
+                <div class="passions2">
                   <img
                     class="rubiks-cube-icon"
                     alt=""
                     src="./public/rubiks-cube.svg"
                   />
 
-                  <div class="passions2">PASSIONS</div>
+                  <div class="passions3">PASSIONS</div>
                 </div>
                 <a
-                  class="resume1"
+                  class="resume2"
                   href="https://drive.google.com/file/d/1yIwIyFa2kMHVO4iV8ypUsUcXclFJkJd3/view?usp=sharing"
                   target="_blank"
                 >
                   <img class="cv-logo-icon" alt="" src="./public/cv-logo.svg" />
 
-                  <div class="certification2">RESUME</div>
+                  <div class="certification3">RESUME</div>
                 </a>
               </div>
             </div>
@@ -424,7 +650,7 @@
       );
       if (drawercertificationContainer) {
         drawercertificationContainer.addEventListener("click", function (e) {
-          window.location.href = "./certificate-new.html";
+          window.location.href = "./hall-of-certificate.html";
         });
       }
       var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
@@ -469,7 +695,7 @@
       var certificationText = document.getElementById("certificationText");
       if (certificationText) {
         certificationText.addEventListener("click", function (e) {
-          window.location.href = "./certificate-new.html";
+          window.location.href = "./hall-of-certificate.html";
         });
       }
       
@@ -502,66 +728,135 @@
         });
       }
       
-      var projectTemplateContainer1 = document.getElementById(
-        "projectTemplateContainer1"
+      var tftThumbnailImage = document.getElementById("tftThumbnailImage");
+      if (tftThumbnailImage) {
+        tftThumbnailImage.addEventListener("click", function (e) {
+          window.location.href = "./bitcoin-tft-sub-page.html";
+        });
+      }
+      
+      var huggingFaceLogo = document.getElementById("huggingFaceLogo");
+      if (huggingFaceLogo) {
+        huggingFaceLogo.addEventListener("click", function () {
+          window.open("https://www.linkedin.com/in/gilang-islamay-putra-djuharis/");
+        });
+      }
+      
+      var linkedinLogoIcon = document.getElementById("linkedinLogoIcon");
+      if (linkedinLogoIcon) {
+        linkedinLogoIcon.addEventListener("click", function () {
+          window.open("https://www.linkedin.com/in/gilang-islamay-putra-djuharis/");
+        });
+      }
+      
+      var githubLogoIcon = document.getElementById("githubLogoIcon");
+      if (githubLogoIcon) {
+        githubLogoIcon.addEventListener("click", function () {
+          window.open("https://github.com/AfterRain007/");
+        });
+      }
+      
+      var githubLogoIcon = document.getElementById("githubLogoIcon");
+      if (githubLogoIcon) {
+        githubLogoIcon.addEventListener("click", function () {
+          window.open("https://github.com/AfterRain007/TFT_Bitcoin");
+        });
+      }
+      
+      var huggingfaceThumbnailWhite = document.getElementById(
+        "huggingfaceThumbnailWhite"
       );
-      if (projectTemplateContainer1) {
-        projectTemplateContainer1.addEventListener("click", function (e) {
+      if (huggingfaceThumbnailWhite) {
+        huggingfaceThumbnailWhite.addEventListener("click", function (e) {
           window.location.href = "./bitcoin-sentiment-sub-page.html";
         });
       }
       
-      var projectTemplateContainer2 = document.getElementById(
-        "projectTemplateContainer2"
-      );
-      if (projectTemplateContainer2) {
-        projectTemplateContainer2.addEventListener("click", function (e) {
+      var githubLogoIcon = document.getElementById("githubLogoIcon");
+      if (githubLogoIcon) {
+        githubLogoIcon.addEventListener("click", function () {
+          window.open("https://github.com/AfterRain007/cryptobertRefined");
+        });
+      }
+      
+      var ipothThumbnailImage = document.getElementById("ipothThumbnailImage");
+      if (ipothThumbnailImage) {
+        ipothThumbnailImage.addEventListener("click", function (e) {
           window.location.href = "./ipoth-sub-page.html";
         });
       }
       
-      var projectTemplateContainer3 = document.getElementById(
-        "projectTemplateContainer3"
-      );
-      if (projectTemplateContainer3) {
-        projectTemplateContainer3.addEventListener("click", function (e) {
-          window.location.href = "./power-b-i-sub-page.html";
+      var githubLogoIcon = document.getElementById("githubLogoIcon");
+      if (githubLogoIcon) {
+        githubLogoIcon.addEventListener("click", function () {
+          window.open(
+            "https://github.com/Izzudddin/my-portofolio/tree/main/Potholes%20Detection%20using%20YOLO"
+          );
         });
       }
       
-      var projectTemplateContainer4 = document.getElementById(
-        "projectTemplateContainer4"
-      );
-      if (projectTemplateContainer4) {
-        projectTemplateContainer4.addEventListener("click", function (e) {
+      var powerBiThumbnail = document.getElementById("powerBiThumbnail");
+      if (powerBiThumbnail) {
+        powerBiThumbnail.addEventListener("click", function (e) {
+          window.location.href = "./power-bi-sub-page.html";
+        });
+      }
+      
+      var djangoAppThumbnail = document.getElementById("djangoAppThumbnail");
+      if (djangoAppThumbnail) {
+        djangoAppThumbnail.addEventListener("click", function (e) {
           window.location.href = "./django-sub-page.html";
         });
       }
       
-      var projectTemplateContainer5 = document.getElementById(
-        "projectTemplateContainer5"
-      );
-      if (projectTemplateContainer5) {
-        projectTemplateContainer5.addEventListener("click", function (e) {
+      var githubLogoIcon = document.getElementById("githubLogoIcon");
+      if (githubLogoIcon) {
+        githubLogoIcon.addEventListener("click", function () {
+          window.open("https://github.com/AfterRain007/Learn-Django");
+        });
+      }
+      
+      var websiteThumbnailImage = document.getElementById("websiteThumbnailImage");
+      if (websiteThumbnailImage) {
+        websiteThumbnailImage.addEventListener("click", function (e) {
           window.location.href = "./website-sub-page.html";
         });
       }
       
-      var projectTemplateContainer6 = document.getElementById(
-        "projectTemplateContainer6"
-      );
-      if (projectTemplateContainer6) {
-        projectTemplateContainer6.addEventListener("click", function (e) {
+      var githubLogoIcon = document.getElementById("githubLogoIcon");
+      if (githubLogoIcon) {
+        githubLogoIcon.addEventListener("click", function () {
+          window.open("https://github.com/AfterRain007/AfterRain007.github.io");
+        });
+      }
+      
+      var githubProfileThumbnail = document.getElementById("githubProfileThumbnail");
+      if (githubProfileThumbnail) {
+        githubProfileThumbnail.addEventListener("click", function (e) {
           window.location.href = "./fun-projects-sub-page.html";
         });
       }
       
-      var projectTemplateContainer7 = document.getElementById(
-        "projectTemplateContainer7"
+      var githubLogoIcon = document.getElementById("githubLogoIcon");
+      if (githubLogoIcon) {
+        githubLogoIcon.addEventListener("click", function () {
+          window.open("https://github.com/AfterRain007/Fun-Projects");
+        });
+      }
+      
+      var courseCapstoneThumbnail = document.getElementById(
+        "courseCapstoneThumbnail"
       );
-      if (projectTemplateContainer7) {
-        projectTemplateContainer7.addEventListener("click", function (e) {
+      if (courseCapstoneThumbnail) {
+        courseCapstoneThumbnail.addEventListener("click", function (e) {
           window.location.href = "./course-capstone-sub-page.html";
+        });
+      }
+      
+      var githubLogoIcon = document.getElementById("githubLogoIcon");
+      if (githubLogoIcon) {
+        githubLogoIcon.addEventListener("click", function () {
+          window.open("https://github.com/AfterRain007/TFDS");
         });
       }
       
@@ -585,20 +880,6 @@
       if (youtubeLogoIcon) {
         youtubeLogoIcon.addEventListener("click", function () {
           window.open("https://www.youtube.com/@afterrain37/");
-        });
-      }
-      
-      var githubLogoIcon = document.getElementById("githubLogoIcon");
-      if (githubLogoIcon) {
-        githubLogoIcon.addEventListener("click", function () {
-          window.open("https://github.com/AfterRain007/");
-        });
-      }
-      
-      var linkedinLogoIcon = document.getElementById("linkedinLogoIcon");
-      if (linkedinLogoIcon) {
-        linkedinLogoIcon.addEventListener("click", function () {
-          window.open("https://www.linkedin.com/in/gilang-islamay-putra-djuharis/");
         });
       }
       </script>

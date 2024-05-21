@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./bitcoin-tft-sub-page.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,900;1,400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+    />
+
+    <style>
+      @font-face {
+        font-family: "Venite Adoremus";
+        src: url("./public/Venite Adoremus.otf");
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bitcoin-tft-sub-page">
+      <a class="bitcoin-tft-sub-page1">
+        <div class="header7">
+          <div class="navbar9">
+            <div class="menu9">
+              <button class="back-arrow7" id="backArrow">
+                <img class="vector-icon7" alt="" src="./public/vector.svg" />
+              </button>
+            </div>
+          </div>
+          <div class="intro7">
+            <div class="title-parent5">
+              <div class="title8">
+                Bitcoin Price Prediction using Temporal Fusion Transformer
+              </div>
+              <i class="sub-title7"
+                >Forecasting a time-series data is hard, especially volatile one
+                like bitcoin’s price. So how does one do such thing?</i
+              >
+            </div>
+            <div class="tft-thumbnail-parent">
+              <img
+                class="tft-thumbnail-icon1"
+                alt=""
+                src="./public/tft-thumbnail@2x.png"
+              />
+
+              <div class="image-17">
+                Temporal Fusion Transformer Architecture
+              </div>
+              <img
+                class="overlay-icon6"
+                alt=""
+                src="./public/overlay@2x.png"
+                id="overlayImage"
+              />
+            </div>
+          </div>
+        </div>
+        <main class="content9">
+          <section class="general-overview14">
+            <h2 class="general-overview15">General Overview</h2>
+            <p class="lorem-ipsum-dolor7">
+              The second part of my thesis! Temporal Fusion Transformers is
+              compared against Long-Short Term Memory (LSTM), Gated Recurrent
+              Units (GRUs), and Temporal Convolution Networks (TCN) when
+              predicting bitcoin’s price using it’s Volume, Sentiment, and
+              Google Trend. It is found that Temporal Fusion Transformers comes
+              first not only with the best accuracy, it also provide an
+              explanation regarding the variable importance which solves the
+              black-box problem that apparent in other forecasting method like
+              LSTM, GRU, and TCN.
+            </p>
+          </section>
+          <section class="general-overview14">
+            <h2 class="comprehensive-breakdown7">Comprehensive Breakdown</h2>
+            <p class="quisque-scelerisque-tristique-container2">
+              <span class="data-preprocessing-is-very-imp">
+                <span class="data-preprocessing-is"
+                  >Data preprocessing is very important when dealing with
+                  time-series forecasting, not only it can makes the model
+                  worse, but can also bla bla bla. hence a lot of data
+                  preprocessing trial and error was done,
+                </span>
+                <i class="data-preprocessing-is">exempli gratia </i>
+                <span
+                  >outlier handling using Simple Moving Average and Boxplot is
+                  explored. Also Data Normalization is done using First Order
+                  Differencing Transformation to handle volatility.</span
+                >
+              </span>
+              <span class="data-preprocessing-is-very-imp">
+                <span
+                  >It is concluded that Temporal Fusion Transformer is more
+                  superior compared to its predecessor. Explainability of the
+                  model can also be found the most important variables in the
+                  Encoder are Trend and linear_increase with significance over
+                  10%, and Trend even reaches over 50%. In the Decoder, Trend
+                  and week are the more important variables, with Trend over 40%
+                  and week over 10%. Not only that, the model's attention to the
+                  explanatory variables can be seen that Attention rises during
+                  training precisely at point -7, so it can be concluded that
+                  the model uses great attention to the 7 points before
+                  forecasting is done to make the forecast.</span
+                >
+              </span>
+            </p>
+          </section>
+        </main>
+        <div class="footer-wrapper5">
+          <div class="footer9">
+            <div class="rectangle-parent15">
+              <div class="frame-child23"></div>
+              <div class="lets-connect-parent7">
+                <div class="lets-connect9">Let’s Connect!</div>
+                <div class="social-media-logo9">
+                  <img
+                    class="instagram-logo-icon9"
+                    alt=""
+                    src="./public/instagram-logo.svg"
+                    id="instagramLogoIcon"
+                  />
+
+                  <img
+                    class="youtube-logo-icon9"
+                    alt=""
+                    src="./public/youtube-logo.svg"
+                    id="youtubeLogoIcon"
+                  />
+
+                  <img
+                    class="github-logo-icon25"
+                    alt=""
+                    src="./public/github-logo1.svg"
+                    id="githubLogoIcon"
+                  />
+
+                  <img
+                    class="github-logo-icon25"
+                    alt=""
+                    src="./public/linkedin-logo@2x.png"
+                    id="linkedinLogoIcon"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <script>
+      var backArrow = document.getElementById("backArrow");
+      if (backArrow) {
+        backArrow.addEventListener("click", function (e) {
+          window.location.href = "./index.html";
+        });
+      }
+      
+      var overlayImage = document.getElementById("overlayImage");
+      if (overlayImage) {
+        overlayImage.addEventListener("click", function () {
+          window.open("https://github.com/AfterRain007/TFT_Bitcoin");
+        });
+      }
+      
+      var instagramLogoIcon = document.getElementById("instagramLogoIcon");
+      if (instagramLogoIcon) {
+        instagramLogoIcon.addEventListener("click", function () {
+          window.open("https://www.instagram.com/razel007");
+        });
+      }
+      
+      var youtubeLogoIcon = document.getElementById("youtubeLogoIcon");
+      if (youtubeLogoIcon) {
+        youtubeLogoIcon.addEventListener("click", function () {
+          window.open("https://www.youtube.com/@afterrain37/");
+        });
+      }
+      
+      var githubLogoIcon = document.getElementById("githubLogoIcon");
+      if (githubLogoIcon) {
+        githubLogoIcon.addEventListener("click", function () {
+          window.open("https://github.com/AfterRain007/");
+        });
+      }
+      
+      var linkedinLogoIcon = document.getElementById("linkedinLogoIcon");
+      if (linkedinLogoIcon) {
+        linkedinLogoIcon.addEventListener("click", function () {
+          window.open("https://www.linkedin.com/in/gilang-islamay-putra-djuharis/");
+        });
+      }
+      </script>
+  </body>
+</html>

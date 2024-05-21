@@ -43,7 +43,7 @@
   height: 23.9px;
   object-fit: cover;
 }
-.home2 {
+.home3 {
   position: relative;
   font-size: var(--font-size-13xl);
   line-height: 24px;
@@ -51,7 +51,7 @@
   color: var(--color-white);
   text-align: left;
 }
-.home1 {
+.home2 {
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -67,11 +67,11 @@
   position: relative;
   height: 28px;
 }
-.certification2 {
+.certification3 {
   position: relative;
   line-height: 24px;
 }
-.certification1 {
+.certification2 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -86,11 +86,11 @@
   overflow: hidden;
   flex-shrink: 0;
 }
-.passions2 {
+.passions3 {
   position: relative;
   line-height: 24px;
 }
-.passions1 {
+.passions2 {
   display: none;
   flex-direction: row;
   align-items: center;
@@ -103,11 +103,11 @@
   height: 23.9px;
 }
 .home-parent,
-.resume1 {
+.resume2 {
   display: flex;
   justify-content: center;
 }
-.resume1 {
+.resume2 {
   text-decoration: none;
   flex-direction: row;
   align-items: center;
@@ -122,7 +122,7 @@
 }
 .close-parent,
 .drawer-menu-items,
-.menu1 {
+.menu10 {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -132,7 +132,7 @@
   flex-direction: row;
 }
 .close-parent,
-.menu1 {
+.menu10 {
   align-self: stretch;
   flex-direction: column;
 }
@@ -181,13 +181,13 @@
   animation: 0.25s ease 0s 1 normal forwards slide-in-right;
 }
 @media screen and (max-width: 960px) {
-  .home2 {
+  .home3 {
     font-size: var(--font-size-base);
   }
   .home-parent {
     font-size: 50%;
   }
-  .menu1 {
+  .menu10 {
     padding-right: 0;
     box-sizing: border-box;
   }
@@ -218,7 +218,7 @@
     width: 25px;
     object-fit: contain;
   }
-  .home2 {
+  .home3 {
     font-size: var(--font-size-3xs);
   }
   .certificate-logo-icon {
@@ -226,7 +226,7 @@
     font-size: 25%;
     object-fit: contain;
   }
-  .certification2 {
+  .certification3 {
     font-size: var(--font-size-3xs);
   }
   .rubiks-cube-icon {
@@ -262,7 +262,7 @@
     width: 23px;
   }
   .background-designed-by-container {
-    font-size: 6px;
+    font-size: var(--font-size-7xs);
     line-height: 13px;
   }
 }
