@@ -832,8 +832,8 @@
 	  
       var linkedinLogoIconWebsite = document.getElementById("linkedinLogoIconWebsite");
       if (linkedinLogoIconWebsite) {
-        linkedinLogoIconWebsite.addEventListener("click", function (e) {
-          window.location.href = "https://www.linkedin.com/posts/gilang-islamay-putra-djuharis_excited-to-announce-my-new-website-hi-everyone-activity-7185454089042866177-4kb7?utm_source=share&utm_medium=member_desktop";
+        linkedinLogoIconWebsite.addEventListener("click", function () {
+          window.open("https://www.linkedin.com/posts/gilang-islamay-putra-djuharis_excited-to-announce-my-new-website-hi-everyone-activity-7185454089042866177-4kb7?utm_source=share&utm_medium=member_desktop");
         });
       }
 	  
@@ -894,6 +894,13 @@
       if (youtubeLogoIcon) {
         youtubeLogoIcon.addEventListener("click", function () {
           window.open("https://www.youtube.com/@afterrain37/");
+        });
+      }
+	  
+      var linkedinLogoIcon = document.getElementById("linkedinLogoIcon");
+      if (linkedinLogoIcon) {
+        linkedinLogoIcon.addEventListener("click", function () {
+          window.open("https://www.linkedin.com/in/gilang-islamay-putra-djuharis/");
         });
       }
       </script>

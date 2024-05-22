@@ -266,7 +266,7 @@
   object-fit: contain;
 }
 .price-overall-1:hover {
-  box-shadow: 0 0 5px #584fee;
+  box-shadow: 0 0 75px rgba(102, 76, 232, 0.5);
 }
 .github-pic-icon,
 .huggingface-light-icon,
