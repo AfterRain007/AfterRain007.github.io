@@ -47,7 +47,10 @@
               />
 
               <div class="image-1">Indonesia Pot Holes (IPOTH)</div>
-              <img class="overlay-icon" alt="" src="./public/overlay@2x.png" />
+              <img class="overlay-icon"
+                   alt="" 
+                   src="./public/overlay@2x.png"
+                   id = "overlayImage"/>
             </div>
           </div>
         </div>
@@ -140,6 +143,13 @@
         });
       }
       
+      var overlayImage = document.getElementById("overlayImage");
+      if (overlayImage) {
+        overlayImage.addEventListener("click", function () {
+          window.open("https://github.com/Izzudddin/my-portofolio/tree/main/Potholes%20Detection%20using%20YOLO");
+        });
+      }
+
       var instagramLogoIcon = document.getElementById("instagramLogoIcon");
       if (instagramLogoIcon) {
         instagramLogoIcon.addEventListener("click", function () {
