@@ -79,7 +79,7 @@
   z-index: 2;
 }
 .overlay-icon3:hover {
-  opacity: 100%;
+  opacity: 75%;
 }
 .course-capstone-thumbnail-parent {
   display: flex;

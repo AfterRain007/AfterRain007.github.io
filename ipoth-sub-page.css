@@ -79,7 +79,7 @@
   z-index: 2;
 }
 .overlay-icon:hover {
-  opacity: 100%;
+  opacity: 75%;
 }
 .ipoth-thumbnail-parent {
   display: flex;

@@ -79,7 +79,7 @@
   z-index: 2;
 }
 .ovelay-icon:hover {
-  opacity: 100%;
+  opacity: 75%;
 }
 .django-app-thumbnail-parent {
   display: flex;
