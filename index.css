@@ -343,7 +343,7 @@
   align-self: stretch;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: space-between;
   padding: 0 0 var(--padding-8xs);
 }
