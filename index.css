@@ -138,8 +138,8 @@
   text-align: justify;
 }
 .projects1 {
-  height: 58px;
-  width: 1138px;
+  height: auto;
+  width: auto;
   position: relative;
   display: inline-block;
   flex-shrink: 0;
@@ -173,7 +173,7 @@
 .hugging-face-logo:hover {
   box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
 }
-.github-logo-icon,
+.github-logo-tft,
 .hugging-face-logo {
   height: 20px;
   width: 20px;
@@ -181,12 +181,12 @@
   object-fit: contain;
   cursor: pointer;
 }
-.github-logo-icon:hover {
+.github-logo-tft:hover {
   animation: 1s ease 0s 1 normal none pulsate;
   opacity: 1;
 }
 .frame-child,
-.github-logo-icon1 {
+.github-logo-icon {
   position: absolute;
   top: 0;
   left: 0;
@@ -197,12 +197,12 @@
   background-color: var(--color-gainsboro);
   display: none;
 }
-.github-logo-icon1 {
+.github-logo-icon {
   object-fit: contain;
   cursor: pointer;
 }
-.github-logo-icon1:hover,
-.github-logo-icon7:hover {
+.github-logo-icon4:hover,
+.github-logo-icon:hover {
   box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
 }
 .rectangle-parent {
@@ -237,7 +237,7 @@
   padding: var(--padding-3xs);
   object-fit: contain;
 }
-.github-logo-icon7 {
+.github-logo-icon4 {
   position: absolute;
   top: 0;
   left: 0;
@@ -266,7 +266,7 @@
   object-fit: contain;
 }
 .price-overall-1:hover {
-  box-shadow: 0 0 75px #584fee;
+  box-shadow: 0 0 5px #584fee;
 }
 .github-pic-icon,
 .huggingface-light-icon,
@@ -298,21 +298,23 @@
   justify-content: space-around;
   gap: var(--gap-31xl);
 }
+.projects,
+.title1 {
+  align-items: center;
+  justify-content: center;
+}
 .projects {
   align-self: stretch;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: var(--gap-31xl);
   font-size: var(--font-size-29xl);
   font-family: var(--font-venite-adoremus);
 }
-.experience1 {
-  height: 58px;
-  flex: 1;
-  position: relative;
-  display: inline-block;
+.title1 {
+  width: 1670px;
+  display: none;
+  flex-direction: row;
 }
 .ellipse-div,
 .frame-child12 {
@@ -320,15 +322,95 @@
   background-color: var(--color-white);
 }
 .ellipse-div {
-  width: 25px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  height: 25px;
 }
 .frame-child12 {
   width: 2px;
   flex: 1;
 }
 .ellipse-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.march-april {
+  width: 181px;
+  position: relative;
+  display: inline-block;
+  height: 24px;
+  flex-shrink: 0;
+}
+.production-division-intern {
+  margin: 0;
+  font-weight: 900;
+}
+.production-division-intern-container {
+  height: auto;
+  flex: 1;
+  position: relative;
+  display: inline-block;
+}
+.frame-group,
+.production-division-intern-b-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+.production-division-intern-b-wrapper {
+  flex: 1;
+  padding: 0 0 var(--padding-6xl);
+  text-align: justify;
+}
+.frame-group {
+  align-self: stretch;
+  gap: var(--gap-6xl);
+}
+.frame-child14 {
+  width: 2px;
+  flex: 1;
+  position: relative;
+  background-color: var(--color-white);
+  display: none;
+}
+.ellipse-group {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.full-stack-power-bi-develope-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: justify;
+}
+.frame-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  font-family: var(--font-montserrat);
+}
+.frame-child15 {
+  width: 25px;
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  height: 25px;
+}
+.ellipse-container {
   align-self: stretch;
   display: flex;
   flex-direction: column;
@@ -343,15 +425,11 @@
   align-self: stretch;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: center;
   justify-content: space-between;
   padding: 0 0 var(--padding-8xs);
 }
-.production-division-intern {
-  margin: 0;
-  font-weight: 900;
-}
-.production-division-intern-container {
+.production-division-intern-container1 {
   align-self: stretch;
   height: auto;
   position: relative;
@@ -390,14 +468,11 @@
   gap: var(--gap-31xl);
   text-align: justify;
 }
-.experience,
-.frame-parent {
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-}
-.frame-parent {
+.frame-parent1 {
+  width: 1670px;
+  display: none;
   flex-direction: row;
+  align-items: center;
   justify-content: space-around;
   gap: var(--gap-3xs);
   flex-wrap: wrap;
@@ -406,18 +481,21 @@
   font-family: var(--font-montserrat);
 }
 .experience {
+  align-self: stretch;
+  display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   gap: var(--gap-31xl);
   font-size: var(--font-size-29xl);
   font-family: var(--font-venite-adoremus);
 }
-.frame-child14,
+.frame-child18,
 .lets-connect {
   align-self: stretch;
   position: relative;
 }
-.frame-child14 {
+.frame-child18 {
   background: linear-gradient(
     90deg,
     rgba(3, 7, 14, 0),
@@ -432,7 +510,7 @@
   height: 24px;
   display: inline-block;
 }
-.github-logo-icon16,
+.github-logo-icon11,
 .instagram-logo-icon,
 .youtube-logo-icon {
   height: 30px;
@@ -441,12 +519,12 @@
   object-fit: contain;
   cursor: pointer;
 }
-.github-logo-icon16,
+.github-logo-icon11,
 .youtube-logo-icon {
   height: 33px;
   width: 45px;
 }
-.github-logo-icon16 {
+.github-logo-icon11 {
   width: 33px;
 }
 .lets-connect-parent,
@@ -530,8 +608,7 @@
     font-size: var(--font-size-mini);
   }
   .introduction {
-    padding-left: var(--padding-xl);
-    padding-right: var(--padding-xl);
+    padding : 0;
     box-sizing: border-box;
   }
   .title {
@@ -545,7 +622,7 @@
     font-size: var(--font-size-xs);
   }
   .github-logo-icon,
-  .github-logo-icon1,
+  .github-logo-tft,
   .hugging-face-logo {
     width: 15px;
     height: 15px;
@@ -553,7 +630,7 @@
   .project-template {
     font-size: 75%;
   }
-  .github-logo-icon7 {
+  .github-logo-icon4 {
     width: 15px;
     height: 15px;
   }
@@ -581,7 +658,17 @@
     box-sizing: border-box;
     max-width: 1440px;
   }
-  .july-dec {
+  .ellipse-div {
+    width: 18px;
+    height: 18px;
+  }
+  .march-april {
+    width: 136px;
+    height: 18px;
+  }
+  .july-dec,
+  .march-april,
+  .production-division-intern-container {
     font-size: var(--font-size-mini);
   }
   .july-dec-2020-parent {
@@ -589,7 +676,7 @@
     box-sizing: border-box;
   }
   .download-resume,
-  .production-division-intern-container {
+  .production-division-intern-container1 {
     font-size: var(--font-size-mini);
   }
   .experience {
@@ -608,7 +695,7 @@
     width: 34px;
     height: 25px;
   }
-  .github-logo-icon16 {
+  .github-logo-icon11 {
     width: 25px;
     height: 25px;
   }
@@ -658,8 +745,8 @@
     font-size: var(--font-size-3xs);
   }
   .github-logo-icon,
-  .github-logo-icon1,
-  .github-logo-icon7,
+  .github-logo-icon4,
+  .github-logo-tft,
   .hugging-face-logo {
     width: 13px;
     height: 13px;
@@ -698,6 +785,21 @@
     box-sizing: border-box;
   }
   .ellipse-div {
+    width: 15px;
+    height: 15px;
+  }
+  .march-april {
+    width: 109px;
+    height: 15px;
+  }
+  .march-april,
+  .production-division-intern-container {
+    font-size: var(--font-size-xs);
+  }
+  .frame-group {
+    gap: var(--gap-xl);
+  }
+  .frame-child15 {
     width: 20px;
     height: 20px;
   }
@@ -709,7 +811,7 @@
     box-sizing: border-box;
   }
   .download-resume,
-  .production-division-intern-container {
+  .production-division-intern-container1 {
     font-size: var(--font-size-xs);
   }
   .production-division-intern-b-parent {
@@ -731,7 +833,7 @@
     width: 28px;
     height: 21px;
   }
-  .github-logo-icon16 {
+  .github-logo-icon11 {
     width: 21px;
     height: 21px;
   }
@@ -819,8 +921,8 @@
     font-size: var(--font-size-7xs);
   }
   .github-logo-icon,
-  .github-logo-icon1,
-  .github-logo-icon7,
+  .github-logo-icon4,
+  .github-logo-tft,
   .hugging-face-logo {
     width: 10px;
     height: 10px;
@@ -844,13 +946,28 @@
     row-gap: 20px;
   }
   .projects {
-    gap: var(--gap-mini);
+    gap: var(--gap-xl);
     padding: 0;
     box-sizing: border-box;
   }
+  .ellipse-div {
+    width: 12px;
+    height: 12px;
+  }
+  .march-april {
+    width: 91px;
+    height: 12px;
+  }
+  .march-april,
+  .production-division-intern-container {
+    font-size: var(--font-size-3xs);
+  }
+  .frame-group {
+    gap: var(--gap-mini);
+  }
   .download-resume,
   .july-dec,
-  .production-division-intern-container {
+  .production-division-intern-container1 {
     font-size: var(--font-size-3xs);
   }
   .experience {
@@ -870,7 +987,7 @@
     width: 23px;
     height: 17px;
   }
-  .github-logo-icon16 {
+  .github-logo-icon11 {
     width: 17px;
     height: 17px;
   }
@@ -950,8 +1067,7 @@
     gap: var(--gap-6xl);
   }
   .introduction {
-    padding-left: var(--padding-mini);
-    padding-right: var(--padding-mini);
+    padding : 0;
     padding-bottom: 0;
     box-sizing: border-box;
   }
@@ -966,15 +1082,15 @@
     font-size: var(--font-size-7xs);
     text-align: center;
   }
-  .github-logo-icon,
+  .github-logo-tft,
   .hugging-face-logo {
     width: 13px;
     height: 13px;
   }
-  .github-logo-icon {
+  .github-logo-tft {
     display: none;
   }
-  .github-logo-icon1 {
+  .github-logo-icon {
     display: none;
     width: 7px;
     height: 7px;
@@ -984,7 +1100,7 @@
     padding-right: 0;
     box-sizing: border-box;
   }
-  .github-logo-icon7 {
+  .github-logo-icon4 {
     display: none;
     width: 7px;
     height: 7px;
@@ -1027,6 +1143,16 @@
     padding-right: 0;
     box-sizing: border-box;
   }
+  .march-april,
+  .production-division-intern-container {
+    font-size: var(--font-size-3xs);
+  }
+  .frame-group {
+    gap: var(--gap-3xs);
+  }
+  .frame-parent {
+    gap: var(--gap-0);
+  }
   .july-dec {
     font-size: var(--font-size-3xs);
   }
@@ -1035,14 +1161,14 @@
     box-sizing: border-box;
   }
   .download-resume,
-  .production-division-intern-container {
+  .production-division-intern-container1 {
     font-size: var(--font-size-3xs);
   }
   .production-division-intern-b-parent {
     padding-bottom: var(--padding-10xs);
     box-sizing: border-box;
   }
-  .frame-parent {
+  .frame-parent1 {
     gap: var(--gap-3xs);
   }
   .experience {
@@ -1062,7 +1188,7 @@
     width: 18px;
     height: 13px;
   }
-  .github-logo-icon16 {
+  .github-logo-icon11 {
     width: 13px;
     height: 13px;
   }
@@ -1077,8 +1203,9 @@
     box-sizing: border-box;
   }
   .content {
-    gap: var(--gap-14xl);
-    padding: var(--padding-14xl) var(--padding-mini);
+    gap: var(--gap-31xl);
+    padding-left: var(--padding-6xl);
+    padding-right: var(--padding-6xl);
   }
   .index {
     padding-left: 0;
@@ -1115,8 +1242,8 @@
     font-size: var(--font-size-7xs);
     text-align: center;
   }
-  .github-logo-icon1,
-  .github-logo-icon7 {
+  .github-logo-icon,
+  .github-logo-icon4 {
     display: none;
     width: 7px;
     height: 7px;
@@ -1130,10 +1257,10 @@
     row-gap: 20px;
   }
   .projects {
-    gap: var(--gap-8xs);
+    gap: var(--gap-mini);
   }
-  .experience1 {
-    height: auto;
+  .frame-group {
+    gap: var(--gap-3xs);
   }
   .experience {
     gap: var(--gap-8xs);
