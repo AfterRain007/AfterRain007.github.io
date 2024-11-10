@@ -48,6 +48,21 @@ footer p {
     display: inline-block; /* Ensures the scaling centers correctly */
     transform-origin: center; /* Scale from center */
     animation: scaleText 2s infinite; /* Runs the animation continuously */
+    position: absolute;
+    bottom: -10px; 
+    right: -85px; 
+    transform: rotate(-15deg); 
+    white-space: nowrap; 
+    color: black;
+    font-size: clamp(12px, 2vw, 15px); /* Adapt font size based on screen width */
+    max-width: 100%; /* Prevent overflow */ 
+}
+
+@media (max-width: 576px) {
+    #Welcome-Text {
+        right: -25px;
+        font-size: smaller;
+    }
 }
 
 .project-card {
