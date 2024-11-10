@@ -11,14 +11,6 @@ main {
     flex: 1;
 }
 
-/* Footer styles */
-footer {
-    background-color: #f8f9fa;
-    text-align: center;
-    padding: 1rem;
-    margin-top: auto; /* This pushes the footer to the bottom when content is short */
-}
-
 nav {
     position: sticky;
     top: 0;
@@ -26,4 +18,53 @@ nav {
     justify-content: space-between;
     background-color: white;
     z-index: 100;
+}
+
+footer {
+    display: flex;
+    justify-content: center;   /* Horizontally center the content */
+    align-items: center;       /* Vertically center the content */
+    height: 50px;              /* Adjust height as needed */
+    width: 100%;               /* Ensure it spans the full width */
+    background-color: #f8f9fa; /* Light background */
+}
+  
+footer p {
+    margin: 0;                 /* Remove default margin for better centering */
+}
+
+/* Define the scaling animation */
+@keyframes scaleText {
+    0%, 100% {
+        transform: rotate(-15deg) scale(1); /* Start and end with original size and rotation */
+    }
+    50% {
+        transform: rotate(-15deg) scale(1.15); /* Grow to 1.15x original size while keeping rotation */
+    }
+}
+
+/* Apply the animation to the text */
+#Welcome-Text {
+    display: inline-block; /* Ensures the scaling centers correctly */
+    transform-origin: center; /* Scale from center */
+    animation: scaleText 2s infinite; /* Runs the animation continuously */
+}
+
+.project-card {
+    margin-bottom: 1rem;
+}
+
+.project-card .image-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card .image-column img {
+    border-radius: .25rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card .text-column {
+    text-align: justify;
 }
