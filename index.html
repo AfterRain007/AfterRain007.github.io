@@ -3,17 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Web Page</title>
-    <link rel="stylesheet" href="./public/style.css">
+    <title>Gilang's Portofolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/style.css">
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <a class="navbar-brand" href="#">Gilang Islamay</a>
         <div class="navbar-nav">
-          <a class="nav-link" href="#">Resume</a>
+          <a class="nav-link" href="https://drive.google.com/file/d/1BTt6NYuyJ2xuUpHqzP9tRNsrZZp8wDBv/view?usp=drive_link" target="_blank">Resume</a>
+          <a class="nav-link" href="#">Project</a>
           <a class="nav-link" href="#">Achievement</a>
           <a class="nav-link" href="#">Freelance</a>
         </div>
@@ -32,46 +34,46 @@
         </div>
         <div class="mb-3" style="position: relative; display: inline-block;">
           <h2>Gilang Islamay Putra Djuharis</h2>
-          <p id="Welcome-Text">
-            Welcome
+          <p class="d-none" id="Welcome-Text" data-bs-toggle="tooltip" data-bs-title="Get out of my room mom I'm playing minecraft!">
+            
           </p>
         </div>
         <p>Greetings! My name is Gilang Islamay from Indonesia and I'm a Microsoft Certified: Power BI Data Analyst Associate. I hold a Bachelor Degree on Mathematics with a specialization in Data Science, with a GPA of 3.66 from Syarif Hidayatullah State Islamic University Jakarta. I'm deeply passionate about the world of data! This website covers all my projects & certificate in a professional setting plus some fun stuff! Hope to have the opportunity of working with you soon!</p>
       </section>
       
-      <!-- Additional Content Sections -->
+      <!-- Project -->
       <section class="container my-5">
         <h2 class="text-center mb-4 section-title">Project</h2>
       
         <!-- First visible project rows -->
         <div class="row mb-3 g-5 justify-content-center">
-          <div class="col-lg-4 col-12">
+          <div class="col-lg-4 col-12 d-flex" style="flex-grow: 1;">
             <a class="card" href="#">
                 <img src="./public/images/HuggingFace.png" alt="Forecast Bitcoin" class="card-img-top">
                 <hr class="m-0">
                 <div class="card-body">
                     <h5 class="card-title">Bitcoin Sentiment Analysis with roBERTa</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Fine tuned roBERTa's Text Classification model to analyze the daily sentiment of bitcoin across social media (Twitter and Reddit)</p>
                 </div>
             </a>
-        </div>
-            <div class="col-lg-4 col-12">
-                <a class="card" href="#">
-                    <img src="./public/images/Bitcoin Forecast.png" alt="Forecast Bitcoin" class="card-img-top">
-                    <hr class="m-0">
-                    <div class="card-body">
-                        <h5 class="card-title">Bitcoin Prediction with Transformer</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-12">
+          </div>
+          <div class="col-lg-4 col-12 d-flex" style="flex-grow: 1;">
               <a class="card" href="#">
-                  <img src="./public/images/Vector.png" alt="Forecast Bitcoin" class="card-img-top">
+                  <img src="./public/images/Bitcoin Forecast.png" alt="Forecast Bitcoin" class="card-img-top">
+                  <hr class="m-0">
+                  <div class="card-body">
+                      <h5 class="card-title">Bitcoin Prediction with TFT</h5>
+                      <p class="card-text">Temporal Fusion Transformers is compared against LSTM, GRUs, and TCN when predicting bitcoin's price using it's Volume, Sentiment, and Google Trend.</p>
+                  </div>
+              </a>
+          </div>
+          <div class="col-lg-4 col-12 d-flex" style="flex-grow: 1;">
+              <a class="card" href="#">
+                  <img src="./public/images/Power BI 1.png" alt="Forecast Bitcoin" class="card-img-top">
                   <hr class="m-0">
                   <div class="card-body">
                       <h5 class="card-title">Power BI Dashboard</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p class="card-text">A user-friendly dashboard to track key business metrics, offering seamless insights and an intuitive design that doesn't require expert guidance.</p>
                   </div>
               </a>
           </div>
@@ -79,39 +81,39 @@
       
         <!-- Collapsible section for additional projects -->
         <div class="collapse" id="moreProjects">
-            <div class="row mb-3 g-5">
-                <div class="col-4">
-                    <div class="card">
-                        <img src="./public/images/temp1.jpg" alt="Project Image" class="img-fluid card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
+          <div class="row mb-3 g-5">
+            <div class="col-lg-4 col-12 d-flex" style="flex-grow: 1;">
+              <a class="card" href="#">
+                  <img src="./public/images/IPOTH.png" alt="Forecast Bitcoin" class="card-img-top">
+                  <hr class="m-0">
+                  <div class="card-body">
+                      <h5 class="card-title">Real-Time Analytics Dashboard</h5>
+                      <p class="card-text">A custom-built, interactive dashboard developed from scratch using HTML, showcasing real-time data insights for tracking key metrics and driving informed decision-making.</p>
+                  </div>
+              </a>
             </div>
+          </div>
           <!-- Add more projects as needed -->
         </div>
         <!-- "See All" button -->
         <div class="text-end mt-4">
-          <a type="button" data-bs-toggle="collapse" data-bs-target="#moreProjects" aria-expanded="false" aria-controls="moreProjects" id="seeAllLink">
-            See All
+          <a type="button" data-bs-toggle="collapse" data-bs-target="#moreProjects" aria-expanded="false" aria-controls="moreProjects" id="seeAllLink" class="btn button-sexy">
+            More Project
           </a>
         </div>
       </section>
       
       <section class="container my-5">
-        <h2 class="text-center mb-4">Experience</h2>
+        <h2 class="text-center mb-4 section-title">Experience</h2>
         <div class="row g-1">
           <div class="col-auto d-flex flex-column align-items-center">
             <div class="exp-circle rounded-circle"></div>
             <div class="exp-line"></div>
           </div>
-          <div class="col-auto" style="width: 175px; text-align: center;">
+          <div class="col-auto exp-time">
             March - April 2022
           </div>
-          <p class="col">
+          <p class="col exp-text">
             <strong>Production Division Intern • Badan Pusat Statistik</strong>
             <br>
             As a Production Division Intern at Badan Pusat Statistik Kota Tangerang, I've conducted data cleaning for Indonesia Property Data and Active Company Directory using Microsoft Excel, calculated employee salaries, and performed data entry for Supply Chain and Food Marketing Questionnaires in Tangerang. Additionally, I've automated the making of envelope front cover.
@@ -122,25 +124,23 @@
             <div class="exp-circle rounded-circle"></div>
             <!-- <div class="exp-line"></div> -->
           </div>
-          <div class="col-auto" style="width: 175px; text-align: center;">
-            March - April 2022
+          <div class="col-auto exp-time">
+            June 2024 - Now
           </div>
-          <p class="col">
-            <strong>Full-Stack & Power BI Developer Intern • Asia Pulp & Paper</strong>
-            <br>
+          <div class="col exp-text">
+            <strong>Full-Stack & Power BI Developer Intern • Asia Pulp & Paper</strong><br>
             As a Full-Stack & Power BI Developer Intern at Asia Pulp & Paper (APP), I spearheaded the development of an innovative website that streamlined and accelerated the reporting process for the Corporate Resilience Division (CRD), significantly enhancing operational efficiency. Additionally, I architected a robust MySQL database structure to ensure enhanced data integrity and seamless maintenance of referential relationships. To further revolutionize the reporting process, I leveraged Power BI to deliver insightful visualizations that dramatically improved data readability and accessibility for stakeholders.
-          </p>
+          </div>
         </div>
       </section>      
     </main>
     
     <!-- Footer -->
-    <footer class="bg-light text-center p-1">
-      <p>&copy; 2024 Your Name. All rights reserved.</p>
+    <footer class="bg-light text-center" style="padding: 30px 0px;">
+      <p>&copy; 2024 Gilang Islamay. All rights reserved.</p>
     </footer>
     
     <!-- JavaScript Files -->
-    <script src="./public/script.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous" defer></script>
@@ -162,15 +162,32 @@
       });
     </script>
 
-    <script>
-      $(document).ready(function() {
-        $('#seeAllLink').click(function() {
-          // Fade out the link over 500ms, then remove it
-          $(this).fadeOut(500, function() {
-            $(this).remove();  // Remove the element after the fade-out is complete
-          });
-        });
+<script>
+  $(document).ready(function() {
+    $('#seeAllLink').click(function() {
+      // Fade out the current text
+      $(this).fadeOut(300, function() {
+        // Remove collapse-related attributes
+        $(this).removeAttr('data-bs-toggle')
+              .removeAttr('data-bs-target')
+              .removeAttr('aria-expanded')
+              .removeAttr('aria-controls');
+        
+        // Add an href attribute (you can replace this URL with the actual link you want)
+        $(this).attr('href', 'project');  // Change 'project' to your desired URL
+        
+        // Change the button text to indicate the new behavior
+        $(this).text('Show me all of them!');  // New text
+        
+        // Fade the text back in
+        $(this).fadeIn(500);
       });
-    </script>
+    });
+  });
+</script>
+
+
+    <script src="./public/script.js" defer></script>
+
   </body>
 </html>

@@ -1,3 +1,7 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 /* Set the body and html to take up the full height */
 html, body {
     height: 100%;
@@ -56,6 +60,7 @@ footer p {
     color: black;
     font-size: clamp(12px, 2vw, 15px); /* Adapt font size based on screen width */
     max-width: 100%; /* Prevent overflow */ 
+    user-select: none;
 }
 
 @media (max-width: 576px) {
@@ -82,6 +87,7 @@ a.card:hover {
 .card-img-top {
     height: 15rem;
     object-fit: cover;
+    object-position: top;
 }
 
 .section-title {
@@ -89,15 +95,98 @@ a.card:hover {
 }
 
 .exp-circle {
-    background-color: cadetblue; 
+    background-color: black; 
     height: 25px; 
     width: 25px;
 }
 
 .exp-line {
     width: 2px;
-    background-color: cadetblue;
+    background-color: black;
     flex-grow: 1; /* Makes the line grow as needed */
     margin: 0;
     z-index: 0;
+}
+
+.exp-time {
+    width: 175px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.button-sexy.btn {
+    display: inline-block;            /* Make sure the button is inline (fits content size) */
+    background-color: black !important;
+    color: white;
+    text-align: center;               /* Center the text */
+    font-size: 1vw;                   /* Responsive font size */
+    padding: 10px 20px;               /* Add padding to the button */
+    text-decoration: none;            /* Remove underline */
+    position: relative;               /* Allow positioning of ::before */
+    border: none;
+    overflow: hidden;                 /* Hide anything outside the bounds of the button */
+    z-index: 0;                       /* Create a stacking context for the button itself */
+}
+
+.button-sexy.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;                        /* Start with no width */
+    height: 100%;                     /* Make the bar the same height as the button */
+    background-color: white;          /* The bar color */
+    transition: width 0.5s ease;      /* Smooth transition on hover */
+    z-index: -1;                      /* Place the bar beneath the button's content */
+}
+
+.button-sexy.btn:hover {
+    background-color: #828282 !important;
+    color: black;                     /* Change text color on hover */
+}
+
+.button-sexy.btn:hover::before {
+    width: 100%;                      /* On hover, the bar expands to full width */
+}
+
+.button-sexy.btn > * {
+    position: relative;               /* Keep text above the bar */
+    z-index: 1;                       /* Make sure text stays above the bar */
+    transition: color 0.5s ease;      /* Smooth transition for text color change */
+}
+
+.navbar {
+    padding: 1rem 0; /* Adjust padding for desired height */
+  }
+
+  .nav-link {
+    position: relative;
+    text-decoration: none;
+    color: darkslategray; /* Ensure text color is visible on dark background */
+    padding: 0.5rem 1rem; /* Space around the text */
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px; /* Push the bar down to align with the bottom of the navbar */
+    width: 0;
+    height: 3px; /* Thickness of the bar */
+    background-color: black; /* Color of the bar */
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%; /* Full width on hover */
+  }
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-text, .exp-text {
+    text-align: justify;
 }
