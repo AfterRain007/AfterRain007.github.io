@@ -65,21 +65,39 @@ footer p {
     }
 }
 
-.project-card {
-    margin-bottom: 1rem;
+a.card {
+    text-decoration: none;
 }
 
-.project-card .image-column {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+a.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    will-change: transform;
 }
 
-.project-card .image-column img {
-    border-radius: .25rem;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+a.card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: scale(1.015); /* Increase size by 5% */
 }
 
-.project-card .text-column {
-    text-align: justify;
+.card-img-top {
+    height: 15rem;
+    object-fit: cover;
+}
+
+.section-title {
+    font-weight: bold;
+}
+
+.exp-circle {
+    background-color: cadetblue; 
+    height: 25px; 
+    width: 25px;
+}
+
+.exp-line {
+    width: 2px;
+    background-color: cadetblue;
+    flex-grow: 1; /* Makes the line grow as needed */
+    margin: 0;
+    z-index: 0;
 }

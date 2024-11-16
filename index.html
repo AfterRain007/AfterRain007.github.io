@@ -24,9 +24,9 @@
     <hr class="m-0">
     
     <!-- Main Content -->
-    <main class="py-3">
+    <main class="py-3" style="background-color: #fafbfe;">
       <!-- Profile Section -->
-      <section class="container text-center my-4">
+      <section class="container text-center my-5">
         <div class="mb-3">
           <img src="./public/photo-profile.png" class="rounded-circle" style="height: 150px; object-fit: cover;" alt="Profile Picture of Gilang Islamay Putra Djuharis">
         </div>
@@ -36,56 +36,61 @@
             Welcome
           </p>
         </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        <p>Greetings! My name is Gilang Islamay from Indonesia and I'm a Microsoft Certified: Power BI Data Analyst Associate. I hold a Bachelor Degree on Mathematics with a specialization in Data Science, with a GPA of 3.66 from Syarif Hidayatullah State Islamic University Jakarta. I'm deeply passionate about the world of data! This website covers all my projects & certificate in a professional setting plus some fun stuff! Hope to have the opportunity of working with you soon!</p>
       </section>
       
       <!-- Additional Content Sections -->
-      <section class="container my-4">
-        <h2 class="text-center mb-4">Project</h2>
+      <section class="container my-5">
+        <h2 class="text-center mb-4 section-title">Project</h2>
       
         <!-- First visible project rows -->
-        <div class="row project-card">
-          <div class="col-12 col-lg-4 image-column">
-            <img src="./public/images/temp1.jpg" alt="Project Image" class="img-fluid">
-          </div>
-          <div class="col-12 col-lg-8 text-column">
-            <h4>Project Title</h4>
-            <p>This is a detailed description of the project. Provide additional information about the goals, progress, and outcomes here.</p>
-          </div>
+        <div class="row mb-3 g-5 justify-content-center">
+          <div class="col-lg-4 col-12">
+            <a class="card" href="#">
+                <img src="./public/images/HuggingFace.png" alt="Forecast Bitcoin" class="card-img-top">
+                <hr class="m-0">
+                <div class="card-body">
+                    <h5 class="card-title">Bitcoin Sentiment Analysis with roBERTa</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </a>
         </div>
-      
-        <div class="row project-card">
-          <div class="col-12 col-lg-4 image-column">
-            <img src="./public/images/temp1.jpg" alt="Project Image" class="img-fluid">
+            <div class="col-lg-4 col-12">
+                <a class="card" href="#">
+                    <img src="./public/images/Bitcoin Forecast.png" alt="Forecast Bitcoin" class="card-img-top">
+                    <hr class="m-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Bitcoin Prediction with Transformer</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-12">
+              <a class="card" href="#">
+                  <img src="./public/images/Vector.png" alt="Forecast Bitcoin" class="card-img-top">
+                  <hr class="m-0">
+                  <div class="card-body">
+                      <h5 class="card-title">Power BI Dashboard</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+              </a>
           </div>
-          <div class="col-12 col-lg-8 text-column">
-            <h4>Project Title</h4>
-            <p>This is a detailed description of the project. Provide additional information about the goals, progress, and outcomes here.</p>
-          </div>
-        </div>
+        </div>        
       
         <!-- Collapsible section for additional projects -->
         <div class="collapse" id="moreProjects">
-          <div class="row project-card">
-            <div class="col-12 col-lg-4 image-column">
-              <img src="./public/images/temp1.jpg" alt="Project Image" class="img-fluid">
+            <div class="row mb-3 g-5">
+                <div class="col-4">
+                    <div class="card">
+                        <img src="./public/images/temp1.jpg" alt="Project Image" class="img-fluid card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-lg-8 text-column">
-              <h4>Project Title</h4>
-              <p>This is a detailed description of the project. Provide additional information about the goals, progress, and outcomes here.</p>
-            </div>
-          </div>
-      
-          <div class="row project-card">
-            <div class="col-12 col-lg-4 image-column">
-              <img src="./public/images/temp1.jpg" alt="Project Image" class="img-fluid">
-            </div>
-            <div class="col-12 col-lg-8 text-column">
-              <h4>Project Title</h4>
-              <p>This is a detailed description of the project. Provide additional information about the goals, progress, and outcomes here.</p>
-            </div>
-          </div>
-      
           <!-- Add more projects as needed -->
         </div>
         <!-- "See All" button -->
@@ -96,11 +101,37 @@
         </div>
       </section>
       
-      
-      <section class="my-4">
+      <section class="container my-5">
         <h2 class="text-center mb-4">Experience</h2>
-
-      </section>
+        <div class="row g-1">
+          <div class="col-auto d-flex flex-column align-items-center">
+            <div class="exp-circle rounded-circle"></div>
+            <div class="exp-line"></div>
+          </div>
+          <div class="col-auto" style="width: 175px; text-align: center;">
+            March - April 2022
+          </div>
+          <p class="col">
+            <strong>Production Division Intern • Badan Pusat Statistik</strong>
+            <br>
+            As a Production Division Intern at Badan Pusat Statistik Kota Tangerang, I've conducted data cleaning for Indonesia Property Data and Active Company Directory using Microsoft Excel, calculated employee salaries, and performed data entry for Supply Chain and Food Marketing Questionnaires in Tangerang. Additionally, I've automated the making of envelope front cover.
+          </p>
+        </div>
+        <div class="row g-1">
+          <div class="col-auto d-flex flex-column align-items-center">
+            <div class="exp-circle rounded-circle"></div>
+            <!-- <div class="exp-line"></div> -->
+          </div>
+          <div class="col-auto" style="width: 175px; text-align: center;">
+            March - April 2022
+          </div>
+          <p class="col">
+            <strong>Full-Stack & Power BI Developer Intern • Asia Pulp & Paper</strong>
+            <br>
+            As a Full-Stack & Power BI Developer Intern at Asia Pulp & Paper (APP), I spearheaded the development of an innovative website that streamlined and accelerated the reporting process for the Corporate Resilience Division (CRD), significantly enhancing operational efficiency. Additionally, I architected a robust MySQL database structure to ensure enhanced data integrity and seamless maintenance of referential relationships. To further revolutionize the reporting process, I leveraged Power BI to deliver insightful visualizations that dramatically improved data readability and accessibility for stakeholders.
+          </p>
+        </div>
+      </section>      
     </main>
     
     <!-- Footer -->
