@@ -122,7 +122,6 @@ a.card:hover {
     background-color: black !important;
     color: white;
     text-align: center;               /* Center the text */
-    font-size: 1vw;                   /* Responsive font size */
     padding: 10px 20px;               /* Add padding to the button */
     text-decoration: none;            /* Remove underline */
     position: relative;               /* Allow positioning of ::before */
