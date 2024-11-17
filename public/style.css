@@ -61,18 +61,12 @@ footer p {
     font-size: clamp(12px, 2vw, 15px); /* Adapt font size based on screen width */
     max-width: 100%; /* Prevent overflow */ 
     user-select: none;
+    line-height: 1.2;
 }
 
 @media (max-width: 768px) {
     #Welcome-Text {
         right: -50px;
-        font-size: smaller;
-    }
-}
-
-@media (max-width: 500px) {
-    #Welcome-Text {
-        right: 0px;
         font-size: smaller;
     }
 }

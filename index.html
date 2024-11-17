@@ -57,7 +57,10 @@
           <img src="./public/photo-profile.png" class="rounded-circle" style="height: 150px; object-fit: cover;" alt="Profile Picture of Gilang Islamay Putra Djuharis">
         </div>
         <div class="mb-3" style="position: relative; display: inline-block;">
-          <h2>Gilang Islamay Putra Djuharis</h2>
+          <h2>
+            Gilang Islamay
+            <span class="d-none d-sm-inline">Putra Djuharis</span>
+          </h2>          
           <p id="Welcome-Text" data-bs-toggle="tooltip" data-bs-title="Get out of my room mom I'm playing minecraft!">
             
           </p>
@@ -245,7 +248,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous" defer></script>
     <script>
       $(document).ready(function() {
-        // Array of welcome messages
+        // Default array of welcome messages
         const welcomeMessages = [
           "Welcome Weary Traveler!",
           "Greetings, Adventurer!",
@@ -254,12 +257,25 @@
           "Ahoy, Bold Voyager!",
           "Welcome to the Realm!"
         ];
-        
-        // Randomly select a welcome message
-        const randomMessage = welcomeMessages[Math.floor(Math.random() * welcomeMessages.length)];
+    
+        // Additional welcome message that should only appear on large screens
+        const largeScreenMessage = [
+          "Also try ikromalfurqon.github.io!"
+        ];
+    
+        // Check if screen width is greater than 768px
+        const isLargeScreen = $(window).width() > 768;
+    
+        // Combine both lists if on a large screen, otherwise just use the default messages
+        const combinedMessages = isLargeScreen ? welcomeMessages.concat(largeScreenMessage) : welcomeMessages;
+    
+        // Randomly select a message from the combined list
+        const randomMessage = combinedMessages[Math.floor(Math.random() * combinedMessages.length)];
+    
+        // Set the selected message to the element with id 'Welcome-Text'
         $('#Welcome-Text').text(randomMessage);
       });
-    </script>
+    </script>    
 
 <script>
   $(document).ready(function() {
