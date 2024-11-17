@@ -72,16 +72,18 @@ footer p {
 
 a.card {
     text-decoration: none;
+    display: inline-block; /* Ensures proper scaling */
 }
 
 a.card {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    will-change: transform;
+    will-change: transform, box-shadow;
 }
 
 a.card:hover {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transform: scale(1.015); /* Increase size by 5% */
+    transform: scale(1.015) translateZ(0); /* Apply 3D transform for better performance */
+    will-change: transform, box-shadow;
 }
 
 .card-img-top {
@@ -109,7 +111,7 @@ a.card:hover {
 }
 
 .exp-time {
-    width: 175px;
+    width: 200px;
     text-align: center;
     font-weight: bold;
 }
@@ -159,16 +161,16 @@ a.card:hover {
     padding: 1rem 0; /* Adjust padding for desired height */
   }
 
-  .nav-link {
+.nav-link {
     position: relative;
     text-decoration: none;
     color: darkslategray; /* Ensure text color is visible on dark background */
     padding: 0.5rem 1rem; /* Space around the text */
     display: inline-block;
     font-weight: bold;
-  }
+}
 
-  .nav-link::after {
+.nav-link::after {
     content: "";
     position: absolute;
     left: 0;
@@ -177,11 +179,11 @@ a.card:hover {
     height: 3px; /* Thickness of the bar */
     background-color: black; /* Color of the bar */
     transition: width 0.3s ease;
-  }
+}
 
-  .nav-link:hover::after {
+.nav-link:hover::after {
     width: 100%; /* Full width on hover */
-  }
+}
 
 .card-title {
     font-weight: bold;
@@ -189,4 +191,12 @@ a.card:hover {
 
 .card-text, .exp-text {
     text-align: justify;
+}
+
+@media (max-width: 992px) {
+    .exp-time {
+        width: 225px;
+        text-align: left;
+        font-weight: bold;
+    }
 }
