@@ -63,9 +63,16 @@ footer p {
     user-select: none;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     #Welcome-Text {
-        right: -25px;
+        right: -50px;
+        font-size: smaller;
+    }
+}
+
+@media (max-width: 500px) {
+    #Welcome-Text {
+        right: 0px;
         font-size: smaller;
     }
 }
