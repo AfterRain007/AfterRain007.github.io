@@ -376,7 +376,7 @@
     // Trigger animation when in viewport
     function checkCards() {
       $(".card-outer").each(function () {
-        if (isInViewport(this, window.innerHeight / 3)) { // Halfway from the bottom
+        if (isInViewport(this, window.innerHeight / 4)) {
           $(this).addClass("animate");
         }
       });
