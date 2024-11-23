@@ -188,7 +188,7 @@ a.card:hover {
     font-weight: bold;
 }
 
-.card-text, .exp-text {
+.exp-text {
     text-align: justify;
 }
 
@@ -209,6 +209,7 @@ a.card:hover {
 /* Blinking cursor */
 #introduction-text.typing-blink::after {
     content: "|"; /* Blinking cursor */
+    display: inline-block;
     animation: blink 1s steps(60, end) infinite; /* Smooth 60 FPS blink */
 }
 
