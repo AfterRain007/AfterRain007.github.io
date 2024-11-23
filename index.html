@@ -31,7 +31,7 @@
       </div>
     
       <!-- Offcanvas Component -->
-      <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="--bs-offcanvas-width: 250px;">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navigation</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -52,22 +52,31 @@
     <!-- Main Content -->
     <main class="py-3" style="background-color: #fafbfe;">
       <!-- Profile Section -->
-      <section class="container text-center my-5">
-        <div class="mb-3">
-          <img src="./public/photo-profile.png" class="rounded-circle" style="height: 150px; object-fit: cover;" alt="Profile Picture of Gilang Islamay Putra Djuharis">
+      <section class="container text-md-start text-center py-5" style="margin-top: 3rem; margin-bottom: 3rem;">
+        <div class="row d-flex align-items-center justify-content-center">
+          <!-- Image -->
+          <div class="col-auto">
+            <img src="./public/photo-profile.png" 
+                 class="rounded-circle" 
+                 style="height: 150px; object-fit: cover;" 
+                 alt="Profile Picture of Gilang Islamay Putra Djuharis">
+          </div>
+          <!-- Text Content -->
+          <div class="col-auto">
+            <h2>Gilang Islamay Putra Djuharis</h2>
+            <div class="mb-3">
+              <span class="badge text-bg-dark">Data Analyst</span>
+              <span class="badge text-bg-dark">Data Scientist</span>
+              <span class="badge text-bg-dark">Full Stack Developer</span>
+              <span class="badge text-bg-dark">Power BI Developer</span>
+            </div>
+            <p class="d-inline-block" id="introduction-text" style="margin-bottom: 0px;"></p>
+          </div>
         </div>
-        <div class="mb-3" style="position: relative; display: inline-block;">
-          <h2>
-            Gilang Islamay
-            <span class="d-none d-sm-inline">Putra Djuharis</span>
-          </h2>          
-          <p id="Welcome-Text" data-bs-toggle="tooltip" data-bs-title="Get out of my room mom I'm playing minecraft!">
-            
-          </p>
-        </div>
-        <p class="d-none d-md-block">Greetings! I'm Gilang Islamay from Indonesia, a Microsoft Certified: Power BI Data Analyst Associate with a Bachelor's in Mathematics (Specialization in Data Science, GPA 3.66) from Syarif Hidayatullah State Islamic University Jakarta. I'm deeply passionate about the world of data! This website showcases my projects, certificates, and some fun extras. Looking forward to collaborating with you!</p>
-        <p class="d-block d-md-none">Hi, I'm Gilang Islamay, a Microsoft Certified Power BI Data Analyst from Indonesia with a Math degree (Data Science, GPA 3.66). Explore my projects, certifications, and more. Let's collaborate!</p>
       </section>
+      
+      
+      <hr class="m-0">
       
       <!-- Project -->
       <section class="container my-5">
@@ -155,7 +164,7 @@
       <section class="container my-5">
         <h2 class="text-center mb-4 section-title">Certification</h2>
         <div class="row mb-3 justify-content-center">
-          <div class="col-lg-3 col-12">
+          <div class="col-lg col-auto">
             <div class="row g-3 justify-content-center align-items-center">
               <div class="rounded-circle bg-primary d-flex justify-content-center align-items-center" style="width: 100px; height: 100px;">
                 <i class="fa-brands fa-microsoft text-white fs-1"></i>  
@@ -166,7 +175,7 @@
               </p>              
             </div>
           </div>
-          <div class="col-lg-3 col-12">
+          <div class="col-lg col-auto">
             <div class="row g-3 justify-content-center align-items-center">
               <div class="rounded-circle bg-primary d-flex justify-content-center align-items-center" style="width: 100px; height: 100px;">
                 <i class="fa-brands fa-google text-white fs-1"></i>  
@@ -174,7 +183,7 @@
               <p style="text-align: center;"><strong>Google Data Analytics Specialization</strong></p>
             </div>
           </div>
-          <div class="col-lg-3 col-12">
+          <div class="col-lg col-auto">
             <div class="row g-3 justify-content-center align-items-center">
               <div class="rounded-circle bg-primary d-flex justify-content-center align-items-center" style="width: 100px; height: 100px;">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" id="Ibm" style="height: 25px;">
@@ -200,13 +209,13 @@
               <div class="col-lg-auto col-12 exp-time order-lg-1 order-2">
                 March - April 2022
               </div>
-              <div class="col-lg col-12 order-lg-2 order-1">
+              <div class="col-lg col-12 order-lg-2 order-1" style="text-align: justify;">
                 <strong>Production Division Intern • Badan Pusat Statistik</strong>
               </div>
             </div>
             <div class="row m-0 p-0">
               <div class="col-lg-auto d-none d-lg-block exp-time"></div>
-              <div class="col">
+              <div class="col" style="text-align: justify;">
                 <p>As a Production Division Intern at Badan Pusat Statistik Kota Tangerang, I've conducted data cleaning for Indonesia Property Data and Active Company Directory using Microsoft Excel, calculated employee salaries, and performed data entry for Supply Chain and Food Marketing Questionnaires in Tangerang. Additionally, I've automated the making of envelope front cover.</p>
               </div>
             </div>
@@ -222,13 +231,13 @@
               <div class="col-lg-auto col-12 exp-time order-lg-1 order-2">
                 March - April 2022
               </div>
-              <div class="col-lg col-12 order-lg-2 order-1">
+              <div class="col-lg col-12 order-lg-2 order-1"  style="text-align: justify;">
                 <strong>Full-Stack & Power BI Developer Intern • Asia Pulp & Paper</strong>
               </div>
             </div>
             <div class="row m-0 p-0">
               <div class="col-lg-auto d-none d-lg-block exp-time"></div>
-              <div class="col">
+              <div class="col" style="text-align: justify;">
                 <p>As a Full-Stack & Power BI Developer Intern at Asia Pulp & Paper (APP), I spearheaded the development of an innovative website that streamlined and accelerated the reporting process for the Corporate Resilience Division (CRD), significantly enhancing operational efficiency. Additionally, I architected a robust MySQL database structure to ensure enhanced data integrity and seamless maintenance of referential relationships. To further revolutionize the reporting process, I leveraged Power BI to deliver insightful visualizations that dramatically improved data readability and accessibility for stakeholders.</p>
               </div>
             </div>
@@ -273,9 +282,48 @@
         const randomMessage = combinedMessages[Math.floor(Math.random() * combinedMessages.length)];
     
         // Set the selected message to the element with id 'Welcome-Text'
-        $('#Welcome-Text').text(randomMessage);
+        $('.welcome-text').text(randomMessage);
       });
-    </script>    
+    </script>
+
+<script>
+  $(document).ready(function () {
+      const text = "Hello! Welcome to my portfolio!";
+      let index = 0;
+
+      function typeText() {
+          if (index < text.length) {
+              $('#introduction-text').text($('#introduction-text').text() + text.charAt(index));
+
+              // If "Hello!" is completed, make the cursor blink during the delay
+              if (text.charAt(index) === "!") {
+                  $('#introduction-text').removeClass('typing-solid').addClass('typing-blink');
+                  setTimeout(() => {
+                      $('#introduction-text').removeClass('typing-blink').addClass('typing-solid');
+                      index++; // Continue typing after the delay
+                      typeText();
+                  }, 500); // 500ms delay before continuing
+              } else {
+                  index++;
+                  setTimeout(typeText, 100); // Standard typing speed
+              }
+          } else {
+              // Typing finished, switch to blinking cursor
+              $('#introduction-text').removeClass('typing-solid').addClass('typing-blink');
+
+              // Fade out the cursor 5 seconds after typing finishes
+              setTimeout(() => {
+                  $('#introduction-text').addClass('fade-out');
+              }, 3300);
+          }
+      }
+
+      // Initialize with a solid cursor
+      $('#introduction-text').addClass('typing-solid');
+      typeText();
+  });
+</script>
+
 
 <script>
   $(document).ready(function() {

@@ -48,13 +48,13 @@ footer p {
 }
 
 /* Apply the animation to the text */
-#Welcome-Text {
+.welcome-text {
     display: inline-block; /* Ensures the scaling centers correctly */
     transform-origin: center; /* Scale from center */
     animation: scaleText 2s infinite; /* Runs the animation continuously */
     position: absolute;
     bottom: -10px; 
-    right: -85px; 
+    right: -35px;
     transform: rotate(-15deg); 
     white-space: nowrap; 
     color: black;
@@ -65,8 +65,7 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    #Welcome-Text {
-        right: -50px;
+    .welcome-text {
         font-size: smaller;
     }
 }
@@ -198,5 +197,39 @@ a.card:hover {
         width: 225px;
         text-align: left;
         font-weight: bold;
+    }
+}
+
+/* Solid cursor during typing */
+#introduction-text.typing-solid::after {
+    content: "|"; /* Solid cursor */
+    display: inline-block;
+}
+
+/* Blinking cursor */
+#introduction-text.typing-blink::after {
+    content: "|"; /* Blinking cursor */
+    animation: blink 1s steps(60, end) infinite; /* Smooth 60 FPS blink */
+}
+
+/* Fade-out effect for the cursor */
+#introduction-text.fade-out::after {
+    animation: fadeOut 1s forwards;
+}
+
+/* Keyframes for blinking */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Keyframes for fading out */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }
