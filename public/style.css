@@ -73,12 +73,32 @@ footer p {
 a.card {
     text-decoration: none;
     display: inline-block; /* Ensures proper scaling */
-}
-
-a.card {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     will-change: transform, box-shadow;
 }
+
+.card-outer {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .card-outer.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .card-outer:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  .card-outer:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  .card-outer:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+  
+  
 
 a.card:hover {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);

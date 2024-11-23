@@ -83,8 +83,8 @@
         <h2 class="text-center mb-4 section-title">Project</h2>
       
         <!-- First visible project rows -->
-        <div class="row mb-3 g-4 justify-content-center">
-          <div class="col-lg-4 col-12 d-flex" style="flex-grow: 1;">
+        <div class="row mb-3 g-4 justify-content-center project">
+          <div class="col-lg-4 col-12 d-flex card-outer" style="flex-grow: 1;">
             <a class="card" href="#">
               <img src="./public/images/HuggingFace.png" alt="Forecast Bitcoin" class="card-img-top">
               <hr class="m-0">
@@ -99,43 +99,43 @@
                     <span class="badge rounded-pill text-bg-info">Python</span>
                     <span class="badge rounded-pill text-bg-secondary">Transformers</span>
                 </p>
-            </div>
-          </a>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-12 d-flex card-outer" style="flex-grow: 1;">
+            <a class="card" href="#">
+              <img src="./public/images/Bitcoin Forecast.png" alt="Forecast Bitcoin" class="card-img-top">
+              <hr class="m-0">
+              <div class="card-body">
+                  <h5 class="card-title">Bitcoin Price Prediction</h5>
+                  <p class="card-text">
+                      <span class="badge rounded-pill text-bg-warning">Time Series</span>
+                      <span class="badge rounded-pill text-bg-info">Forecasting</span>
+                      <span class="badge rounded-pill text-bg-primary">TFT</span>
+                      <span class="badge rounded-pill text-bg-success">Financial Analysis</span>
+                      <span class="badge rounded-pill text-bg-secondary">Deep Learning</span>
+                      <span class="badge rounded-pill text-bg-dark">Python</span>
+                  </p>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-12 d-flex card-outer" style="flex-grow: 1;">
+            <a class="card" href="#">
+              <img src="./public/images/Power BI 1.png" alt="Power BI Dashboard" class="card-img-top">
+              <hr class="m-0">
+              <div class="card-body">
+                  <h5 class="card-title">Power BI Dashboard</h5>
+                  <p class="card-text">
+                      <span class="badge rounded-pill text-bg-primary">Data Visualization</span>
+                      <span class="badge rounded-pill text-bg-warning">Interactive Dashboard</span>
+                      <span class="badge rounded-pill text-bg-info">Power BI</span>
+                      <span class="badge rounded-pill text-bg-success">Business Intelligence</span>
+                      <span class="badge rounded-pill text-bg-secondary">Reporting</span>
+                  </p>
+              </div>
+            </a>
+          </div>
         </div>
-        <div class="col-lg-4 col-12 d-flex" style="flex-grow: 1;">
-          <a class="card" href="#">
-            <img src="./public/images/Bitcoin Forecast.png" alt="Forecast Bitcoin" class="card-img-top">
-            <hr class="m-0">
-            <div class="card-body">
-                <h5 class="card-title">Bitcoin Price Prediction</h5>
-                <p class="card-text">
-                    <span class="badge rounded-pill text-bg-warning">Time Series</span>
-                    <span class="badge rounded-pill text-bg-info">Forecasting</span>
-                    <span class="badge rounded-pill text-bg-primary">TFT</span>
-                    <span class="badge rounded-pill text-bg-success">Financial Analysis</span>
-                    <span class="badge rounded-pill text-bg-secondary">Deep Learning</span>
-                    <span class="badge rounded-pill text-bg-dark">Python</span>
-                </p>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-12 d-flex" style="flex-grow: 1;">
-          <a class="card" href="#">
-            <img src="./public/images/Power BI 1.png" alt="Power BI Dashboard" class="card-img-top">
-            <hr class="m-0">
-            <div class="card-body">
-                <h5 class="card-title">Power BI Dashboard</h5>
-                <p class="card-text">
-                    <span class="badge rounded-pill text-bg-primary">Data Visualization</span>
-                    <span class="badge rounded-pill text-bg-warning">Interactive Dashboard</span>
-                    <span class="badge rounded-pill text-bg-info">Power BI</span>
-                    <span class="badge rounded-pill text-bg-success">Business Intelligence</span>
-                    <span class="badge rounded-pill text-bg-secondary">Reporting</span>
-                </p>
-            </div>
-          </a>
-        </div>
-      </div>
       
         <!-- Collapsible section for additional projects -->
         <div class="collapse" id="moreProjects">
@@ -361,6 +361,34 @@
       // Initialize with a solid cursor
       $('#introduction-text').addClass('typing-solid');
       typeText();
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    // Function to check if an element is in the viewport with custom offset
+    function isInViewport(element, offset = 0) {
+      const rect = element.getBoundingClientRect();
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      return rect.top <= windowHeight - offset && rect.bottom >= offset;
+    }
+
+    // Trigger animation when in viewport
+    function checkCards() {
+      $(".card-outer").each(function () {
+        if (isInViewport(this, window.innerHeight / 3)) { // Halfway from the bottom
+          $(this).addClass("animate");
+        }
+      });
+    }
+
+    // Initial check
+    checkCards();
+
+    // Check on scroll
+    $(window).on("scroll", function () {
+      checkCards();
+    });
   });
 </script>
 
