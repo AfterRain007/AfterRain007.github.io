@@ -141,8 +141,6 @@ a.card:hover {
 }
 
 .exp-time {
-    width: 200px;
-    text-align: center;
     font-weight: bold;
 }
 
@@ -263,4 +261,25 @@ a.card:hover {
     to {
         opacity: 0;
     }
+}
+
+.certifications {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.certification {
+    display: flex;
+    align-items: stretch; /* Ensures the line matches the height of the text */
+    margin-bottom: 15px;
+}
+.line {
+    width: 5px; /* Keeps the width consistent */
+    flex-shrink: 0; /* Prevents the line from shrinking */
+    background-color: #007bff; /* Change this color as needed */
+    margin-right: 15px;
+}
+.text {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5; /* Controls spacing for multi-line text */
 }
