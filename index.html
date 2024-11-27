@@ -147,7 +147,7 @@
         <div class="collapse" id="moreProjects">
           <div class="row mb-3 g-4">
             <div class="col-lg-4 col-12 d-flex" style="flex-grow: 1;">
-              <a class="card d-flex card-outer" style="flex-grow: 1;" href="#">
+              <a class="card d-flex card-outer animate" style="flex-grow: 1;" href="#">
                   <img src="./public/images/dashboard sinarmas.png" alt="Real-Time Analytics Dashboard" class="card-img-top">
                   <hr class="m-0">
                   <div class="card-body">
@@ -164,7 +164,7 @@
             </div>
           
             <div class="col-lg-4 col-12 d-flex" style="flex-grow: 1;">
-                <a class="card d-flex card-outer" style="flex-grow: 1;" href="#">
+                <a class="card d-flex card-outer animate" style="flex-grow: 1;" href="#">
                     <img src="./public/images/django web app.png" alt="Django Web Apps" class="card-img-top">
                     <hr class="m-0">
                     <div class="card-body">
@@ -182,7 +182,7 @@
             </div>
           
             <div class="col-lg-4 col-12 d-flex" style="flex-grow: 1;">
-                <a class="card d-flex card-outer" style="flex-grow: 1;" href="#">
+                <a class="card d-flex card-outer animate" style="flex-grow: 1;" href="#">
                     <img src="./public/images/Github Profile.png" alt="Fun Projects" class="card-img-top">
                     <hr class="m-0">
                     <div class="card-body">
@@ -245,30 +245,7 @@
       <section class="container my-5">
         <h2 class="text-center mb-4 section-title">Experience</h2>
         <div class="row">
-          <div class="col-lg-8 col-12">
-            <div class="row">
-              <div class="col-auto d-flex flex-column align-items-center">
-                <div class="exp-circle rounded-circle"></div>
-                <div class="exp-line"></div>
-              </div>
-              <div class="col mb-3">
-                <div class="p-2 d-inline-block" style="outline: 1px solid grey;">
-                  <div>
-                    <strong>March - April 2022</strong>
-                  </div>
-                  <div>
-                    <strong style="text-align: justify;">Production Division Intern • Badan Pusat Statistik</strong>
-                  </div>
-                  <ul style="margin: 0px; text-align: justify;">
-                    <li>Conducted data cleaning for Indonesia Property Data and Active Company Directory using Microsoft Excel.</li>
-                    <li>Calculated employee salaries.</li>
-                    <li>Performed data entry for Supply Chain and Food Marketing Questionnaires in Tangerang.</li>
-                    <li>Automated the creation of envelope front covers.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
+          <div class="col-lg-7 col-12">
             <div class="row">
               <div class="col-auto d-flex flex-column align-items-center">
                 <div class="exp-circle rounded-circle"></div>
@@ -282,15 +259,55 @@
                   <div>
                     <strong style="text-align: justify;">Full-Stack & Power BI Developer Intern • Asia Pulp & Paper</strong>
                   </div>
-                  <ul style="margin: 0px; text-align: justify;">
-                    <li>Led the development of a high-performance website for CRD, with a dashboard to track factory security performance, improving reporting efficiency by 18x.</li>
-                    <li>Designed a robust MySQL database structure, ensuring data integrity and efficient maintenance.</li>
-                    <li>Utilized Power BI to enhance reporting with clear, accessible visualizations for stakeholders.</li>
-                  </ul>                  
+                  <p style="text-indent: 30px; margin: 0px; text-align: justify;">
+                    Developed a high-performance CRD website with a security dashboard, boosting reporting efficiency, designed a robust MySQL database, and enhanced reporting with Power BI visualizations.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-auto d-flex flex-column align-items-center">
+                <div class="exp-circle rounded-circle"></div>
+              </div>
+              <div class="col mb-3">
+                <div class="p-2 d-inline-block" style="outline: 1px solid grey;">
+                  <div>
+                    <strong>March - April 2022</strong>
+                  </div>
+                  <div>
+                    <strong style="text-align: justify;">Production Division Intern • Badan Pusat Statistik</strong>
+                  </div>
+                  <p style="text-indent: 30px; margin: 0px; text-align: justify;">
+                    Cleaned and organized property and company data, managed salary calculations, entered supply chain and marketing data, and automated envelope cover creation.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
+          <!-- <div class="col-lg-5 col-12">
+            <div id="carouselExample" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./public/images/Bitcoin Forecast.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./public/images/dashboard sinarmas.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./public/images/django web app.png" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div> -->
           <!-- <div class="col-lg-4 col-12 certifications">
             <div class="certification">
                 <div class="line"></div>
@@ -399,7 +416,7 @@
     // Trigger animation when in viewport
     function checkCards() {
       $(".card-outer").each(function () {
-        if (isInViewport(this, window.innerHeight / 4)) {
+        if (isInViewport(this, window.innerHeight / 8)) {
           $(this).addClass("animate");
         }
       });
@@ -440,8 +457,34 @@
   });
 </script>
 
+<script>
+  $(document).ready(function() {
+    const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR-YxrBUuqBO3hvqqG-qb7W2lKp4g2xLOn5b1qljCGuMxSJBss21spSzxSkiDPQ1aqy-Q_2Ot5U9RXV/pub?output=csv';
 
-    <script src="./public/script.js" defer></script>
+    $.ajax({
+      url: sheetUrl,
+      dataType: 'text',
+      success: function(data) {
+        const rows = data.split('\n');
+        rows.forEach((row, index) => {
+          const cells = row.split(',');
+          if (index > 0 && cells.length > 1) { // Skip header and empty rows
+            $('#data-table tbody').append(`
+              <tr>
+                <td>${cells[0]}</td>
+                <td>${cells[1]}</td>
+                <td>${cells[2]}</td>
+                <td>${cells[3]}</td>
+              </tr>
+            `);
+          }
+        });
+      }
+    });
+  });
+</script>
+
+<script src="./public/script.js" defer></script>
 
   </body>
 </html>
