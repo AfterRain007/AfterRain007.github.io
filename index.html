@@ -324,21 +324,6 @@
           </div> -->
         </div>
       </section>
-
-      <table id="data-table">
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Debit</th>
-            <th>Credit</th>
-            <th>Description</th>
-            <th>Classification</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Data will be loaded here -->
-        </tbody>
-      </table>
     </main>
     
     <!-- Footer -->
@@ -468,35 +453,6 @@
         // Fade the text back in
         $(this).fadeIn(500);
       });
-    });
-  });
-</script>
-
-<script>
-  $(document).ready(function() {
-    const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR-YxrBUuqBO3hvqqG-qb7W2lKp4g2xLOn5b1qljCGuMxSJBss21spSzxSkiDPQ1aqy-Q_2Ot5U9RXV/pub?gid=985685597&single=true&output=csv';
-
-    $.ajax({
-      url: sheetUrl,
-      dataType: 'text',
-      success: function(data) {
-        const rows = data.split('\n');
-        rows.forEach((row, index) => {
-          const cells = row.split(',');
-          console.log(cells)
-          if (index > 0 && cells.length > 1) { // Skip header and empty rows
-            $('#data-table tbody').append(`
-              <tr>
-                <td>${cells[0]}</td>
-                <td>${cells[1]}</td>
-                <td>${cells[2]}</td>
-                <td>${cells[3]}</td>
-                <td>${cells[4]}</td>
-              </tr>
-            `);
-          }
-        });
-      }
     });
   });
 </script>
