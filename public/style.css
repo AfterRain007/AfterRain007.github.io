@@ -127,9 +127,21 @@ a.card:hover {
 }
 
 .exp-circle {
-    background-color: black; 
-    height: 25px; 
-    width: 25px;
+    background-color: white; /* Set a background color for the logo */
+    border: 2px solid black; /* Outer border for the circle */
+    border-radius: 50%; /* Ensures the div is circular */
+    height: 75px; /* Adjust as needed */
+    width: 75px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures the image stays within the circle */
+}
+
+.exp-circle img {
+    width: 75%; /* Make the image fill the container */
+    height: 75%; /* Keep aspect ratio */
+    object-fit:contain;
 }
 
 .exp-line {
@@ -142,6 +154,17 @@ a.card:hover {
 
 .exp-time {
     font-weight: bold;
+}
+
+.timeline-dot {
+    position: relative;
+    z-index: 2;
+    width: 15px;
+    height: 15px;
+    background-color: #007bff;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 5px;
 }
 
 .button-sexy.btn {
