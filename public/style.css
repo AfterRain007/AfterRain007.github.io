@@ -138,6 +138,13 @@ a.card:hover {
     overflow: hidden; /* Ensures the image stays within the circle */
 }
 
+@media (max-width: 992px) {
+    .exp-circle {
+        height: 50px; /* Adjust as needed */
+        width: 50px; /* Adjust as needed */
+    }
+}
+
 .exp-circle img {
     width: 75%; /* Make the image fill the container */
     height: 75%; /* Keep aspect ratio */
