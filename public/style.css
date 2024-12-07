@@ -152,6 +152,25 @@ a.card:hover {
     z-index: 0;
 }
 
+@media (max-width: 992px) {
+    .exp-line {
+        opacity: 0%;
+    }
+
+    .align-y-center {
+        display: flex;
+        align-items: center;
+    }
+
+    .vertical-line {
+        width: 1px;
+        height: 15px;
+        background-color: black;
+        margin: 0;
+        z-index: 0;
+    }
+}
+
 .exp-time {
     font-weight: bold;
 }
