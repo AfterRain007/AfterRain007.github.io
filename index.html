@@ -247,7 +247,7 @@
         <div class="row">
           <div class="col-lg-4 col-12 text-start text-lg-center p-0 m-0">
             <div class="row m-0">
-              <div class="row col-lg-12 col-2 position-relative p-0 m-0 justify-content-center align-items-center" style="display: flex; align-items: center;">
+              <div class="row col-lg-12 col-2 position-relative p-0 m-0 justify-content-center align-items-center mb-lg-2" style="display: flex; align-items: center;">
                 <div class="col d-lg-block d-none"></div>
                 <div class="col-auto exp-circle rounded-circle">
                   <img src="public/images/logo_bps.png" alt="Logo">
@@ -275,7 +275,7 @@
           
           <div class="col-lg-4 col-12 text-start text-lg-center p-0 m-0">
             <div class="row m-0 p-0">
-              <div class="row col-lg-12 col-2 position-relative p-0 m-0 justify-content-center align-items-center" style="display: flex; align-items: center;">
+              <div class="row col-lg-12 col-2 position-relative p-0 m-0 justify-content-center align-items-center mb-lg-2" style="display: flex; align-items: center;">
                 <hr class="col exp-line d-lg-block d-none">
                 <div class="col-auto exp-circle rounded-circle">
                   <img src="public/images/logo_app.png" alt="Logo">
@@ -284,7 +284,9 @@
               </div>
               <div class="col-lg-12 col-auto align-y-center">
                 <div>
-                  <strong>Full-Stack & Power BI Developer</strong><br> 
+                  <strong class="d-lg-inline-block d-none">Full-Stack & Power BI Developer</strong>
+                  <strong class="d-lg-none d-inline-block">Full-Stack & PBI Developer</strong>
+                  <br>
                   <span style="font-size: smaller; font-style: italic;">June 2024 - December 2024</span>
                 </div>
               </div>
@@ -302,7 +304,7 @@
 
           <div class="col-lg-4 col-12 text-start text-lg-center p-0 m-0">
             <div class="row m-0">
-              <div class="row col-lg-12 col-2 position-relative p-0 m-0 justify-content-center align-items-center" style="display: flex; align-items: center;">
+              <div class="row col-lg-12 col-2 position-relative p-0 m-0 justify-content-center align-items-center mb-lg-2" style="display: flex; align-items: center;">
                 <hr class="col exp-line d-lg-block d-none">
                 <div class="col-auto exp-circle rounded-circle">
                   <img src="public/images/logo_unilever.png" alt="Logo">
@@ -377,10 +379,10 @@
                       $('#introduction-text').removeClass('typing-blink').addClass('typing-solid');
                       index++; // Continue typing after the delay
                       typeText();
-                  }, 500); // 500ms delay before continuing
+                  }, 1000); // 500ms delay before continuing
               } else {
                   index++;
-                  setTimeout(typeText, 100); // Standard typing speed
+                  setTimeout(typeText, 75); // Standard typing speed
               }
           } else {
               // Typing finished, switch to blinking cursor
