@@ -333,7 +333,32 @@ a.card:hover {
     line-height: 1.5; /* Controls spacing for multi-line text */
 }
 
-.project-content {
+.project-content p {
     text-align: justify;
     text-indent: 25px;
+}
+
+.project-content h4 {
+    font-weight: bold;
+}
+
+.carousel-inner, .carousel-item, .carousel-image {
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-image {
+    object-fit: cover;
+}
+
+#carouselProject {
+    height: 100%;
+    width: 50vw;
+}
+
+@media (max-width: 992px) {
+    #carouselProject {
+        height: 100%;
+        width: 75vw;
+    }
 }
