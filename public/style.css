@@ -235,7 +235,7 @@ a.card:hover {
 
 .navbar {
     padding: 1rem 0; /* Adjust padding for desired height */
-  }
+}
 
 .nav-link {
     position: relative;
@@ -335,4 +335,5 @@ a.card:hover {
 
 .project-content {
     text-align: justify;
+    text-indent: 25px;
 }

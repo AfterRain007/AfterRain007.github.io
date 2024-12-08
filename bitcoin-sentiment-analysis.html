@@ -53,37 +53,31 @@
     <hr class="m-0">
 
     <!-- Main Content -->
-    <main style="background-color: #fafbfe; padding: 0 125px 0 125px;">
+    <main style="background-color: #fafbfe; padding: 0 5rem 0 5rem;">
 
-      <section class="container my-3 text-center">
-        <h2 class="text-center mb-4 section-title">Bitcoin Sentiment Analysis</h2>
-        <img src="./public/images/HuggingFace.png" alt="Forecast Bitcoin" style="width: 50vw; height: 50vh; object-fit: cover;">
-        <div class="my-2">
-          <span class="badge rounded-pill text-bg-warning">Machine Learning</span>
-          <span class="badge rounded-pill text-bg-warning">Deep Learning</span>
-          <span class="badge rounded-pill text-bg-primary">NLP</span>
-          <span class="badge rounded-pill text-bg-dark">AI</span>
-          <span class="badge rounded-pill text-bg-success">Sentiment Analysis</span>
-          <span class="badge rounded-pill text-bg-info">Python</span>
-          <span class="badge rounded-pill text-bg-secondary">Transformers</span>
+      <section class="container my-4 text-center">
+        <div class="mb-3">
+          <h2 class="text-center section-title">Bitcoin Sentiment Analysis</h2>
+          <div>
+            <span class="badge rounded-pill text-bg-warning">Machine Learning</span>
+            <span class="badge rounded-pill text-bg-warning">Deep Learning</span>
+            <span class="badge rounded-pill text-bg-primary">NLP</span>
+            <span class="badge rounded-pill text-bg-dark">AI</span>
+            <span class="badge rounded-pill text-bg-success">Sentiment Analysis</span>
+            <span class="badge rounded-pill text-bg-info">Python</span>
+            <span class="badge rounded-pill text-bg-secondary">Transformers</span>
+          </div>
         </div>
+        <img src="./public/images/HuggingFace.png" alt="Forecast Bitcoin" style="width: 50vw; height: 50vh; object-fit: cover;">
+
       </section>
 
       <section class="project-content">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam semper gravida maximus. Praesent dictum massa metus, et ornare sem aliquet non. Nam facilisis ipsum odio, a ultrices nisl accumsan in. Phasellus nec sapien vel magna consectetur maximus. Aliquam in malesuada neque. Duis eget magna lacus. Etiam cursus eget tortor quis pretium.
+          This thesis investigates the performance of Temporal Fusion Transformers (TFTs) in predicting Bitcoin prices, comparing it to established models like Long-Short Term Memory (LSTM), Gated Recurrent Units (GRU), and Temporal Convolution Networks (TCN). Utilizing Volume, Sentiment, and Google Trend data as predictors, the study demonstrates that TFTs achieve superior accuracy. Furthermore, TFTs offer a significant advantage by providing insights into variable importance, addressing the "black-box" nature of other models.
         </p>
         <p>
-          Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce vel lacinia felis, ut maximus ex. Donec placerat neque quis rhoncus faucibus. Nunc eu leo ut massa mattis vehicula. Morbi in fermentum leo. Duis dapibus libero orci, interdum ornare turpis porttitor vitae. In hac habitasse platea dictumst.
-        </p>
-        <p>
-          Suspendisse viverra, neque non viverra faucibus, justo leo elementum magna, non consequat mi urna vitae lacus. Nunc tempus erat sed nulla efficitur, at ultrices diam vehicula. Ut consequat rutrum iaculis. Donec lacinia urna eu consequat bibendum. Etiam non enim ornare, luctus mi ut, mattis tortor. In scelerisque facilisis est, eu sagittis quam rutrum eu. Praesent egestas sem nec erat porta sollicitudin. Donec eu malesuada metus, sed luctus nulla. Pellentesque venenatis ex sed libero viverra aliquet. Suspendisse sit amet laoreet est. Curabitur nunc mauris, sagittis a metus eget, pulvinar convallis felis. In purus tortor, convallis vel porttitor id, laoreet accumsan massa. Mauris at tincidunt nisl, id fermentum lorem. In et nisl commodo mi finibus porttitor id et lacus. Nunc ut orci non leo accumsan elementum.
-        </p>
-        <p>
-          Phasellus vitae ante id risus faucibus consectetur quis quis dolor. Sed vel ipsum ut leo tincidunt scelerisque quis a urna. Ut facilisis tincidunt ante, non scelerisque nulla dignissim eget. Donec elementum ut sapien at luctus. Quisque venenatis mattis sollicitudin. Sed ex arcu, posuere non dapibus sed, euismod sit amet felis. Quisque quam eros, tempor in posuere sed, scelerisque dictum lacus. Sed tristique eros arcu, at sagittis nunc auctor in. In vitae vestibulum ante.
-        </p>
-        <p>
-          Donec pellentesque imperdiet mauris a consequat. Ut rhoncus erat sit amet erat pellentesque aliquam. Donec aliquet augue eu elit tincidunt sagittis. Donec accumsan egestas vulputate. Vivamus mollis purus eget felis blandit pulvinar. Sed sodales lorem massa, ut dictum felis pulvinar ac. Morbi hendrerit erat ipsum, a vehicula neque ultricies et. Proin gravida malesuada lectus, sagittis elementum turpis pulvinar quis. Aliquam sollicitudin rhoncus purus, sit amet fermentum justo lobortis vel. Vivamus ut mi facilisis, laoreet tellus id, laoreet sapien. Duis sed pellentesque mauris. Ut blandit ex lectus.
+          Data preprocessing played a crucial role in this research. To mitigate the impact of noise and volatility, techniques such as outlier handling (using Simple Moving Average and Boxplot) and data normalization (employing First Order Differencing Transformation) were meticulously explored and implemented. The findings conclusively establish the superiority of TFTs over its predecessors. Notably, the model's explainability is highlighted by identifying Trend and linear_increase as the most influential variables in the Encoder, with Trend exhibiting a significance exceeding 50%. In the Decoder, Trend and week emerged as the dominant factors, with Trend surpassing 40% and week exceeding 10%. Moreover, the model's attention mechanism reveals a significant focus on the seven data points preceding the forecast, indicating a strategic utilization of historical information for accurate predictions.
         </p>
       </section>
       
