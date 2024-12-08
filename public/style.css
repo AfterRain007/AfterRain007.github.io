@@ -332,3 +332,7 @@ a.card:hover {
     color: #333;
     line-height: 1.5; /* Controls spacing for multi-line text */
 }
+
+.project-content {
+    text-align: justify;
+}
