@@ -171,7 +171,7 @@ a.card:hover {
 
     .vertical-line {
         width: 1px;
-        height: 15px;
+        height: 50px;
         background-color: black;
         margin: 0;
         z-index: 0;
@@ -336,6 +336,10 @@ a.card:hover {
 .project-content p {
     text-align: justify;
     text-indent: 25px;
+}
+
+.project-content a {
+    text-decoration: none;
 }
 
 .project-content h4 {
