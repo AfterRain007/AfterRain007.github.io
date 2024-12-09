@@ -360,9 +360,19 @@ a.card:hover {
     width: 50vw;
 }
 
+.carousel-outer{
+    height: 50vh;
+}
+
 @media (max-width: 992px) {
     #carouselProject {
         height: 100%;
         width: 75vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-outer {
+        height: 25vh;
     }
 }
