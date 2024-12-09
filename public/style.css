@@ -360,7 +360,7 @@ a.card:hover {
     width: 50vw;
 }
 
-.carousel-outer{
+.carousel-outer {
     height: 50vh;
 }
 
@@ -374,5 +374,15 @@ a.card:hover {
 @media (max-width: 768px) {
     .carousel-outer {
         height: 25vh;
+    }
+
+    .content-project{
+        padding: 0px 25px 0px 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-content p {
+        text-align: left;
     }
 }
