@@ -14,7 +14,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
           <img src="./public/images/Logo Lmao.png" alt="Gilang's Logo" style="height: 40px;">
         </a>
         <div class="navbar-nav d-flex align-items-center">
@@ -25,8 +25,8 @@
     
           <!-- Navigation Links (visible on lg screens and above) -->
           <div class="d-none d-lg-flex">
+            <a class="nav-link" href="index.html">Home</a>
             <a class="nav-link" href="https://drive.google.com/file/d/1BTt6NYuyJ2xuUpHqzP9tRNsrZZp8wDBv/view?usp=drive_link" target="_blank">Resume</a>
-            <!-- <a class="nav-link" href="#">Project</a> -->
             <a class="nav-link" href="achievement.html">Achievement</a>
             <a class="nav-link" href="freelance.html">Freelance</a>
           </div>
@@ -40,11 +40,10 @@
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body d-flex flex-column" style="padding: 0px;">
-          <!-- Links are stacked vertically -->
+          <a class="nav-link" href="#">Home</a>
           <a class="nav-link" href="https://drive.google.com/file/d/1BTt6NYuyJ2xuUpHqzP9tRNsrZZp8wDBv/view?usp=drive_link" target="_blank">Resume</a>
-          <!-- <a class="nav-link" href="#">Project</a> -->
-          <a class="nav-link" href="#">Achievement</a>
-          <a class="nav-link" href="#">Freelance</a>
+          <a class="nav-link" href="achievement.html">Achievement</a>
+          <a class="nav-link" href="freelance.html">Freelance</a>
         </div>
       </div>
     </nav>
@@ -52,60 +51,58 @@
     <!-- Divider -->
     <hr class="m-0">
 
+    <div class="d-flex justify-content-center align-items-center mb-3" style="width: 100%;"> 
+        <div id="carouselProject" class="carousel slide" data-bs-theme="light">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselProject" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselProject" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselProject" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./public/images/Bitcoin Forecast.png" class="d-block carousel-image" alt="...">
+                    <div class="carousel-overlay"></div> 
+                </div>
+                <div class="carousel-item" style="width: 100%; height: 100%">
+                    <img src="./public/images/dashboard sinarmas.png" class="d-block carousel-image" alt="...">
+                    <div class="carousel-overlay"></div> 
+                </div>
+                <div class="carousel-item" style="width: 100%; height: 100%">
+                    <img src="./public/images/django web app.png" class="d-block carousel-image" alt="...">
+                    <div class="carousel-overlay"></div> 
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselProject" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="centered-text">
+                <h2 class="text-center section-title">Project Title</h2>
+                <div>
+                  <span class="badge rounded-pill text-bg-warning">Machine Learning</span>
+                  <span class="badge rounded-pill text-bg-warning">Deep Learning</span>
+                  <span class="badge rounded-pill text-bg-primary">NLP</span>
+                  <span class="badge rounded-pill text-bg-dark">AI</span>
+                  <span class="badge rounded-pill text-bg-success">Sentiment Analysis</span>
+                  <span class="badge rounded-pill text-bg-info">Python</span>
+                  <span class="badge rounded-pill text-bg-secondary">Transformers</span>
+                </div>  
+            </div>
+        </div>
+    </div>
+
     <!-- Main Content -->
     <main class="container content-project" style="background-color: #fafbfe;">
 
       <section class="container my-4 text-center align-items-center">
         <div class="mb-3">
-          <h2 class="text-center section-title">Project Title</h2>
-          <div>
-            <span class="badge rounded-pill text-bg-warning">Machine Learning</span>
-            <span class="badge rounded-pill text-bg-warning">Deep Learning</span>
-            <span class="badge rounded-pill text-bg-primary">NLP</span>
-            <span class="badge rounded-pill text-bg-dark">AI</span>
-            <span class="badge rounded-pill text-bg-success">Sentiment Analysis</span>
-            <span class="badge rounded-pill text-bg-info">Python</span>
-            <span class="badge rounded-pill text-bg-secondary">Transformers</span>
-          </div>
+
         </div>
-        <div class="d-flex justify-content-center align-items-center mb-1" style="height: 50vh;"> 
-          <div id="carouselProject" class="carousel slide" data-bs-theme="light">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselProject" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselProject" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselProject" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="./public/images/Bitcoin Forecast.png" class="d-block carousel-image" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
-                </div>
-              </div>
-              <div class="carousel-item" style="width: 100%; height: 100%">
-                <img src="./public/images/dashboard sinarmas.png" class="d-block carousel-image" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
-                </div>
-              </div>
-              <div class="carousel-item" style="width: 100%; height: 100%">
-                <img src="./public/images/django web app.png" class="d-block carousel-image" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselProject" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-      </section>
+      </section>  
 
       <section class="project-content">
         <p>
