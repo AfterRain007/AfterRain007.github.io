@@ -344,6 +344,7 @@ a.card:hover {
 
 .project-content h4 {
     font-weight: bold;
+    text-transform: capitalize;
 }
 
 .carousel-inner, .carousel-item, .carousel-image {
