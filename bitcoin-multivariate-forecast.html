@@ -93,13 +93,31 @@
         <h4>
           How does one forecast volatile Bitcoin prices?
         </h4>
-        <p>This research investigates the effectiveness of Temporal Fusion Transformers (TFTs) in predicting Bitcoin prices, comparing its performance against traditional time series models such as Long-Short Term Memory (LSTM), Gated Recurrent Units (GRUs), and Temporal Convolutional Networks (TCNs). The study incorporates key variables including Volume, Sentiment, and Google Trends to enhance prediction accuracy.</p>
+        <p>The effectiveness of Temporal Fusion Transformers (TFTs) in predicting Bitcoin prices is investigated, comparing it to LSTM, GRU, and TCN models, and incorporating Volume, Sentiment, and Google Trends for better accuracy.</p>
 
-        <p>Data preprocessing plays a crucial role in achieving optimal model performance. This research meticulously explores various preprocessing techniques, including outlier handling methods such as Simple Moving Average and Boxplot, as well as data normalization through First Order Differencing Transformation to address volatility.</p>
+        <h4>
+          Data Preprocessing
+        </h4>
 
-        <p>The findings demonstrate the superiority of TFTs in Bitcoin price prediction. Unlike black-box models like LSTM and GRU, TFTs offer valuable insights into variable importance. Analysis reveals that Trend and linear_increase are the most significant variables in the Encoder, with Trend exhibiting the highest significance exceeding 50%. In the Decoder, Trend and week emerge as the most influential factors, with Trend surpassing 40% and week exceeding 10%. Furthermore, the model's attention mechanism demonstrates a clear pattern, with peak attention observed at point -7, indicating that the model effectively utilizes information from the preceding seven data points to generate accurate forecasts.</p>
+        <!-- IMG for Preprocessing Part -->
 
-        <p>This research underscores the potential of TFTs in time series forecasting, particularly in domains requiring both high accuracy and interpretability.</p>
+        <p>
+          The importance of data preprocessing for optimal model performance can't go unnoticed, exploring outlier handling (Simple Moving Average, Boxplot) and data normalization (First Order Differencing) to manage volatility.
+        </p>
+
+        <h4>
+          Performances
+        </h4>
+
+        <!-- Image Performance Compared to Other -->
+
+        <h4>
+          White Box
+        </h4>
+
+        <!-- <img src="public/images/explainability" -->
+
+        <p>The findings show TFTs exceed in Bitcoin price prediction, offering insights into variable importance. Trend and linear_increase are key in the Encoder, while Trend and week are crucial in the Decoder. The attention mechanism peaks at point -7, using the last seven data points for accurate forecasts. This research highlights TFTs' potential for high accuracy and interpretability in time series forecasting.</p>
 
         <h4>
           Source Code
