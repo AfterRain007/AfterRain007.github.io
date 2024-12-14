@@ -333,9 +333,16 @@ a.card:hover {
     line-height: 1.5; /* Controls spacing for multi-line text */
 }
 
-.project-content p {
+.project-content > p {
     text-align: justify;
     text-indent: 25px;
+}
+
+.img-caption {
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0px;
 }
 
 .project-content a {
@@ -347,6 +354,11 @@ a.card:hover {
     text-transform: capitalize;
     text-align: justify;
 }
+
+/* .project-content img {
+    outline: 2px solid #333;
+    outline-offset: 2px;
+}   */
 
 .carousel-inner, .carousel-item, .carousel-image {
     height: 100%;
@@ -412,4 +424,11 @@ a.card:hover {
 .carousel-control-next,
 .carousel-control-prev {
     width: 5%;
+}
+
+.badge {
+    user-select: none; 
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
 }

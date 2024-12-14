@@ -54,24 +54,26 @@
     <hr class="m-0">
 
     <div class="d-flex justify-content-center align-items-center mb-3" style="width: 100%;"> 
-      <div id="carouselProject" class="carousel slide" data-bs-theme="light">
+      <div id="carouselProject" class="carousel slide" data-bs-theme="light" data-bs-ride="carousel">
           <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselProject" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselProject" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselProject" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselProject" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
           <div class="carousel-inner">
-              <div class="carousel-item active">
-                  <img src="./public/images/Bitcoin Forecast.png" class="d-block carousel-image" alt="...">
-                  <div class="carousel-overlay"></div> 
-              </div>
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="./public/images/bitcoin price.png" class="d-block carousel-image" alt="Bitcoin Price Train Test Split">
+                <div class="carousel-overlay"></div>
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+              <img src="./public/images/Outlier by Price and Volume.png" class="d-block carousel-image" alt="Bitcoin Outlier Handling using Isolation Forest & Moving Average">
+              <div class="carousel-overlay"></div> 
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+              <img src="./public/images/Model 1 Autoencoder Importance.png" class="d-block carousel-image" alt="Temporal Fusion Transformer Autoencoder Explainability">
+              <div class="carousel-overlay"></div> 
+            </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselProject" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-          </button>
           <div class="centered-text">
             <h2 class="text-center section-title">Bitcoin Multivariate Forecast</h2>
             <div>
@@ -93,31 +95,208 @@
         <h4>
           How does one forecast volatile Bitcoin prices?
         </h4>
-        <p>The effectiveness of Temporal Fusion Transformers (TFTs) in predicting Bitcoin prices is investigated, comparing it to LSTM, GRU, and TCN models, and incorporating Volume, Sentiment, and Google Trends for better accuracy.</p>
+
+        <p>Predicting Bitcoin prices accurately is a complex task due to its high volatility. This project explores the efficacy of Temporal Fusion Transformers (TFTs) in forecasting Bitcoin prices. We compare TFTs with LSTM, GRU, and TCN models, while incorporating Volume, Sentiment, and Google Trends as key features to enhance predictive performance.</p>
 
         <h4>
           Data Preprocessing
         </h4>
 
-        <!-- IMG for Preprocessing Part -->
+        <div class="text-center mb-3">
+          <div class="img-thumbnail d-inline-block"> 
+            <img src="public/images/Outlier by Price and Volume.png" class="img-fluid mb-1" alt="Bitcoin Outlier Handling using Isolation Forest & Moving Average">
+            <p class="img-caption">
+              Outlier Handling (Simple Moving Average, Boxplot)
+            </p>
+          </div>
+        </div>
 
         <p>
-          The importance of data preprocessing for optimal model performance can't go unnoticed, exploring outlier handling (Simple Moving Average, Boxplot) and data normalization (First Order Differencing) to manage volatility.
+          The importance of data preprocessing for optimal model performance can't go unnoticed. Outlier handling using Simple Moving Average and Boxplot, also data normalization using First Order Differencing Transformation is explored to manage volatility.
         </p>
 
         <h4>
           Performances
         </h4>
 
-        <!-- Image Performance Compared to Other -->
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th rowspan="2" class="align-middle text-center">Model</th>
+                <th colspan="3" class="text-center">Moving Average</th>
+                <th colspan="3" class="text-center">Boxplot</th>
+                <th rowspan="2" class="align-middle text-center">Avg Train Time</th>
+              </tr>
+              <tr>
+                <th class="text-center">RMSE</th>
+                <th class="text-center">MAE</th>
+                <th class="text-center">MAPE</th>
+                <th class="text-center">RMSE</th>
+                <th class="text-center">MAE</th>
+                <th class="text-center">MAPE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-weight: bold;">
+                  <span class="d-none d-lg-inline-block">Temporal Fusion Transformer</span>
+                  <span class="d-lg-none">TFT</span>
+                </td>
+                <td style="font-weight: bold;">0.0261</td>
+                <td>0.0177</td>
+                <td>3.0973</td>
+                <td style="font-weight: bold;">0.0463</td>
+                <td style="font-weight: bold;">0.0312</td>
+                <td style="font-weight: bold;">6.7257</td>
+                <td rowspan="2" class="align-middle text-center">166.14</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">
+                  <span class="d-none d-lg-inline-block">Temporal Fusion Transformer</span><span class="d-lg-none">TFT</span><span style="font-weight: normal; font-size: x-small">w/o</span></td>
+                <td>0.0263</td>
+                <td>0.0176</td>
+                <td>3.0737</td>
+                <td>0.0479</td>
+                <td>0.0316</td>
+                <td>6.9818</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">
+                  <span class="d-none d-lg-inline-block">Temporal Convolutional Networks</span>
+                  <span class="d-lg-none">TCN</span>
+                </td>
+                <td>0.0263</td>
+                <td>0.0175</td>
+                <td>3.0627</td>
+                <td>0.0477</td>
+                <td>0.0322</td>
+                <td>7.0084</td>
+                <td rowspan="2" class="align-middle text-center" style="font-weight: bold;">46.94</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">
+                  <span class="d-none d-lg-inline-block">Temporal Convolutional Networks</span><span class="d-lg-none">TCN</span><span style="font-weight: normal; font-size: x-small">w/o</span></td>
+                <td>0.0262</td>
+                <td style="font-weight: bold;">0.0172</td>
+                <td style="font-weight: bold;">3.0166</td>
+                <td>0.0480</td>
+                <td>0.0318</td>
+                <td>7.0042</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">
+                  <span class="d-none d-lg-inline-block">Gated Recurrent Unit</span>
+                  <span class="d-lg-none">GRU</span>
+                </td>
+                <td>0.0262</td>
+                <td>0.0175</td>
+                <td>3.0764</td>
+                <td>0.0475</td>
+                <td>0.0316</td>
+                <td>6.9442</td>
+                <td rowspan="2" class="align-middle text-center">77.98</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">
+                  <span class="d-none d-lg-inline-block">Gated Recurrent Unit</span><span class="d-lg-none">GRU</span><span style="font-weight: normal; font-size: x-small">w/o</span></td>
+                <td>0.0263</td>
+                <td>0.0175</td>
+                <td>3.0678</td>
+                <td>0.0479</td>
+                <td>0.0318</td>
+                <td>7.0250</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">
+                  <span class="d-none d-lg-inline-block">Long Short-Term Memory</span>
+                  <span class="d-lg-none">LSTM</span>
+                </td>
+                <td>0.0262</td>
+                <td>0.0174</td>
+                <td>3.0532</td>
+                <td>0.0477</td>
+                <td>0.0314</td>
+                <td>6.9306</td>
+                <td rowspan="2" class="align-middle text-center">74.05</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">
+                  <span class="d-none d-lg-inline-block">Long Short-Term Memory</span><span class="d-lg-none">LSTM</span><span style="font-weight: normal; font-size: x-small;">w/o</span>
+                </td>
+                <td>0.0264</td>
+                <td>0.0174</td>
+                <td>3.0469</td>
+                <td>0.0479</td>
+                <td>0.0317</td>
+                <td>7.0063</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
+        <p>
+          Based on the result of our test, when using Boxplot TFT pulls forward compared to other traditional model. But thing changes when we use moving average as our outlier handling method. TFT is ahead in terms of Root Mean Squared Error, but TCN is better in terms of Mean Absolute Error and Mean Absolute Percentage Error. Average training time of the model is also compared and TCN is better by more than 3 times compared to TFT.
+        </p>
+        
         <h4>
           White Box
         </h4>
 
-        <!-- <img src="public/images/explainability" -->
+        <div class="text-center mb-3">
+          <div class="img-thumbnail d-inline-block"> 
+            <img src="public/images/Model 1 Autoencoder Importance.png" class="img-fluid mb-1" alt="Temporal Fusion Trasformer Autoencoder Importance Explainability">
+            <p class="img-caption">
+              Temporal Fusion Transformer's Autoencoder Explainability
+            </p>
+          </div>
+        </div>
 
-        <p>The findings show TFTs exceed in Bitcoin price prediction, offering insights into variable importance. Trend and linear_increase are key in the Encoder, while Trend and week are crucial in the Decoder. The attention mechanism peaks at point -7, using the last seven data points for accurate forecasts. This research highlights TFTs' potential for high accuracy and interpretability in time series forecasting.</p>
+        <p>
+          One of many advantages of TFT are also it's explainability. Rather than other traditional architecture, we are able to see which one of the variable that's more important compared to other in the encoder and also decoder. As we can see the Trend take the number one spot followed by linear increase and week in the encoder. On the decoder part, trend also take the number one spot, and followed by week also volume.
+        </p>
+
+        <div class="text-center mb-3">
+          <div class="img-thumbnail d-inline-block"> 
+            <img src="public/images/Attention.png" class="img-fluid mb-1" alt="Temporal Fusion Trasformer Mean Attention Explainability">
+            <p class="img-caption">
+              Temporal Fusion Transformer's Attention Mean Explainability
+            </p>
+          </div>
+        </div>
+
+        <p>
+          We can also see the attention mechanism, it peaks at -7 relative to the first prediction point. Which mean it's using the last seven data points for accurate forecasts or in other words data from the last 7 days (1 week) is crucial for TFT to generate accurate forecasts.
+        </p>
+
+        <!-- <div class="row">
+          <div class="col-12 col-lg-6">
+            <div class="text-center mb-3">
+              <div class="img-thumbnail">
+                <img src="public/images/Model 1 Autoencoder Importance.png" class="img-fluid mb-1">
+                <p class="img-caption">
+                  Temporal Fusion Transformer's Autoencoder Explainability 
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 d-flex align-items-center"> 
+            <div class="text-center mb-3"> 
+              <div class="img-thumbnail">
+                <img src="public/images/Attention.png" class="img-fluid mb-1">
+                <p class="img-caption">
+                  Temporal Fusion Transformer's Autoencoder Explainability 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <h4>
+          Conclusion
+        </h4>
+
+        <p>The analysis demonstrates that TFT using Boxplot as its outlier handling achieve superior Bitcoin price prediction, albeit with longer training times. They provide valuable insights into variable importance. This research highlights TFTs' potential for high accuracy and interpretability in time series forecasting.</p>
 
         <h4>
           Source Code
