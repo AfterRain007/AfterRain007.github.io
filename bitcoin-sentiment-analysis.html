@@ -95,19 +95,245 @@
           Enough talking about bitcoin price, what about the sentiment?
         </h4>
         <p>
-          This thesis investigates the performance of Temporal Fusion Transformers (TFTs) in predicting Bitcoin prices, comparing it to established models like Long-Short Term Memory (LSTM), Gated Recurrent Units (GRU), and Temporal Convolution Networks (TCN). Utilizing Volume, Sentiment, and Google Trend data as predictors, the study demonstrates that TFTs achieve superior accuracy. Furthermore, TFTs offer a significant advantage by providing insights into variable importance, addressing the "black-box" nature of other models.
+          With the rise and fall of bitcoin price, one could argue that the public sentiment also play a great role in it's price. So we incorporate public sentiment as one of the variable to predict bitcoin price by using post from Reddit and X (formerly Twitter) as our dataset with Transformer Model as our architecture of choice! 
         </p>
+        <h4>
+          Data Labelling
+        </h4>
         <p>
-          Data preprocessing played a crucial role in this research. To mitigate the impact of noise and volatility, techniques such as outlier handling (using Simple Moving Average and Boxplot) and data normalization (employing First Order Differencing Transformation) were meticulously explored and implemented. The findings conclusively establish the superiority of TFTs over its predecessors. Notably, the model's explainability is highlighted by identifying Trend and linear_increase as the most influential variables in the Encoder, with Trend exhibiting a significance exceeding 50%. In the Decoder, Trend and week emerged as the dominant factors, with Trend surpassing 40% and week exceeding 10%. Moreover, the model's attention mechanism reveals a significant focus on the seven data points preceding the forecast, indicating a strategic utilization of historical information for accurate predictions.
+          Data labelling is done by manually labelling text between Negative (-1), Neutral (0), and Positive (1). It's done for the purpose of training the model to decide which classification it should conclude. An already labelled dataset from <a href="https://www.surgehq.ai/">SurgeAI</a> is combined too resulting in 3.803 data. With  distribution of 748 Negative, 1.177 Neutral, and 1.818 Positive.
+        </p>
+        <h4>
+          Data Preprocessing
+        </h4>
+        <p>
+          One of the important part of creating a text classification model is how does one process the data before hand, so 6 step of data preprocessing is used. Which are
+        </p>
+        <ul>
+          <li>Cleansing of urls and HTML Entity</li>
+          <li>Lowercasing</li>
+          <li>Tokenization</li>
+          <li>Cleaning of Punctuation and Conjunctions</li>
+          <li>Cleaning of Special Character and Number</li>
+          <li>Lemmanization</li>
+        </ul>
+        <p>
+          After all that's set and done, we delete tweets that's categorized as spam. It's done by manually detecting tweets that's similar and deleting tweets that similiar to it. For example tweet like
+          <p class="img-thumbnail" style="text-indent: 0px; padding: 10px;">
+            The $BTC price is at $34655.23 right now.<br>
+            🔴 Compared to the last tweet, the price has dropped by $72.77 (-0.21%).<br>
+            🟢 In the last 24 hours the price has increased by $1488.36 (4.49%).<br>
+            #Bitcoin #BTC https://t.co/5wDhcU31UB
+          </p>
+          is deleted using matching regex pattern. This resulted in our Negative data to be only 512 (This would be important later)
+        </p>
+        <h4>
+          Data Augmentation
+        </h4>
+        <div class="text-center mb-3">
+          <div class="img-thumbnail d-inline-block"> 
+            <img src="public/images/Training Data Overall 2.webp" class="img-fluid img-project mb-1" alt="Data Augmentation Count using Back-Translation">
+            <p class="img-caption">
+              Data Augmentation Count using Back-Translation
+            </p>
+          </div>
+        </div>  
+        <p>Before going into Data Augmentation, undersampling is done by taking the data that have the lowest count so the model doesn't skew into particular classification. Hence our original data come down from 3.803 to 1.536 with 512 data across all classification.</p>
+        <p>
+          Data Augmentation are done by using back-translation, which are by translating the text into another language and then translating it back to english. It's done to enrich and multiply the amount of data we have to train the model. We use google translate and a Natural Language Processing model from <a href="https://huggingface.co/Helsinki-NLP">University of Helsinki</a>.
+        </p>
+        <h4>
+          Base Model
+        </h4>
+        <p>
+          Base model used are also explored, there are six total model that's tested be picked as the model of choice to be trained further.
+
+          <div class="text-center mb-3">
+            <div class="img-thumbnail d-inline-block"> 
+              <img src="public/images/All Confusion Matrix.webp" class="img-fluid img-project mb-1" alt="Confusion Matrix of All Base Model">
+              <p class="img-caption">
+                Confusion Matrix of All Base Model
+              </p>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th style="text-align: center;">Model</th>
+                  <th style="text-align: center;">Negative Accuracy</th>
+                  <th style="text-align: center;">Neautral Accuracy</th>
+                  <th style="text-align: center;">Positive Accuracy</th>
+                  <th style="text-align: center;">Average Accuracy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-weight: bold;">Twitter-roberta-base-sentiment-latest</td>
+                  <td>0.59</td>
+                  <td>0.72</td>
+                  <td>0.27</td>
+                  <td style="font-weight: bold; text-align: center">0.526</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">bertweet-base-sentiment-analysis</td>
+                  <td>0.53</td>
+                  <td>0.75</td>
+                  <td>0.24</td>
+                  <td style="font-weight: bold; text-align: center">0.506</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">Finbert</td>
+                  <td>0.05</td>
+                  <td>0.06</td>
+                  <td>0.91</td>
+                  <td style="font-weight: bold; text-align: center">0.340</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">Twitter-xlm-roeberta-base-sentiment</td>
+                  <td>0.52</td>
+                  <td>0.70</td>
+                  <td>0.30</td>
+                  <td style="font-weight: bold; text-align: center">0.506</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">Cryptobert</td>
+                  <td>0.37</td>
+                  <td>0.56</td>
+                  <td>0.59</td>
+                  <td style="font-weight: bold; text-align: center">0.506</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">Twitter-xlm-roeberta-bitcoin-sentiment</td>
+                  <td>0.47</td>
+                  <td>0.51</td>
+                  <td>0.38</td>
+                  <td style="font-weight: bold; text-align: center">0.453</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          it can be concluded from the confusion matrix and the accuracy table above there are 4 model that stands out with accuracy above 50%, these model are picked to be trained further.
+        </p>
+
+        <h4>Fine-Tune</h4>
+
+        <p>
+          Fine-Tuning is done to the 4 model that's picked with 4 dataset we have which are Pure (Without data augmentation), GT (Google Translate top 20 Language BLEU Score), GTH (Google Translate top 10 Language BLEU Score), and T (HelsinkiNLP Transformer NLP Model).
+
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th style="text-align: center; width: 50%;">Model</th>
+                  <th style="text-align: center;">Pure</th>
+                  <th style="text-align: center;">GT</th>
+                  <th style="text-align: center;">GTH</th>
+                  <th style="text-align: center;">T</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-weight: bold;">Twitter-roberta-base-sentiment-latest</td>
+                  <td>0.65</td>
+                  <td>0.65</td>
+                  <td>0.64</td>
+                  <td>0.64</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">bertweet-base-sentiment-analysis</td>
+                  <td>0.62</td>
+                  <td>0.66</td>
+                  <td>0.66</td>
+                  <td>0.65</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">Twitter-xlm-roeberta-base-sentiment</td>
+                  <td>0.60</td>
+                  <td>0.59</td>
+                  <td>0.61</td>
+                  <td>0.62</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">Cryptobert</td>
+                  <td>0.66</td>
+                  <td style="font-weight: bold;">0.67</td>
+                  <td style="font-weight: bold;">0.67</td>
+                  <td>0.64</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          Out of the 4 models and 4 dataset that's used. There's one model that stands out which is Cryptobert with accuracy better than other models which are 67%. The confusion matrix and evaluation metrics can also be reviewed.
+        </p>
+
+        <div class="text-center mb-3">
+          <div class="img-thumbnail d-inline-block"> 
+            <img src="public/images/Confusion Matrix.webp" class="img-fluid img-project mb-1" alt="Confusion Matrix for CryptobertRefined">
+            <p class="img-caption">
+              Confusion Matrix for CryptobertRefined
+            </p>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th style="text-align: center;">Sentiment Score</th>
+                <th style="text-align: center;">Precision</th>
+                <th style="text-align: center;">Recall</th>
+                <th style="text-align: center;">F1-Score</th>
+                <th style="text-align: center;">n</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-weight: bold; text-align: center;">-1</td>
+                <td>0.73</td>
+                <td>0.76</td>
+                <td>0.75</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold; text-align: center;">0</td>
+                <td>0.72</td>
+                <td>0.48</td>
+                <td>0.56</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold; text-align: center;">1</td>
+                <td>0.63</td>
+                <td>0.83</td>
+                <td>0.72</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold; text-align: center;">Accuracy</td>
+                <td colspan="3" style="font-weight: bold; text-align: center;">0.68</td>
+                <td>300</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4>Conclusion</h4>
+
+        <p>
+          Well it ain't much, but it's honest work! An empirical study was conducted using four text classification model and dataset with various enriching method and tool, which are Back-Translation using Top 10 & 20 language with the highest BLEU score on Google Translate, Back-Translation using HelsinkiNLP, and EDA_NLP by Jason Wei. It is found that using Back-Translation using Top 10 language with the highest BLEU score on Google Translate created the best model over four that's experimented on, but it doesn't mean it's always the best over every case.
         </p>
         <h4>
           Source Code
         </h4>
         <p>
           You can find the source code in this 
-          <a href="#">GitHub Repository</a><span style="white-space: nowrap;">,</span> 
+          <a href="https://github.com/AfterRain007/cryptobertRefined">GitHub Repository</a><span style="white-space: nowrap;">,</span> 
           and the model is available on 
-          <a href="#">HuggingFace</a><span style="white-space: nowrap;">.</span>
+          <a href="https://huggingface.co/AfterRain007/cryptobertRefined">HuggingFace</a><span style="white-space: nowrap;">.</span>
         </p>
       </section>
       

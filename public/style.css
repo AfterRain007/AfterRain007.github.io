@@ -432,3 +432,7 @@ a.card:hover {
     -moz-user-select: none; 
     -ms-user-select: none; 
 }
+
+.img-project {
+    max-height: 500px;
+}
