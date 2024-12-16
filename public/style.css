@@ -436,3 +436,13 @@ a.card:hover {
 .img-project {
     max-height: 500px;
 }
+
+.achievement-caption {
+    font-size: smaller;
+}
+
+@media (max-width: 992px) {
+    .achievement-caption {
+        font-size: larger;
+    }
+}
