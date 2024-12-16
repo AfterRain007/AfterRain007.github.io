@@ -446,3 +446,8 @@ a.card:hover {
         font-size: larger;
     }
 }
+
+/* .certificate-picture {
+    min-height: 225px;
+    object-fit: cover;
+} */
