@@ -211,14 +211,14 @@
 
       <section class="container my-5">
         <h2 class="text-center mb-4 section-title">Experience</h2>
-        <div class="row">
+        <div class="row mb-3">
           <div class="col-lg-4 col-12 text-start text-lg-center m-0 p-lg-0">
             <div class="row m-0">
               <div class="row col-lg-12 col-2 position-relative p-0 m-0 justify-content-center align-items-center mb-lg-2" style="display: flex; align-items: center;">
                 <div class="col d-lg-block d-none"></div>
-                <div class="col-auto exp-circle rounded-circle">
+                <a class="col-auto exp-circle rounded-circle logo-experience" data-bs-toggle="collapse" href="#collapseBPSExperience" role="button" aria-expanded="false" aria-controls="collapseBPSExperience">
                   <img src="public/images/logo_bps.webp" alt="Logo">
-                </div>
+                </a>
                 <hr class="col exp-line d-lg-block d-none">
               </div>
               <div class="col-lg-12 col-auto align-y-center">
@@ -244,9 +244,9 @@
             <div class="row m-0 p-0">
               <div class="row col-lg-12 col-2 position-relative p-0 m-0 justify-content-center align-items-center mb-lg-2" style="display: flex; align-items: center;">
                 <hr class="col exp-line d-lg-block d-none">
-                <div class="col-auto exp-circle rounded-circle">
+                <a class="col-auto exp-circle rounded-circle logo-experience" data-bs-toggle="collapse" href="#collapseAPPExperience" role="button" aria-expanded="false" aria-controls="collapseAPPExperience">
                   <img src="public/images/logo_app.webp" alt="Logo">
-                </div>
+                </a>
                 <hr class="col exp-line d-lg-block d-none">
               </div>
               <div class="col-lg-12 col-auto align-y-center">
@@ -273,9 +273,9 @@
             <div class="row m-0">
               <div class="row col-lg-12 col-2 position-relative p-0 m-0 justify-content-center align-items-center mb-lg-2" style="display: flex; align-items: center;">
                 <hr class="col exp-line d-lg-block d-none">
-                <div class="col-auto exp-circle rounded-circle">
+                <a class="col-auto exp-circle rounded-circle logo-experience active" data-bs-toggle="collapse" href="#collapseULIExperience" role="button" aria-expanded="false" aria-controls="collapseULIExperience">
                   <img src="public/images/logo_unilever.webp" alt="Logo">
-                </div>
+                </a>
                 <div class="col d-lg-block d-none"></div>
               </div>
               <div class="col-lg-12 col-auto align-y-center">
@@ -285,6 +285,44 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="accordion" id="experienceAccordion">
+          <div class="collapse" id="collapseBPSExperience" data-bs-parent="#experienceAccordion">
+            <div class="card card-body">
+              <p><strong>Internship • Production Division, Badan Pusat Statistik Tangerang</strong></p>
+              <ul>
+                <li>Conducted data cleaning for Indonesia Property Data and Active Company Directory using Microsoft Excel.</li>
+                <li>Calculated employee salaries with accuracy and efficiency.</li>
+                <li>Performed data entry for Supply Chain and Food Marketing Questionnaires in the Tangerang area.</li>
+                <li>Automated the creation of envelope front covers, reducing manual workload and improving operational efficiency.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="collapse" id="collapseAPPExperience" data-bs-parent="#experienceAccordion">
+            <div class="card card-body">
+              <p><strong>Full-Stack & Power BI Developer Intern • Corporate Resilience Division, Asia Pulp & Paper</strong></p>
+              <ul>
+                <li>Developed a website to expedite the reporting process within CRD, streamlining data access and submission.</li>
+                <li>Designed and implemented the CRD database structure using MySQL to ensure referential integrity and support efficient data management.</li>
+                <li>Utilized Power BI to simplify reporting, creating dashboards that improved data readability and user experience.</li>
+                <li>Built an integrated website component inside a larger app, allowing seamless access to reporting tools directly from the application interface.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="collapse show" id="collapseULIExperience" data-bs-parent="#experienceAccordion">
+          <div class="card card-body">
+            <p><strong>Project Support • Ice Cream Division, Unilever Indonesia</strong></p>
+            <ul>
+              <li>Automated data tracking, reporting, and transformation using Power Query, VBA, and Python to streamline sales and operational workflows.</li>
+              <li>Built end-to-end ETL pipelines in Python to automate the management of product listings, pricing, and promotions—reducing manual workload and minimizing human error.</li>
+              <li>Maintained and updated product information and sales journey plans across multiple retail channels.</li>
+              <li>Coordinated data collection and migration for a new digital platform, ensuring smooth integration and cross-team collaboration.</li>
+              <li>Managed device distribution and monitored payment tracking in partnership with external stakeholders.</li>
+              <li>Developed a Power BI dashboard to track outlet enrollment performance by Area, Distributor, and Assistant Area Sales Manager.</li>
+              <li>Enabled data export functionality per distributor and implemented Row-Level Security (RLS) to ensure users only access assigned data.</li>
+            </ul>
+          </div>
           </div>
         </div>
       </section>
@@ -299,6 +337,14 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous" defer></script>
+    <script>
+      document.querySelectorAll('.logo-experience').forEach(button => {
+        button.addEventListener('click', function () {
+          document.querySelectorAll('.logo-experience').forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    </script>
     <script>
       $(document).ready(function() {
         // Default array of welcome messages
