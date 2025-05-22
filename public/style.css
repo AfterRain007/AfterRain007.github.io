@@ -234,8 +234,44 @@ a.card:hover {
 }
 
 .navbar {
-    padding: 1rem 0; /* Adjust padding for desired height */
+    transition: all 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    border-bottom: 1px solid #ccc; /* Simulates <hr> */
 }
+
+.navbar.a {
+    font-weight: bold;
+}
+
+.navbar-scrolled {
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    background-color: rgba(255, 255, 255, 0.5); /* 25% opacity for background */
+}
+
+/* Smoothly fade out the logo */
+/* .navbar-scrolled .navbar-brand {
+    opacity: 0;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+} */
+
+/* Smoothly center the menu */
+/* .navbar-scrolled .navbar-nav {
+    justify-content: center !important;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+} */
 
 .nav-link {
     position: relative;
