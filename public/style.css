@@ -2,6 +2,11 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+
+ul li {
+margin-bottom: 5px; /* Adjust spacing as needed */
+}
+
 /* Set the body and html to take up the full height */
 html, body {
     height: 100%;

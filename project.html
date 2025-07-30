@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gilang Islamay</title>
+    <link rel="icon" href="./public/images/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./public/style.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="./public/images/Logo Lmao.webp" alt="Gilang's Logo" style="height: 40px;">
+        </a>
+        <div class="navbar-nav d-flex align-items-center">
+          <!-- Toggler for Offcanvas -->
+          <button class="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <!-- Navigation Links (visible on lg screens and above) -->
+          <div class="d-none d-lg-flex">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="https://drive.google.com/file/d/1BTt6NYuyJ2xuUpHqzP9tRNsrZZp8wDBv/view?usp=drive_link" target="_blank">Resume</a>
+            <a class="nav-link" href="certification.html">Certification</a>
+            <!-- <a class="nav-link" href="freelance.html">Freelance</a> -->
+            <!-- <a class="nav-link" href="about-me.html">About Me</a> -->
+          </div>
+        </div>
+      </div>
+    
+      <!-- Offcanvas Component -->
+      <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="--bs-offcanvas-width: 250px;">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">AfterRain</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column" style="padding: 0px;">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="https://drive.google.com/file/d/1BTt6NYuyJ2xuUpHqzP9tRNsrZZp8wDBv/view?usp=drive_link" target="_blank">Resume</a>
+          <a class="nav-link" href="certification.html">Certification</a>
+          <!-- <a class="nav-link" href="freelance.html">Freelance</a> -->
+          <!-- <a class="nav-link" href="about-me.html">About Me</a> -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- Divider -->
+    <hr class="m-0">
+
+    <main class="pt-5" style="background-color: #fafbfe;">
+
+        <div class="container my-4">
+            <!-- Search Bar -->
+            <input type="text" id="searchInput" class="form-control mb-3" placeholder="Search by title...">
+
+            <!-- Category Buttons (Dynamic) -->
+            <div id="categoryFilters" class="mb-3 d-flex flex-wrap gap-2"></div>
+
+            <!-- Cards -->
+            <div id="cardContainer" class="row g-3">
+                <div class="col-lg-4 col-md-6 col-12 d-flex card-outer">
+                <a class="card d-flex w-100" href="bitcoin-sentiment-analysis.html">
+                    <img src="./public/images/HuggingFace.webp" alt="Forecast Bitcoin" class="card-img-top">
+                    <hr class="m-0">
+                    <div class="card-body">
+                    <h5 class="card-title">Bitcoin Sentiment Analysis</h5>
+                    <p class="card-text">
+                        <span class="badge rounded-pill text-bg-warning">Machine Learning</span>
+                        <span class="badge rounded-pill text-bg-warning">Deep Learning</span>
+                        <span class="badge rounded-pill text-bg-primary">NLP</span>
+                        <span class="badge rounded-pill text-bg-dark">AI</span>
+                        <span class="badge rounded-pill text-bg-success">Sentiment Analysis</span>
+                        <span class="badge rounded-pill text-bg-info">Python</span>
+                        <span class="badge rounded-pill text-bg-secondary">Transformers</span>
+                    </p>
+                    </div>
+                </a>
+                </div>
+                <!-- more cards ... -->
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-light bg-subtle text-center" style="padding: 30px 0px;">
+      <p>&copy; 2024 Gilang Islamay. All rights reserved.</p>
+    </footer>
+    
+    <!-- JavaScript Files -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous" defer></script>
+    
+    <script>
+      document.querySelectorAll('.logo-experience').forEach(button => {
+        button.addEventListener('click', function () {
+          document.querySelectorAll('.logo-experience').forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function() {
+        // Default array of welcome messages
+        const welcomeMessages = [
+          "Welcome Weary Traveler!",
+          "Greetings, Adventurer!",
+          "Hello, Intrepid Explorer!",
+          "Salutations, Brave Soul!",
+          "Ahoy, Bold Voyager!",
+          "Welcome to the Realm!"
+        ];
+    
+        // Additional welcome message that should only appear on large screens
+        const largeScreenMessage = [
+          "Also try ikromalfurqon.github.io!"
+        ];
+    
+        // Check if screen width is greater than 768px
+        const isLargeScreen = $(window).width() > 768;
+    
+        // Combine both lists if on a large screen, otherwise just use the default messages
+        const combinedMessages = isLargeScreen ? welcomeMessages.concat(largeScreenMessage) : welcomeMessages;
+    
+        // Randomly select a message from the combined list
+        const randomMessage = combinedMessages[Math.floor(Math.random() * combinedMessages.length)];
+    
+        // Set the selected message to the element with id 'Welcome-Text'
+        $('.welcome-text').text(randomMessage);
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+          const text = "Hiya! Welcome to my portfolio!";
+          let index = 0;
+
+          function typeText() {
+              if (index < text.length) {
+                  $('#introduction-text').text($('#introduction-text').text() + text.charAt(index));
+
+                  // If "Hello!" is completed, make the cursor blink during the delay
+                  if (text.charAt(index) === "!") {
+                      $('#introduction-text').removeClass('typing-solid').addClass('typing-blink');
+                      setTimeout(() => {
+                          $('#introduction-text').removeClass('typing-blink').addClass('typing-solid');
+                          index++; // Continue typing after the delay
+                          typeText();
+                      }, 1000); // 500ms delay before continuing
+                  } else {
+                      index++;
+                      setTimeout(typeText, 75); // Standard typing speed
+                  }
+              } else {
+                  // Typing finished, switch to blinking cursor
+                  $('#introduction-text').removeClass('typing-solid').addClass('typing-blink');
+
+                  // Fade out the cursor 5 seconds after typing finishes
+                  setTimeout(() => {
+                      $('#introduction-text').addClass('fade-out');
+                  }, 3300);
+              }
+          }
+
+          // Initialize with a solid cursor
+          $('#introduction-text').addClass('typing-solid');
+          typeText();
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        // Function to check if an element is in the viewport with custom offset
+        function isInViewport(element, offset = 0) {
+          const rect = element.getBoundingClientRect();
+          const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+          return rect.top <= windowHeight - offset && rect.bottom >= offset;
+        }
+
+        // Trigger animation when in viewport
+        function checkCards() {
+          $(".card-outer").each(function () {
+            if (isInViewport(this, window.innerHeight / 10)) {
+              $(this).addClass("animate");
+            }
+          });
+        }
+
+        // Initial check
+        checkCards();
+
+        // Check on scroll
+        $(window).on("scroll", function () {
+          checkCards();
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function() {
+        $('#seeAllLink').click(function() {
+          // Fade out the current text
+          $(this).fadeOut(300, function() {
+            $(this).remove();
+          //   // Remove collapse-related attributes
+          //   $(this).removeAttr('data-bs-toggle')
+          //         .removeAttr('data-bs-target')
+          //         .removeAttr('aria-expanded')
+          //         .removeAttr('aria-controls');
+            
+          //   // Add an href attribute (you can replace this URL with the actual link you want)
+          //   $(this).attr('href', 'project');  // Change 'project' to your desired URL
+            
+          //   // Change the button text to indicate the new behavior
+          //   $(this).text('Show me all of them!');  // New text
+            
+          //   // Fade the text back in
+          //   $(this).fadeIn(500);
+          });
+        });
+      });
+    </script>
+
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const categoryFilters = document.getElementById("categoryFilters");
+        const cards = document.querySelectorAll("#cardContainer .card-outer");
+
+        let activeCategory = "all";
+
+        // Collect unique categories with their color class
+        const categories = {};
+        cards.forEach(card => {
+        card.querySelectorAll(".badge").forEach(badge => {
+            const text = badge.textContent.trim();
+            const colorClass = Array.from(badge.classList).find(c => c.startsWith("text-bg-"));
+            if (!categories[text]) {
+            categories[text] = colorClass || "text-bg-secondary";
+            }
+        });
+        });
+
+        // Add "All" button first
+        const allBtn = document.createElement("button");
+        allBtn.className = "btn btn-outline-primary active";
+        allBtn.dataset.category = "all";
+        allBtn.textContent = "All";
+        categoryFilters.appendChild(allBtn);
+
+        // Generate category buttons dynamically
+        Object.keys(categories).forEach(cat => {
+        const btn = document.createElement("button");
+        btn.className = 'btn ${categories[cat]}';
+        btn.dataset.category = cat;
+        btn.textContent = cat;
+        categoryFilters.appendChild(btn);
+        });
+
+        // Event Listeners
+        searchInput.addEventListener("input", filterCards);
+        categoryFilters.addEventListener("click", (e) => {
+        if (e.target.tagName === "BUTTON") {
+            // Reset active style
+            categoryFilters.querySelectorAll("button").forEach(btn => btn.classList.remove("active"));
+            e.target.classList.add("active");
+
+            activeCategory = e.target.dataset.category;
+            filterCards();
+        }
+        });
+
+        function filterCards() {
+        const searchTerm = searchInput.value.toLowerCase();
+
+        cards.forEach(card => {
+            const title = card.querySelector(".card-title").textContent.toLowerCase();
+            const badges = Array.from(card.querySelectorAll(".badge")).map(b => b.textContent);
+
+            const matchesSearch = title.includes(searchTerm);
+            const matchesCategory = activeCategory === "all" || badges.includes(activeCategory);
+
+            card.style.display = matchesSearch && matchesCategory ? "flex" : "none";
+        });
+        }
+    </script>
+
+    <script src="./public/script.js" defer></script>
+
+  </body>
+</html>
