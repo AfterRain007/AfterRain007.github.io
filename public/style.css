@@ -18,6 +18,8 @@ html, body {
 /* Main content should take up the remaining space */
 main {
     flex: 1;
+    padding-top: 75px;
+    background-color: #fafbfe;
 }
 
 nav {
@@ -25,8 +27,98 @@ nav {
     top: 0;
     display: flex;
     justify-content: space-between;
-    background-color: white;
+    background-color: white;  /* Default background color (for light theme) */
     z-index: 100;
+}
+
+.navbar {
+    transition: all 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    border-bottom: 1px solid #ccc; /* Simulates <hr> */
+}
+
+.navbar.a {
+    font-weight: bold;
+}
+
+.navbar-scrolled {
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    background-color: rgba(255, 255, 255, 0.5); /* 25% opacity for background */
+}
+
+/* Smoothly fade out the logo */
+/* .navbar-scrolled .navbar-brand {
+    opacity: 0;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+} */
+
+/* Smoothly center the menu */
+/* .navbar-scrolled .navbar-nav {
+    justify-content: center !important;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+} */
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: darkslategray; /* Ensure text color is visible on dark background */
+    padding: 0.5rem 1rem; /* Space around the text */
+    display: inline-block;
+    font-weight: bold;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px; /* Push the bar down to align with the bottom of the navbar */
+    width: 0;
+    height: 3px; /* Thickness of the bar */
+    background-color: black; /* Color of the bar */
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%; /* Full width on hover */
+}
+
+/* Dark theme settings */
+@media (prefers-color-scheme: dark) {
+    nav {
+        background-color: black;  /* Background color for dark theme */
+        color: white;  /* Optional: change text color to white for better contrast */
+    }
+
+    .navbar {
+        background-color: black;  /* Background color for dark theme */
+        color: white;  /* Optional: change text color to white for better contrast */
+    }
+
+    .nav-link {
+        color: white; /* Ensure text color is visible on dark background */
+    }
+
+    .navbar-scrolled {
+        background-color: rgba(0, 0, 0, 0.5); /* 25% opacity for background */
+    }
+
+    main {
+        background-color: #1a1a1a;
+        /* Other option are 333333, 2d2d3e, or d1d5e3 */
+    }
 }
 
 footer {
@@ -81,27 +173,6 @@ a.card {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     will-change: transform, box-shadow;
 }
-
-.card-outer {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-  
-  .card-outer.animate {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .card-outer:nth-child(1) {
-    transition-delay: 0.0s;
-  }
-  .card-outer:nth-child(2) {
-    transition-delay: 0.05s;
-  }
-  .card-outer:nth-child(3) {
-    transition-delay: 0.1s;
-  }
   
 @media (max-width: 992px) {
     .card-outer:nth-child(1) {
@@ -236,70 +307,6 @@ a.card:hover {
     position: relative;               /* Keep text above the bar */
     z-index: 1;                       /* Make sure text stays above the bar */
     transition: color 0.5s ease;      /* Smooth transition for text color change */
-}
-
-.navbar {
-    transition: all 0.3s ease-in-out;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 1);
-    border-bottom: 1px solid #ccc; /* Simulates <hr> */
-}
-
-.navbar.a {
-    font-weight: bold;
-}
-
-.navbar-scrolled {
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    background-color: rgba(255, 255, 255, 0.5); /* 25% opacity for background */
-}
-
-/* Smoothly fade out the logo */
-/* .navbar-scrolled .navbar-brand {
-    opacity: 0;
-    display: none;
-    transition: opacity 0.3s ease-in-out;
-} */
-
-/* Smoothly center the menu */
-/* .navbar-scrolled .navbar-nav {
-    justify-content: center !important;
-    width: 100%;
-    transition: all 0.3s ease-in-out;
-} */
-
-.nav-link {
-    position: relative;
-    text-decoration: none;
-    color: darkslategray; /* Ensure text color is visible on dark background */
-    padding: 0.5rem 1rem; /* Space around the text */
-    display: inline-block;
-    font-weight: bold;
-}
-
-.nav-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -10px; /* Push the bar down to align with the bottom of the navbar */
-    width: 0;
-    height: 3px; /* Thickness of the bar */
-    background-color: black; /* Color of the bar */
-    transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-    width: 100%; /* Full width on hover */
 }
 
 .card-title {

@@ -26,9 +26,10 @@
           <!-- Navigation Links (visible on lg screens and above) -->
           <div class="d-none d-lg-flex">
             <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="project.html">Projects</a>
+            <a class="nav-link" href="certification.html">Certifications</a>
             <a class="nav-link" href="https://drive.google.com/file/d/1BTt6NYuyJ2xuUpHqzP9tRNsrZZp8wDBv/view?usp=drive_link" target="_blank">Resume</a>
-            <a class="nav-link" href="certification.html">Certification</a>
-            <!-- <a class="nav-link" href="freelance.html">Freelance</a> -->
+            
             <!-- <a class="nav-link" href="about-me.html">About Me</a> -->
           </div>
         </div>
@@ -43,7 +44,8 @@
         <div class="offcanvas-body d-flex flex-column" style="padding: 0px;">
           <a class="nav-link" href="index.html">Home</a>
           <a class="nav-link" href="https://drive.google.com/file/d/1BTt6NYuyJ2xuUpHqzP9tRNsrZZp8wDBv/view?usp=drive_link" target="_blank">Resume</a>
-          <a class="nav-link" href="certification.html">Certification</a>
+          <a class="nav-link" href="certification.html">Certifications</a>
+            
           <!-- <a class="nav-link" href="freelance.html">Freelance</a> -->
           <!-- <a class="nav-link" href="about-me.html">About Me</a> -->
         </div>
@@ -53,39 +55,124 @@
     <!-- Divider -->
     <hr class="m-0">
 
-    <main class="pt-5" style="background-color: #fafbfe;">
+    <main>
+      <div class="container my-4">
+        <div class="row">
+          
+          <!-- Search + Filters -->
+          <div class="col-3">
+            <input type="text" id="search" class="form-control mb-3" placeholder="Search by title">
 
-        <div class="container my-4">
-            <!-- Search Bar -->
-            <input type="text" id="searchInput" class="form-control mb-3" placeholder="Search by title...">
+            <div id="filter-buttons" class="mb-3">
+              <!-- Category buttons will be dynamically inserted here -->
+            </div>
 
-            <!-- Category Buttons (Dynamic) -->
-            <div id="categoryFilters" class="mb-3 d-flex flex-wrap gap-2"></div>
+            <button id="reset" class="btn btn-secondary btn-sm">Reset</button>
+          </div>
 
-            <!-- Cards -->
-            <div id="cardContainer" class="row g-3">
-                <div class="col-lg-4 col-md-6 col-12 d-flex card-outer">
-                <a class="card d-flex w-100" href="bitcoin-sentiment-analysis.html">
-                    <img src="./public/images/HuggingFace.webp" alt="Forecast Bitcoin" class="card-img-top">
-                    <hr class="m-0">
-                    <div class="card-body">
+          <!-- Cards -->
+          <div class="col-9">
+            <div class="row mb-3 g-4 justify-content-center project" id="card-container">
+              <h1><strong>Project Collections</strong></h1>
+
+              <!-- Card 1 -->
+              <div class="col-12 d-flex card-outer ">
+                <a class="card d-flex card-outer w-100 " href="bitcoin-sentiment-analysis.html">
+                  <img src="./public/images/HuggingFace.webp" alt="Forecast Bitcoin" class="card-img-top">
+                  <hr class="m-0">
+                  <div class="card-body">
                     <h5 class="card-title">Bitcoin Sentiment Analysis</h5>
                     <p class="card-text">
-                        <span class="badge rounded-pill text-bg-warning">Machine Learning</span>
-                        <span class="badge rounded-pill text-bg-warning">Deep Learning</span>
-                        <span class="badge rounded-pill text-bg-primary">NLP</span>
-                        <span class="badge rounded-pill text-bg-dark">AI</span>
-                        <span class="badge rounded-pill text-bg-success">Sentiment Analysis</span>
-                        <span class="badge rounded-pill text-bg-info">Python</span>
-                        <span class="badge rounded-pill text-bg-secondary">Transformers</span>
+                      <span class="badge rounded-pill text-bg-dark">AI/ML</span>
+                      <span class="badge rounded-pill text-bg-primary">NLP</span>
+                      <span class="badge rounded-pill text-bg-info">Python</span>
+                      <span class="badge rounded-pill text-bg-secondary">Frameworks</span>
                     </p>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="col-12 d-flex card-outer ">
+                <a class="card d-flex card-outer w-100 " href="bitcoin-multivariate-forecast.html">
+                  <img src="./public/images/bitcoin price.webp" alt="Forecast Bitcoin" class="card-img-top">
+                  <hr class="m-0">
+                  <div class="card-body">
+                    <h5 class="card-title">Bitcoin Multivariate Forecast</h5>
+                    <p class="card-text">
+                      <span class="badge rounded-pill text-bg-dark">AI/ML</span>
+                      <span class="badge rounded-pill text-bg-warning">Forecasting</span>
+                      <span class="badge rounded-pill text-bg-info">Python</span>
+                      <span class="badge rounded-pill text-bg-secondary">Frameworks</span>
+                    </p>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="col-12 d-flex card-outer ">
+                <a class="card d-flex card-outer w-100 " href="power-bi-dashboard.html">
+                  <img src="./public/images/Power BI 1.webp" alt="Power BI Dashboard" class="card-img-top">
+                  <hr class="m-0">
+                  <div class="card-body">
+                    <h5 class="card-title">Power BI Dashboard</h5>
+                    <p class="card-text">
+                      <span class="badge rounded-pill text-bg-primary">Visualization</span>
+                      <span class="badge rounded-pill text-bg-dark">Dashboard</span>
+                    </p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 d-flex card-outer ">
+                <a class="card d-flex card-outer animate" style="flex-grow: 1;" href="html-integrated-dashboard.html">
+                    <img src="./public/images/dashboard sinarmas.webp" alt="Real-Time Analytics Dashboard" class="card-img-top">
+                    <hr class="m-0">
+                    <div class="card-body">
+                        <h5 class="card-title">HTML Integrated Dashboard</h5>
+                        <p class="card-text">
+                          <span class="badge rounded-pill text-bg-primary">Visualization</span>
+                          <span class="badge rounded-pill text-bg-dark">Dashboard</span>
+                          <span class="badge rounded-pill text-bg-secondary">Web Dev</span>
+                        </p>
                     </div>
                 </a>
-                </div>
-                <!-- more cards ... -->
-            </div>
-        </div>
+              </div>
+            
+              <div class="col-12 d-flex card-outer ">
+                  <a class="card d-flex card-outer animate" style="flex-grow: 1;" href="django-web-apps.html">
+                      <img src="./public/images/django web app.webp" alt="Django Web Apps" class="card-img-top">
+                      <hr class="m-0">
+                      <div class="card-body">
+                          <h5 class="card-title">Django Web Apps</h5>
+                          <p class="card-text">
+                            <span class="badge rounded-pill text-bg-info">Python</span>
+                            <span class="badge rounded-pill text-bg-dark">Web Dev</span>
+                            <span class="badge rounded-pill text-bg-warning">Data Management</span>
+                          </p>
+                      </div>
+                  </a>
+              </div>
+            
+              <div class="col-12 d-flex card-outer ">
+                <a class="card d-flex card-outer animate" style="flex-grow: 1;" href="landing-page.html">
+                  <img src="./public/images/Github Profile.webp" alt="Fun Projects" class="card-img-top">
+                  <hr class="m-0">
+                  <div class="card-body">
+                      <h5 class="card-title">Landing Page</h5>
+                      <p class="card-text">
+                        <span class="badge rounded-pill text-bg-secondary">Web Dev</span>
+                        <span class="badge rounded-pill text-bg-primary">Responsive Design</span>
+                        <span class="badge rounded-pill text-bg-dark">SEO</span>
+                      </p>
+                  </div>
+                </a>
+              </div>
 
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- Footer -->
@@ -97,199 +184,61 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous" defer></script>
-    
-    <script>
-      document.querySelectorAll('.logo-experience').forEach(button => {
-        button.addEventListener('click', function () {
-          document.querySelectorAll('.logo-experience').forEach(btn => btn.classList.remove('active'));
-          this.classList.add('active');
-        });
-      });
-    </script>
-
-    <script>
-      $(document).ready(function() {
-        // Default array of welcome messages
-        const welcomeMessages = [
-          "Welcome Weary Traveler!",
-          "Greetings, Adventurer!",
-          "Hello, Intrepid Explorer!",
-          "Salutations, Brave Soul!",
-          "Ahoy, Bold Voyager!",
-          "Welcome to the Realm!"
-        ];
-    
-        // Additional welcome message that should only appear on large screens
-        const largeScreenMessage = [
-          "Also try ikromalfurqon.github.io!"
-        ];
-    
-        // Check if screen width is greater than 768px
-        const isLargeScreen = $(window).width() > 768;
-    
-        // Combine both lists if on a large screen, otherwise just use the default messages
-        const combinedMessages = isLargeScreen ? welcomeMessages.concat(largeScreenMessage) : welcomeMessages;
-    
-        // Randomly select a message from the combined list
-        const randomMessage = combinedMessages[Math.floor(Math.random() * combinedMessages.length)];
-    
-        // Set the selected message to the element with id 'Welcome-Text'
-        $('.welcome-text').text(randomMessage);
-      });
-    </script>
 
     <script>
       $(document).ready(function () {
-          const text = "Hiya! Welcome to my portfolio!";
-          let index = 0;
-
-          function typeText() {
-              if (index < text.length) {
-                  $('#introduction-text').text($('#introduction-text').text() + text.charAt(index));
-
-                  // If "Hello!" is completed, make the cursor blink during the delay
-                  if (text.charAt(index) === "!") {
-                      $('#introduction-text').removeClass('typing-solid').addClass('typing-blink');
-                      setTimeout(() => {
-                          $('#introduction-text').removeClass('typing-blink').addClass('typing-solid');
-                          index++; // Continue typing after the delay
-                          typeText();
-                      }, 1000); // 500ms delay before continuing
-                  } else {
-                      index++;
-                      setTimeout(typeText, 75); // Standard typing speed
-                  }
-              } else {
-                  // Typing finished, switch to blinking cursor
-                  $('#introduction-text').removeClass('typing-solid').addClass('typing-blink');
-
-                  // Fade out the cursor 5 seconds after typing finishes
-                  setTimeout(() => {
-                      $('#introduction-text').addClass('fade-out');
-                  }, 3300);
-              }
-          }
-
-          // Initialize with a solid cursor
-          $('#introduction-text').addClass('typing-solid');
-          typeText();
-      });
-    </script>
-
-    <script>
-      $(document).ready(function () {
-        // Function to check if an element is in the viewport with custom offset
-        function isInViewport(element, offset = 0) {
-          const rect = element.getBoundingClientRect();
-          const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-          return rect.top <= windowHeight - offset && rect.bottom >= offset;
-        }
-
-        // Trigger animation when in viewport
-        function checkCards() {
-          $(".card-outer").each(function () {
-            if (isInViewport(this, window.innerHeight / 10)) {
-              $(this).addClass("animate");
-            }
-          });
-        }
-
-        // Initial check
-        checkCards();
-
-        // Check on scroll
-        $(window).on("scroll", function () {
-          checkCards();
-        });
-      });
-    </script>
-
-    <script>
-      $(document).ready(function() {
-        $('#seeAllLink').click(function() {
-          // Fade out the current text
-          $(this).fadeOut(300, function() {
-            $(this).remove();
-          //   // Remove collapse-related attributes
-          //   $(this).removeAttr('data-bs-toggle')
-          //         .removeAttr('data-bs-target')
-          //         .removeAttr('aria-expanded')
-          //         .removeAttr('aria-controls');
-            
-          //   // Add an href attribute (you can replace this URL with the actual link you want)
-          //   $(this).attr('href', 'project');  // Change 'project' to your desired URL
-            
-          //   // Change the button text to indicate the new behavior
-          //   $(this).text('Show me all of them!');  // New text
-            
-          //   // Fade the text back in
-          //   $(this).fadeIn(500);
-          });
-        });
-      });
-    </script>
-
-    <script>
-        const searchInput = document.getElementById("searchInput");
-        const categoryFilters = document.getElementById("categoryFilters");
-        const cards = document.querySelectorAll("#cardContainer .card-outer");
-
-        let activeCategory = "all";
-
-        // Collect unique categories with their color class
-        const categories = {};
-        cards.forEach(card => {
-        card.querySelectorAll(".badge").forEach(badge => {
-            const text = badge.textContent.trim();
-            const colorClass = Array.from(badge.classList).find(c => c.startsWith("text-bg-"));
-            if (!categories[text]) {
-            categories[text] = colorClass || "text-bg-secondary";
-            }
-        });
+        // Step 1: Extract unique badge values
+        let categories = new Set();
+        $('.card-text .badge').each(function () {
+          categories.add($(this).text().trim());
         });
 
-        // Add "All" button first
-        const allBtn = document.createElement("button");
-        allBtn.className = "btn btn-outline-primary active";
-        allBtn.dataset.category = "all";
-        allBtn.textContent = "All";
-        categoryFilters.appendChild(allBtn);
-
-        // Generate category buttons dynamically
-        Object.keys(categories).forEach(cat => {
-        const btn = document.createElement("button");
-        btn.className = 'btn ${categories[cat]}';
-        btn.dataset.category = cat;
-        btn.textContent = cat;
-        categoryFilters.appendChild(btn);
+        // Step 2: Render category buttons
+        categories.forEach(cat => {
+          $('#filter-buttons').append(`<button class="btn btn-outline-primary btn-sm filter-btn" data-category="${cat}">${cat}</button>`);
         });
 
-        // Event Listeners
-        searchInput.addEventListener("input", filterCards);
-        categoryFilters.addEventListener("click", (e) => {
-        if (e.target.tagName === "BUTTON") {
-            // Reset active style
-            categoryFilters.querySelectorAll("button").forEach(btn => btn.classList.remove("active"));
-            e.target.classList.add("active");
-
-            activeCategory = e.target.dataset.category;
-            filterCards();
-        }
-        });
-
+        let activeCategory = '';
+        
         function filterCards() {
-        const searchTerm = searchInput.value.toLowerCase();
+          let searchVal = $('#search').val().toLowerCase();
 
-        cards.forEach(card => {
-            const title = card.querySelector(".card-title").textContent.toLowerCase();
-            const badges = Array.from(card.querySelectorAll(".badge")).map(b => b.textContent);
+          $('.card-outer').each(function () {
+            let title = $(this).find('.card-title').text().toLowerCase();
+            let badges = $(this).find('.badge').map(function () {
+              return $(this).text().trim();
+            }).get();
 
-            const matchesSearch = title.includes(searchTerm);
-            const matchesCategory = activeCategory === "all" || badges.includes(activeCategory);
+            let matchSearch = title.includes(searchVal);
+            let matchCategory = activeCategory === '' || badges.includes(activeCategory);
 
-            card.style.display = matchesSearch && matchesCategory ? "flex" : "none";
-        });
+            if (matchSearch && matchCategory) {
+              $(this).removeClass('d-none');
+            } else {
+              $(this).addClass('d-none');
+            }
+          });
         }
+
+        // Search functionality
+        $('#search').on('keyup', filterCards);
+
+        // Category filter
+        $(document).on('click', '.filter-btn', function () {
+          $('.filter-btn').removeClass('btn-primary').addClass('btn-outline-primary');
+          $(this).removeClass('btn-outline-primary').addClass('btn-primary');
+          activeCategory = $(this).data('category');
+          filterCards();
+        });
+
+        // Reset button
+        $('#reset').on('click', function () {
+          $('#search').val('');
+          activeCategory = '';
+          $('.filter-btn').removeClass('btn-primary').addClass('btn-outline-primary');
+          filterCards();
+        });
+      });
     </script>
 
     <script src="./public/script.js" defer></script>

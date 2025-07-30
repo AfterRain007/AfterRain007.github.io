@@ -9,6 +9,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./public/style.css">
+    <style>
+      .card-outer {
+          opacity: 0;
+          transform: translateY(50px);
+          transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+  
+      .card-outer.animate {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+      .card-outer:nth-child(1) {
+          transition-delay: 0.0s;
+        }
+      .card-outer:nth-child(2) {
+          transition-delay: 0.05s;
+        }
+      .card-outer:nth-child(3) {
+          transition-delay: 0.1s;
+        }
+    </style>
   </head>
   <body>
     <!-- Navigation -->
@@ -26,8 +48,10 @@
           <!-- Navigation Links (visible on lg screens and above) -->
           <div class="d-none d-lg-flex">
             <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="project.html">Projects</a>
+            <a class="nav-link" href="certification.html">Certifications</a>
             <a class="nav-link" href="https://drive.google.com/file/d/1BTt6NYuyJ2xuUpHqzP9tRNsrZZp8wDBv/view?usp=drive_link" target="_blank">Resume</a>
-            <a class="nav-link" href="certification.html">Certification</a>
+            
             <!-- <a class="nav-link" href="freelance.html">Freelance</a> -->
             <!-- <a class="nav-link" href="about-me.html">About Me</a> -->
           </div>
@@ -43,7 +67,8 @@
         <div class="offcanvas-body d-flex flex-column" style="padding: 0px;">
           <a class="nav-link" href="index.html">Home</a>
           <a class="nav-link" href="https://drive.google.com/file/d/1BTt6NYuyJ2xuUpHqzP9tRNsrZZp8wDBv/view?usp=drive_link" target="_blank">Resume</a>
-          <a class="nav-link" href="certification.html">Certification</a>
+          <a class="nav-link" href="certification.html">Certifications</a>
+            
           <!-- <a class="nav-link" href="freelance.html">Freelance</a> -->
           <!-- <a class="nav-link" href="about-me.html">About Me</a> -->
         </div>
