@@ -41,7 +41,7 @@ nav {
     padding-bottom: 0.5rem;
     width: 100%;
     background-color: rgba(255, 255, 255, 1);
-    border-bottom: 1px solid #ccc; /* Simulates <hr> */
+    border-bottom: 1px solid #ccc;
 }
 
 .navbar.a {
@@ -95,6 +95,20 @@ nav {
     width: 100%; /* Full width on hover */
 }
 
+/* Light mode: no changes */
+.logo-invert {
+  transition: filter 0.3s ease;
+}
+
+footer {
+    display: flex;
+    justify-content: center;   /* Horizontally center the content */
+    align-items: center;       /* Vertically center the content */
+    height: 50px;              /* Adjust height as needed */
+    width: 100%;               /* Ensure it spans the full width */
+    background-color: #f8f9fa; /* Light background */
+}
+
 /* Dark theme settings */
 @media (prefers-color-scheme: dark) {
     nav {
@@ -105,6 +119,7 @@ nav {
     .navbar {
         background-color: black;  /* Background color for dark theme */
         color: white;  /* Optional: change text color to white for better contrast */
+        border-bottom: 1px solid #333333;
     }
 
     .nav-link {
@@ -116,18 +131,54 @@ nav {
     }
 
     main {
-        background-color: #1a1a1a;
+        background-color: #282424;
         /* Other option are 333333, 2d2d3e, or d1d5e3 */
     }
-}
 
-footer {
-    display: flex;
-    justify-content: center;   /* Horizontally center the content */
-    align-items: center;       /* Vertically center the content */
-    height: 50px;              /* Adjust height as needed */
-    width: 100%;               /* Ensure it spans the full width */
-    background-color: #f8f9fa; /* Light background */
+    h1, h2, h3, h4, h5, h6, p, a, strong, em {
+        color: white;
+    }
+
+    .card-body {
+        background-color: #1a1a1a;
+        color: white;
+    }
+
+    .card.card-outer {
+        border: 1px solid #444; /* or #666 for a softer border */
+        background-color: #1e1e1e; /* optional: dark background for card */
+    }
+
+    .card.card-outer .card-body,
+    .card.card-outer .card-title,
+    .card.card-outer .card-text {
+        color: #eee; /* Light text color for visibility */
+    }
+
+    .card.card-outer hr {
+        border-color: #444;
+    }
+
+    .card.card-outer img {
+        filter: brightness(0.9); /* optional: darken bright images slightly */
+    }
+
+    .logo-invert {
+        filter: brightness(0) invert(1);
+    }
+
+    footer {
+        background-color: #1e1e1e;
+    }
+
+    .exp-line {
+        background-color: white;
+        border-top: 1px solid white; /* Ensures the line is white in dark mode */
+    }
+    .text-bg-dark {
+        background-color: white !important;
+        color: black !important;
+    }
 }
   
 footer p {
