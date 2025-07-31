@@ -29,7 +29,6 @@
             <a class="nav-link" href="project.html">Projects</a>
             <a class="nav-link" href="certification.html">Certifications</a>
             <a class="nav-link" href="https://drive.google.com/file/d/1BTt6NYuyJ2xuUpHqzP9tRNsrZZp8wDBv/view?usp=drive_link" target="_blank">Resume</a>
-            
             <!-- <a class="nav-link" href="about-me.html">About Me</a> -->
           </div>
         </div>
@@ -60,9 +59,7 @@
           <div class="col-12 col-lg-3 sticky-vicky">
             <input type="text" id="search" class="form-control mb-3" placeholder="Search by title">
 
-            <div id="filter-buttons" class="mb-3">
-              
-            </div>
+            <div id="filter-buttons" class="mb-3"></div>
           </div>
 
           <!-- Cards -->
@@ -128,7 +125,7 @@
                         <p class="card-text">
                           <span class="badge rounded-pill text-bg-primary">Visualization</span>
                           <span class="badge rounded-pill text-bg-dark">Dashboard</span>
-                          <span class="badge rounded-pill text-bg-secondary">Web Dev</span>
+                          <span class="badge rounded-pill text-bg-secondary">Website Development</span>
                         </p>
                     </div>
                 </a>
@@ -142,7 +139,7 @@
                           <h5 class="card-title">Django Web Apps</h5>
                           <p class="card-text">
                             <span class="badge rounded-pill text-bg-info">Python</span>
-                            <span class="badge rounded-pill text-bg-dark">Web Dev</span>
+                            <span class="badge rounded-pill text-bg-dark">Website Development</span>
                             <span class="badge rounded-pill text-bg-warning">Data Management</span>
                           </p>
                       </div>
@@ -156,7 +153,7 @@
                   <div class="card-body">
                       <h5 class="card-title">Landing Page</h5>
                       <p class="card-text">
-                        <span class="badge rounded-pill text-bg-secondary">Web Dev</span>
+                        <span class="badge rounded-pill text-bg-secondary">Website Development</span>
                         <span class="badge rounded-pill text-bg-primary">Responsive Design</span>
                         <span class="badge rounded-pill text-bg-dark">SEO</span>
                       </p>
@@ -189,7 +186,7 @@
 
         // Step 2: Render category buttons
         categories.forEach(cat => {
-          $('#filter-buttons').append(`<button class="btn btn-outline-primary btn-sm filter-btn me-2" data-category="${cat}">${cat}</button>`);
+          $('#filter-buttons').append(`<button class="btn btn-outline-light btn-sm filter-btn me-2 mb-2 " data-category="${cat}">${cat}</button>`);
         });
 
         let activeCategory = '';
@@ -218,10 +215,20 @@
         $('#search').on('keyup', filterCards);
 
         // Category filter
+        // Category filter with deselect feature
         $(document).on('click', '.filter-btn', function () {
-          $('.filter-btn').removeClass('btn-primary').addClass('btn-outline-primary');
-          $(this).removeClass('btn-outline-primary').addClass('btn-primary');
-          activeCategory = $(this).data('category');
+          const clickedCategory = $(this).data('category');
+
+          // If same button clicked again, deselect it
+          if (activeCategory === clickedCategory) {
+            activeCategory = '';
+            $('.filter-btn').removeClass('btn-primary').addClass('btn-outline-primary');
+          } else {
+            activeCategory = clickedCategory;
+            $('.filter-btn').removeClass('btn-primary').addClass('btn-outline-primary');
+            $(this).removeClass('btn-outline-primary').addClass('btn-primary');
+          }
+
           filterCards();
         });
 

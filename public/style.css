@@ -12,7 +12,7 @@ body {
 }
 
 ul li {
-margin-bottom: 5px; /* Adjust spacing as needed */
+    margin-bottom: 5px; /* Adjust spacing as needed */
 }
 
 /* Set the body and html to take up the full height */
@@ -28,6 +28,10 @@ main {
     flex: 1;
     padding-top: 75px;
     background-color: #fafbfe;
+}
+
+.project-main {
+    padding-top: 25px;
 }
 
 nav {
@@ -134,22 +138,35 @@ footer {
         color: white; /* Ensure text color is visible on dark background */
     }
 
+    .nav-link::after {
+        background-color: white; /* Color of the bar */
+    }
+
+    a.nav-link:hover {
+        color: gray;
+    }
+
     .navbar-scrolled {
         background-color: rgba(0, 0, 0, 0.5); /* 25% opacity for background */
     }
 
-    main {
+    main,
+    .section {
         background-color: #282424;
         /* Other option are 333333, 2d2d3e, or d1d5e3 */
     }
 
-    h1, h2, h3, h4, h5, h6, p, a, strong, em {
+    h1, h2, h3, h4, h5, h6, p, a, strong, em, li {
         color: white;
     }
 
     .card-body {
         background-color: #1a1a1a;
         color: white;
+    }
+
+    .card{
+        border: 1px solid #444; /* or #666 for a softer border */
     }
 
     .card.card-outer {
@@ -183,6 +200,7 @@ footer {
         background-color: white;
         border-top: 1px solid white; /* Ensures the line is white in dark mode */
     }
+    
     .text-bg-dark {
         background-color: white !important;
         color: black !important;
@@ -202,6 +220,16 @@ footer {
 
     .navbar-toggler {
         border-color: white; /* Change this to your desired color */
+    }
+
+    hr {
+        background-color: white;
+        border-top: 1px solid white; /* Ensures the line is white in dark mode */
+    }
+
+    .img-thumbnail {
+        background-color: #282424;
+        color: white;
     }
 }
   
@@ -528,13 +556,21 @@ a.card:hover {
     }
 }
 
+.content-project {
+    margin: 0px 200px 0px 200px;
+}
+
+.content-project .img-thumbnail img {
+    max-width: 400px;
+}
+
 @media (max-width: 768px) {
     .carousel-outer {
         height: 25vh;
     }
 
     .content-project{
-        padding: 0px 25px 0px 25px;
+        margin: 0px 25px 0px 25px;
     }
 }
 
