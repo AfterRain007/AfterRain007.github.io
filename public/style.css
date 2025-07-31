@@ -2,6 +2,14 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+@media (min-width: 992px) {
+  .sticky-vicky {
+    position: sticky;
+    top: 105px; /* how far from top it stays */
+    height: 100vh; /* optional, if you want it to cover full height */
+    z-index: 1000;
+  }
+}
 
 ul li {
 margin-bottom: 5px; /* Adjust spacing as needed */
@@ -178,6 +186,22 @@ footer {
     .text-bg-dark {
         background-color: white !important;
         color: black !important;
+    }
+
+    .offcanvas {
+        background-color: #212529;
+    }
+
+    .offcanvas-backdrop {
+        background-color: rgba(255, 255, 255, 0.3); /* 0.8 = 80% opacity */
+    }
+
+    .navbar-toggler-icon {
+        filter: brightness(0) invert(1);
+    }
+
+    .navbar-toggler {
+        border-color: white; /* Change this to your desired color */
     }
 }
   

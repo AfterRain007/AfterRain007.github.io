@@ -57,14 +57,12 @@
         <div class="row">
           
           <!-- Search + Filters -->
-          <div class="col-12 col-lg-3">
+          <div class="col-12 col-lg-3 sticky-vicky">
             <input type="text" id="search" class="form-control mb-3" placeholder="Search by title">
 
             <div id="filter-buttons" class="mb-3">
-              <!-- Category buttons will be dynamically inserted here -->
+              
             </div>
-
-            <button id="reset" class="btn btn-secondary btn-sm">All</button>
           </div>
 
           <!-- Cards -->
@@ -172,7 +170,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-light bg-subtle text-center" style="padding: 30px 0px;">
+    <footer class="text-center" style="padding: 30px 0px;">
       <p>&copy; 2024 Gilang Islamay. All rights reserved.</p>
     </footer>
     
@@ -191,7 +189,7 @@
 
         // Step 2: Render category buttons
         categories.forEach(cat => {
-          $('#filter-buttons').append(`<button class="btn btn-outline-primary btn-sm filter-btn" data-category="${cat}">${cat}</button>`);
+          $('#filter-buttons').append(`<button class="btn btn-outline-primary btn-sm filter-btn me-2" data-category="${cat}">${cat}</button>`);
         });
 
         let activeCategory = '';
