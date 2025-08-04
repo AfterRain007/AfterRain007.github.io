@@ -158,60 +158,11 @@
               </div>
             </a>
           </div>
-
-          <div class="collapse" id="moreProjects">
-            <div class="row mb-3 g-4">
-              <div class="col-lg-4 col-md-6 col-12 d-flex" style="flex-grow: 1;">
-                <a class="card d-flex card-outer animate" style="flex-grow: 1;" href="html-integrated-dashboard.html">
-                    <img src="./public/images/dashboard sinarmas.webp" alt="Real-Time Analytics Dashboard" class="card-img-top">
-                    <hr class="m-0">
-                    <div class="card-body">
-                        <h5 class="card-title">HTML Integrated Dashboard</h5>
-                        <p class="card-text">
-                          <span class="badge rounded-pill text-bg-primary">Visualization</span>
-                          <span class="badge rounded-pill text-bg-dark">Dashboard</span>
-                          <span class="badge rounded-pill text-bg-secondary">Website Development</span>
-                        </p>
-                    </div>
-                </a>
-              </div>
-            
-              <div class="col-lg-4 col-md-6 col-12 d-flex" style="flex-grow: 1;">
-                  <a class="card d-flex card-outer animate" style="flex-grow: 1;" href="django-web-apps.html">
-                      <img src="./public/images/django web app.webp" alt="Django Web Apps" class="card-img-top">
-                      <hr class="m-0">
-                      <div class="card-body">
-                          <h5 class="card-title">Django Web Apps</h5>
-                          <p class="card-text">
-                            <span class="badge rounded-pill text-bg-info">Python</span>
-                            <span class="badge rounded-pill text-bg-dark">Website Development</span>
-                            <span class="badge rounded-pill text-bg-warning">Data Management</span>
-                          </p>
-                      </div>
-                  </a>
-              </div>
-            
-              <div class="col-lg-4 col-md-6 col-12 d-flex" style="flex-grow: 1;">
-                <a class="card d-flex card-outer animate" style="flex-grow: 1;" href="landing-page.html">
-                  <img src="./public/images/Github Profile.webp" alt="Fun Projects" class="card-img-top">
-                  <hr class="m-0">
-                  <div class="card-body">
-                      <h5 class="card-title">Landing Page</h5>
-                      <p class="card-text">
-                        <span class="badge rounded-pill text-bg-secondary">Website Development</span>
-                        <span class="badge rounded-pill text-bg-primary">Responsive Design</span>
-                        <span class="badge rounded-pill text-bg-dark">SEO</span>
-                      </p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
 
         <!-- "See All" button -->
         <div class="text-end mt-4">
-          <a type="button" data-bs-toggle="collapse" data-bs-target="#moreProjects" aria-expanded="false" aria-controls="moreProjects" id="seeAllLink" class="btn button-sexy">
+          <a href="project.html" type="button" aria-expanded="false" aria-controls="moreProjects" id="seeAllLink" class="btn button-sexy">
             More Project
           </a>
         </div>
@@ -426,7 +377,7 @@
         // Trigger animation when in viewport
         function checkCards() {
           $(".card-outer").each(function () {
-            if (isInViewport(this, window.innerHeight / 10)) {
+            if (isInViewport(this, window.innerHeight / 5)) {
               $(this).addClass("animate");
             }
           });
@@ -442,12 +393,11 @@
       });
     </script>
 
-    <script>
-      $(document).ready(function() {
-        $('#seeAllLink').click(function() {
-          // Fade out the current text
-          $(this).fadeOut(300, function() {
-            $(this).remove();
+      // $(document).ready(function() {
+      //   $('#seeAllLink').click(function() {
+      //     // Fade out the current text
+      //     $(this).fadeOut(300, function() {
+      //       $(this).remove();
           //   // Remove collapse-related attributes
           //   $(this).removeAttr('data-bs-toggle')
           //         .removeAttr('data-bs-target')
@@ -462,10 +412,9 @@
             
           //   // Fade the text back in
           //   $(this).fadeIn(500);
-          });
-        });
-      });
-    </script>
+    //       });
+    //     });
+    //   });
 
     <script src="./public/script.js" defer></script>
 

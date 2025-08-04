@@ -31,7 +31,7 @@ main {
 }
 
 .project-main {
-    padding-top: 25px;
+    padding: 25px 0 25px 0;
 }
 
 nav {
@@ -229,6 +229,10 @@ footer {
 
     .img-thumbnail {
         background-color: #282424;
+        color: white;
+    }
+
+    div {
         color: white;
     }
 }
