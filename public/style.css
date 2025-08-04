@@ -156,7 +156,7 @@ footer {
         /* Other option are 333333, 2d2d3e, or d1d5e3 */
     }
 
-    h1, h2, h3, h4, h5, h6, p, a, strong, em, li {
+    h1, h2, h3, h4, h5, h6, p, strong, em, li {
         color: white;
     }
 
@@ -503,6 +503,7 @@ a.card:hover {
 .project-content a {
     text-decoration: none;
 }
+
 
 .project-content h4 {
     font-weight: bold;

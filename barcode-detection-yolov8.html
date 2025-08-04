@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gilang Islamay</title>
+    <link rel="icon" href="./public/images/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./public/style.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="./public/images/Logo Lmao.webp" alt="Gilang's Logo" class="logo-invert" style="height: 40px;">
+        </a>
+        <div class="navbar-nav d-flex align-items-center">
+          <!-- Toggler for Offcanvas -->
+          <button class="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <!-- Navigation Links (visible on lg screens and above) -->
+          <div class="d-none d-lg-flex">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="project.html">Projects</a>
+            <a class="nav-link" href="certification.html">Certifications</a>
+            <a class="nav-link" href="https://drive.google.com/file/d/1BTt6NYuyJ2xuUpHqzP9tRNsrZZp8wDBv/view?usp=drive_link" target="_blank">Resume</a>
+            
+            <!-- <a class="nav-link" href="freelance.html">Freelance</a> -->
+            <!-- <a class="nav-link" href="about-me.html">About Me</a> -->
+          </div>
+        </div>
+      </div>
+    
+      <!-- Offcanvas Component -->
+      <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="--bs-offcanvas-width: 250px;">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navigation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column" style="padding: 0px;">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="https://drive.google.com/file/d/1BTt6NYuyJ2xuUpHqzP9tRNsrZZp8wDBv/view?usp=drive_link" target="_blank">Resume</a>
+          <a class="nav-link" href="certification.html">Certifications</a>
+            
+          <!-- <a class="nav-link" href="freelance.html">Freelance</a> -->
+          <!-- <a class="nav-link" href="about-me.html">About Me</a> -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- Divider -->
+    <hr class="m-0">
+
+    <div class="d-flex justify-content-center align-items-center" style="width: 100%;"> 
+      <div id="carouselProject" class="carousel slide" data-bs-theme="light" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselProject" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          </div>
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img src="./public/images/Broken Barcode.webp" class="d-block carousel-image" alt="...">
+                  <div class="carousel-overlay"></div> 
+              </div>
+          </div>
+          <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselProject" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button> -->
+          <div class="centered-text">
+            <h2 class="text-center section-title">Barcode Quality Assessment Using Computer Vision (YOLOv8)</h2>
+            <div>
+              <span class="badge rounded-pill text-bg-primary">Visualization</span>
+              <span class="badge rounded-pill text-bg-dark">Dashboard</span>
+              <span class="badge rounded-pill text-bg-secondary">Website Development</span>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="project-main">
+      <div class="project-content content-project">
+        <h4>
+          You Only Look Once!
+        </h4>
+        <p>
+          This end-to-end solution was developed to automate barcode quality verification for sales cabinets using computer vision. A YOLOv8 object detection model lies at the heart of the system, trained to detect barcodes in field images submitted by sales personnel. The goal was to increase scan accuracy, reduce manual verification time, and improve compliance monitoring across distributed field teams.
+        </p>
+        <p>
+          Around 1,200 image samples are manually labelled using Label Studio to create the initial training dataset. During early testing, the model struggled with a high rate of false positives particularly in environments where gates or patterned objects mimicked barcode structures.
+        </p>
+
+        <div class="text-center mb-3">
+          <div class="img-thumbnail d-inline-block"> 
+            <img src="public/images/Gates-False-Positive.webp" class="img-fluid img-project mb-1" alt="Gates False Positive">
+            <p class="img-caption">
+              Gate Falsely Detected as a Barcode.
+            </p>
+          </div>
+        </div>
+
+        <p>
+          A new class, labeled 'Not Barcode,' was introduced to explicitly teach the model to ignore misleading patterns. As a result, model accuracy dramatically improved from ~60% to 93%, effectively eliminating the primary source of error while demonstrating robustness in real-world conditions.
+        </p>
+        <p>
+          Despite having no dedicated budget or high-end infrastructure, the model was initially trained using Google Colab's free-tier T4 GPU to prove the concept's feasibility before requesting further investment. And then GTX 1050 are used for the labeling pipeline to process over 4 million data entries, overcoming significant hardware limitations through optimization and task segmentation.
+        </p>
+        <p>
+          The results were integrated into a <a href="power-bi-dashboard.html">Power BI dashboard</a>, allowing the Cabinet Care team to monitor scan activity, barcode status, and follow-up actions by region and date. Asset photos, scan outcomes, and field metadata are all dynamically visualized, enabling faster operational decisions and improved accountability. This solution not only automated a time-consuming process but also laid the foundation for future enhancements in field compliance analytics, proving the value of practical AI deployment in everyday operations.
+        </p>
+      </div>
+      
+      <script src="./public/script.js" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="text-center" style="padding: 30px 0px;">
+      <p>&copy; 2024 Gilang Islamay. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
