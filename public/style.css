@@ -569,6 +569,15 @@ a.card:hover {
     max-width: 400px;
 }
 
+
+
+.img-thumbnail img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+}
+
 @media (max-width: 768px) {
     .carousel-outer {
         height: 25vh;
