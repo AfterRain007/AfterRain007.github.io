@@ -659,7 +659,7 @@ a.card:hover {
   border-color: black;
 }
 
-.img-thumbnail {
+.img-thumbnail.image {
     cursor: pointer;
 }
 
