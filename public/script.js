@@ -20,3 +20,37 @@ $(document).ready(function () {
     $('table.table.table-bordered').addClass('table-dark');
   }
 });
+
+$(document).ready(function() {
+  // When clicking the whole thumbnail block
+  $(".img-thumbnail").on("click", function() {
+    let img = $(this).find("img"); // get the inner image
+    let src = img.attr("src");
+    let alt = img.attr("alt");
+    $("#zoomed-image").attr("src", src).attr("alt", alt);
+    $("#zoom-container").addClass("display");
+    $("body").addClass("no-scroll");
+  });
+
+  // Close when clicking the close button
+  $("#zoom-close").on("click", function() {
+    $("#zoom-container").removeClass("display");
+    $("body").removeClass("no-scroll");
+  });
+
+  // Close when clicking overlay (but not image)
+  $("#zoom-container").on("click", function(e) {
+    if (e.target.id === "zoom-container") {
+      $(this).removeClass("display");
+      $("body").removeClass("no-scroll");
+    }
+  });
+
+  // Close on ESC
+  $(document).on("keydown", function(e) {
+    if (e.key === "Escape") {
+      $("#zoom-container").removeClass("display");
+      $("body").removeClass("no-scroll");
+    }
+  });
+});
