@@ -23,7 +23,7 @@ $(document).ready(function () {
 
 $(document).ready(function() {
   // When clicking the whole thumbnail block
-  $(".img-thumbnail").on("click", function() {
+  $(".img-thumbnail.image").on("click", function() {
     let img = $(this).find("img"); // get the inner image
     let src = img.attr("src");
     let alt = img.attr("alt");
