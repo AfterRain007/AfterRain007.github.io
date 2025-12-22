@@ -1,0 +1,716 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media (min-width: 992px) {
+  .sticky-vicky {
+    position: sticky;
+    top: 105px; /* how far from top it stays */
+    height: 100vh; /* optional, if you want it to cover full height */
+    z-index: 1000;
+  }
+}
+
+ul li {
+    margin-bottom: 5px; /* Adjust spacing as needed */
+}
+
+/* Set the body and html to take up the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #fafbfe;
+}
+
+/* Main content should take up the remaining space */
+main {
+    flex: 1;
+    padding-top: 75px;
+    background-color: #fafbfe;
+}
+
+.project-main {
+    padding: 25px 0 25px 0;
+}
+
+.navbar-plop {
+    transition: all 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    border-bottom: 1px solid #ccc;
+}
+
+.navbar-gimmick {
+    top: 0;
+    left: 0;
+    z-index: -1;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0%;
+}
+
+.navbar-gimmick.nav-link {
+    padding: 0.5rem 1rem; /* Space around the text */
+}
+
+.navbar-gimmick.a {
+    font-weight: bold;
+}
+
+.navbar.a {
+    font-weight: bold;
+}
+
+.navbar-scrolled {
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    background-color: rgba(255, 255, 255, 0.5); /* 25% opacity for background */
+}
+
+/* Smoothly fade out the logo */
+/* .navbar-scrolled .navbar-brand {
+    opacity: 0;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+} */
+
+/* Smoothly center the menu */
+/* .navbar-scrolled .navbar-nav {
+    justify-content: center !important;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+} */
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: darkslategray; /* Ensure text color is visible on dark background */
+    padding: 0.5rem 1rem; /* Space around the text */
+    display: inline-block;
+    font-weight: bold;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px; /* Push the bar down to align with the bottom of the navbar */
+    width: 0;
+    height: 3px; /* Thickness of the bar */
+    background-color: black; /* Color of the bar */
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%; /* Full width on hover */
+}
+
+/* Light mode: no changes */
+.logo-invert {
+  transition: filter 0.3s ease;
+}
+
+footer {
+    display: flex;
+    justify-content: center;   /* Horizontally center the content */
+    align-items: center;       /* Vertically center the content */
+    height: 50px;              /* Adjust height as needed */
+    width: 100%;               /* Ensure it spans the full width */
+    background-color: #f8f9fa; /* Light background */
+}
+
+/* Dark theme settings */
+@media (prefers-color-scheme: dark) {
+    nav {
+        background-color: black;  /* Background color for dark theme */
+        color: white;  /* Optional: change text color to white for better contrast */
+    }
+
+    .navbar {
+        background-color: black;  /* Background color for dark theme */
+        color: white;  /* Optional: change text color to white for better contrast */
+        border-bottom: 1px solid #333333;
+    }
+
+    .nav-link {
+        color: white; /* Ensure text color is visible on dark background */
+    }
+
+    .nav-link::after {
+        background-color: white; /* Color of the bar */
+    }
+
+    a.nav-link:hover {
+        color: gray;
+    }
+
+    .navbar-scrolled {
+        background-color: rgba(0, 0, 0, 0.5); /* 25% opacity for background */
+    }
+
+    main,
+    .section,
+    body {
+        background-color: #282424;
+        /* Other option are 333333, 2d2d3e, or d1d5e3 */
+    }
+
+    h1, h2, h3, h4, h5, h6, p, strong, em, li {
+        color: white;
+    }
+
+    .card-body {
+        background-color: #1a1a1a;
+        color: white;
+    }
+
+    .card{
+        border: 1px solid #444; /* or #666 for a softer border */
+    }
+
+    .card.card-outer {
+        border: 1px solid #444; /* or #666 for a softer border */
+        background-color: #1e1e1e; /* optional: dark background for card */
+    }
+
+    .card.card-outer .card-body,
+    .card.card-outer .card-title,
+    .card.card-outer .card-text {
+        color: #eee; /* Light text color for visibility */
+    }
+
+    .card.card-outer hr {
+        border-color: #444;
+    }
+
+    .card.card-outer img {
+        filter: brightness(0.9); /* optional: darken bright images slightly */
+    }
+
+    .logo-invert {
+        filter: brightness(0) invert(1);
+    }
+
+    footer {
+        background-color: #1e1e1e;
+    }
+
+    .exp-line {
+        background-color: white;
+        border-top: 1px solid white; /* Ensures the line is white in dark mode */
+    }
+    
+    .text-bg-dark {
+        background-color: white !important;
+        color: black !important;
+    }
+
+    .offcanvas {
+        background-color: #212529;
+    }
+
+    .offcanvas-backdrop {
+        background-color: rgba(255, 255, 255, 0.3); /* 0.8 = 80% opacity */
+    }
+
+    .navbar-toggler-icon {
+        filter: brightness(0) invert(1);
+    }
+
+    .navbar-toggler {
+        border-color: white; /* Change this to your desired color */
+    }
+
+    hr {
+        background-color: white;
+        border-top: 1px solid white; /* Ensures the line is white in dark mode */
+    }
+
+    .img-thumbnail {
+        background-color: #282424;
+        color: white;
+    }
+
+    div {
+        color: white;
+    }
+}
+
+@media (min-width: 768px) { /* when your button is hidden */
+  .input-group > .form-control {
+    border-top-right-radius: 0.375rem !important; /* same as Bootstrap default */
+    border-bottom-right-radius: 0.375rem !important;
+  }
+}
+
+footer p {
+    margin: 0;                 /* Remove default margin for better centering */
+}
+
+/* Define the scaling animation */
+@keyframes scaleText {
+    0%, 100% {
+        transform: rotate(-15deg) scale(1); /* Start and end with original size and rotation */
+    }
+    50% {
+        transform: rotate(-15deg) scale(1.15); /* Grow to 1.15x original size while keeping rotation */
+    }
+}
+
+/* Apply the animation to the text */
+.welcome-text {
+    display: inline-block; /* Ensures the scaling centers correctly */
+    transform-origin: center; /* Scale from center */
+    animation: scaleText 2s infinite; /* Runs the animation continuously */
+    position: absolute;
+    bottom: -10px; 
+    right: -35px;
+    transform: rotate(-15deg); 
+    white-space: nowrap; 
+    color: black;
+    font-size: clamp(12px, 2vw, 15px); /* Adapt font size based on screen width */
+    max-width: 100%; /* Prevent overflow */ 
+    user-select: none;
+    line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+    .welcome-text {
+        font-size: smaller;
+    }
+}
+
+a.card {
+    text-decoration: none;
+    display: inline-block; /* Ensures proper scaling */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    will-change: transform, box-shadow;
+}
+  
+@media (max-width: 992px) {
+    .card-outer:nth-child(1) {
+        transition-delay: 0.1s;
+      }
+    .card-outer:nth-child(2) {
+        transition-delay: 0.1s;
+    }
+    .card-outer:nth-child(3) {
+        transition-delay: 0.1s;
+    }
+}
+
+a.card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: scale(1.015) translateZ(0); /* Apply 3D transform for better performance */
+    will-change: transform, box-shadow;
+}
+
+.card-img-top {
+    height: 15rem;
+    object-fit: cover;
+    object-position: top;
+}
+
+.section-title {
+    font-weight: bold;
+}
+
+.exp-circle {
+    background-color: white; /* Set a background color for the logo */
+    border: 2px solid black; /* Outer border for the circle */
+    border-radius: 50%; /* Ensures the div is circular */
+    height: 75px; /* Adjust as needed */
+    width: 75px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures the image stays within the circle */
+}
+
+@media (max-width: 992px) {
+    .exp-circle {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+.exp-circle img {
+    width: 75%; /* Make the image fill the container */
+    height: 75%; /* Keep aspect ratio */
+    object-fit:contain;
+}
+
+.exp-line {
+    width: 2px;
+    background-color: black;
+    flex-grow: 1; /* Makes the line grow as needed */
+    margin: 0;
+    z-index: 0;
+}
+
+@media (max-width: 992px) {
+    .exp-line {
+        opacity: 0%;
+    }
+
+    .align-y-center {
+        display: flex;
+        align-items: center;
+    }
+
+    .vertical-line {
+        width: 1px;
+        height: 50px;
+        background-color: black;
+        margin: 0;
+        z-index: 0;
+    }
+}
+
+.exp-time {
+    font-weight: bold;
+}
+
+.timeline-dot {
+    position: relative;
+    z-index: 2;
+    width: 15px;
+    height: 15px;
+    background-color: #007bff;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+.button-sexy.btn {
+    display: inline-block;            /* Make sure the button is inline (fits content size) */
+    background-color: black !important;
+    color: white;
+    text-align: center;               /* Center the text */
+    padding: 10px 20px;               /* Add padding to the button */
+    text-decoration: none;            /* Remove underline */
+    position: relative;               /* Allow positioning of ::before */
+    border: none;
+    overflow: hidden;                 /* Hide anything outside the bounds of the button */
+    z-index: 0;                       /* Create a stacking context for the button itself */
+}
+
+.button-sexy.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;                        /* Start with no width */
+    height: 100%;                     /* Make the bar the same height as the button */
+    background-color: white;          /* The bar color */
+    transition: width 0.5s ease;      /* Smooth transition on hover */
+    z-index: -1;                      /* Place the bar beneath the button's content */
+}
+
+.button-sexy.btn:hover {
+    background-color: #828282 !important;
+    color: black;                     /* Change text color on hover */
+}
+
+.button-sexy.btn:hover::before {
+    width: 100%;                      /* On hover, the bar expands to full width */
+}
+
+.button-sexy.btn > * {
+    position: relative;               /* Keep text above the bar */
+    z-index: 1;                       /* Make sure text stays above the bar */
+    transition: color 0.5s ease;      /* Smooth transition for text color change */
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.exp-text {
+    text-align: justify;
+}
+
+@media (max-width: 992px) {
+    .exp-time {
+        width: 225px;
+        text-align: left;
+        font-weight: bold;
+    }
+}
+
+/* Solid cursor during typing */
+#introduction-text.typing-solid::after {
+    content: "|"; /* Solid cursor */
+    display: inline-block;
+}
+
+/* Blinking cursor */
+#introduction-text.typing-blink::after {
+    content: "|"; /* Blinking cursor */
+    display: inline-block;
+    animation: blink 1s steps(60, end) infinite; /* Smooth 60 FPS blink */
+}
+
+/* Fade-out effect for the cursor */
+#introduction-text.fade-out::after {
+    animation: fadeOut 1s forwards;
+}
+
+/* Keyframes for blinking */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Keyframes for fading out */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.certifications {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.certification {
+    display: flex;
+    align-items: stretch; /* Ensures the line matches the height of the text */
+    margin-bottom: 15px;
+}
+.line {
+    width: 5px; /* Keeps the width consistent */
+    flex-shrink: 0; /* Prevents the line from shrinking */
+    background-color: #007bff; /* Change this color as needed */
+    margin-right: 15px;
+}
+.text {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5; /* Controls spacing for multi-line text */
+}
+
+.project-content > p {
+    text-align: justify;
+    text-indent: 25px;
+}
+
+.img-caption {
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.project-content a {
+    text-decoration: none;
+}
+
+
+.project-content h4 {
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: justify;
+}
+
+/* .project-content img {
+    outline: 2px solid #333;
+    outline-offset: 2px;
+}   */
+
+.carousel-inner, .carousel-item, .carousel-image {
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-image {
+    object-fit: cover;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75); /* 75% black opacity */
+}
+
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    color: white; /* Adjust color as needed */
+    font-weight: bold;
+    text-align: center;
+    z-index: 10; /* Ensure it appears above the image */
+}
+
+.carousel-outer {
+    height: 50vh;
+}
+
+#carouselProject {
+    height: 45vh;
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+    #carouselProject {
+        height: 40vh;
+    }
+}
+
+.content-project {
+    margin: 0px 200px 0px 200px;
+}
+
+.content-project .img-thumbnail img {
+    max-width: 400px;
+}
+
+.img-thumbnail img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .carousel-outer {
+        height: 25vh;
+    }
+
+    .content-project{
+        margin: 0px 25px 0px 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-content > p {
+        text-align: left;
+    }
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    width: 5%;
+}
+
+.badge {
+    user-select: none; 
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+}
+
+.img-project {
+    max-height: 500px;
+}
+
+.achievement-caption {
+    font-size: smaller;
+}
+
+@media (max-width: 992px) {
+    .achievement-caption {
+        font-size: larger;
+    }
+}
+
+/* .certificate-picture {
+    min-height: 225px;
+    object-fit: cover;
+} */
+
+.logo-experience {
+  background-color: white;
+  border: 2px solid #ccc;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.logo-experience:hover {
+  background-color: #f0f0f0;
+  border-color: #999;
+}
+
+.logo-experience.active {
+  background-color: #f0f0f0; /* Soft light grey */
+  border-color: black;
+}
+
+.img-thumbnail.image {
+    cursor: pointer;
+}
+
+.image-zoom {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.image-zoom img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
+
+.image-zoom.display {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3rem;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10000;
+    transition: color 0.2s ease;
+}
+.close-btn:hover {
+    color: #ff4444;
+}

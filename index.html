@@ -1,946 +1,426 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <title>AR Home</title>
-
-    <meta property="og:image" content="public/website-thumbnail@2x.webp" />
-    <meta name='description' content='Gilang Islamay Putra Djuharis Portfolio. Data Analyst, Data Scientist, and Web Developer is my Area of Interest! Some of My Projects are Bitcoin Forecasting using 3 Time-Series Model using Temporal Fusion Transformer, Long-Short Term Memory, and Gated Recurrent Networks, Bitcoin Sentiment Analysis using roBERTa, Full-Stack App using Django with Python and MySQL, Computer Vision using YOLO, Power BI Dashboard, and Front-End Website using HTML and CSS'>
-
-    <link rel="icon" href="public/favicon.ico" />
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./index.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,900;1,400&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
-    />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gilang Islamay</title>
+    <link rel="icon" href="./public/images/favicon-light.ico" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="./public/images/favicon-dark.ico" media="(prefers-color-scheme: dark)">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./public/style.css">
     <style>
-      @font-face {
-        font-family: "Venite Adoremus";
-        src: url("./public/Venite Adoremus.otf");
-        font-weight: 400;
-      }
+      .card-outer {
+          opacity: 0;
+          transform: translateY(50px);
+          transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+  
+      .card-outer.animate {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+      .card-outer:nth-child(1) {
+          transition-delay: 0.0s;
+        }
+      .card-outer:nth-child(2) {
+          transition-delay: 0.05s;
+        }
+      .card-outer:nth-child(3) {
+          transition-delay: 0.1s;
+        }
     </style>
   </head>
   <body>
-    <a class="index">
-      <div class="navbar-parent">
-        <div class="navbar">
-          <div class="menu">
-            <div class="home" id="homeText">
-              Home
-              <div class="anchor-home" data-scroll-to="homeText"></div>
-            </div>
-            <div class="home" id="resumeText">Resume</div>
-            <div class="home" id="certificationText">Certification</div>
-            <div class="passions">Passions</div>
-            <button class="hamburger-menu" id="hamburgerMenu">
-              <img
-                class="hamburger-menu-icon"
-                alt=""
-                src="./public/hamburger-menu.svg"
-              />
-            </button>
+    <!-- Navigation -->
+    <nav class="navbar navbar-plop navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="./public/images/Logo Lmao.webp" alt="Gilang's Logo" class="logo-invert" style="height: 40px;">
+        </a>
+        <div class="navbar-nav d-flex align-items-center">
+          <!-- Toggler for Offcanvas -->
+          <button class="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <!-- Navigation Links (visible on lg screens and above) -->
+          <div class="d-none d-lg-flex">
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/project">Projects</a>
+            <a class="nav-link" href="/certification">Certifications</a>
+            <a class="nav-link" href="https://drive.google.com/file/d/1nqrvj-RaUla_OXb2n3zfpLZERiUSyTPp/view?usp=sharing" target="_blank">Resume</a>
           </div>
-        </div>
-        <div class="welcome-weary-traveler-wrapper">
-          <div class="welcome-weary-traveler">WELCOME Weary Traveler!</div>
         </div>
       </div>
-      <section class="content">
-        <div class="introduction">
-          <div class="new-arrivals">
-            <img
-              class="photo-profile-icon"
-              alt=""
-              src="./public/photo-profile@2x.png"
-            />
-
-            <div class="greetings-my-name-container">
-              <p class="greetings-my-name">
-                Greetings! My name is Gilang Islamay from Indonesia and I'm a
-                Microsoft Certified: Power BI Data Analyst Associate. I hold a
-                Bachelor Degree on Mathematics with a specialization in Data
-                Science, with a GPA of 3.66 from Syarif Hidayatullah State
-                Islamic University Jakarta. I'm deeply passionate about the
-                world of data!
-              </p>
-              <p class="greetings-my-name">&nbsp;</p>
-              <p class="greetings-my-name">
-                This website covers all my projects & certificate in a
-                professional setting plus some fun stuff! Hope to have the
-                opportunity of working with you soon!
-              </p>
-            </div>
-          </div>
+    
+      <!-- Offcanvas Component -->
+      <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="--bs-offcanvas-width: 250px;">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">AfterRain</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="projects">
-          <div class="title">
-            <div class="projects1">Projects</div>
-          </div>
-          <div class="fashioncards">
-            <div class="project-template">
-              <img
-                class="tft-thumbnail-icon"
-                alt=""
-                src="./public/tft-arch@2x.webp"
-                id="tftThumbnailImage"
-              />
-
-              <div class="lorem-ipsum-parent">
-                <div class="lorem-ipsum">
-                  <p class="greetings-my-name">
-                    Bitcoin Price Prediction using
-                  </p>
-                  <p class="greetings-my-name">Temporal Fusion Transformer</p>
-                </div>
-                <img
-                  class="hugging-face-logo"
-                  alt=""
-                  src="./public/hugging-face-logo@2x.png"
-                  id="huggingFaceLogo"
-                />
-
-                <img
-                  class="hugging-face-logo"
-                  alt=""
-                  src="./public/linkedin-logo@2x.png"
-                  id="linkedinLogoIconX"
-                />
-
-                <img
-                  class="github-logo-tft"
-                  alt=""
-                  src="./public/github-logo.svg"
-                  id="githubLogoIconTft"
-                />
-
-                <div class="rectangle-parent">
-                  <div class="frame-child"></div>
-                  <img
-                    class="github-logo-icon"
-                    alt=""
-                    src="./public/github-logo.svg"
-                    id="githubLogoIconTft"
-                  />
-                </div>
-                <div class="frame-item"></div>
-              </div>
-            </div>
-            <div class="project-template">
-              <img
-                class="tft-thumbnail-icon"
-                alt=""
-                src="./public/huggingfacethumbnailwhite@2x.png"
-                id="huggingfaceThumbnailWhite"
-              />
-
-              <div class="lorem-ipsum-parent">
-                <div class="lorem-ipsum">
-                  <p class="greetings-my-name">Bitcoin Sentiment</p>
-                  <p class="greetings-my-name">Analysis with roBERTa</p>
-                </div>
-                <img
-                  class="github-logo-tft"
-                  alt=""
-                  src="./public/hugging-face-logo@2x.png"
-                  id="huggingFaceLogoRoberta"
-                />
-
-                <img
-                  class="hugging-face-logo"
-                  alt=""
-                  src="./public/linkedin-logo@2x.png"
-                  id="linkedinLogoIconX"
-                />
-
-                <img
-                  class="github-logo-tft"
-                  alt=""
-                  src="./public/github-logo.svg"
-                  id="githubLogoIconCryptobert"
-                />
-
-                <div class="rectangle-parent">
-                  <div class="frame-child"></div>
-                  <img
-                    class="github-logo-icon"
-                    alt=""
-                    src="./public/github-logo.svg"
-                    id="githubLogoIconCryptobert"
-                  />
-                </div>
-                <div class="frame-item"></div>
-              </div>
-            </div>
-            <div class="project-template">
-              <img
-                class="tft-thumbnail-icon"
-                alt=""
-                src="./public/ipoth-thumbnail@2x.webp"
-                id="ipothThumbnailImage"
-              />
-
-              <div class="lorem-ipsum-parent">
-                <div class="lorem-ipsum">
-                  <p class="greetings-my-name">Pot Holes Detection</p>
-                  <p class="greetings-my-name">with Computer Vision</p>
-                </div>
-                <img
-                  class="hugging-face-logo"
-                  alt=""
-                  src="./public/hugging-face-logo@2x.png"
-                  id="huggingFaceLogo"
-                />
-
-                <img
-                  class="github-logo-tft"
-                  alt=""
-                  src="./public/linkedin-logo@2x.png"
-                  id="linkedinLogoIconIpoth"
-                />
-
-                <img
-                  class="github-logo-tft"
-                  alt=""
-                  src="./public/github-logo.svg"
-                  id="githubLogoIconIpoth"
-                />
-
-                <div class="rectangle-parent">
-                  <div class="frame-child"></div>
-                  <img
-                    class="github-logo-icon"
-                    alt=""
-                    src="./public/github-logo.svg"
-                    id="githubLogoIconIpoth"
-                  />
-                </div>
-                <div class="frame-item"></div>
-              </div>
-            </div>
-            <div class="project-template">
-              <img
-                class="tft-thumbnail-icon"
-                alt=""
-                src="./public/power-bi-thumbnail@2x.webp"
-                id="powerBiThumbnail"
-              />
-
-              <div class="lorem-ipsum-parent">
-                <div class="lorem-ipsum">Power BI Reports</div>
-                <img
-                  class="hugging-face-logo"
-                  alt=""
-                  src="./public/hugging-face-logo@2x.png"
-                  id="huggingFaceLogo"
-                />
-
-                <img
-                  class="hugging-face-logo"
-                  alt=""
-                  src="./public/linkedin-logo@2x.png"
-                  id="linkedinLogoIconX"
-                />
-
-                <img
-                  class="hugging-face-logo"
-                  alt=""
-                  src="./public/github-logo.svg"
-                  id="githubLogoIcon3"
-                />
-                <div class="frame-item"></div>
-              </div>
-            </div>
-            <div class="project-template">
-              <img
-                class="tft-thumbnail-icon"
-                alt=""
-                src="./public/django-app thumbnail@2x.webp"
-                id="djangoAppThumbnail"
-              />
-
-              <div class="lorem-ipsum-parent">
-                <div class="lorem-ipsum">Django App</div>
-                <img
-                  class="hugging-face-logo"
-                  alt=""
-                  src="./public/hugging-face-logo@2x.png"
-                  id="huggingFaceLogo"
-                />
-
-                <img
-                  class="hugging-face-logo"
-                  alt=""
-                  src="./public/linkedin-logo@2x.png"
-                  id="linkedinLogoIconX"
-                />
-
-                <img
-                  class="github-logo-tft"
-                  alt=""
-                  src="./public/github-logo.svg"
-                  id="githubLogoIconDjango"
-                />
-
-                <div class="rectangle-parent">
-                  <div class="frame-child"></div>
-                  <img
-                    class="github-logo-icon"
-                    alt=""
-                    src="./public/github-logo.svg"
-                    id="githubLogoIconDjango"
-                  />
-                </div>
-                <div class="frame-item"></div>
-              </div>
-            </div>
-            <div class="project-template">
-              <img
-                class="tft-thumbnail-icon"
-                alt=""
-                src="./public/website-thumbnail@2x.webp"
-                id="websiteThumbnailImage"
-              />
-
-              <div class="lorem-ipsum-parent">
-                <div class="lorem-ipsum">Personal Website</div>
-                <img
-                  class="hugging-face-logo"
-                  alt=""
-                  src="./public/hugging-face-logo@2x.png"
-                  id="huggingFaceLogo"
-                />
-
-                <img
-                  class="github-logo-tft"
-                  alt=""
-                  src="./public/linkedin-logo@2x.png"
-                  id="linkedinLogoIconX"
-                />
-
-                <img
-                  class="github-logo-tft"
-                  alt=""
-                  src="./public/github-logo.svg"
-                  id="githubLogoIconWebsite"
-                />
-
-                <div class="rectangle-parent">
-                  <div class="frame-child"></div>
-                  <img
-                    class="github-logo-icon"
-                    alt=""
-                    src="./public/github-logo.svg"
-                    id="githubLogoIconWebsite"
-                  />
-                </div>
-                <div class="frame-item"></div>
-              </div>
-            </div>
-            <div class="project-template">
-              <img
-                class="tft-thumbnail-icon"
-                alt=""
-                src="./public/github-profile@2x.webp"
-                id="githubProfileThumbnail"
-              />
-
-              <div class="lorem-ipsum-parent">
-                <div class="lorem-ipsum">Fun Projects</div>
-                <img
-                  class="hugging-face-logo"
-                  alt=""
-                  src="./public/hugging-face-logo@2x.png"
-                  id="huggingFaceLogo"
-                />
-
-                <img
-                  class="hugging-face-logo"
-                  alt=""
-                  src="./public/linkedin-logo@2x.png"
-                  id="linkedinLogoIconX"
-                />
-
-                <img
-                  class="github-logo-tft"
-                  alt=""
-                  src="./public/github-logo.svg"
-                  id="githubLogoIconFun"
-                />
-
-                <div class="rectangle-parent">
-                  <div class="frame-child"></div>
-                  <img
-                    class="github-logo-icon"
-                    alt=""
-                    src="./public/github-logo.svg"
-                    id="githubLogoIconFun"
-                  />
-                </div>
-                <div class="frame-item"></div>
-              </div>
-            </div>
-            <div class="project-template">
-              <img
-                class="tft-thumbnail-icon"
-                alt=""
-                src="./public/course-capstone-thumbnail@2x.webp"
-                id="courseCapstoneThumbnail"
-              />
-
-              <div class="lorem-ipsum-parent">
-                <div class="lorem-ipsum">Course Capstone</div>
-                <img
-                  class="hugging-face-logo"
-                  alt=""
-                  src="./public/hugging-face-logo@2x.png"
-                  id="huggingFaceLogo"
-                />
-
-                <img
-                  class="hugging-face-logo"
-                  alt=""
-                  src="./public/linkedin-logo@2x.png"
-                  id="linkedinLogoIconX"
-                />
-
-                <img
-                  class="github-logo-tft"
-                  alt=""
-                  src="./public/github-logo.svg"
-                  id="githubLogoIconCourse"
-                />
-
-                <div class="rectangle-parent">
-                  <div class="frame-child"></div>
-                  <img
-                    class="github-logo-icon"
-                    alt=""
-                    src="./public/github-logo.svg"
-                    id="githubLogoIconCourse  "
-                  />
-                </div>
-                <div class="frame-item"></div>
-              </div>
-            </div>
-          </div>
-          <div class="fashioncards1">
-            <img
-              class="price-overall-1"
-              alt=""
-              src="./public/price-overall-1@2x.png"
-            />
-
-            <img
-              class="huggingface-light-icon"
-              alt=""
-              src="./public/huggingface-light@2x.png"
-            />
-
-            <img class="ipoth-1-icon" alt="" src="./public/ipoth-1@2x.png" />
-
-            <img class="power-bi-1" alt="" src="./public/power-bi-1@2x.png" />
-
-            <img class="ipoth-1-icon" alt="" src="./public/spacex-2@2x.png" />
-
-            <img
-              class="github-pic-icon"
-              alt=""
-              src="./public/github-pic@2x.png"
-            />
-          </div>
+        <div class="offcanvas-body d-flex flex-column" style="padding: 0px;">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/project">Projects</a>
+          <a class="nav-link" href="/certification">Certifications</a>
+          <a class="nav-link" href="https://drive.google.com/file/d/1nqrvj-RaUla_OXb2n3zfpLZERiUSyTPp/view?usp=sharing" target="_blank">Resume</a>
+          <!-- <a class="nav-link" href="freelance">Freelance</a> -->
+          <!-- <a class="nav-link" href="about-me">About Me</a> -->
         </div>
-        <div class="projects">
-          <div class="title">
-            <div class="projects1">EXPERIENCE</div>
-          </div>
-          <div class="frame-parent">
-            <div class="frame-group">
-              <div class="ellipse-parent">
-                <div class="ellipse-div"></div>
-                <div class="frame-child12"></div>
-              </div>
-              <div class="march-april">March - April 2022</div>
-              <div class="production-division-intern-b-wrapper">
-                <div class="production-division-intern-container">
-                  <p class="production-division-intern">
-                    Production Division Intern • Badan Pusat Statistik
-                  </p>
-                  <p class="greetings-my-name">
-                    As a Production Division Intern at Badan Pusat Statistik
-                    Kota Tangerang, I've conducted data cleaning for Indonesia
-                    Property Data and Active Company Directory using Microsoft
-                    Excel, calculated employee salaries, and performed data
-                    entry for Supply Chain and Food Marketing Questionnaires in
-                    Tangerang. Additionally, I've automated the making of
-                    envelope front cover.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="frame-group">
-              <div class="ellipse-group">
-                <div class="ellipse-div"></div>
-                <div class="frame-child14"></div>
-              </div>
-              <div class="march-april">June 2024 - Now</div>
-              <div class="full-stack-power-bi-develope-wrapper">
-                <div class="production-division-intern-container">
-                  <p class="production-division-intern">
-                    Full-Stack & Power BI Developer Intern • Asia Pulp & Paper
-                  </p>
-                  <p class="greetings-my-name">
-                    As a Full-Stack & Power BI Developer Intern at Asia Pulp &
-                    Paper (APP), I spearheaded the development of an innovative website that streamlined and accelerated the reporting process for the Corporate Resilience Division (CRD), significantly enhancing operational efficiency. Additionally, I architected a robust MySQL database structure to ensure enhanced data integrity and seamless maintenance of referential relationships. To further revolutionize the reporting process, I leveraged Power BI to deliver insightful visualizations that dramatically improved data readability and accessibility for stakeholders.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="frame-parent1">
-            <div class="ellipse-container">
-              <div class="frame-child15"></div>
-              <div class="frame-child12"></div>
-              <div class="frame-child15"></div>
-            </div>
-            <div class="july-dec-2020-parent">
-              <div class="july-dec">July - Dec 2020</div>
-              <div class="july-dec">2024 - Presents</div>
-            </div>
-            <div class="production-division-intern-b-parent">
-              <div class="production-division-intern-container1">
-                <p class="production-division-intern">
-                  Production Division Intern • Badan Pusat Statistik
-                </p>
-                <p class="greetings-my-name">
-                  As a Production Division Intern at Badan Pusat Statistik Kota
-                  Tangerang, I've conducted data cleaning for Indonesia Property
-                  Data and Active Company Directory using Microsoft Excel,
-                  calculated employee salaries, and performed data entry for
-                  Supply Chain and Food Marketing Questionnaires in Tangerang.
-                  Additionally, I've automated the making of envelope front
-                  cover.
-                </p>
-              </div>
-              <button class="button-download-resume" id="buttonDownloadResume">
-                <div class="download-resume">Download Resume</div>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="footer">
-          <div class="rectangle-parent6">
-            <div class="frame-child18"></div>
-            <div class="lets-connect-parent">
-              <div class="lets-connect">Let’s Connect!</div>
-              <div class="social-media-logo">
-                <img
-                  class="instagram-logo-icon"
-                  alt=""
-                  src="./public/instagram-logo.svg"
-                  id="instagramLogoIcon"
-                />
-
-                <img
-                  class="youtube-logo-icon"
-                  alt=""
-                  src="./public/youtube-logo.svg"
-                  id="youtubeLogoIcon"
-                />
-
-                <img
-                  class="github-logo-icon11"
-                  alt=""
-                  src="./public/linkedin-logo@2x.png"
-                  id="linkedinLogoIcon"
-                />
-
-                <img
-                  class="github-logo-icon11"
-                  alt=""
-                  src="./public/github-logo.svg"
-                  id="githubLogoIcon"
-                />
-              </div>
-            </div>
+      </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="pt-0 pb-3">
+      
+      <section class="navbar navbar-gimmick">
+        <div class="container">
+          <div class="navbar-brand">
+            <img src="./public/images/Logo Lmao.webp" alt="Gilang's Logo" class="logo-invert" style="height: 40px;">
           </div>
         </div>
       </section>
-    </a>
 
-    <div id="drawerMenu" class="popup-overlay" style="display: none">
-      <div class="drawer-menu" data-animate-on-scroll>
-        <div class="close-parent">
-          <button class="close" id="drawerclose">
-            <div class="close-child"></div>
-            <div class="close-item"></div>
-          </button>
-          <div class="menu10">
-            <div class="drawer-menu-items">
-              <div class="home-parent">
-                <button class="home2" id="drawerhome">
-                  <img
-                    class="profile-logo-icon"
-                    alt=""
-                    src="./public/profile-logo@2x.png"
-                  />
+      <!-- Profile Section -->
+      <section class="container text-md-start text-center py-3" style="margin-top: 3rem; margin-bottom: 3rem;">
+        <div class="row d-flex align-items-center justify-content-center">
+          <!-- Image -->
+          <div class="col-auto">
+            <img src="./public/images/profile_photo.webp"
+                 class="rounded-circle" 
+                 style="height: 150px; object-fit: cover;" 
+                 alt="Profile Picture of Gilang Islamay Putra Djuharis">
+          </div>
+          <!-- Text Content -->
+          <div class="col-auto">
+            <h2 class="mt-1" style="font-weight: bold;">
+              Gilang Islamay 
+              <span class="d-none d-sm-inline">Putra Djuharis</span>
+            </h2>            
+            <div class="mb-3">
+              <span class="badge text-bg-dark">Data Analyst</span>
+              <span class="badge text-bg-dark">Data Scientist</span>
+              <span class="badge text-bg-dark">Full Stack Developer</span>
+              <span class="badge text-bg-dark">Power BI Developer</span>
+            </div>
+            <p class="d-inline-block" id="introduction-text" style="margin-bottom: 0px;"></p>
+          </div>
+        </div>
+      </section>
 
-                  <div class="home3">HOME</div>
-                </button>
-                <div class="certification2" id="drawercertificationContainer">
-                  <img
-                    class="certificate-logo-icon"
-                    alt=""
-                    src="./public/certificate-logo.svg"
-                  />
+      <hr class="m-0">
+      
+      <!-- Project -->
+      <section class="container my-5">
+        <h2 class="text-center mb-4 section-title">Project</h2>
+      
+        <!-- First visible project rows -->
+        <div class="row mb-3 g-4 justify-content-center project">
+          <div class="col-lg-4 col-md-6 col-12 d-flex card-outer" style="flex-grow: 1;">
+            <a class="card d-flex card-outer" style="flex-grow: 1;" href="/project/bitcoin-sentiment-analysis">
+              <img src="./public/images/HuggingFace.webp" alt="Forecast Bitcoin" class="card-img-top">
+              <hr class="m-0">
+              <div class="card-body">
+                <h5 class="card-title">Bitcoin Sentiment Analysis</h5>
+                <p class="card-text">
+                  <span class="badge rounded-pill text-bg-dark">AI/ML</span>
+                  <span class="badge rounded-pill text-bg-primary">NLP</span>
+                  <span class="badge rounded-pill text-bg-info">Python</span>
+                  
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 d-flex card-outer" style="flex-grow: 1;">
+            <a class="card d-flex card-outer" style="flex-grow: 1;" href="/project/bitcoin-multivariate-forecast">
+              <img src="./public/images/bitcoin price.webp" alt="Forecast Bitcoin" class="card-img-top">
+              <hr class="m-0">
+              <div class="card-body">
+                  <h5 class="card-title">Bitcoin Multivariate Forecast</h5>
+                  <p class="card-text">
+                    <span class="badge rounded-pill text-bg-dark">AI/ML</span>
+                    <span class="badge rounded-pill text-bg-warning">Forecasting</span>
+                    <span class="badge rounded-pill text-bg-info">Python</span>
+                    
+                  </p>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 d-flex card-outer" style="flex-grow: 1;">
+            <a class="card d-flex card-outer" style="flex-grow: 1;" href="/project/power-bi-dashboard">
+              <img src="./public/images/Power BI 1.webp" alt="Power BI Dashboard" class="card-img-top">
+              <hr class="m-0">
+              <div class="card-body">
+                  <h5 class="card-title">Power BI Dashboard</h5>
+                  <p class="card-text">
+                    <span class="badge rounded-pill text-bg-primary">Visualization</span>
+                    <span class="badge rounded-pill text-bg-dark">Dashboard</span>
+                  </p>
+              </div>
+            </a>
+          </div>
+        </div>
 
-                  <div class="certification3">CERTIFICATION</div>
-                </div>
-                <div class="passions2">
-                  <img
-                    class="rubiks-cube-icon"
-                    alt=""
-                    src="./public/rubiks-cube.svg"
-                  />
+        <!-- "See All" button -->
+        <div class="text-end mt-4">
+          <a href="/project" type="button" aria-expanded="false" aria-controls="moreProjects" id="seeAllLink" class="btn button-sexy">
+            More Project
+          </a>
+        </div>
+      </section>
 
-                  <div class="passions3">PASSIONS</div>
-                </div>
-                <a
-                  class="resume2"
-                  href="https://drive.google.com/file/d/1yIwIyFa2kMHVO4iV8ypUsUcXclFJkJd3/view?usp=sharing"
-                  target="_blank"
-                >
-                  <img class="cv-logo-icon" alt="" src="./public/cv-logo.svg" />
-
-                  <div class="certification3">RESUME</div>
+      <section class="container my-5">
+        <h2 class="text-center mb-4 section-title">Experience</h2>
+        <div class="row mb-3">
+          <div class="col-lg-4 col-12 text-start text-lg-center m-0 p-lg-0">
+            <div class="row m-0">
+              <div class="row col-lg-12 col-2 position-relative p-0 m-0 justify-content-center align-items-center mb-lg-2" style="display: flex; align-items: center;">
+                <div class="col d-lg-block d-none"></div>
+                <a class="col-auto exp-circle rounded-circle logo-experience" data-bs-toggle="collapse" href="#collapseBPSExperience" role="button" aria-expanded="false" aria-controls="collapseBPSExperience">
+                  <img src="public/images/logo_bps.webp" alt="Logo">
                 </a>
+                <hr class="col exp-line d-lg-block d-none">
+              </div>
+              <div class="col-lg-12 col-auto align-y-center">
+                <div>
+                  <strong>Production Division Intern</strong><br> 
+                  <span style="font-size: smaller; font-style: italic;">March 2022 - April 2022</span>
+                </div>
+              </div>
+            </div>
+            <div class="row m-0">
+              <div class="row col-lg-12 col-2 position-relative p-0 m-0 justify-content-center align-items-center">
+                <div class="vertical-line p-0"></div>
+              </div>
+              <div class="col-lg-12 col-auto align-y-center">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-12 text-start text-lg-center m-0 p-lg-0">
+            <div class="row m-0 p-0">
+              <div class="row col-lg-12 col-2 position-relative p-0 m-0 justify-content-center align-items-center mb-lg-2" style="display: flex; align-items: center;">
+                <hr class="col exp-line d-lg-block d-none">
+                <a class="col-auto exp-circle rounded-circle logo-experience" data-bs-toggle="collapse" href="#collapseAPPExperience" role="button" aria-expanded="false" aria-controls="collapseAPPExperience">
+                  <img src="public/images/logo_app.webp" alt="Logo">
+                </a>
+                <hr class="col exp-line d-lg-block d-none">
+              </div>
+              <div class="col-lg-12 col-auto align-y-center">
+                <div>
+                  <strong class="d-lg-inline-block d-none">Full-Stack & Power BI Developer</strong>
+                  <strong class="d-lg-none d-inline-block">Full-Stack & PBI Developer</strong>
+                  <br>
+                  <span style="font-size: smaller; font-style: italic;">June 2024 - December 2024</span>
+                </div>
+              </div>
+            </div>
+            <div class="row m-0">
+              <div class="row col-lg-12 col-2 position-relative p-0 m-0 justify-content-center align-items-center">
+                <div class="vertical-line p-0"></div>
+              </div>
+              <div class="col-lg-12 col-auto align-y-center">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-12 text-start text-lg-center m-0 p-lg-0">
+            <div class="row m-0">
+              <div class="row col-lg-12 col-2 position-relative p-0 m-0 justify-content-center align-items-center mb-lg-2" style="display: flex; align-items: center;">
+                <hr class="col exp-line d-lg-block d-none">
+                <a class="col-auto exp-circle rounded-circle logo-experience active" data-bs-toggle="collapse" href="#collapseULIExperience" role="button" aria-expanded="false" aria-controls="collapseULIExperience">
+                  <img src="public/images/logo_unilever.webp" alt="Logo">
+                </a>
+                <div class="col d-lg-block d-none"></div>
+              </div>
+              <div class="col-lg-12 col-auto align-y-center">
+                <div>
+                  <strong>Customer Development Excellence</strong><br> 
+                  <span style="font-size: smaller; font-style: italic;">December 2024 - Now</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="app-version-details">
-          <div class="background-designed-by-container">
-            <p class="background-designed-by">Background Designed by Freepik</p>
-            <p class="background-designed-by">Made with Figma x Locofy</p>
-            <p class="background-designed-by">Website Version 1.1</p>
+        <div class="accordion" id="experienceAccordion">
+          <div class="collapse" id="collapseBPSExperience" data-bs-parent="#experienceAccordion">
+            <div class="card card-body">
+              <p><strong>Internship • Production Division, Badan Pusat Statistik Tangerang</strong></p>
+              <ul class="mb-0 pb-0">
+                <li>Conducted data cleaning for Indonesia Property Data and Active Company Directory using Microsoft Excel.</li>
+                <li>Calculated employee salaries with accuracy and efficiency.</li>
+                <li>Performed data entry for Supply Chain and Food Marketing Questionnaires in the Tangerang area.</li>
+                <li>Automated the creation of envelope front covers, reducing manual workload and improving operational efficiency.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="collapse" id="collapseAPPExperience" data-bs-parent="#experienceAccordion">
+            <div class="card card-body">
+              <p><strong>Full-Stack & Power BI Developer Intern • Corporate Resilience Division, Asia Pulp & Paper</strong></p>
+              <ul class="mb-0 pb-0">
+                <li>Developed a website to expedite the reporting process within CRD, streamlining data access and submission across all Indonesia.</li>
+                <li>Developed an inline dashboard integrated within the main application, enabling quick and seamless access to reporting directly from the app itself.</li>
+                <li>Designed and implemented MySQL database structure to ensure referential integrity and support efficient data management.</li>
+                <li>Utilized Power BI to create interactive dashboards that enhanced data readability and enabled users to perform deeper, more intuitive analysis.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="collapse show" id="collapseULIExperience" data-bs-parent="#experienceAccordion">
+          <div class="card card-body">
+            <p><strong>Customer Development Excellence • Ice Cream Division, Unilever Indonesia</strong></p>
+            <ul class="mb-0 pb-0">
+              <li>Built a YOLOv8-based barcode detection model to verify cabinet scans, improving salesman compliance and accuracy. Where the outputs are integrated into a Power BI dashboard for faster issue resolution.</li>
+              <li>Developed Python automation pipelines covering daily operational reports, weekly/monthly task workflows, Electronic Purchase Order (EPO) master updates/validations, and month-end replenishment. Significantly reducing manual workload and improving process reliability.</li>
+              <li>Designed multiple Power BI dashboards, including an RLS-enabled outlet's enrollment monitoring dashboard and a multisource distributor performance dashboard. Improving reporting entirety and stakeholder visibility.</li>
+              <li>Led the end-to-end data migration to a new digital platform, coordinating system integration across teams and managing the distribution of devices and payment tracking with key external partners.</li>
+            </ul>
+          </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="text-center" style="padding: 30px 0px;">
+      <p>&copy; 2025 Gilang Islamay. All rights reserved.</p>
+    </footer>
+    
+    <!-- JavaScript Files -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous" defer></script>
+    
+    <script>
+      document.querySelectorAll('.logo-experience').forEach(button => {
+        button.addEventListener('click', function () {
+          document.querySelectorAll('.logo-experience').forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    </script>
 
     <script>
-      var drawerclose = document.getElementById("drawerclose");
-      if (drawerclose) {
-        drawerclose.addEventListener("click", function (e) {
-          var popup = e.currentTarget.parentNode;
-          function isOverlay(node) {
-            return !!(
-              node &&
-              node.classList &&
-              node.classList.contains("popup-overlay")
-            );
-          }
-          while (popup && !isOverlay(popup)) {
-            popup = popup.parentNode;
-          }
-          if (isOverlay(popup)) {
-            popup.style.display = "none";
-          }
-        });
-      }
-      
-      var drawerhome = document.getElementById("drawerhome");
-      if (drawerhome) {
-        drawerhome.addEventListener("click", function () {
-          window.location.href = "https://afterrain007.github.io/";
-        });
-      }
-      
-      var drawerhome = document.getElementById("drawerhome");
-      if (drawerhome) {
-        drawerhome.addEventListener("click", function (e) {
-          var popup = e.currentTarget.parentNode;
-          function isOverlay(node) {
-            return !!(
-              node &&
-              node.classList &&
-              node.classList.contains("popup-overlay")
-            );
-          }
-          while (popup && !isOverlay(popup)) {
-            popup = popup.parentNode;
-          }
-          if (isOverlay(popup)) {
-            popup.style.display = "none";
-          }
-        });
-      }
-      
-      var drawercertificationContainer = document.getElementById(
-        "drawercertificationContainer"
-      );
-      if (drawercertificationContainer) {
-        drawercertificationContainer.addEventListener("click", function (e) {
-          window.location.href = "./hall-of-certificate.html";
-        });
-      }
-      var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
-      var observer = new IntersectionObserver(
-        (entries) => {
-          for (const entry of entries) {
-            if (entry.isIntersecting || entry.intersectionRatio > 0) {
-              const targetElement = entry.target;
-              targetElement.classList.add("animate");
-              observer.unobserve(targetElement);
-            }
-          }
-        },
-        {
-          threshold: 0.15,
-        }
-      );
-      
-      for (let i = 0; i < scrollAnimElements.length; i++) {
-        observer.observe(scrollAnimElements[i]);
-      }
-      
-      var homeText = document.getElementById("homeText");
-      if (homeText) {
-        homeText.addEventListener("click", function () {
-          var anchor = document.querySelector("[data-scroll-to='homeText']");
-          if (anchor) {
-            anchor.scrollIntoView({ block: "start" });
-          }
-        });
-      }
-      
-      var resumeText = document.getElementById("resumeText");
-      if (resumeText) {
-        resumeText.addEventListener("click", function () {
-          window.open(
-            "https://drive.google.com/file/d/1754nM9oDdlydNtZMs1FngzhFK5eTlwDF/view?usp=drive_link"
-          );
-        });
-      }
-      
-      var certificationText = document.getElementById("certificationText");
-      if (certificationText) {
-        certificationText.addEventListener("click", function (e) {
-          window.location.href = "./hall-of-certificate.html";
-        });
-      }
-      
-      var hamburgerMenu = document.getElementById("hamburgerMenu");
-      if (hamburgerMenu) {
-        hamburgerMenu.addEventListener("click", function () {
-          var drawerOverlay = document.getElementById("drawerMenu");
-          if (!drawerOverlay) return;
-          var drawerOverlayStyle = drawerOverlay.style;
-          if (drawerOverlayStyle) {
-            drawerOverlayStyle.display = "flex";
-            drawerOverlayStyle.zIndex = 99;
-            drawerOverlayStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
-            drawerOverlayStyle.alignItems = "flex-end";
-            drawerOverlayStyle.justifyContent = "";
-          }
-          drawerOverlay.setAttribute("closable", "");
-      
-          var onClick =
-            drawerOverlay.onClick ||
-            function (e) {
-              if (
-                e.target === drawerOverlay &&
-                drawerOverlay.hasAttribute("closable")
-              ) {
-                drawerOverlayStyle.display = "none";
+      $(document).ready(function() {
+        // Default array of welcome messages
+        const welcomeMessages = [
+          "Welcome Weary Traveler!",
+          "Greetings, Adventurer!",
+          "Hello, Intrepid Explorer!",
+          "Salutations, Brave Soul!",
+          "Ahoy, Bold Voyager!",
+          "Welcome to the Realm!"
+        ];
+    
+        // Additional welcome message that should only appear on large screens
+        const largeScreenMessage = [
+          "Also try ikromalfurqon.github.io!"
+        ];
+    
+        // Check if screen width is greater than 768px
+        const isLargeScreen = $(window).width() > 768;
+    
+        // Combine both lists if on a large screen, otherwise just use the default messages
+        const combinedMessages = isLargeScreen ? welcomeMessages.concat(largeScreenMessage) : welcomeMessages;
+    
+        // Randomly select a message from the combined list
+        const randomMessage = combinedMessages[Math.floor(Math.random() * combinedMessages.length)];
+    
+        // Set the selected message to the element with id 'Welcome-Text'
+        $('.welcome-text').text(randomMessage);
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+          const text = "Hiya! Welcome to my portfolio!";
+          let index = 0;
+
+          function typeText() {
+              if (index < text.length) {
+                  $('#introduction-text').text($('#introduction-text').text() + text.charAt(index));
+
+                  // If "Hello!" is completed, make the cursor blink during the delay
+                  if (text.charAt(index) === "!") {
+                      $('#introduction-text').removeClass('typing-solid').addClass('typing-blink');
+                      setTimeout(() => {
+                          $('#introduction-text').removeClass('typing-blink').addClass('typing-solid');
+                          index++; // Continue typing after the delay
+                          typeText();
+                      }, 750); // 500ms delay before continuing
+                  } else {
+                      index++;
+                      setTimeout(typeText, 75); // Standard typing speed
+                  }
+              } else {
+                  // Typing finished, switch to blinking cursor
+                  $('#introduction-text').removeClass('typing-solid').addClass('typing-blink');
+
+                  // Fade out the cursor 5 seconds after typing finishes
+                  setTimeout(() => {
+                      $('#introduction-text').addClass('fade-out');
+                  }, 3300);
               }
-            };
-          drawerOverlay.addEventListener("click", onClick);
-        });
-      }
-      
-      var tftThumbnailImage = document.getElementById("tftThumbnailImage");
-      if (tftThumbnailImage) {
-        tftThumbnailImage.addEventListener("click", function (e) {
-          window.location.href = "./bitcoin-tft-sub-page.html";
-        });
-      }
-      
-      var linkedinLogoIcon = document.getElementById("linkedinLogoIcon");
-      if (linkedinLogoIcon) {
-        linkedinLogoIcon.addEventListener("click", function () {
-          window.open("https://www.linkedin.com/in/gilang-islamay-putra-djuharis/");
-        });
-      }
-      
-      var githubLogoIcon = document.getElementById("githubLogoIcon");
-      if (githubLogoIcon) {
-        githubLogoIcon.addEventListener("click", function () {
-          window.open("https://github.com/AfterRain007/");
-        });
-      }
-      
-      var instagramLogoIcon = document.getElementById("instagramLogoIcon");
-      if (instagramLogoIcon) {
-        instagramLogoIcon.addEventListener("click", function () {
-          window.open("https://www.instagram.com/razel007");
-        });
-      }
-      
-      var youtubeLogoIcon = document.getElementById("youtubeLogoIcon");
-      if (youtubeLogoIcon) {
-        youtubeLogoIcon.addEventListener("click", function () {
-          window.open("https://www.youtube.com/@afterrain37/");
-        });
-      }
+          }
 
-      var huggingFaceLogoRoberta = document.getElementById("huggingFaceLogoRoberta");
-      if (huggingFaceLogoRoberta) {
-        huggingFaceLogoRoberta.addEventListener("click", function () {
-          window.open("https://huggingface.co/AfterRain007/cryptobertRefined");
-        });
-      }
-      
-      var linkedinLogoIconProfile = document.getElementById("linkedinLogoIconProfile");
-      if (linkedinLogoIconProfile) {
-        linkedinLogoIconProfile.addEventListener("click", function () {
-          window.open("https://www.linkedin.com/in/gilang-islamay-putra-djuharis/");
-        });
-      }
-      
-      var linkedinLogoIconIpoth = document.getElementById("linkedinLogoIconIpoth");
-      if (linkedinLogoIconIpoth) {
-        linkedinLogoIconIpoth.addEventListener("click", function () {
-          window.open("https://www.linkedin.com/posts/hananazhar_computervision-infrastructure-project-activity-6982959851412885504-Pa7G?utm_source=share&utm_medium=member_desktop");
-        });
-      }
+          // Initialize with a solid cursor
+          $('#introduction-text').addClass('typing-solid');
+          typeText();
+      });
+    </script>
 
-      var githubLogoIconTft = document.getElementById("githubLogoIconTft");
-      if (githubLogoIconTft) {
-        githubLogoIconTft.addEventListener("click", function () {
-          window.open("https://github.com/AfterRain007/TFT_Bitcoin");
-        });
-      }
+    <script>
+      $(document).ready(function () {
+        // Function to check if an element is in the viewport with custom offset
+        function isInViewport(element, offset = 0) {
+          const rect = element.getBoundingClientRect();
+          const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+          return rect.top <= windowHeight - offset && rect.bottom >= offset;
+        }
 
-      var githubLogoIconCryptobert = document.getElementById("githubLogoIconCryptobert");
-      if (githubLogoIconCryptobert) {
-        githubLogoIconCryptobert.addEventListener("click", function () {
-          window.open("https://github.com/AfterRain007/cryptobertRefined");
-        });
-      }
+        // Trigger animation when in viewport
+        function checkCards() {
+          $(".card-outer").each(function () {
+            if (isInViewport(this, window.innerHeight / 5)) {
+              $(this).addClass("animate");
+            }
+          });
+        }
 
-      var githubLogoIconIpoth = document.getElementById("githubLogoIconIpoth");
-      if (githubLogoIconIpoth) {
-        githubLogoIconIpoth.addEventListener("click", function () {
-          window.open(
-            "https://github.com/Izzudddin/my-portofolio/tree/main/Potholes%20Detection%20using%20YOLO"
-          );
-        });
-      }
+        // Initial check
+        checkCards();
 
-      var githubLogoIconDjango = document.getElementById("githubLogoIconDjango");
-      if (githubLogoIconDjango) {
-        githubLogoIconDjango.addEventListener("click", function () {
-          window.open("https://github.com/AfterRain007/Learn-Django");
+        // Check on scroll
+        $(window).on("scroll", function () {
+          checkCards();
         });
-      }
+      });
+    </script>
 
-      var linkedinLogoIconWebsite = document.getElementById("linkedinLogoIconWebsite");
-      if (linkedinLogoIconWebsite) {
-        linkedinLogoIconWebsite.addEventListener("click", function () {
-          window.open("https://www.linkedin.com/posts/gilang-islamay-putra-djuharis_excited-to-announce-my-new-website-hi-everyone-activity-7185454089042866177-4kb7?utm_source=share&utm_medium=member_desktop");
-        });
-      }
+      <!-- // $(document).ready(function() {
+      //   $('#seeAllLink').click(function() {
+      //     // Fade out the current text
+      //     $(this).fadeOut(300, function() {
+      //       $(this).remove();
+          //   // Remove collapse-related attributes
+          //   $(this).removeAttr('data-bs-toggle')
+          //         .removeAttr('data-bs-target')
+          //         .removeAttr('aria-expanded')
+          //         .removeAttr('aria-controls');
+            
+          //   // Add an href attribute (you can replace this URL with the actual link you want)
+          //   $(this).attr('href', 'project');  // Change 'project' to your desired URL
+            
+          //   // Change the button text to indicate the new behavior
+          //   $(this).text('Show me all of them!');  // New text
+            
+          //   // Fade the text back in
+          //   $(this).fadeIn(500);
+    //       });
+    //     });
+    //   }); -->
 
-      var githubLogoIconWebsite = document.getElementById("githubLogoIconWebsite");
-      if (githubLogoIconWebsite) {
-        githubLogoIconWebsite.addEventListener("click", function () {
-          window.open("https://github.com/AfterRain007/AfterRain007.github.io");
-        });
-      }
+    <script src="./public/script.js" defer></script>
 
-      var githubLogoIconFun = document.getElementById("githubLogoIconFun");
-      if (githubLogoIconFun) {
-        githubLogoIconFun.addEventListener("click", function () {
-          window.open("https://github.com/AfterRain007/Fun-Projects");
-        });
-      }
-
-      var githubLogoIconCourse = document.getElementById("githubLogoIconCourse");
-      if (githubLogoIconCourse) {
-        githubLogoIconCourse.addEventListener("click", function () {
-          window.open("https://github.com/AfterRain007/TFDS");
-        });
-      }
-      
-      var huggingfaceThumbnailWhite = document.getElementById(
-        "huggingfaceThumbnailWhite"
-      );
-      if (huggingfaceThumbnailWhite) {
-        huggingfaceThumbnailWhite.addEventListener("click", function (e) {
-          window.location.href = "./bitcoin-sentiment-sub-page.html";
-        });
-      }
-      
-      var ipothThumbnailImage = document.getElementById("ipothThumbnailImage");
-      if (ipothThumbnailImage) {
-        ipothThumbnailImage.addEventListener("click", function (e) {
-          window.location.href = "./ipoth-sub-page.html";
-        });
-      }
-      
-      var powerBiThumbnail = document.getElementById("powerBiThumbnail");
-      if (powerBiThumbnail) {
-        powerBiThumbnail.addEventListener("click", function (e) {
-          window.location.href = "./power-bi-sub-page.html";
-        });
-      }
-      
-      var djangoAppThumbnail = document.getElementById("djangoAppThumbnail");
-      if (djangoAppThumbnail) {
-        djangoAppThumbnail.addEventListener("click", function (e) {
-          window.location.href = "./django-sub-page.html";
-        });
-      }
-      
-      var websiteThumbnailImage = document.getElementById("websiteThumbnailImage");
-      if (websiteThumbnailImage) {
-        websiteThumbnailImage.addEventListener("click", function (e) {
-          window.location.href = "./website-sub-page.html";
-        });
-      }
-      
-      var githubProfileThumbnail = document.getElementById("githubProfileThumbnail");
-      if (githubProfileThumbnail) {
-        githubProfileThumbnail.addEventListener("click", function (e) {
-          window.location.href = "./fun-projects-sub-page.html";
-        });
-      }
-      
-      var courseCapstoneThumbnail = document.getElementById(
-        "courseCapstoneThumbnail"
-      );
-      if (courseCapstoneThumbnail) {
-        courseCapstoneThumbnail.addEventListener("click", function (e) {
-          window.location.href = "./course-capstone-sub-page.html";
-        });
-      }
-      
-      var buttonDownloadResume = document.getElementById("buttonDownloadResume");
-      if (buttonDownloadResume) {
-        buttonDownloadResume.addEventListener("click", function () {
-          window.open(
-            "https://drive.google.com/file/d/1754nM9oDdlydNtZMs1FngzhFK5eTlwDF/view?usp=drive_link"
-          );
-        });
-      }
-      </script>
   </body>
 </html>

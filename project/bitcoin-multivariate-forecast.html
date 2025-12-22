@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gilang Islamay</title>
+    <link rel="icon" href="/public/images/favicon-light.ico" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/public/images/favicon-dark.ico" media="(prefers-color-scheme: dark)">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/public/style.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-plop navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/public/images/Logo Lmao.webp" alt="Gilang's Logo" class="logo-invert" style="height: 40px;">
+        </a>
+        <div class="navbar-nav d-flex align-items-center">
+          <!-- Toggler for Offcanvas -->
+          <button class="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <!-- Navigation Links (visible on lg screens and above) -->
+          <div class="d-none d-lg-flex">
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/project">Projects</a>
+            <a class="nav-link" href="/certification">Certifications</a>
+            <a class="nav-link" href="https://drive.google.com/file/d/1nqrvj-RaUla_OXb2n3zfpLZERiUSyTPp/view?usp=sharing" target="_blank">Resume</a>
+            
+            <!-- <a class="nav-link" href="freelance">Freelance</a> -->
+            <!-- <a class="nav-link" href="about-me">About Me</a> -->
+          </div>
+        </div>
+      </div>
+    
+      <!-- Offcanvas Component -->
+      <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="--bs-offcanvas-width: 250px;">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">AfterRain</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column" style="padding: 0px;">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/project">Projects</a>
+          <a class="nav-link" href="/certification">Certifications</a>
+          <a class="nav-link" href="https://drive.google.com/file/d/1nqrvj-RaUla_OXb2n3zfpLZERiUSyTPp/view?usp=sharing" target="_blank">Resume</a>
+          <!-- <a class="nav-link" href="freelance">Freelance</a> -->
+          <!-- <a class="nav-link" href="about-me">About Me</a> -->
+        </div>
+      </div>
+    </nav>
+
+    <section class="navbar navbar-gimmick">
+      <div class="container">
+        <div class="navbar-brand">
+          <img src="/public/images/Logo Lmao.webp" alt="Gilang's Logo" class="logo-invert" style="height: 40px;">
+        </div>
+      </div>
+    </section>
+
+    <div class="d-flex justify-content-center align-items-center" style="width: 100%;"> 
+      <div id="carouselProject" class="carousel slide" data-bs-theme="light" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselProject" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselProject" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselProject" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="/public/images/bitcoin price.webp" class="d-block carousel-image" alt="Bitcoin Price Train Test Split">
+                <div class="carousel-overlay"></div>
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+              <img src="/public/images/Outlier by Price and Volume.webp" class="d-block carousel-image" alt="Bitcoin Outlier Handling using Isolation Forest & Moving Average">
+              <div class="carousel-overlay"></div> 
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+              <img src="/public/images/Model 1 Autoencoder Importance.webp" class="d-block carousel-image" alt="Temporal Fusion Transformer Autoencoder Explainability">
+              <div class="carousel-overlay"></div> 
+            </div>
+          </div>
+          <div class="centered-text">
+            <h2 class="text-center section-title">Bitcoin Multivariate Forecast</h2>
+            <div>
+              <span class="badge rounded-pill text-bg-dark">AI/ML</span>
+              <span class="badge rounded-pill text-bg-warning">Forecasting</span>
+              <span class="badge rounded-pill text-bg-info">Python</span>
+              
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="project-main">
+      <div class="project-content content-project ">
+        <h4>
+          How does one forecast volatile Bitcoin prices?
+        </h4>
+
+        <p>Predicting Bitcoin prices accurately is a complex task due to its high volatility. This project explores the efficacy of Temporal Fusion Transformers (TFTs) in forecasting Bitcoin prices. We compare TFTs with LSTM, GRU, and TCN models, while incorporating Volume, Sentiment, and Google Trends as key features to enhance predictive performance.</p>
+
+        <h4>
+          Data Preprocessing
+        </h4>
+
+        <div class="text-center mb-3">
+          <div class="img-thumbnail image d-inline-block"> 
+            <img src="/public/images/Outlier by Price and Volume.webp" class="img-fluid mb-1" alt="Bitcoin Outlier Handling using Isolation Forest & Moving Average">
+            <p class="img-caption">
+              Outlier Handling (Simple Moving Average, Boxplot)
+            </p>
+          </div>
+        </div>
+
+        <p>
+          The importance of data preprocessing for optimal model performance can't go unnoticed. Outlier handling using Simple Moving Average and Boxplot, also data normalization using First Order Differencing Transformation is explored to manage volatility.
+        </p>
+
+        <h4>
+          Performances
+        </h4>
+
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th rowspan="2" class="align-middle text-center">Model</th>
+                <th colspan="3" class="text-center">Moving Average</th>
+                <th colspan="3" class="text-center">Boxplot</th>
+                <th rowspan="2" class="align-middle text-center">Avg Train Time</th>
+              </tr>
+              <tr>
+                <th class="text-center">RMSE</th>
+                <th class="text-center">MAE</th>
+                <th class="text-center">MAPE</th>
+                <th class="text-center">RMSE</th>
+                <th class="text-center">MAE</th>
+                <th class="text-center">MAPE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-weight: bold;">
+                  <span class="d-none d-lg-inline-block">Temporal Fusion Transformer</span>
+                  <span class="d-lg-none">TFT</span>
+                </td>
+                <td style="font-weight: bold;">0.0261</td>
+                <td>0.0177</td>
+                <td>3.0973</td>
+                <td style="font-weight: bold;">0.0463</td>
+                <td style="font-weight: bold;">0.0312</td>
+                <td style="font-weight: bold;">6.7257</td>
+                <td rowspan="2" class="align-middle text-center">166.14</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">
+                  <span class="d-none d-lg-inline-block">Temporal Fusion Transformer</span><span class="d-lg-none">TFT</span><span style="font-weight: normal; font-size: x-small">w/o</span></td>
+                <td>0.0263</td>
+                <td>0.0176</td>
+                <td>3.0737</td>
+                <td>0.0479</td>
+                <td>0.0316</td>
+                <td>6.9818</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">
+                  <span class="d-none d-lg-inline-block">Temporal Convolutional Networks</span>
+                  <span class="d-lg-none">TCN</span>
+                </td>
+                <td>0.0263</td>
+                <td>0.0175</td>
+                <td>3.0627</td>
+                <td>0.0477</td>
+                <td>0.0322</td>
+                <td>7.0084</td>
+                <td rowspan="2" class="align-middle text-center" style="font-weight: bold;">46.94</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">
+                  <span class="d-none d-lg-inline-block">Temporal Convolutional Networks</span><span class="d-lg-none">TCN</span><span style="font-weight: normal; font-size: x-small">w/o</span></td>
+                <td>0.0262</td>
+                <td style="font-weight: bold;">0.0172</td>
+                <td style="font-weight: bold;">3.0166</td>
+                <td>0.0480</td>
+                <td>0.0318</td>
+                <td>7.0042</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">
+                  <span class="d-none d-lg-inline-block">Gated Recurrent Unit</span>
+                  <span class="d-lg-none">GRU</span>
+                </td>
+                <td>0.0262</td>
+                <td>0.0175</td>
+                <td>3.0764</td>
+                <td>0.0475</td>
+                <td>0.0316</td>
+                <td>6.9442</td>
+                <td rowspan="2" class="align-middle text-center">77.98</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">
+                  <span class="d-none d-lg-inline-block">Gated Recurrent Unit</span><span class="d-lg-none">GRU</span><span style="font-weight: normal; font-size: x-small">w/o</span></td>
+                <td>0.0263</td>
+                <td>0.0175</td>
+                <td>3.0678</td>
+                <td>0.0479</td>
+                <td>0.0318</td>
+                <td>7.0250</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">
+                  <span class="d-none d-lg-inline-block">Long Short-Term Memory</span>
+                  <span class="d-lg-none">LSTM</span>
+                </td>
+                <td>0.0262</td>
+                <td>0.0174</td>
+                <td>3.0532</td>
+                <td>0.0477</td>
+                <td>0.0314</td>
+                <td>6.9306</td>
+                <td rowspan="2" class="align-middle text-center">74.05</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">
+                  <span class="d-none d-lg-inline-block">Long Short-Term Memory</span><span class="d-lg-none">LSTM</span><span style="font-weight: normal; font-size: x-small;">w/o</span>
+                </td>
+                <td>0.0264</td>
+                <td>0.0174</td>
+                <td>3.0469</td>
+                <td>0.0479</td>
+                <td>0.0317</td>
+                <td>7.0063</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Based on the result of our test, when using Boxplot TFT pulls forward compared to other traditional model. But thing changes when we use moving average as our outlier handling method. TFT is ahead in terms of Root Mean Squared Error, but TCN is better in terms of Mean Absolute Error and Mean Absolute Percentage Error. Average training time of the model is also compared and TCN is better by more than 3 times compared to TFT.
+        </p>
+        
+        <h4>
+          White Box
+        </h4>
+
+        <div class="text-center mb-3">
+          <div class="img-thumbnail image d-inline-block"> 
+            <img src="/public/images/Model 1 Autoencoder Importance.webp" class="img-fluid mb-1" alt="Temporal Fusion Trasformer Autoencoder Importance Explainability">
+            <p class="img-caption">
+              Temporal Fusion Transformer's Autoencoder Explainability
+            </p>
+          </div>
+        </div>
+
+        <p>
+          One of many advantages of TFT are also it's explainability. Rather than other traditional architecture, we are able to see which one of the variable that's more important compared to other in the encoder and also decoder. As we can see the Trend take the number one spot followed by linear increase and week in the encoder. On the decoder part, trend also take the number one spot, and followed by week also volume.
+        </p>
+
+        <div class="text-center mb-3">
+          <div class="img-thumbnail image d-inline-block"> 
+            <img src="/public/images/Attention.webp" class="img-fluid mb-1" alt="Temporal Fusion Trasformer Mean Attention Explainability">
+            <p class="img-caption">
+              Temporal Fusion Transformer's Attention Mean Explainability
+            </p>
+          </div>
+        </div>
+
+        <p>
+          We can also see the attention mechanism, it peaks at -7 relative to the first prediction point. Which mean it's using the last seven data points for accurate forecasts or in other words data from the last 7 days (1 week) is crucial for TFT to generate accurate forecasts.
+        </p>
+
+        <!-- <div class="row">
+          <div class="col-12 col-lg-6">
+            <div class="text-center mb-3">
+              <div class="img-thumbnail">
+                <img src="/public/images/Model 1 Autoencoder Importance.webp" class="img-fluid mb-1">
+                <p class="img-caption">
+                  Temporal Fusion Transformer's Autoencoder Explainability 
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 d-flex align-items-center"> 
+            <div class="text-center mb-3"> 
+              <div class="img-thumbnail">
+                <img src="/public/images/Attention.webp" class="img-fluid mb-1">
+                <p class="img-caption">
+                  Temporal Fusion Transformer's Autoencoder Explainability 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <h4>
+          Conclusion
+        </h4>
+
+        <p>The analysis demonstrates that TFT using Boxplot as its outlier handling achieve superior Bitcoin price prediction, albeit with longer training times. They provide valuable insights into variable importance. This research highlights TFTs' potential for high accuracy and interpretability in time series forecasting.</p>
+
+        <h4>
+          Source Code
+        </h4>
+
+        <p>
+          You can find the source code in this 
+          <a href="#">GitHub Repository</a><span style="white-space: nowrap;">.</span>
+        </p>
+      </div>
+      
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      <script src="/public/script.js" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </main>
+
+    <div class="image-zoom" id="zoom-container">
+      <button class="close-btn" id="zoom-close">&times;</button>
+      <img id="zoomed-image" src="" alt="">
+    </div>
+    
+    <!-- Footer -->
+    <footer class="text-center" style="padding: 30px 0px;">
+      <p>&copy; 2025 Gilang Islamay. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
