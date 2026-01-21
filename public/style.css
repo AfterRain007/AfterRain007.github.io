@@ -354,8 +354,8 @@ a.card:hover {
 
 @media (max-width: 992px) {
     .exp-circle {
-        height: 66px;
-        width: 66px;
+        max-height: 66px;
+        max-width: 66px;
     }
 }
 
