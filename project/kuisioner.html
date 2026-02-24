@@ -312,7 +312,7 @@
 <script>
     let data = {};
 
-    fetch("/public/locations.json")
+    fetch("./public/locations.json")
     .then(res => res.json())
     .then(json => {
         data = json;
