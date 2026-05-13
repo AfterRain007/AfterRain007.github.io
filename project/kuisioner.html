@@ -6,11 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link href="https://db.onlinewebfonts.com/c/575c5e6ac4113381b04ae19181e715d7?family=Corbel+W99+Bold" rel="stylesheet">
-
         <link href="https://db.onlinewebfonts.com/c/5c8036fec9d614a90b202dbe1c3b8395?family=Stick-A-Round+W00Stick-A-Round" rel="stylesheet">
-
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
         <style>
@@ -19,55 +16,15 @@
                 background-color: #f7f7f7;
             }
 
-            /* ===== HEADER ===== */
-            .header-wrapper {
-                position: relative;
-                background: #fff;
-            }
-
-            .top-bar {
-                height: 28px;
-                background-color: #e31e24;
-            }
-
-            .header-logo {
-                position: absolute;
-                top: -8px;
-                left: 32px;
-                z-index: 10;
-            }
-
-            .header-logo img {
-                height: 85px;
-                width: auto;
-            }
-
-            .navbar-wall {
-                background-color: #ffffff;
-                padding-left: 120px;
-                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adjust these values as needed */
-            }
-
-            .navbar-nav .nav-link {
-                color: #000;
-                font-weight: 400;
-                padding: 0;
-                line-height: 1.2;
-            }
-
-            .navbar-nav .nav-link:hover {
-                color: #e31e24;
-            }
-
-            .nav-link.active-red {
-                color: #e31e24 !important;
-                border-bottom: 3px solid #e31e24;
-                padding-bottom: 20px;
-            }
-
-            .menu-spacing {
-                gap: 2rem;
-            }
+            .header-wrapper { position: relative; background: #fff; }
+            .top-bar { height: 28px; background-color: #e31e24; }
+            .header-logo { position: absolute; top: -8px; left: 32px; z-index: 10; }
+            .header-logo img { height: 85px; width: auto; }
+            .navbar-wall { background-color: #ffffff; padding-left: 120px; box-shadow: 0px 4px 6px rgba(0,0,0,0.1); }
+            .navbar-nav .nav-link { color: #000; font-weight: 400; padding: 0; line-height: 1.2; }
+            .navbar-nav .nav-link:hover { color: #e31e24; }
+            .nav-link.active-red { color: #e31e24 !important; border-bottom: 3px solid #e31e24; padding-bottom: 20px; }
+            .menu-spacing { gap: 2rem; }
 
             .section-title {
                 font-family: "Stick-A-Round W00Stick-A-Round", Arial, sans-serif;
@@ -82,49 +39,107 @@
                 box-shadow: 0 4px 16px rgba(0,0,0,0.08);
             }
 
-            textarea {
-                resize: none;
+            textarea { resize: none; }
+            .btn-danger { background-color: #e31e24; border: none; }
+            .btn-danger:hover { background-color: #c91a1f; }
+
+            /* GPS Button States */
+            .gps-btn { transition: all 0.3s ease; min-height: 80px; }
+            .gps-btn.success {
+                background-color: #e8f5e9 !important;
+                border-color: #4caf50 !important;
+                color: #2e7d32 !important;
+            }
+            .gps-btn.loading {
+                background-color: #fff3e0 !important;
+                border-color: #ff9800 !important;
+                color: #e65100 !important;
+            }
+            .gps-btn.error {
+                background-color: #ffebee !important;
+                border-color: #f44336 !important;
+                color: #c62828 !important;
             }
 
-            .btn-danger {
-                background-color: #e31e24;
-                border: none;
+            /* GPS coordinate display */
+            .gps-info {
+                display: none;
+                margin-top: 8px;
+                padding: 8px 12px;
+                background: #e8f5e9;
+                border-radius: 8px;
+                font-size: 0.85rem;
+                color: #2e7d32;
+                border: 1px solid #a5d6a7;
             }
+            .gps-info.show { display: block; }
 
-            .btn-danger:hover {
-                background-color: #c91a1f;
+            /* Camera / Photo area */
+            .photo-upload-area {
+                border: 2px dashed #e31e24;
+                border-radius: 10px;
+                min-height: 80px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: background 0.2s;
+                padding: 12px;
+                background: #fff;
+                position: relative;
             }
+            .photo-upload-area:hover { background: #fff5f5; }
+            .photo-upload-area input[type="file"] {
+                position: absolute;
+                inset: 0;
+                opacity: 0;
+                cursor: pointer;
+                width: 100%;
+                height: 100%;
+            }
+            .photo-preview {
+                display: none;
+                margin-top: 10px;
+                border-radius: 8px;
+                overflow: hidden;
+                border: 1px solid #ddd;
+            }
+            .photo-preview img {
+                width: 100%;
+                max-height: 200px;
+                object-fit: cover;
+                display: block;
+            }
+            .photo-preview.show { display: block; }
+
+            /* Submit button loading */
+            #submitBtn:disabled { opacity: 0.7; cursor: not-allowed; }
+
+            /* Toast notification */
+            .toast-container { z-index: 9999; }
         </style>
     </head>
 
     <body>
 
         <header class="header-wrapper">
-
             <div class="top-bar"></div>
-
-            <!-- LOGO OVERLAP -->
             <a class="header-logo" href="#" title="Wall's header logo">
                 <img
                     src="/public/images/Brand Walls.png"
                     alt="Wall's header logo"
                     loading="eager">
             </a>
-
             <nav class="navbar navbar-expand-lg navbar-wall py-3">
                 <div class="container-fluid px-4">
-
                     <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
                     <div class="collapse navbar-collapse" id="mainNavbar">
-
                         <ul class="navbar-nav align-items-center me-auto menu-spacing ms-5">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                                    Brand Kami
-                                </a>
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Brand Kami</a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Feast</a></li>
                                     <li><a class="dropdown-item" href="#">Magnum</a></li>
@@ -135,15 +150,9 @@
                                     <li><a class="dropdown-item" href="#">Others</a></li>
                                 </ul>
                             </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Es Krim</a>
-                            </li>
-
+                            <li class="nav-item"><a class="nav-link" href="#">Es Krim</a></li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                                    Tentang Wall's
-                                </a>
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Tentang Wall's</a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Sejarah Wall's</a></li>
                                     <li><a class="dropdown-item" href="#">Tujuan Mulia Kami</a></li>
@@ -151,47 +160,47 @@
                                     <li><a class="dropdown-item" href="#">Kontak</a></li>
                                 </ul>
                             </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Belanja Sekarang
-                                </a>
-                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#">Belanja Sekarang</a></li>
                         </ul>
-
                         <a href="#" class="d-flex align-items-center gap-2 nav-link nav-item">
                             <i class="bi bi-search fs-5"></i>
                             <span>Mencari</span>
                         </a>
-
                     </div>
                 </div>
             </nav>
         </header>
 
-        <main class="container my-5">
+        <!-- Toast -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="toastMsg" class="toast align-items-center text-white border-0" role="alert">
+                <div class="d-flex">
+                    <div class="toast-body" id="toastBody">Berhasil dikirim!</div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                </div>
+            </div>
+        </div>
 
-            <h2 class="section-title mb-4">
-                New Outlet Prospect
-            </h2>
+        <main class="container my-5">
+            <h2 class="section-title mb-4">New Outlet Prospect</h2>
 
             <div class="form-card">
-                <form>
+                <form id="prospectForm">
                     <div class="row g-3">
 
                         <div class="col-md-6">
                             <label class="form-label">Nama Toko*</label>
-                            <input type="text" class="form-control" required>
+                            <input type="text" class="form-control" id="namaToko" required>
                         </div>
 
                         <div class="col-md-6">
                             <label class="form-label">Nama Pemilik Toko*</label>
-                            <input type="text" class="form-control" required>
+                            <input type="text" class="form-control" id="namaPemilik" required>
                         </div>
 
                         <div class="col-12">
                             <label class="form-label">Alamat Toko*</label>
-                            <textarea class="form-control" required rows="3"></textarea>
+                            <textarea class="form-control" id="alamatToko" required rows="3"></textarea>
                         </div>
 
                         <div class="col-md-3">
@@ -224,12 +233,12 @@
 
                         <div class="col-md-6">
                             <label class="form-label">Nomor HP*</label>
-                            <input type="tel" class="form-control" required>
+                            <input type="tel" class="form-control" id="nomorHP" required>
                         </div>
 
                         <div class="col-md-6">
                             <label class="form-label">Jam Operasional Toko*</label>
-                            <select class="form-select" required>
+                            <select class="form-select" id="jamOperasional" required>
                                 <option value="" selected disabled>Pilih Jawaban</option>
                                 <option>Diatas 15 jam</option>
                                 <option>10 - 15 jam</option>
@@ -239,7 +248,7 @@
 
                         <div class="col-md-6">
                             <label class="form-label">Apakah toko menjual air galon / gas?*</label>
-                            <select class="form-select" required>
+                            <select class="form-select" id="jualGalon" required>
                                 <option value="" selected disabled>Pilih Jawaban</option>
                                 <option>Yes</option>
                                 <option>No</option>
@@ -248,7 +257,7 @@
 
                         <div class="col-md-6">
                             <label class="form-label">Lokasi Toko Berada*</label>
-                            <select class="form-select" required>
+                            <select class="form-select" id="lokasiToko" required>
                                 <option value="" selected disabled>Pilih Jawaban</option>
                                 <option>Jalan Utama</option>
                                 <option>Jalan Kecil / Gang Perumahan</option>
@@ -257,7 +266,7 @@
 
                         <div class="col-md-6">
                             <label class="form-label">Jumlah toko lain di sekitar radius 20 meter*</label>
-                            <select class="form-select" required>
+                            <select class="form-select" id="jumlahToko" required>
                                 <option value="" selected disabled>Pilih Jawaban</option>
                                 <option>Lebih dari 2 toko</option>
                                 <option>Kurang dari 2 toko</option>
@@ -266,7 +275,7 @@
 
                         <div class="col-md-6">
                             <label class="form-label">Jumlah Stock Rokok*</label>
-                            <select class="form-select" required>
+                            <select class="form-select" id="stockRokok" required>
                                 <option value="" selected disabled>Pilih Jawaban</option>
                                 <option>> 150 pcs</option>
                                 <option>50 - 150 pcs</option>
@@ -275,117 +284,286 @@
                             </select>
                         </div>
 
+                        <!-- GPS BUTTON -->
                         <div class="col-md-6">
                             <label class="form-label d-block">
                                 Ketuk tombol di bawah untuk membagikan lokasi toko*
                             </label>
-                            <button type="button" class="btn btn-outline-danger py-5 w-100">
-                                Ambil Lokasi Toko (GPS)
+                            <button type="button" class="btn btn-outline-danger w-100 gps-btn" id="gpsBtn" onclick="ambilLokasi()">
+                                <i class="bi bi-geo-alt-fill me-2"></i>Ambil Lokasi Toko (GPS)
                             </button>
+                            <div class="gps-info" id="gpsInfo">
+                                <i class="bi bi-check-circle-fill me-1"></i>
+                                <span id="gpsText"></span>
+                            </div>
+                            <!-- Hidden inputs for lat/long -->
+                            <input type="hidden" id="latitude">
+                            <input type="hidden" id="longitude">
                         </div>
 
+                        <!-- PHOTO UPLOAD -->
                         <div class="col-md-6">
                             <label class="form-label d-block">
                                 Foto toko (Tampak depan dan terlihat barang dagangan)*
                             </label>
-                            <button type="button" class="btn btn-outline-danger py-5 w-100">
-                                Ambil Foto (Live Camera + GPS)
-                            </button>
+                            <div class="photo-upload-area" id="photoArea">
+                                <input type="file" accept="image/*" capture="environment" id="fotoToko" onchange="previewFoto(event)">
+                                <i class="bi bi-camera-fill text-danger fs-3"></i>
+                                <span class="text-danger mt-1 small fw-bold">Ambil Foto / Upload Gambar</span>
+                                <span class="text-muted small">Klik di sini untuk membuka kamera atau memilih foto</span>
+                            </div>
+                            <div class="photo-preview" id="photoPreview">
+                                <img id="previewImg" src="" alt="Preview foto toko">
+                            </div>
                         </div>
 
                         <div class="col-12">
-                            <button type="submit" class="btn btn-danger w-100">Submit</button>
+                            <button type="submit" class="btn btn-danger w-100" id="submitBtn">
+                                <span id="submitText">Submit</span>
+                                <span id="submitSpinner" class="spinner-border spinner-border-sm ms-2 d-none"></span>
+                            </button>
                         </div>
+
                     </div>
                 </form>
             </div>
-
         </main>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
         <script>
+            // ============================================================
+            // POWER AUTOMATE URL — replace with your new regenerated URL
+            // ============================================================
+            const POWER_AUTOMATE_URL = "https://defaultf66fae025d36495bbfe078a6ff9f8e.6e.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/cc97c24f843d493bb8a2767a8425b19b/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=IpLQgVticKY1NvBJUcYLYq0_cCH9xM1wlDgBcYgIDzo";
+
+            // ============================================================
+            // LOCATION DATA
+            // ============================================================
             let data = {};
 
             fetch("./public/locations.json")
-            .then(res => res.json())
-            .then(json => {
-                data = json;
-                populateProvinsi();
-            });
+                .then(res => res.json())
+                .then(json => {
+                    data = json;
+                    populateProvinsi();
+                });
 
-            const provSelect = document.getElementById("provinsi");
+            const provSelect      = document.getElementById("provinsi");
             const kabupatenSelect = document.getElementById("kabupaten");
-            const kecSelect = document.getElementById("kecamatan");
-            const kelSelect = document.getElementById("kelurahan");
+            const kecSelect       = document.getElementById("kecamatan");
+            const kelSelect       = document.getElementById("kelurahan");
 
             function refreshSelect(level) {
-                switch (level) {
-                    case 0:                
-                        while (kabupatenSelect.options.length > 1) {
-                            kabupatenSelect.remove(1);
-                            kabupatenSelect.selectedIndex = 0;
-                        };
-                        while (kecSelect.options.length > 1) {
-                            kecSelect.remove(1);
-                            kecSelect.selectedIndex = 0;
-                        };
-                        while (kelSelect.options.length > 1) {
-                            kelSelect.remove(1);
-                            kelSelect.selectedIndex = 0;
-                        };
-                        break;
-                    case 1:
-                        while (kecSelect.options.length > 1) {
-                            kecSelect.remove(1);
-                            kecSelect.selectedIndex = 0;
-                        };
-                        while (kelSelect.options.length > 1) {
-                            kelSelect.remove(1);
-                            kelSelect.selectedIndex = 0;
-                        };
-                        break;
-                    case 2:
-                        while (kelSelect.options.length > 1) {
-                            kelSelect.remove(1);
-                            kelSelect.selectedIndex = 0;
-                        };
-                        break;
-                }
+                if (level <= 0) { clearSelect(kabupatenSelect); }
+                if (level <= 1) { clearSelect(kecSelect); }
+                if (level <= 2) { clearSelect(kelSelect); }
+            }
+
+            function clearSelect(sel) {
+                while (sel.options.length > 1) sel.remove(1);
+                sel.selectedIndex = 0;
             }
 
             function populateProvinsi() {
-                Object.keys(data).forEach(prov => {
-                    let opt = new Option(prov, prov);
-                    provSelect.add(opt);
+                Object.keys(data).forEach(prov => provSelect.add(new Option(prov, prov)));
+            }
+
+            provSelect.addEventListener("change", function () {
+                refreshSelect(0);
+                Object.keys(data[this.value] || {}).forEach(kab => kabupatenSelect.add(new Option(kab, kab)));
+            });
+
+            kabupatenSelect.addEventListener("change", function () {
+                const prov = provSelect.value;
+                refreshSelect(1);
+                Object.keys(data[prov][this.value] || {}).forEach(kec => kecSelect.add(new Option(kec, kec)));
+            });
+
+            kecSelect.addEventListener("change", function () {
+                const prov = provSelect.value;
+                const kab  = kabupatenSelect.value;
+                refreshSelect(2);
+                (data[prov][kab][this.value] || []).forEach(kel => kelSelect.add(new Option(kel, kel)));
+            });
+
+            // ============================================================
+            // GPS
+            // ============================================================
+            function ambilLokasi() {
+                const btn     = document.getElementById("gpsBtn");
+                const info    = document.getElementById("gpsInfo");
+                const gpsText = document.getElementById("gpsText");
+
+                if (!navigator.geolocation) {
+                    showToast("Browser tidak mendukung GPS.", "danger");
+                    return;
+                }
+
+                btn.classList.remove("success", "error");
+                btn.classList.add("loading");
+                btn.innerHTML = `<span class="spinner-border spinner-border-sm me-2"></span>Mengambil lokasi...`;
+                btn.disabled = true;
+
+                navigator.geolocation.getCurrentPosition(
+                    (pos) => {
+                        const lat = pos.coords.latitude.toFixed(7);
+                        const lng = pos.coords.longitude.toFixed(7);
+                        const acc = Math.round(pos.coords.accuracy);
+
+                        document.getElementById("latitude").value  = lat;
+                        document.getElementById("longitude").value = lng;
+
+                        btn.classList.remove("loading");
+                        btn.classList.add("success");
+                        btn.innerHTML = `<i class="bi bi-check-circle-fill me-2"></i>Lokasi Berhasil Diambil`;
+                        btn.disabled = false;
+
+                        gpsText.textContent = `Lat: ${lat}, Long: ${lng} (±${acc}m)`;
+                        info.classList.add("show");
+                    },
+                    (err) => {
+                        btn.classList.remove("loading");
+                        btn.classList.add("error");
+                        btn.innerHTML = `<i class="bi bi-exclamation-triangle-fill me-2"></i>Gagal — Coba Lagi`;
+                        btn.disabled = false;
+
+                        const msgs = {
+                            1: "Akses lokasi ditolak. Izinkan akses GPS di browser.",
+                            2: "Posisi tidak tersedia.",
+                            3: "Waktu habis. Coba lagi."
+                        };
+                        showToast(msgs[err.code] || "Gagal mengambil lokasi.", "danger");
+                    },
+                    { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 }
+                );
+            }
+
+            // ============================================================
+            // PHOTO PREVIEW
+            // ============================================================
+            function previewFoto(event) {
+                const file    = event.target.files[0];
+                const preview = document.getElementById("photoPreview");
+                const img     = document.getElementById("previewImg");
+
+                if (!file) return;
+
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    img.src = e.target.result;
+                    preview.classList.add("show");
+                };
+                reader.readAsDataURL(file);
+            }
+
+            // ============================================================
+            // CONVERT IMAGE TO BASE64
+            // ============================================================
+            function fileToBase64(file) {
+                return new Promise((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.onload  = () => resolve(reader.result.split(",")[1]); // strip data:...;base64,
+                    reader.onerror = reject;
+                    reader.readAsDataURL(file);
                 });
             }
 
-            document.getElementById("provinsi").addEventListener("change", function() {
-                refreshSelect(0);
-                
-                Object.keys(data[this.value] || {}).forEach(kabupaten => {
-                    kabupatenSelect.add(new Option(kabupaten, kabupaten));
-                });
-            });
+            // ============================================================
+            // TOAST HELPER
+            // ============================================================
+            function showToast(msg, type = "success") {
+                const toast = document.getElementById("toastMsg");
+                const body  = document.getElementById("toastBody");
 
-            document.getElementById("kabupaten").addEventListener("change", function() {
-                const prov = document.getElementById("provinsi").value;
-                refreshSelect(1);
+                toast.classList.remove("bg-success", "bg-danger");
+                toast.classList.add(type === "success" ? "bg-success" : "bg-danger");
+                body.textContent = msg;
 
-                Object.keys(data[prov][this.value] || {}).forEach(kec => {
-                    kecSelect.add(new Option(kec, kec));
-                });
-            });
+                new bootstrap.Toast(toast, { delay: 4000 }).show();
+            }
 
-            document.getElementById("kecamatan").addEventListener("change", function() {
-                const prov = document.getElementById("provinsi").value;
-                const kabupaten = document.getElementById("kabupaten").value;
-                refreshSelect(2);
+            // ============================================================
+            // FORM SUBMIT → POWER AUTOMATE
+            // ============================================================
+            document.getElementById("prospectForm").addEventListener("submit", async function (e) {
+                e.preventDefault();
 
-                (data[prov][kabupaten][this.value] || []).forEach(kel => {
-                    kelSelect.add(new Option(kel, kel));
-                });
+                const lat = document.getElementById("latitude").value;
+                const lng = document.getElementById("longitude").value;
+
+                if (!lat || !lng) {
+                    showToast("Harap ambil lokasi GPS terlebih dahulu.", "danger");
+                    return;
+                }
+
+                const fotoFile = document.getElementById("fotoToko").files[0];
+                if (!fotoFile) {
+                    showToast("Harap ambil atau upload foto toko.", "danger");
+                    return;
+                }
+
+                // Disable submit button
+                const submitBtn = document.getElementById("submitBtn");
+                document.getElementById("submitText").textContent = "Mengirim...";
+                document.getElementById("submitSpinner").classList.remove("d-none");
+                submitBtn.disabled = true;
+
+                try {
+                    // Convert photo to base64
+                    const fotoBase64 = await fileToBase64(fotoFile);
+                    const fotoMimeType = fotoFile.type; // e.g. "image/jpeg"
+
+                    const payload = {
+                        namaToko:        document.getElementById("namaToko").value,
+                        namaPemilik:     document.getElementById("namaPemilik").value,
+                        alamatToko:      document.getElementById("alamatToko").value,
+                        provinsi:        document.getElementById("provinsi").value,
+                        kabupaten:       document.getElementById("kabupaten").value,
+                        kecamatan:       document.getElementById("kecamatan").value,
+                        kelurahan:       document.getElementById("kelurahan").value,
+                        nomorHP:         document.getElementById("nomorHP").value,
+                        jamOperasional:  document.getElementById("jamOperasional").value,
+                        jualGalon:       document.getElementById("jualGalon").value,
+                        lokasiToko:      document.getElementById("lokasiToko").value,
+                        jumlahToko:      document.getElementById("jumlahToko").value,
+                        stockRokok:      document.getElementById("stockRokok").value,
+                        latitude:        lat,
+                        longitude:       lng,
+                        foto: {
+                            fileName:    fotoFile.name,
+                            mimeType:    fotoMimeType,
+                            base64:      fotoBase64
+                        }
+                    };
+
+                    const response = await fetch(POWER_AUTOMATE_URL, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (response.ok || response.status === 202) {
+                        showToast("✅ Data berhasil dikirim!", "success");
+                        document.getElementById("prospectForm").reset();
+                        document.getElementById("gpsBtn").className = "btn btn-outline-danger w-100 gps-btn";
+                        document.getElementById("gpsBtn").innerHTML = `<i class="bi bi-geo-alt-fill me-2"></i>Ambil Lokasi Toko (GPS)`;
+                        document.getElementById("gpsInfo").classList.remove("show");
+                        document.getElementById("photoPreview").classList.remove("show");
+                        document.getElementById("latitude").value  = "";
+                        document.getElementById("longitude").value = "";
+                    } else {
+                        throw new Error(`HTTP ${response.status}`);
+                    }
+
+                } catch (err) {
+                    console.error(err);
+                    showToast("❌ Gagal mengirim data. Coba lagi.", "danger");
+                } finally {
+                    document.getElementById("submitText").textContent = "Submit";
+                    document.getElementById("submitSpinner").classList.add("d-none");
+                    submitBtn.disabled = false;
+                }
             });
         </script>
 
