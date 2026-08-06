@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Outlet Prospect | The Magnum Ice Cream Company</title>
+<style>
+  :root{
+    --red:#b30021; --brown:#8d3f2b; --cream:#fdf9f6; --vanilla:#f2e9db;
+    --ink:#212721; --wafer:#e1b87f; --ice:#dde5ed; --green:#71b790;
+    --font:"NeueHaasGroteskDisplayPro", Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--cream); color:var(--ink); font-family:var(--font); font-weight:400; line-height:1.6;}
+  a{color:inherit;}
+
+  /* --- header: logo row on top (with search at right), nav row below --- */
+  .cmp-experiencefragment--header{background-color:var(--cream); border-bottom:.125rem solid #eceff1;}
+  .header-wrapper{max-width:76%; margin:0 auto; padding:0 1rem;}
+  .main-container{ display:flex; flex-direction:column; }
+  .logo-row{
+    display:flex; align-items:center; justify-content:center; position:relative;
+    padding:1rem 0;
+  }
+  .tabimage img{height:48px; width:auto; object-fit:contain;}
+  @media(min-width:768px){ .tabimage img{height:68px;} }
+  @media(min-width:1024px){ .tabimage img{height:80px;} }
+  .search-box{ position:absolute; right:0; top:50%; transform:translateY(-50%); }
+  .search-box input{
+    border:none; background:var(--vanilla); border-radius:1.5rem; padding:.6rem 1rem;
+    font-family:var(--font); font-size:.85rem; width:140px;
+  }
+  @media(min-width:768px){ .search-box input{width:220px;} }
+  .search-box input::placeholder{color:#666;}
+
+  .nav-row{ border-top:1px solid var(--vanilla); }
+  .globalnavigation{display:none; gap:1.75rem; font-size:1rem; font-weight:500; align-items:center; justify-content:center;}
+  @media(min-width:768px){ .globalnavigation{display:flex;} }
+  .globalnavigation > a, .globalnavigation .mainLink{
+    text-decoration:none; color:var(--ink); background:none; border:none;
+    font-family:var(--font); font-size:1rem; font-weight:500; cursor:pointer; padding:1.2rem 0;
+  }
+  .globalnavigation > a:hover, .globalnavigation .mainLink:hover{color:var(--red);}
+  .nav-item{position:relative;}
+  .nav-item .submenu{
+    display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%);
+    background:#fff; border:1px solid var(--vanilla); border-radius:.5rem; list-style:none;
+    margin:0; padding:.75rem 0; min-width:240px; box-shadow:0 12px 24px rgba(0,0,0,.08); z-index:20;
+  }
+  .nav-item:hover .submenu, .nav-item:focus-within .submenu{display:block;}
+  .nav-item .submenu li a{
+    display:block; padding:.6rem 1.25rem; text-decoration:none; color:var(--ink);
+    font-size:.9rem; font-weight:400; white-space:nowrap;
+  }
+  .nav-item .submenu li a:hover{background:var(--vanilla); color:var(--brown);}
+
+  /* --- title.big-s style hero header, matches text.title-big-s tokens --- */
+  .page-header{background:var(--cream); padding:2.5rem 1rem 1rem; text-align:center;}
+  .page-header .badge{
+    display:inline-flex; align-items:center; gap:.5rem; background:var(--red);
+    border-radius:1.5rem; padding:.5625rem 1.5rem; margin-bottom:1rem;
+  }
+  .page-header .badge span{color:var(--cream); font-size:.875rem; font-weight:500; letter-spacing:.025rem;}
+  .page-header h1{
+    font-size:1.75rem; font-weight:500; line-height:1.1; margin:0 auto .75rem; max-width:34.25rem;
+  }
+  @media(min-width:1024px){ .page-header h1{ font-size:2.5rem; } }
+  .page-header p{max-width: 90vw; margin:0 auto; color:var(--ink); font-size:1rem; letter-spacing:.02rem;}
+
+  .form-shell{max-width: 90vw; margin:2.5rem auto 4rem; padding:0 1rem;}
+  #outletForm{
+    background:#fff;
+    border:1px solid var(--vanilla);
+    border-radius:.5rem;
+    padding:2rem 1.5rem;
+  }
+  @media(min-width:768px){ form{padding:3rem 2.5rem;} }
+
+  .field{margin-bottom:1.5rem;}
+  .field label{display:block; font-size:1rem; font-weight:500; margin-bottom:.5rem;}
+  .field label .req{color:var(--red);}
+  .field input[type="text"], .field input[type="tel"], .field select, .field textarea{
+    width:100%; padding:.75rem 1rem; font-family:var(--font); font-size:1rem;
+    color:var(--ink); background:var(--cream); border:1px solid #d8cdb8; border-radius:.5rem;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{ outline:none; border-color:var(--red); }
+  .field select{
+    appearance:none;
+    background-image:linear-gradient(45deg, transparent 50%, var(--brown) 50%),
+                      linear-gradient(135deg, var(--brown) 50%, transparent 50%);
+    background-position: calc(100% - 18px) center, calc(100% - 13px) center;
+    background-size:5px 5px, 5px 5px; background-repeat:no-repeat;
+  }
+
+  .pill-row{display:flex; flex-wrap:wrap; gap:.75rem;}
+  .pill{position:relative; flex:1 1 auto; min-width:130px;}
+  .pill input:hover+ span{background: #e1b87f; transition: .2s ease;}
+  .pill input{position:absolute; opacity:0;}
+  .pill span{
+    display:block; text-align:center; padding:.7rem .75rem; border:1px solid #d8cdb8;
+    border-radius:1.5rem; font-size:.9rem; cursor:pointer;
+  }
+  .pill input:checked + span{background:var(--red); border-color:var(--red); color:#fff; font-weight:500;}
+
+  /* mirrors .button.slide-button-red hover-fill pattern from the real button CSS */
+  .gps-btn{
+    position:relative; width:100%; padding:.75rem 1.6rem; background:var(--wafer);
+    border:none; border-radius:1.5rem; overflow:hidden; z-index:1; cursor:pointer;
+    font-family:var(--font); font-size:1.13rem; font-weight:500; color:var(--ink);
+  }
+  .gps-btn:before{
+    content:""; position:absolute; inset:0; background:var(--green);
+    transform:translateX(-100%); transition:transform .5s ease; z-index:-1;
+  }
+  .gps-btn:hover:before{ transform:translateX(0); }
+  .gps-status{font-size:.85rem; margin-top:.5rem; text-align:center; min-height:1.2em;}
+
+  .upload-box{
+    display:block; border:1px dashed var(--wafer); border-radius:.5rem; padding:2rem 1rem;
+    text-align:center; cursor:pointer; background:var(--cream); font-size:.9rem;
+  }
+  .upload-box:hover{border-color:var(--brown);}
+  .upload-box input{display:none;}
+  #preview-wrap{margin-top:1rem; text-align:center;}
+  #preview-wrap img{max-width:100%; max-height:220px; border-radius:.5rem;}
+
+  .submit-btn{
+    width:100%; margin-top:.5rem; padding:.9rem 1.6rem; background:var(--red); color:#fff;
+    border:none; border-radius:3rem; font-family:var(--font); font-size:1.05rem; font-weight:600;
+    cursor:pointer; transition:background .3s;
+  }
+  .submit-btn:hover{ background:#8a0019; }
+
+  .toast{
+    position:fixed; top:1.5rem; left:50%; transform:translateX(-50%) translateY(-140%);
+    background:var(--red); color:#fff; padding:.9rem 1.8rem; border-radius:.5rem;
+    font-size:.95rem; font-weight:500; z-index:100; transition:transform .4s ease;
+  }
+  .toast.show{ transform:translateX(-50%) translateY(0); }
+
+  /* --- footer, matching .cmp-experiencefragment--footer wave + red-legal --- */
+  .cmp-experiencefragment--footer{
+    background-color:var(--vanilla); position:relative; padding-top:3rem; overflow:hidden;
+  }
+  .cmp-experiencefragment--footer:before{
+    content:""; position:absolute; top:-1.4rem; left:0; width:100%; height:1.6rem;
+    background:radial-gradient(120% 220% at 50% 220%, var(--vanilla) 60%, transparent 62%);
+  }
+  .footer-inner{max-width:70rem; margin:0 auto; padding:0 1rem 2.5rem;}
+  .container-unilever{
+    display:flex; flex-direction:column; align-items:center; text-align:center;
+    padding-bottom:1.5rem; border-bottom:1px solid #e7ddc9;
+  }
+  @media(min-width:768px){ .container-unilever{flex-direction:row; text-align:left; gap:2rem;} }
+  .container-unilever img{max-width:180px; height:auto;}
+  .container-unilever p{font-size:.875rem; margin:0; color:var(--ink); font-weight:500; line-height:1.6;}
+
+  .footer-nav-cols{
+    display:grid; grid-template-columns:1fr; gap:2rem; padding-top:1.5rem;
+  }
+  @media(min-width:768px){ .footer-nav-cols{grid-template-columns:1fr 1fr;} }
+  .footer-nav-heading{font-size:1.25rem; font-weight:500; margin-bottom:1rem;}
+  .footer-nav-col ul{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:.5rem 1rem;}
+  .footer-nav-col ul li a{
+    font-size:1rem; color:var(--ink); text-decoration:underline; text-underline-offset:2px;
+  }
+  .footer-nav-col ul li a:hover{color:var(--brown);}
+
+  .red-legal{background:var(--red); height:1rem; width:100%; margin-top:1rem;}
+  .cmp-experiencefragment--header{
+    background:#fdf9f6;
+    border-bottom:1px solid #eee;
+}
+
+.header{
+    background:var(--cream);
+    border-bottom:1px solid #ece6dc;
+}
+
+.header-top{
+    max-width:1440px;
+    margin:auto;
+    height:155px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+/* Logo */
+
+.header-logo img{
+    width:237px;
+    height:80px;
+    object-fit:contain;
+}
+
+/* Search */
+
+.search-container{
+    position:absolute;
+    right:32px;
+    top:26px;
+}
+
+.search-bar form{
+    display:flex;
+    align-items:center;
+    position:relative;
+}
+
+.search-bar-input{
+    width:300px;
+    height:48px;
+    border:none;
+    border-radius:24px;
+    background:var(--vanilla);
+    padding:0 52px 0 24px;
+    font-size:14px;
+    outline:none;
+}
+
+.search-bar-input::placeholder{
+    color:#666;
+}
+
+.search-bar-btn-handler{
+    position:absolute;
+    right:18px;
+    width:24px;
+    height:24px;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.search-bar-btn-clear{
+    display:none;
+}
+
+/* Navigation */
+
+.header-nav{
+    margin-top:24px;
+    display:flex;
+    gap:36px;
+}
+
+.header-nav a{
+    text-decoration:none;
+    color:var(--text);
+    font-size:15px;
+    font-weight:500;
+}
+
+/* Hamburger */
+
+.hamburger{
+    display:none;
+    position:absolute;
+    left:20px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:26px;
+    cursor:pointer;
+    border:none;
+    background:none;
+}
+
+/* Mobile Search Icon */
+
+.mobile-search{
+    display:none;
+    position:absolute;
+    right:20px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:22px;
+    cursor:pointer;
+    border:none;
+    background:none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width:767px){
+
+.header-top{
+    height:80px;
+    flex-direction:row;
+}
+
+.header-logo img{
+    width:141px;
+    height:48px;
+}
+
+.header-nav{
+    display:none;
+}
+
+.search-container{
+    display:none;
+}
+
+.hamburger{
+    display:block;
+}
+
+.mobile-search{
+    display:block;
+}
+}
+
+.logo img{
+    height:70px;
+}
+
+.desktop-search{
+    position:absolute;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+    display:flex;
+    align-items:center;
+    background:transparent;
+}
+
+.desktop-search input{
+    width:240px;
+    height:44px;
+    border:none;
+    border-radius:999px;
+    background:var(--vanilla);
+    padding:0 18px;
+    font-size:15px;
+    outline:none;
+    box-shadow:none;
+}
+
+.desktop-search form{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:transparent;
+    padding:0;
+    margin:0;
+    border:none;
+    box-shadow:none;
+}
+
+.desktop-search button{
+    border:none;
+    background:#b30021;
+    color:#fff;
+    padding:0 22px;
+    border-radius:999px;
+    cursor:pointer;
+}
+
+.globalnavigation{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:18px 0;
+    border-top:1px solid #eee;
+}
+
+.globalnavigation a{
+    text-decoration:none;
+    color:#222;
+    font-weight:500;
+}
+
+.globalnavigation a:hover{
+    color:#b30021;
+}
+
+.menu-btn,
+.search-btn{
+    display:none;
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    border:none;
+    background:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.menu-btn{
+    left:0;
+}
+
+.search-btn{
+    right:0;
+}
+
+.mobile-search{
+    display:none;
+    padding:15px 0;
+}
+
+.mobile-search.active{
+    display:block;
+}
+
+.mobile-search form{
+    display:flex;
+    gap:10px;
+}
+
+.mobile-search input{
+    flex:1;
+    height:42px;
+    padding:0 16px;
+    border-radius:999px;
+    border:1px solid #ddd;
+}
+
+.mobile-search button{
+    background:#b30021;
+    color:white;
+    border:none;
+    padding:0 18px;
+    border-radius:999px;
+}
+
+.mobile-menu{
+    position:fixed;
+    top:0;
+    left:-300px;
+    width:280px;
+    height:100%;
+    background:white;
+    z-index:9999;
+    transition:.3s;
+    display:flex;
+    flex-direction:column;
+    padding:90px 30px 30px;
+}
+
+.mobile-menu.open{
+    left:0;
+}
+
+.mobile-menu a{
+    padding:16px 0;
+    text-decoration:none;
+    color:#222;
+    border-bottom:1px solid #eee;
+}
+
+.close-menu{
+    position:absolute;
+    top:20px;
+    right:20px;
+    border:none;
+    background:none;
+    font-size:26px;
+    cursor:pointer;
+}
+
+.menu-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
+    z-index:9998;
+}
+
+.menu-overlay.show{
+    opacity:1;
+    visibility:visible;
+}
+
+@media (max-width:991px){
+
+    .desktop-search{
+        display:none;
+    }
+
+    .globalnavigation{
+        display:none;
+    }
+
+    .menu-btn,
+    .search-btn{
+        display:block;
+    }
+
+    .logo img{
+        height:56px;
+    }
+
+}
+</style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="header pt-3">
+
+    <div class="header-top">
+
+        <button class="hamburger">
+            ☰
+        </button>
+
+        <a href="/" class="header-logo">
+            <img src="https://assets.unileversolutions.com/v1/138986349.png"
+                 alt="The Magnum Ice Cream Company">
+        </a>
+
+        <div class="search-container">
+            <div class="search-bar">
+                <form action="/en/search.html">
+
+                    <input
+                        class="search-bar-input"
+                        type="text"
+                        placeholder="Search"
+                        name="query"
+                        autocomplete="off">
+
+                    <button
+                        class="search-bar-btn-clear"
+                        type="button">
+                        Clear
+                    </button>
+
+                    <button
+                        class="search-bar-btn-handler"
+                        type="submit">
+                        🔍
+                    </button>
+
+                </form>
+            </div>
+        </div>
+
+        <button class="mobile-search">
+            🔍
+        </button>
+
+        <nav class="header-nav">
+            <a href="#">About Us</a>
+            <a href="#">Brands</a>
+            <a href="#">Our Business</a>
+            <a href="#">Sustainability</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact</a>
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- Mobile Drawer -->
+<div class="mobile-menu" id="mobileMenu">
+
+    <button class="close-menu" id="closeMenu">
+        ✕
+    </button>
+
+    <a href="#">About Us</a>
+    <a href="#">Brands</a>
+    <a href="#">Careers</a>
+    <a href="#">Investors</a>
+    <a href="#">Suppliers</a>
+    <a href="#">Contact</a>
+
+</div>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<div class="page-header">
+  <div class="badge"><span>Retail Partnership</span></div>
+  <h1>New Outlet Prospect</h1>
+  <p>Daftarkan toko Anda untuk menjadi mitra resmi The Magnum Ice Cream Company. Lengkapi formulir di bawah dan tim kami akan meninjau pengajuan Anda.</p>
+</div>
+
+<!-- Main Page -->
+<div class="form-shell" id="prospect">
+  <form id="outletForm">
+
+    <div class="row field g-4">
+      <div class="col-md-6 col-12">
+        <label>Nama Toko<span class="req">*</span></label>
+        <input type="text" name="nama_toko" placeholder="Contoh: Toko Sumber Rejeki" required>
+      </div>
+      <div class="col-md-6 col-12">
+        <label>Nama Pemilik Toko<span class="req">*</span></label>
+        <input type="text" name="nama_pemilik" placeholder="Nama lengkap pemilik" required>
+      </div>
+    </div>
+
+
+    <div class="field">
+      <label>Alamat Toko<span class="req">*</span></label>
+      <textarea name="alamat_toko" rows="3" placeholder="Alamat lengkap toko" required></textarea>
+    </div>
+
+    <div class="row field g-4">
+      <div class="col-lg-3 col-md-6 col-12">
+        <label>Provinsi<span class="req">*</span></label>
+        <select name="provinsi" required>
+          <option value="">Pilih Provinsi</option>
+          <option>DKI Jakarta</option><option>Jawa Barat</option><option>Jawa Tengah</option>
+          <option>Jawa Timur</option><option>Banten</option><option>Lainnya</option>
+        </select>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 col-12">
+        <label>Kabupaten<span class="req">*</span></label>
+        <select name="kabupaten" required>
+          <option value="">Pilih Kabupaten</option>
+          <option>Kabupaten Bandung</option><option>Kabupaten Bekasi</option>
+          <option>Kabupaten Tangerang</option><option>Lainnya</option>
+        </select>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 col-12">
+        <label>Kecamatan<span class="req">*</span></label>
+        <select name="kecamatan" required>
+          <option value="">Pilih Kecamatan</option>
+          <option>Kecamatan 1</option><option>Kecamatan 2</option><option>Lainnya</option>
+        </select>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-12">
+        <label>Kelurahan<span class="req">*</span></label>
+        <select name="kelurahan" required>
+          <option value="">Pilih Kelurahan</option>
+          <option>Kelurahan 1</option><option>Kelurahan 2</option><option>Lainnya</option>
+        </select>
+      </div>
+    </div>
+
+
+    <div class="field">
+      <label>Nomor HP<span class="req">*</span></label>
+      <input type="tel" name="no_hp" placeholder="08xx xxxx xxxx" required>
+    </div>
+
+    <div class="field">
+      <label>Jam Operasional Toko<span class="req">*</span></label>
+      <select name="jam_operasional" required>
+        <option value="">Pilih Jawaban</option>
+        <option>Diatas 15 jam</option><option>10 - 15 jam</option><option>Kurang dari 10 jam</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>Apakah toko menjual air galon / gas?<span class="req">*</span></label>
+      <div class="pill-row">
+        <label class="pill"><input type="radio" name="jual_galon_gas" value="Yes" required><span>Yes</span></label>
+        <label class="pill"><input type="radio" name="jual_galon_gas" value="No"><span>No</span></label>
+      </div>
+    </div>
+
+    <div class="row field">
+      <label>Lokasi Toko Berada<span class="req">*</span></label>
+      <div class="col-md-6 col-12">
+        <div class="pill-row">
+          <label class="pill"><input type="radio" name="lokasi_toko" value="Jalan Utama" required><span>Jalan Utama</span></label>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-12">
+        <div class="pill-row">
+          <label class="pill"><input type="radio" name="lokasi_toko" value="Jalan Kecil / Gang Perumahan"><span>Jalan Kecil / Gang Perumahan</span></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Jumlah toko lain di sekitar radius 20 meter<span class="req">*</span></label>
+      <div class="pill-row">
+        <label class="pill"><input type="radio" name="jumlah_toko_sekitar" value="Lebih dari 2 toko" required><span>Lebih dari 2 toko</span></label>
+        <label class="pill"><input type="radio" name="jumlah_toko_sekitar" value="Kurang dari 2 toko"><span>Kurang dari 2 toko</span></label>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Jumlah Stock Rokok<span class="req">*</span></label>
+      <select name="stock_rokok" required>
+        <option value="">Pilih Jawaban</option>
+        <option>&gt; 150 pcs</option><option>50 - 150 pcs</option><option>&lt; 50 pcs</option>
+        <option>Tidak jual rokok</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>Ketuk tombol di bawah untuk membagikan lokasi toko<span class="req">*</span></label>
+      <button type="button" class="gps-btn" id="gpsBtn" onclick="ambilLokasi()">Ambil Lokasi Toko (GPS)</button>
+      <div class="gps-status" id="gpsStatus"></div>
+      <input type="hidden" name="gps_lokasi" id="gpsValue">
+    </div>
+
+    <div class="field">
+      <label>Foto toko (Tampak depan dan terlihat barang dagangan)<span class="req">*</span></label>
+      <label class="upload-box" for="fotoInput">
+        Ambil Foto / Upload Gambar<br>Klik di sini untuk membuka kamera atau memilih foto
+        <input type="file" id="fotoInput" name="foto_toko" accept="image/*" capture="environment" required>
+      </label>
+      <div id="preview-wrap"></div>
+    </div>
+
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+</div>
+
+<footer class="cmp-experiencefragment--footer">
+  <div class="footer-inner">
+    <div class="container-unilever">
+      <img src="https://assets.unileversolutions.com/v1/138986349.png" alt="The Magnum Ice Cream Company logo" width="180" height="60" style="object-fit:contain; margin-bottom:1rem;">
+      <p>&copy;&nbsp;2026 The Magnum Ice Cream Company<br>All rights reserved</p>
+    </div>
+    <div class="footer-nav-cols">
+      <div class="footer-nav-col">
+        <div class="footer-nav-heading">Explore</div>
+        <ul>
+          <li><a href="/en/home.html">Homepage</a></li>
+          <li><a href="/en/brands.html">Brands</a></li>
+          <li><a href="/en/careers.html">Careers</a></li>
+          <li><a href="/en/investors.html">Investors</a></li>
+          <li><a href="https://news.magnumicecream.com">News</a></li>
+          <li><a href="/en/sitemap.html">Sitemap</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-col">
+        <div class="footer-nav-heading">Legal Information</div>
+        <ul>
+          <li><a href="/en/notices/legal/global-english.html">Legal Notice</a></li>
+          <li><a href="/en/notices/cookies/global-english.html">Cookie Notice</a></li>
+          <li><a href="/en/notices/privacy/global-english.html">Privacy Notice</a></li>
+          <li><a href="/en/notices/recruitment-privacy/global-english.html">Recruitment Privacy Notice</a></li>
+          <li><a href="/en/notices/accessibility/global-english.html">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="red-legal"></div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+
+<script>
+  const gpsBtn = document.getElementById('gpsBtn');
+  const gpsStatus = document.getElementById('gpsStatus');
+  const gpsValue = document.getElementById('gpsValue');
+
+  gpsBtn.addEventListener('click', () => {
+    if(!navigator.geolocation){ gpsStatus.textContent = "Geolocation tidak didukung di perangkat ini."; return; }
+    gpsStatus.textContent = "Mengambil lokasi...";
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        const lat = pos.coords.latitude.toFixed(6);
+        const lng = pos.coords.longitude.toFixed(6);
+        gpsValue.value = lat + ", " + lng;
+        gpsStatus.textContent = "Lokasi tersimpan: " + lat + ", " + lng;
+      },
+      () => { gpsStatus.textContent = "Gagal mengambil lokasi. Coba lagi."; }
+    );
+  });
+
+  const fotoInput = document.getElementById('fotoInput');
+  const previewWrap = document.getElementById('preview-wrap');
+  fotoInput.addEventListener('change', () => {
+    previewWrap.innerHTML = '';
+    const file = fotoInput.files[0];
+    if(file){
+      const img = document.createElement('img');
+      img.src = URL.createObjectURL(file);
+      previewWrap.appendChild(img);
+    }
+  });
+
+  const form = document.getElementById('outletForm');
+  const toast = document.getElementById('toast');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2800);
+    form.reset();
+    previewWrap.innerHTML = '';
+    gpsStatus.textContent = '';
+  });
+</script>
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const closeMenu = document.getElementById("closeMenu");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const overlay = document.getElementById("menuOverlay");
+
+  // menuBtn.onclick = () => {
+  //     mobileMenu.classList.add("open");
+  //     overlay.classList.add("show");
+  // };
+
+  // closeMenu.onclick = () => {
+  //     mobileMenu.classList.remove("open");
+  //     overlay.classList.remove("show");
+  // };
+
+  // overlay.onclick = () => {
+  //     mobileMenu.classList.remove("open");
+  //     overlay.classList.remove("show");
+  // };
+
+  // const searchBtn = document.getElementById("searchBtn");
+  // const mobileSearch = document.getElementById("mobileSearch");
+
+  // searchBtn.onclick = () => {
+  //     mobileSearch.classList.toggle("active");
+  // };
+</script>
+
+<script>
+  function ambilLokasi() {
+    const btn     = document.getElementById("gpsBtn");
+    const info    = document.getElementById("gpsInfo");
+    const gpsText = document.getElementById("gpsText");
+
+    if (!navigator.geolocation) {
+        showToast("Browser tidak mendukung GPS.", "danger");
+        return;
+    }
+
+    btn.classList.remove("success", "error");
+    btn.classList.add("loading");
+    btn.innerHTML = `<span class="spinner-border spinner-border-sm me-2"></span>Mengambil lokasi...`;
+    btn.disabled = true;
+
+    navigator.geolocation.getCurrentPosition(
+        (pos) => {
+            const lat = pos.coords.latitude.toFixed(7);
+            const lng = pos.coords.longitude.toFixed(7);
+            const acc = Math.round(pos.coords.accuracy);
+
+            document.getElementById("latitude").value  = lat;
+            document.getElementById("longitude").value = lng;
+
+            btn.classList.remove("loading");
+            btn.classList.add("success");
+            btn.innerHTML = `<i class="bi bi-check-circle-fill me-2"></i>Lokasi Berhasil Diambil`;
+            btn.disabled = false;
+
+            gpsText.textContent = `Lat: ${lat}, Long: ${lng} (±${acc}m)`;
+            info.classList.add("show");
+        },
+        (err) => {
+            btn.classList.remove("loading");
+            btn.classList.add("error");
+            btn.innerHTML = `<i class="bi bi-exclamation-triangle-fill me-2"></i>Gagal — Coba Lagi`;
+            btn.disabled = false;
+
+            const msgs = {
+                1: "Akses lokasi ditolak. Izinkan akses GPS di browser.",
+                2: "Posisi tidak tersedia.",
+                3: "Waktu habis. Coba lagi."
+            };
+            showToast(msgs[err.code] || "Gagal mengambil lokasi.", "danger");
+        },
+        { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 }
+    );
+}
+</script>
+
+</body>
+</html>
