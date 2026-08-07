@@ -185,6 +185,79 @@
   }
   .footer-nav-col ul li a:hover{color:var(--brown);}
 
+  /* --- product knowledge showcase (shown after successful submit) --- */
+  .product-showcase{
+    max-width:90vw; margin:2.5rem auto 4rem; padding:0 1rem;
+    animation:fadeUp .5s ease both;
+  }
+  @keyframes fadeUp{ from{opacity:0; transform:translateY(16px);} to{opacity:1; transform:translateY(0);} }
+
+  .ps-success{
+    display:flex; flex-direction:column; align-items:center; text-align:center;
+    gap:.75rem; margin-bottom:2.5rem;
+  }
+  .ps-success .checkmark{
+    width:64px; height:64px; border-radius:50%; background:var(--green);
+    display:flex; align-items:center; justify-content:center; color:#fff; font-size:2rem;
+    box-shadow:0 8px 20px rgba(113,183,144,.35);
+  }
+  .ps-success h2{ font-size:1.6rem; font-weight:500; margin:.25rem 0 0; }
+  @media(min-width:1024px){ .ps-success h2{ font-size:2rem; } }
+  .ps-success p{ max-width:36rem; color:#5b5b5b; font-size:1rem; margin:0; }
+
+  .ps-header-row{
+    display:flex; align-items:baseline; justify-content:space-between; gap:1rem;
+    flex-wrap:wrap; margin-bottom:1.5rem; border-bottom:1px solid var(--vanilla); padding-bottom:1rem;
+  }
+  .ps-header-row h3{ font-size:1.35rem; font-weight:500; margin:0; }
+  .ps-header-row span{ font-size:.9rem; color:#8d8d8d; }
+
+  .product-grid{
+    display:grid; grid-template-columns:1fr; gap:1.5rem;
+  }
+  @media(min-width:600px){ .product-grid{ grid-template-columns:1fr 1fr; } }
+  @media(min-width:1024px){ .product-grid{ grid-template-columns:repeat(3, 1fr); } }
+
+  .product-card{
+    background:#fff; border:1px solid var(--vanilla); border-radius:.75rem;
+    overflow:hidden; display:flex; flex-direction:column;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .product-card:hover{ transform:translateY(-4px); box-shadow:0 16px 32px rgba(0,0,0,.08); }
+
+  .product-media{
+    position:relative; height:170px; display:flex; align-items:center; justify-content:center;
+    font-size:3rem; overflow:hidden;
+  }
+  .product-media img{ width:100%; height:100%; object-fit:cover; }
+  .product-media .tag{
+    position:absolute; top:.75rem; left:.75rem; background:rgba(255,255,255,.9); color:var(--red);
+    font-size:.7rem; font-weight:600; letter-spacing:.03rem; text-transform:uppercase;
+    padding:.25rem .6rem; border-radius:1rem;
+  }
+
+  .product-body{ padding:1.1rem 1.25rem 1.4rem; display:flex; flex-direction:column; gap:.4rem; flex:1; }
+  .product-body h4{ font-size:1.1rem; font-weight:600; margin:0; }
+  .product-body p{ font-size:.88rem; color:#666; margin:0; line-height:1.55; flex:1; }
+  .product-body .meta{
+    display:flex; align-items:center; justify-content:space-between; margin-top:.6rem;
+    font-size:.8rem; color:var(--brown); font-weight:500;
+  }
+
+  .ps-actions{
+    display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; margin-top:2.5rem;
+  }
+  .ps-actions button{
+    padding:.8rem 1.8rem; border-radius:3rem; font-family:var(--font); font-size:.95rem;
+    font-weight:600; cursor:pointer; border:1px solid var(--red);
+  }
+  .ps-btn-primary{ background:var(--red); color:#fff; }
+  .ps-btn-primary:hover{ background:#8a0019; }
+  .ps-btn-secondary{ background:#fff; color:var(--red); }
+  .ps-btn-secondary:hover{ background:var(--vanilla); }
+
+  .d-none{ display:none !important; }
+
   .red-legal{background:var(--red); height:1rem; width:100%; margin-top:1rem;}
   .cmp-experiencefragment--header{
     background:#fdf9f6;
@@ -739,6 +812,30 @@
   </form>
 </div>
 
+<!-- Product Knowledge (shown after successful submit) -->
+<div class="product-showcase d-none" id="productShowcase">
+
+  <div class="ps-success">
+    <div class="checkmark">✓</div>
+    <h2>Pengajuan Anda Berhasil Terkirim!</h2>
+    <p>Tim kami akan segera meninjau data toko Anda. Sambil menunggu, kenali lebih dekat rangkaian produk unggulan yang akan tersedia di toko Anda.</p>
+  </div>
+
+  <div class="ps-header-row">
+    <h3>Produk Unggulan Kami</h3>
+    <span>The Magnum Ice Cream Company</span>
+  </div>
+
+  <div class="product-grid" id="productGrid">
+    <!-- product cards are rendered by JS from the PRODUCTS array -->
+  </div>
+
+  <div class="ps-actions">
+    <button type="button" class="ps-btn-secondary" id="newSubmissionBtn">Ajukan Toko Lain</button>
+  </div>
+
+</div>
+
 <footer class="cmp-experiencefragment--footer">
   <div class="footer-inner">
     <div class="container-unilever">
@@ -952,12 +1049,89 @@
   }
 
   // ============================================================
+  // PRODUCT KNOWLEDGE SHOWCASE
+  // Swap the `image` field for a real product photo URL whenever you
+  // have one; until then a tasteful gradient + emoji glyph is used
+  // so the layout stays polished even without imagery.
+  // ============================================================
+  const PRODUCTS = [
+    {
+      name: "Magnum Classic",
+      tag: "Best Seller",
+      glyph: "🍫",
+      gradient: "linear-gradient(135deg,#3a2418,#8d3f2b)",
+      description: "Es krim vanilla premium berlapis coklat Belgia tebal yang renyah. Produk andalan dengan margin dan perputaran tercepat di kategori impulse."
+    },
+    {
+      name: "Cornetto",
+      tag: "Impulse Favorite",
+      glyph: "🍦",
+      gradient: "linear-gradient(135deg,#c98a3a,#e1b87f)",
+      description: "Cone renyah dengan lapisan coklat dan topping khas. Favorit anak muda, cocok untuk toko dengan lalu-lintas pelajar dan keluarga."
+    },
+    {
+      name: "Paddle Pop",
+      tag: "Kids Favorite",
+      glyph: "🍡",
+      gradient: "linear-gradient(135deg,#2d7d5f,#71b790)",
+      description: "Es krim stik penuh warna dan karakter favorit anak-anak. Wajib ada bagi toko di sekitar area sekolah atau perumahan."
+    },
+    {
+      name: "Feast",
+      tag: "Value Pack",
+      glyph: "🧊",
+      gradient: "linear-gradient(135deg,#1f3a52,#5c86a8)",
+      description: "Sandwich es krim coklat dengan harga terjangkau dan porsi besar. Pilihan tepat untuk konsumen yang mencari value for money."
+    },
+    {
+      name: "Populaire",
+      tag: "Everyday Treat",
+      glyph: "🍨",
+      gradient: "linear-gradient(135deg,#8a1730,#b30021)",
+      description: "Es krim cup dengan rasa lokal yang disukai segala usia. Cocok dipajang di kulkas depan sebagai penarik pelanggan harian."
+    },
+    {
+      name: "In Home",
+      tag: "Family Size",
+      glyph: "🍧",
+      gradient: "linear-gradient(135deg,#4a4a4a,#8d8d8d)",
+      description: "Kemasan tub besar untuk dinikmati bersama keluarga di rumah. Ideal untuk toko dengan kapasitas freezer lebih besar."
+    }
+  ];
+
+  function renderProducts() {
+    const grid = document.getElementById("productGrid");
+    grid.innerHTML = PRODUCTS.map(p => `
+      <div class="product-card">
+        <div class="product-media" style="background:${p.gradient};">
+          <span class="tag">${p.tag}</span>
+          <span aria-hidden="true">${p.glyph}</span>
+        </div>
+        <div class="product-body">
+          <h4>${p.name}</h4>
+          <p>${p.description}</p>
+          <div class="meta"><span>Wall's / Magnum Portfolio</span></div>
+        </div>
+      </div>
+    `).join("");
+  }
+
+  // ============================================================
   // FORM SUBMIT → POWER AUTOMATE
   // ============================================================
   const form = document.getElementById("outletForm");
   const submitBtn = document.getElementById("submitBtn");
   const submitText = document.getElementById("submitText");
   const submitSpinner = document.getElementById("submitSpinner");
+  const formShell = document.getElementById("prospect");
+  const productShowcase = document.getElementById("productShowcase");
+  const newSubmissionBtn = document.getElementById("newSubmissionBtn");
+
+  newSubmissionBtn.addEventListener("click", () => {
+    productShowcase.classList.add("d-none");
+    formShell.classList.remove("d-none");
+    formShell.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
 
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
@@ -1032,6 +1206,12 @@
 
         refreshSelect(0);
         provSelect.selectedIndex = 0;
+
+        // Swap the form out for the product knowledge showcase
+        renderProducts();
+        formShell.classList.add("d-none");
+        productShowcase.classList.remove("d-none");
+        productShowcase.scrollIntoView({ behavior: "smooth", block: "start" });
       } else {
         throw new Error(`HTTP ${response.status}`);
       }
