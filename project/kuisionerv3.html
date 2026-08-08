@@ -892,59 +892,232 @@
   // Expects ./public/locations.json shaped as:
   // { "Provinsi": { "Kabupaten": { "Kecamatan": ["Kelurahan", ...] } } }
   // ============================================================
-  let locationData = {};
 
-  fetch("./public/locations.json")
-    .then(res => res.json())
-    .then(json => {
-      locationData = json;
-      populateProvinsi();
-    })
-    .catch(err => console.error("Gagal memuat locations.json:", err));
+const provSelect      = document.getElementById("provinsi");
+const kabupatenSelect = document.getElementById("kabupaten");
+const kecSelect       = document.getElementById("kecamatan");
+const kelSelect       = document.getElementById("kelurahan");
 
-  const provSelect      = document.getElementById("provinsi");
-  const kabupatenSelect = document.getElementById("kabupaten");
-  const kecSelect       = document.getElementById("kecamatan");
-  const kelSelect       = document.getElementById("kelurahan");
+let locationData = {};
 
-  function clearSelect(sel, placeholder) {
-    sel.innerHTML = "";
-    sel.add(new Option(placeholder, "", true, true));
-    sel.options[0].disabled = true;
+/**
+ * Clears a select and adds a disabled placeholder.
+ */
+function clearSelect(select, placeholder) {
+  select.innerHTML = "";
+
+  const option = new Option(placeholder, "", true, true);
+  option.disabled = true;
+
+  select.add(option);
+}
+
+/**
+ * Resets selects below the selected level.
+ *
+ * 0: Kabupaten, Kecamatan, Kelurahan
+ * 1: Kecamatan, Kelurahan
+ * 2: Kelurahan
+ */
+function refreshSelect(level) {
+  if (level <= 0) {
+    clearSelect(kabupatenSelect, "Pilih Kabupaten");
+    kabupatenSelect.disabled = true;
   }
 
-  function refreshSelect(level) {
-    if (level <= 0) { clearSelect(kabupatenSelect, "Pilih Kabupaten"); kabupatenSelect.disabled = true; }
-    if (level <= 1) { clearSelect(kecSelect, "Pilih Kecamatan"); kecSelect.disabled = true; }
-    if (level <= 2) { clearSelect(kelSelect, "Pilih Kelurahan"); kelSelect.disabled = true; }
+  if (level <= 1) {
+    clearSelect(kecSelect, "Pilih Kecamatan");
+    kecSelect.disabled = true;
   }
 
-  function populateProvinsi() {
-    Object.keys(locationData).forEach(prov => provSelect.add(new Option(prov, prov)));
+  if (level <= 2) {
+    clearSelect(kelSelect, "Pilih Kelurahan");
+    kelSelect.disabled = true;
   }
+}
 
-  provSelect.addEventListener("change", function () {
-    refreshSelect(0);
-    const options = Object.keys(locationData[this.value] || {});
-    options.forEach(kab => kabupatenSelect.add(new Option(kab, kab)));
-    kabupatenSelect.disabled = options.length === 0;
+/**
+ * Finds a location entry by its code.
+ *
+ * Returns:
+ * [locationName, locationData]
+ */
+function findByCode(collection, code) {
+  return Object.entries(collection || {}).find(
+    ([, location]) => String(location.code) === String(code)
+  );
+}
+
+/**
+ * Populates provinces.
+ */
+function populateProvinsi() {
+  clearSelect(provSelect, "Pilih Provinsi");
+
+  const provinces = Object.entries(locationData);
+
+  provinces.forEach(([provinceName, provinceData]) => {
+    provSelect.add(
+      new Option(provinceName, provinceData.code)
+    );
   });
 
-  kabupatenSelect.addEventListener("change", function () {
-    const prov = provSelect.value;
-    refreshSelect(1);
-    const options = Object.keys((locationData[prov] || {})[this.value] || {});
-    options.forEach(kec => kecSelect.add(new Option(kec, kec)));
-    kecSelect.disabled = options.length === 0;
+  provSelect.disabled = provinces.length === 0;
+}
+
+/**
+ * Province changed: populate Kabupaten.
+ */
+provSelect.addEventListener("change", function () {
+  refreshSelect(0);
+
+  const provinceEntry = findByCode(
+    locationData,
+    this.value
+  );
+
+  if (!provinceEntry) {
+    return;
+  }
+
+  const [, provinceData] = provinceEntry;
+  const kabupatenEntries = Object.entries(
+    provinceData.kabupaten || {}
+  );
+
+  kabupatenEntries.forEach(([kabupatenName, kabupatenData]) => {
+    kabupatenSelect.add(
+      new Option(kabupatenName, kabupatenData.code)
+    );
   });
 
-  kecSelect.addEventListener("change", function () {
-    const prov = provSelect.value;
-    const kab  = kabupatenSelect.value;
-    refreshSelect(2);
-    const options = ((locationData[prov] || {})[kab] || {})[this.value] || [];
-    options.forEach(kel => kelSelect.add(new Option(kel, kel)));
-    kelSelect.disabled = options.length === 0;
+  kabupatenSelect.disabled = kabupatenEntries.length === 0;
+});
+
+/**
+ * Kabupaten changed: populate Kecamatan.
+ */
+kabupatenSelect.addEventListener("change", function () {
+  refreshSelect(1);
+
+  const provinceEntry = findByCode(
+    locationData,
+    provSelect.value
+  );
+
+  if (!provinceEntry) {
+    return;
+  }
+
+  const [, provinceData] = provinceEntry;
+
+  const kabupatenEntry = findByCode(
+    provinceData.kabupaten,
+    this.value
+  );
+
+  if (!kabupatenEntry) {
+    return;
+  }
+
+  const [, kabupatenData] = kabupatenEntry;
+  const kecamatanEntries = Object.entries(
+    kabupatenData.kecamatan || {}
+  );
+
+  kecamatanEntries.forEach(([kecamatanName, kecamatanData]) => {
+    kecSelect.add(
+      new Option(kecamatanName, kecamatanData.code)
+    );
+  });
+
+  kecSelect.disabled = kecamatanEntries.length === 0;
+});
+
+/**
+ * Kecamatan changed: populate Kelurahan.
+ */
+kecSelect.addEventListener("change", function () {
+  refreshSelect(2);
+
+  const provinceEntry = findByCode(
+    locationData,
+    provSelect.value
+  );
+
+  if (!provinceEntry) {
+    return;
+  }
+
+  const [, provinceData] = provinceEntry;
+
+  const kabupatenEntry = findByCode(
+    provinceData.kabupaten,
+    kabupatenSelect.value
+  );
+
+  if (!kabupatenEntry) {
+    return;
+  }
+
+  const [, kabupatenData] = kabupatenEntry;
+
+  const kecamatanEntry = findByCode(
+    kabupatenData.kecamatan,
+    this.value
+  );
+
+  if (!kecamatanEntry) {
+    return;
+  }
+
+  const [, kecamatanData] = kecamatanEntry;
+  const kelurahanEntries = Object.entries(
+    kecamatanData.kelurahan || {}
+  );
+
+  kelurahanEntries.forEach(([kelurahanName, kelurahanData]) => {
+    kelSelect.add(
+      new Option(kelurahanName, kelurahanData.code)
+    );
+  });
+
+  kelSelect.disabled = kelurahanEntries.length === 0;
+});
+
+/**
+ * Set initial state.
+ */
+clearSelect(provSelect, "Memuat Provinsi...");
+provSelect.disabled = true;
+
+refreshSelect(0);
+
+/**
+ * Load JSON.
+ */
+fetch("./public/locations2.json")
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(
+        `HTTP ${response.status}: ${response.statusText}`
+      );
+    }
+
+    return response.json();
+  })
+  .then(json => {
+    locationData = json;
+    populateProvinsi();
+  })
+  .catch(error => {
+    console.error(
+      "Gagal memuat locations2.json:",
+      error
+    );
+
+    clearSelect(provSelect, "Gagal Memuat Provinsi");
+    provSelect.disabled = true;
   });
 
   // ============================================================
